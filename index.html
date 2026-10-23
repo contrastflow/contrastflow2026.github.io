@@ -5,12 +5,11 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="icon" type="image/svg+xml" href="static/favicon.svg">
 <title>A2F: Grounding Generalist Policies via Attention-Guided Action Flows</title>
-<meta name="description" content="Attention-Guided Action Flows (A2F) is a test-time method that refines the actions of a frozen flow-based vision-language-action (VLA) policy. It reads the policy's own text-to-vision attention to locate the visual evidence for the instruction, withholds that evidence in a counterfactual observation, and adds the contrast between the two action-flow predictions back into the flow. No weights are changed and no second model is used.">
+<meta name="description" content="Attention-Guided Action Flows (A2F): test-time guidance for frozen flow-based VLA policies. The policy's own attention locates the evidence, a counterfactual withholds it, and the contrast between the two action flows corrects the action.">
 <meta name="robots" content="noindex, nofollow">
-<meta name="keywords" content="vision-language-action model, VLA, flow matching, test-time guidance, classifier-free guidance, counterfactual guidance, attention, pi0.5, Cosmos3, StarVLA, RoboLab-120, LIBERO-PRO, robot manipulation, A2F">
 <meta property="og:type" content="article">
 <meta property="og:title" content="A2F: Grounding Generalist Policies via Attention-Guided Action Flows">
-<meta property="og:description" content="Test-time guidance for frozen flow-based VLAs: attention locates the evidence, a counterfactual withholds it, and the contrast between the two action flows corrects the action. +6.2 points on RoboLab-120, +9.2 on LIBERO-PRO spatial swap, 30 to 75% cable insertion on a real robot.">
+<meta property="og:description" content="Test-time guidance for frozen flow-based VLAs. No weights changed, no second model.">
 <meta property="og:image" content="static/images/og_thumb.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,14 +22,9 @@
   <div class="sidenav-body">
   <div class="sidenav-title">A2F</div>
   <a href="#overview">Overview</a>
-  <a href="#method" class="top">Method</a>
-  <div class="sub-links">
-    <a class="sub" href="#m-pipeline">&middot; 🔁 Guided action flow</a>
-    <a class="sub" href="#m-attention">&middot; 👁️ Attention extraction</a>
-    <a class="sub" href="#m-flow">&middot; 🌊 Flow at a glance</a>
-  </div>
+  <a href="#method">Method</a>
   <a href="#study">Why it works</a>
-  <div class="sidenav-cat">Experiments</div>
+  <div class="sidenav-cat">Results</div>
   <a href="#simulation" class="top">Simulation</a>
   <div class="sub-links">
     <a class="sub" href="#sim-robolab">&middot; 🧪 RoboLab-120</a>
@@ -40,7 +34,7 @@
   <div class="sub-links">
     <a class="sub" href="#rw-tasks">&middot; 🦾 Tasks</a>
     <a class="sub" href="#rw-results">&middot; 📊 Success rates</a>
-    <a class="sub" href="#rw-servoing">&middot; 🎯 Servoing error</a>
+    <a class="sub" href="#rw-servoing">&middot; 🎯 Servoing</a>
   </div>
   <a href="#analysis">Analysis</a>
   <a href="#bibtex">BibTeX</a>
@@ -51,12 +45,11 @@
 <div class="hero-inner">
   <h1 class="title">Grounding Generalist Policies via <br>Attention-Guided Action Flows</h1>
   <p class="venue">CVPR 2027 submission &middot; under review</p>
-  <!-- TODO(authors): the paper is in review mode; replace with the real author list and affiliations. -->
+  <!-- TODO(authors): replace with the real author list and affiliations. -->
   <p class="authors">Anonymous authors</p>
-  <p class="affiliations" style="font-size:15px;margin:0 0 4px;opacity:.85;">Author names and affiliations are withheld for double-blind review.</p>
   <p class="hero-btns">
-    <span class="btn btn-disabled" title="Paper PDF will be linked once public">📄 Paper (coming soon)</span>
-    <span class="btn btn-disabled" title="Code will be linked once public">💻 Code (coming soon)</span>
+    <span class="btn btn-disabled">📄 Paper (coming soon)</span>
+    <span class="btn btn-disabled">💻 Code (coming soon)</span>
     <a class="btn" href="#bibtex">📚 BibTeX</a>
   </p>
 </div>
@@ -66,41 +59,24 @@
 
 <section id="overview" class="section">
   <h2>Attention-Guided Action Flows (A2F)</h2>
+  <p>
+    A test-time correction for frozen flow-based VLAs. The policy&rsquo;s own text-to-vision attention selects the
+    evidence for the instruction; that evidence is withheld to form a counterfactual observation; the contrast between
+    the two action-flow predictions is added back into the flow. <strong>No weights are changed and no second model is used.</strong>
+  </p>
   <figure class="fig">
-    <img src="static/images/ceg_pipeline.png" alt="A2F pipeline on a frozen VLA. The instruction 'Stack yellow cube on red' and the current image enter the VLA (a VLM tower and a DiT action expert). Text-to-vision attention is extracted and its top cells (red) are masked to form a counterfactual observation. The policy predicts the action flow from the full observation (v+) and from the masked one (v-); the contrast is added to v+, and the guided flow is rolled out to success.">
+    <img src="static/images/ceg_pipeline.png" alt="A2F pipeline: attention over the image is extracted from the VLA, its top cells are masked, the policy predicts the action flow from the full (v+) and masked (v-) observation, and the contrast guides the executed action.">
     <figcaption>
-      <strong>A2F on a frozen VLA.</strong> The instruction&rsquo;s text-to-vision attention over the current image selects
-      the evidence (red cells), which is masked to form the counterfactual observation. At every integration step the
-      same policy predicts the action flow twice, from the full observation (<em>v</em><sub>+</sub>) and from the masked
-      one (<em>v</em><sub>&minus;</sub>); the contrast between the two is added to <em>v</em><sub>+</sub>, and the guided flow
-      is integrated into the executed action chunk. No weights are changed and no second model is used.
+      Attention picks the evidence (red cells) &rarr; mask it &rarr; predict the flow twice, <em>v</em><sub>+</sub> from the full image and
+      <em>v</em><sub>&minus;</sub> from the masked one &rarr; add the contrast to <em>v</em><sub>+</sub> and integrate.
     </figcaption>
   </figure>
-
-  <p>
-    A central challenge in generalist robot control is <strong>vision-action grounding</strong>: making sure that the
-    generated actions stay grounded in the scene the robot actually encounters. Despite learning from large-scale
-    demonstrations, generalist policies often fail to condition their actions on the current observation. This shows up as
-    poor generalization to unseen tasks and scenes, imprecise control in fine-grained manipulation, and a reliance on
-    learned behavioral priors over changes in object positions, so the robot executes a memorized trajectory. At inference
-    time the robot has no task-specific reward or target pose that could correct it.
-  </p>
-  <p>
-    Modern VLAs couple a pretrained vision-language model (VLM) with a flow-matching action expert through attention. The
-    VLM already locates the task-relevant regions, but the action expert learns its own attention over the VLM
-    representations and need not preserve that grounding. <strong>A2F</strong> closes this gap at test time: it reads the
-    policy&rsquo;s own text-to-vision attention to find the evidence for the instruction, withholds that evidence in a
-    <em>counterfactual</em> observation, and uses the difference between the two action-flow predictions as a correction
-    in the policy&rsquo;s native action space. The frozen policy itself translates the visual intervention into action
-    coordinates, with no explicit 3D target and no separately trained corrective model.
-  </p>
-
-  <ol class="regimes">
-    <li><strong>Attention in VLAs is sub-goal specific.</strong> The attended visual regions change with the active sub-goal during task execution, and the instruction words locate the evidence long before the action expert reads it.</li>
-    <li><strong>Limited training data leaves a residual error</strong> that appears across scales: at a larger scale it limits generalization, at a smaller scale it degrades high-precision tasks.</li>
-    <li><strong>A2F uses that attention to refine action generation</strong> across different VLA models (&pi;<sub>0.5</sub>, Cosmos3, StarVLA), substantially improving their real-world robotic performance.</li>
-    <li><strong>A controlled study explains why</strong> the paired contrast removes the residual error, with an oracle showing a 95% reduction in velocity error at early flow times.</li>
-  </ol>
+  <div class="stat-row">
+    <div class="stat"><div class="stat-num">+6.2</div><div class="stat-label">points on RoboLab-120<br>(+8.8 on complex tasks)</div></div>
+    <div class="stat"><div class="stat-num">+9.2</div><div class="stat-label">points on LIBERO-PRO<br>spatial position swap</div></div>
+    <div class="stat"><div class="stat-num">30 &rarr; 75%</div><div class="stat-label">real-robot cable insertion<br>with &pi;<sub>0.5</sub></div></div>
+    <div class="stat"><div class="stat-num">0 &rarr; 43%</div><div class="stat-label">real-robot adapter relocation<br>with StarVLA</div></div>
+  </div>
 </section>
 
 <hr>
@@ -108,84 +84,23 @@
 <section id="method" class="section">
   <h2>Method</h2>
   <p>
-    We consider Mixture-of-Transformers-style VLA policies such as &pi;<sub>0.5</sub>, Cosmos3 and StarVLA: a
-    vision-language tower initialised from a pretrained VLM, and an action expert <em>v</em><sub>&theta;</sub> that generates
-    an action chunk by flow matching while attending to the vision-language tower. At inference the chunk is obtained from
-    Gaussian noise with <em>K</em> Euler steps, each adding &Delta;&tau;&middot;<em>v</em><sub>&theta;</sub>. A2F changes only the
-    velocity that is integrated.
+    At each guided Euler step the frozen policy is evaluated twice at the same noisy action chunk: <em>v</em><sub>+</sub> from the
+    full observation and <em>v</em><sub>&minus;</sub> with the attention-selected visual embeddings zeroed. The guided velocity is
+    <em>v</em><sub>+</sub>&nbsp;+&nbsp;&omega;&nbsp;<em>v</em><sub>&perp;</sub>, where <em>v</em><sub>&perp;</sub> is the component of
+    <em>v</em><sub>+</sub> orthogonal to <em>v</em><sub>&minus;</sub>. Translation and rotation are guided; the gripper follows <em>v</em><sub>+</sub>.
   </p>
-
-  <h3 id="m-pipeline" class="sub">🔁 Guided action flow</h3>
-  <p>
-    Let <em>M</em> be the attention score matrix over the visual tokens and &rho; the erasure budget. The intervention zeroes
-    the input embeddings of the top-&rho; fraction of visual tokens ranked by <em>M</em>, which withholds the selected
-    evidence from the images while the instruction and the robot state are kept. The policy is evaluated twice at the same
-    noisy action chunk and flow time, from the full observation (<em>v</em><sub>+</sub>) and from the evidence-withheld one
-    (<em>v</em><sub>&minus;</sub>). We guide with the <em>projection residual</em>, the component of <em>v</em><sub>+</sub>
-    orthogonal to <em>v</em><sub>&minus;</sub>, scaled by one guidance strength per action coordinate: translation and rotation
-    are guided, the gripper and padded coordinates follow <em>v</em><sub>+</sub>. Guidance costs one additional velocity
-    evaluation per guided step; the first step is left unguided because the contrast diverges as &tau; &rarr; 0.
-  </p>
-<pre class="bib algo">Algorithm 1  One step of A2F
-Require: frozen action expert v_θ; observation o = (I, L, q); layer ℓ*; erasure budget ρ;
-         Euler steps K; executed actions H_e; strengths ω_tr, ω_rot; stabilizer ε
- 1: M  ← attention score matrix of (I, L) at layer ℓ*             ▷ text→vision attention, sinks removed
- 2: I₋ ← E_ρ(I; M)                                                ▷ evidence withheld
- 3: ω  ← ω_tr·1[translation] + ω_rot·1[rotation]                  ▷ zero on gripper, padding
- 4: A⁰ ~ N(0, I);  Δτ ← 1/K;  τ_k ← k/K
- 5: for k = 1 … K:
- 6:    v₊ ← v_θ(A^{τ_{k-1}}, τ_{k-1}, o)
- 7:    if k = 1:  v ← v₊                                          ▷ first step unguided
- 8:    else:
- 9:       v₋ ← v_θ(A^{τ_{k-1}}, τ_{k-1}, (I₋, L, q))
-10:       s  ← ⟨v₊, v₋⟩ / (‖v₋‖² + ε)                             ▷ over all coordinates
-11:       v⊥ ← v₊ − s·v₋                                           ▷ projection residual
-12:       v  ← v₊ + (1_H ωᵀ) ⊙ v⊥
-13:    A^{τ_k} ← A^{τ_{k-1}} + Δτ·v
-14: execute A¹[1:H_e], then replan</pre>
-  <p class="caption">
-    The update has the algebraic form of classifier-free guidance, but the mechanism differs: CFG needs a model trained
-    with condition dropout and strengthens the condition against an unconditional reference. A2F needs no such training.
-    <em>v</em><sub>&minus;</sub> is a deliberately degraded prediction of the same frozen policy, obtained by withholding only the
-    selected visual evidence, and the update steers the flow away from it. By Tweedie&rsquo;s formula the raw contrast
-    <em>v</em><sub>+</sub>&nbsp;&minus;&nbsp;<em>v</em><sub>&minus;</sub> is the score of the likelihood ratio between the full and the
-    evidence-withheld images: the direction in action space along which the selected evidence, and nothing else in the
-    observation, changes the policy&rsquo;s action distribution.
-  </p>
-
-  <h3 id="m-attention" class="sub">👁️ Attention extraction and sink removal</h3>
   <figure class="fig">
-    <img loading="lazy" src="static/images/attention_qualitative.png" alt="Three columns (initial state, attention, final state) by two rows (exterior and wrist camera) for the task 'Stack yellow cube on red'. The attention column shows a grid overlay concentrated on the red and yellow cubes in both camera views; the final state shows the yellow cube stacked on the red one.">
+    <img loading="lazy" src="static/images/attention_qualitative.png" alt="Initial state, attention map and final state for 'Stack yellow cube on red' from the exterior and wrist cameras; attention concentrates on the two cubes.">
     <figcaption>
-      <strong>Attention selects the task-relevant objects.</strong> Columns: the initial observation, the attention score
-      matrix <em>M</em> on the same frame, and the final state; rows: exterior and wrist cameras. For &ldquo;stack yellow cube
-      on red&rdquo;, the matrix concentrates on the cubes in both views, and its top-ranked tokens are the ones A2F zeroes in
-      the counterfactual branch.
+      <strong>Attention selects the task-relevant objects.</strong> The score matrix (centre) is read from the vision-language
+      tower at a fixed layer, with attention sinks removed. Its top-ranked tokens are the ones A2F zeroes in the counterfactual branch.
     </figcaption>
   </figure>
-  <p>
-    At each replanning step we read the text-to-vision attention of the vision-language tower at a fixed layer
-    (&pi;<sub>0.5</sub> layer 12), averaged over all heads and instruction tokens, and filter it. The mean scores are not yet a
-    usable ranking: a few visual tokens receive a large share of the attention regardless of the scene, a behavior known as
-    <em>attention sinks</em>. Ranking by raw attention would select these sinks instead of the evidence. The filter removes
-    them in three steps and renormalizes so that the total attention is preserved:
-  </p>
-  <ol class="regimes">
-    <li><strong>Content-independent sinks</strong> sit at the same grid positions across tasks and layers; we identify these positions once per camera on a small calibration set and discard their attention.</li>
-    <li><strong>Input-dependent sinks</strong> are detected by spatial isolation: a sink is a single bright token among dark neighbors, whereas attention on an object rises and falls smoothly over adjacent tokens. Each isolated spike is replaced by the mean of its neighbors, and the step is repeated because suppressing the strongest sink exposes the next.</li>
-    <li><strong>Light spatial smoothing</strong> makes the scores vary at the scale of objects rather than of single tokens.</li>
-  </ol>
-
-  <h3 id="m-flow" class="sub">🌊 The guided flow at a glance</h3>
   <figure class="fig">
-    <img loading="lazy" src="static/images/denoising_flow.png" alt="Three rows of robot scenes (two exterior views and one wrist view), each shown at three stages of flow integration indicated by a progress bar. In each frame the counterfactual prediction is drawn in orange, the full-observation prediction in blue and the guided prediction in green, first as end-effector paths and finally as density contours over the scene.">
+    <img loading="lazy" src="static/images/denoising_flow.png" alt="Three scenes at three stages of flow integration; orange is the counterfactual prediction, blue the baseline, green the guided prediction.">
     <figcaption>
-      <strong>Three predictions during one action-chunk integration.</strong> Each row is a scene (two exterior views and
-      one wrist view); the columns step through the flow, with the progress bar at the top marking the integration time.
-      Orange is the counterfactual branch <em>v</em><sub>&minus;</sub> (evidence withheld), blue the baseline branch
-      <em>v</em><sub>+</sub>, and green the guided prediction A2F executes; the last column shows the spread of the
-      predicted endpoints as density contours over the image. The counterfactual branch drifts toward where the policy would
-      act without looking, and the guided prediction moves away from it toward the target.
+      <strong>Three predictions during one action-chunk integration.</strong> Orange: counterfactual branch <em>v</em><sub>&minus;</sub>.
+      Blue: baseline <em>v</em><sub>+</sub>. Green: the guided prediction A2F executes, steered away from where the policy would act without looking.
     </figcaption>
   </figure>
 </section>
@@ -193,54 +108,29 @@ Require: frozen action expert v_θ; observation o = (I, L, q); layer ℓ*; erasu
 <hr>
 
 <section id="study" class="section">
-  <h2>Why it works: a controlled study of residual correction</h2>
+  <h2>Why it works</h2>
   <p>
-    A policy can produce a precise action toward a <em>familiar</em> location even after the target moves. We test whether
-    withholding the evidence of the current goal amplifies this existing scene mismatch, so that the difference between the
-    full and ablated predictions supplies the missing correction. A small conditional flow model generates a 2-D endpoint
-    from Gaussian noise; two identical trees of narrow branches define the familiar and the current goal, so changing goal
-    preference must also respect the endpoint geometry. The network receives a familiar-location cue <em>b</em>, noisy visual
-    evidence <em>z</em>, and a nuisance input <em>u</em>; at test time <em>b</em> favors the familiar goal while <em>z</em> favors the
-    current one. The counterfactual sets only <em>z</em>&nbsp;=&nbsp;0.
+    A toy flow model is cued toward a <em>familiar</em> goal while noisy evidence points to the <em>current</em> goal. Withholding
+    the evidence exposes the familiar-goal bias; adding the contrast back corrects it while keeping the endpoint geometry valid.
   </p>
   <figure class="fig">
-    <img loading="lazy" src="static/images/three_conditions.png" alt="Three panels of endpoint scatter plots: (a) baseline v+ splits endpoints between the familiar goal (amber, left) and the current goal (teal, right), 54.6% at the current goal; (b) with the visual cue removed, v- collapses onto the familiar goal, 9.5%; (c) guided with omega = 1, endpoints reach the current goal in 83.0% of cases. Valid geometry stays at 87 to 89% in all three; toy success is 47.8%, 8.1% and 74.1%.">
-    <figcaption class="big-cap">
-      <strong>Withholding the evidence exposes the familiar-goal preference, and adding the contrast corrects it.</strong>
-      Each panel pools all 6,144 saved endpoints of one sampling condition over three training seeds with matched initial
-      noise; amber marks endpoints at the familiar (wrong) goal and teal endpoints at the current goal. The baseline (a)
-      splits between the goals (54.6% at the current goal); the ablated condition (b) collapses onto the familiar goal (9.5%);
-      the guided field (c) reaches the current goal in 83.0% of endpoints, while geometric validity stays at 87&ndash;89% in all
-      three conditions.
+    <img loading="lazy" src="static/images/three_conditions.png" alt="Endpoint scatter plots for baseline (54.6% at the current goal), evidence removed (9.5%) and guided (83.0%); valid geometry stays at 87 to 89% in all three.">
+    <figcaption>
+      Pooled endpoints over three seeds. Baseline: 54.6% at the current goal. Evidence withheld: 9.5%. Guided (&omega;&nbsp;=&nbsp;1): 83.0%.
+      Against an oracle velocity, the contrast removes 95% of the squared velocity error early in the flow.
     </figcaption>
   </figure>
-  <p>
-    The known mixture of the current goal gives the exact velocity <em>v</em><sup>&#9733;</sup>, used only for evaluation. At
-    1,024 shared states early in the flow, the ablated error has nearly twice the component along the baseline error
-    (least-squares slope 1.92), the cosine between the contrast <em>v</em><sub>+</sub>&nbsp;&minus;&nbsp;<em>v</em><sub>&minus;</sub> and
-    the missing correction <em>v</em><sup>&#9733;</sup>&nbsp;&minus;&nbsp;<em>v</em><sub>+</sub> is 0.976, and adding the contrast at
-    &omega;&nbsp;=&nbsp;1 removes 95.1% of the squared velocity error. Together with the endpoint results, this supports the
-    raw paired contrast as a correction for the scene mismatch. For the VLA, A2F forms the paired prediction by zeroing
-    attention-selected visual embeddings, and its projection residual is evaluated separately in the appendix.
-  </p>
 </section>
 
 <hr>
 
 <section id="simulation" class="section">
   <h2>Simulation results</h2>
-  <p>
-    We evaluate in settings that stress different failure modes of a frozen policy: <strong>RoboLab-120</strong> tests
-    zero-shot task generalization by running policies trained on real data directly in a high-fidelity simulation that the
-    policy has never seen, and the <strong>LIBERO-PRO position-swap suites</strong> test out-of-distribution generalization
-    under a behavior prior induced by training, where a policy that has memorised object locations keeps acting on that
-    memory after the scene changes.
-  </p>
 
-  <h3 id="sim-robolab" class="sub">🧪 RoboLab-120: a 6.2-point gain that grows with task difficulty</h3>
+  <h3 id="sim-robolab" class="sub">🧪 RoboLab-120: zero-shot task generalization</h3>
   <div class="table-wrap">
     <table class="res-table">
-      <caption><strong>Table 1.</strong> Success rate (%) on RoboLab-120 under the default instruction: 120 tasks, 10 rollouts each, overall and by the benchmark&rsquo;s difficulty label (64 simple, 39 moderate, 17 complex tasks). The first four rows are the numbers reported with Cosmos3; &pi;<sub>0.5</sub> is our run of the &pi;<sub>0.5</sub>-DROID checkpoint (27.4 vs. 28.0 reported) and the baseline for A2F. Best per column in <strong>bold</strong>.</caption>
+      <caption><strong>Table 1.</strong> Success rate (%), 120 tasks &times; 10 rollouts, by difficulty. One fixed A2F configuration on all tasks. Best per column in <strong>bold</strong>.</caption>
       <thead>
         <tr><th scope="col">Method</th><th scope="col">Overall</th><th scope="col">Simple</th><th scope="col">Moderate</th><th scope="col">Complex</th></tr>
       </thead>
@@ -256,19 +146,11 @@ Require: frozen action expert v_θ; observation o = (I, L, q); layer ℓ*; erasu
       </tbody>
     </table>
   </div>
-  <p class="caption">
-    A2F uses one fixed configuration on all 120 tasks (&omega;&nbsp;=&nbsp;1, the top 15% of text-to-vision attention at
-    PaliGemma layer 12, CFG-Zero<sup>&#9733;</sup>), with the erased tokens taken from both the exterior and the wrist camera
-    because about 80% of the instruction&rsquo;s attention falls on the wrist view on this robot. The configuration was fixed on
-    14 development tasks and confirmed on 28 disjoint tasks before the full run. Over all 120 tasks it improves 49, worsens
-    18 and ties 53 (bootstrap over tasks: +3.3 to +9.3 points), and the gain rises from +5.0 points on simple tasks to +8.8
-    on complex ones, lifting &pi;<sub>0.5</sub> from fourth to second among the listed policies.
-  </p>
 
-  <h3 id="sim-libero" class="sub">↔️ LIBERO-PRO position swap: the only test-time method that improves all four suites</h3>
+  <h3 id="sim-libero" class="sub">↔️ LIBERO-PRO position swap: grounding vs. memorised layouts</h3>
   <div class="table-wrap">
     <table class="res-table">
-      <caption><strong>Table 2.</strong> Success rate (%) on the four LIBERO-PRO position-swap suites with the frozen &pi;<sub>0.5</sub>, 500 trials per cell at seed 7 with the original prompts; <em>Long</em> is <code>libero_10</code>. Every method is a test-time intervention on the same policy. The last block repeats the comparison on Cosmos3 with A2F applied by embedding zeroing at layer 26. &ldquo;&ndash;&rdquo; marks cells not run. Best per column in <strong>bold</strong>.</caption>
+      <caption><strong>Table 2.</strong> Success rate (%) with frozen &pi;<sub>0.5</sub>, 500 trials per cell. All rows are test-time interventions on the same policy. A2F is the only method that improves all four suites. Best per column in <strong>bold</strong>.</caption>
       <thead>
         <tr><th scope="col">Method</th><th scope="col" style="text-align:left">Key technique</th><th scope="col">Spatial</th><th scope="col">Object</th><th scope="col">Goal</th><th scope="col">Long</th></tr>
       </thead>
@@ -278,58 +160,39 @@ Require: frozen action expert v_θ; observation o = (I, L, q); layer ℓ*; erasu
         <tr><td>CAG</td><td class="tech">Language masking</td><td>49.2</td><td>15.2</td><td>26.4</td><td>1.0</td></tr>
         <tr><td>TAG</td><td class="tech">Classifier-free guidance</td><td>51.0</td><td>17.6</td><td>36.8</td><td>6.0</td></tr>
         <tr><td>PCD</td><td class="tech">SAM masking</td><td>51.2</td><td>5.0</td><td>34.0</td><td><strong>7.4</strong></td></tr>
-        <tr><td>SDN</td><td class="tech">Noise selection</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td><td>&ndash;</td></tr>
         <tr><td>CofactVLA</td><td class="tech"></td><td>44.8</td><td>18.4</td><td>26.8</td><td>2.8</td></tr>
         <tr class="ours"><td><strong>A2F (ours)</strong></td><td class="tech">Counterfactual attention guidance</td><td><strong>59.2</strong></td><td><strong>24.6</strong></td><td><strong>38.2</strong></td><td>6.8</td></tr>
         <tr class="delta"><td>&Delta; vs. &pi;<sub>0.5</sub></td><td class="tech"></td><td>+9.2</td><td>+6.8</td><td>+3.8</td><td>+1.6</td></tr>
-        <tr class="block"><td>Cosmos3</td><td class="tech"></td><td>45.6</td><td>9.8</td><td>11.4</td><td>2.2</td></tr>
-        <tr class="ours"><td><strong>Cosmos3 + A2F (ours)</strong></td><td class="tech">Counterfactual attention guidance</td><td>47.0</td><td>10.0</td><td>10.0</td><td>1.0</td></tr>
-        <tr class="delta"><td>&Delta; vs. Cosmos3</td><td class="tech"></td><td>+1.4</td><td>+0.2</td><td>&minus;1.4</td><td>&minus;1.2</td></tr>
       </tbody>
     </table>
   </div>
-  <p class="caption">
-    The position-swap suites exchange object positions in the original LIBERO scenes, so success depends on whether the
-    action is grounded in the current evidence rather than in the prior. The premise of A2F is that the vision-language
-    tower locates that evidence even when the action does not follow it (see <a href="#analysis">Analysis</a>), and the
-    gains above measure how much of the prior the contrast removes: A2F is the only method that improves all four suites,
-    with the largest gain on three of them.
-  </p>
 </section>
 
 <hr>
 
 <section id="realworld" class="section">
   <h2>Real-world results</h2>
-  <p>
-    The real-world tasks test whether the same test-time correction carries over to a physical robot, on tasks that each end
-    in a fine alignment the policy must servo to. A2F is applied at test time to the same frozen backbone, with
-    &pi;<sub>0.5</sub> and with StarVLA, and compared against the test-time baselines PCD and TAG.
-  </p>
 
   <h3 id="rw-tasks" class="sub">🦾 Tasks</h3>
   <div class="task-grid">
     <figure class="task-card">
       <figcaption><span class="rw-num">1</span><span class="rw-title">Cable insertion</span></figcaption>
-      <img loading="lazy" src="static/images/task_cable_insertion.png" alt="Three stages of cable insertion: the cable starts in the robot gripper, the robot aligns it with the cable manager, then performs a high-precision insertion and releases the cable.">
-      <p class="task-desc">Grasp the cable, align it with the cable manager, insert and release. Five in-distribution configurations vary the initial cable and cable-manager poses; two out-of-distribution configurations shift the cable-manager position.</p>
+      <img loading="lazy" src="static/images/task_cable_insertion.png" alt="Cable insertion: grasp the cable, align it with the cable manager, insert and release.">
     </figure>
     <figure class="task-card">
       <figcaption><span class="rw-num">2</span><span class="rw-title">Adapter relocation</span></figcaption>
-      <img loading="lazy" src="static/images/task_adapter_relocation.png" alt="Three stages of adapter relocation: the adapter starts in one of three source outlets, the robot removes it and moves toward the target outlet, then makes fine adjustments and inserts it into the target outlet.">
-      <p class="task-desc">Remove the adapter from one of three source outlets, move it to the target outlet, fine-align and insert. Three source-to-target configurations with 10, 20 and 10 rollouts per method.</p>
+      <img loading="lazy" src="static/images/task_adapter_relocation.png" alt="Adapter relocation: remove the adapter from a source outlet, move it to the target outlet, fine-align and insert.">
     </figure>
     <figure class="task-card">
       <figcaption><span class="rw-num">3</span><span class="rw-title">Burette dispensing</span></figcaption>
-      <img loading="lazy" src="static/images/task_burette_dispensing.png" alt="Three stages of burette dispensing: the robot approaches the burette stopcock, opens it to dispense liquid, and stops dispensing at the target liquid level marked by a black band.">
-      <p class="task-desc">Approach the stopcock, open it, and stop at the liquid level marked by the black band. Results for this task are not yet reported.</p>
+      <img loading="lazy" src="static/images/task_burette_dispensing.png" alt="Burette dispensing: approach the stopcock, open it, stop at the marked liquid level.">
     </figure>
   </div>
 
   <h3 id="rw-results" class="sub">📊 Success rates</h3>
   <div class="table-wrap">
     <table class="res-table">
-      <caption><strong>Table 3.</strong> Real-world success rate (%) by task and backbone. Each entry pools every evaluated configuration of a task (per method: 100 cable-insertion rollouts with &pi;<sub>0.5</sub> and 25 with StarVLA; 40 adapter-relocation rollouts). A2F is applied at test time to the same frozen backbone and raises success on every evaluated task. &ldquo;&ndash;&rdquo; marks cells not run.</caption>
+      <caption><strong>Table 3.</strong> Real-world success rate (%) by task and backbone. A2F is applied at test time to the same frozen backbone. &ldquo;&ndash;&rdquo; = not run.</caption>
       <thead>
         <tr><th scope="col">Backbone</th><th scope="col" style="text-align:left">Method</th><th scope="col">Cable insertion</th><th scope="col">Adapter relocation</th></tr>
       </thead>
@@ -343,23 +206,13 @@ Require: frozen action expert v_θ; observation o = (I, L, q); layer ℓ*; erasu
       </tbody>
     </table>
   </div>
-  <p class="caption">
-    On cable insertion with &pi;<sub>0.5</sub>, A2F improves every configuration and lifts the two out-of-distribution
-    configurations from 0% to 65% (&omega;&nbsp;=&nbsp;1 in-distribution, &omega;&nbsp;=&nbsp;3.5 out-of-distribution). On
-    adapter relocation it improves every source-to-target configuration by 30 to 50 points. Per-configuration rates are in
-    the paper&rsquo;s appendix.
-  </p>
 
   <h3 id="rw-servoing" class="sub">🎯 A2F keeps converging where the base policy stalls</h3>
   <figure class="fig">
-    <img loading="lazy" src="static/images/realworld_servoing_error.png" alt="Two line plots over 10 seconds of cable-insertion rollouts. (a) Position error in millimetres: both methods drop from about 90 mm to about 25 mm by 2.5 s; the base policy then plateaus around 30 mm while ours stays at the lower edge, inside the green expert band. (b) Orientation error in degrees: the base policy drifts upward from 25 to 60 degrees, while ours decreases from 18 to about 5 degrees into the expert band.">
-    <figcaption class="big-cap">
-      <strong>Cable-insertion rollouts with &pi;<sub>0.5</sub>.</strong> (a) Euclidean position error and (b) orientation
-      error (magnitude of the relative rotation vector) of the end effector over time, relative to the mean final pose of
-      the expert demonstrations; thin lines are individual rollouts and bold lines their means, and the green band spans
-      the expert demonstrations&rsquo; own spread around that pose. During the insertion phase A2F continues to reduce both
-      errors into the expert band, while &pi;<sub>0.5</sub> plateaus above it in position and drifts away in orientation.
-      (&ldquo;Counterfactual Evidence Guidance&rdquo; in the legend is an earlier name for A2F.)
+    <img loading="lazy" src="static/images/realworld_servoing_error.png" alt="Position and orientation error over time for cable-insertion rollouts: the base policy plateaus in position and drifts in orientation, while A2F converges into the expert band on both.">
+    <figcaption>
+      Cable-insertion rollouts with &pi;<sub>0.5</sub>: end-effector position (a) and orientation (b) error relative to the expert
+      final pose. Green band: spread of the expert demos. (&ldquo;Counterfactual Evidence Guidance&rdquo; in the legend is an earlier name for A2F.)
     </figcaption>
   </figure>
 </section>
@@ -367,30 +220,21 @@ Require: frozen action expert v_θ; observation o = (I, L, q); layer ℓ*; erasu
 <hr>
 
 <section id="analysis" class="section">
-  <h2>Analysis: the words locate the evidence, the action expert reads it late</h2>
+  <h2>Analysis: the words find the evidence first</h2>
   <figure class="fig fig-narrow">
-    <img loading="lazy" src="static/images/attention_layer_gap.png" alt="Two line plots over PaliGemma layers 0 to 17. Left, attention mass on the task's objects: the text-to-vision curve (orange) rises to 0.40 to 0.45 across layers 3 to 11, while the action-to-vision curve (blue) stays at 0.28 to 0.30 until layers 11 to 13, where it peaks at 0.38; both then collapse. Right, pointing accuracy: the text curve reaches 0.90 at layer 5, above the 0.80 positional-prior line; the action curve stays lower until layer 11. A vertical dashed line marks layer 12.">
-    <figcaption class="big-cap">
-      <strong>Attention mass and pointing accuracy on the task&rsquo;s objects and destination, by PaliGemma layer,</strong>
-      on 56 &pi;<sub>0.5</sub> RoboLab rollouts (28 tasks &times; baseline/A2F, 9,986 frames, both cameras). The instruction
-      words hold 0.40&ndash;0.45 of their image attention on the evidence across layers 3&ndash;11 and point at it in 0.90 of
-      frames at layer 5, above the positional prior (dotted); the action expert stays at 0.28&ndash;0.30 until layers 11&ndash;13.
-      Dashed: uniform attention and chance; vertical: layer 12, the layer A2F reads; bands: 95% intervals over tasks.
+    <img loading="lazy" src="static/images/attention_layer_gap.png" alt="Attention mass and pointing accuracy on the task's objects by PaliGemma layer: the instruction words (orange) locate the evidence from layer 3, the action expert (blue) only at layers 11 to 13.">
+    <figcaption>
+      On 56 &pi;<sub>0.5</sub> RoboLab rollouts, the instruction words&rsquo; attention sits on the task objects from layer 3; the
+      action expert&rsquo;s catches up only at layers 11&ndash;13. A2F reads layer 12 (vertical line), where the two meet.
     </figcaption>
   </figure>
-  <p>
-    Layer 12, which A2F reads, closes the words&rsquo; plateau and opens the action expert&rsquo;s rise, and on the wrist
-    camera, where most of the instruction&rsquo;s attention falls, it is the best layer for both streams. The selection is
-    therefore read from the stream that has found the evidence, at the depth where the action expert begins to use it.
-    This is why the text-to-vision attention, rather than the action expert&rsquo;s own attention, supplies the selection.
-  </p>
 </section>
 
 <hr>
 
 <section id="bibtex" class="section">
   <h2>BibTeX</h2>
-  <!-- TODO(authors): fill in the author list and the arXiv identifier once the paper is public. -->
+  <!-- TODO(authors): fill in the author list and the arXiv identifier once public. -->
 <pre class="bib">@article{a2f2026grounding,
   title   = {Grounding Generalist Policies via Attention-Guided Action Flows},
   author  = {Anonymous},
@@ -400,7 +244,7 @@ Require: frozen action expert v_θ; observation o = (I, L, q); layer ℓ*; erasu
 </section>
 
 <footer class="foot">
-  <p>Attention-Guided Action Flows (A2F) &middot; 2026 &middot; Figures are rendered from the paper source in <code>paper/</code>.</p>
+  <p>Attention-Guided Action Flows (A2F) &middot; 2026</p>
 </footer>
 
 <script src="static/script.js"></script>
