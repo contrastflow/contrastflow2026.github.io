@@ -59,49 +59,23 @@
 
 <section id="overview" class="section">
   <h2>Attention-Guided Action Flows (A2F)</h2>
-  <p>
-    A test-time correction for frozen flow-based VLAs. The policy&rsquo;s own text-to-vision attention selects the
-    evidence for the instruction; that evidence is withheld to form a counterfactual observation; the contrast between
-    the two action-flow predictions is added back into the flow. <strong>No weights are changed and no second model is used.</strong>
-  </p>
+  <p class="key">Test-time guidance for frozen flow-based VLAs: the policy&rsquo;s own attention picks the evidence, a counterfactual withholds it, and the contrast between the two action flows corrects the action. No weights changed, no second model.</p>
   <figure class="fig">
-    <img src="static/images/ceg_pipeline.png" alt="A2F pipeline: attention over the image is extracted from the VLA, its top cells are masked, the policy predicts the action flow from the full (v+) and masked (v-) observation, and the contrast guides the executed action.">
-    <figcaption>
-      Attention picks the evidence (red cells) &rarr; mask it &rarr; predict the flow twice, <em>v</em><sub>+</sub> from the full image and
-      <em>v</em><sub>&minus;</sub> from the masked one &rarr; add the contrast to <em>v</em><sub>+</sub> and integrate.
-    </figcaption>
+    <img src="static/images/ceg_pipeline.png" alt="A2F pipeline: attention is extracted from the VLA, its top cells are masked, the policy predicts the action flow from the full (v+) and masked (v-) observation, and the contrast guides the executed action.">
   </figure>
-  <div class="stat-row">
-    <div class="stat"><div class="stat-num">+6.2</div><div class="stat-label">points on RoboLab-120<br>(+8.8 on complex tasks)</div></div>
-    <div class="stat"><div class="stat-num">+9.2</div><div class="stat-label">points on LIBERO-PRO<br>spatial position swap</div></div>
-    <div class="stat"><div class="stat-num">30 &rarr; 75%</div><div class="stat-label">real-robot cable insertion<br>with &pi;<sub>0.5</sub></div></div>
-    <div class="stat"><div class="stat-num">0 &rarr; 43%</div><div class="stat-label">real-robot adapter relocation<br>with StarVLA</div></div>
-  </div>
 </section>
 
 <hr>
 
 <section id="method" class="section">
   <h2>Method</h2>
-  <p>
-    At each guided Euler step the frozen policy is evaluated twice at the same noisy action chunk: <em>v</em><sub>+</sub> from the
-    full observation and <em>v</em><sub>&minus;</sub> with the attention-selected visual embeddings zeroed. The guided velocity is
-    <em>v</em><sub>+</sub>&nbsp;+&nbsp;&omega;&nbsp;<em>v</em><sub>&perp;</sub>, where <em>v</em><sub>&perp;</sub> is the component of
-    <em>v</em><sub>+</sub> orthogonal to <em>v</em><sub>&minus;</sub>. Translation and rotation are guided; the gripper follows <em>v</em><sub>+</sub>.
-  </p>
+  <p class="key">Attention selects the task-relevant objects; A2F zeroes exactly those visual tokens in the counterfactual branch.</p>
   <figure class="fig">
-    <img loading="lazy" src="static/images/attention_qualitative.png" alt="Initial state, attention map and final state for 'Stack yellow cube on red' from the exterior and wrist cameras; attention concentrates on the two cubes.">
-    <figcaption>
-      <strong>Attention selects the task-relevant objects.</strong> The score matrix (centre) is read from the vision-language
-      tower at a fixed layer, with attention sinks removed. Its top-ranked tokens are the ones A2F zeroes in the counterfactual branch.
-    </figcaption>
+    <img loading="lazy" src="static/images/attention_qualitative.png" alt="Initial state, attention map and final state for 'Stack yellow cube on red'; attention concentrates on the two cubes.">
   </figure>
+  <p class="key">Orange: counterfactual <em>v</em><sub>&minus;</sub>. Blue: baseline <em>v</em><sub>+</sub>. Green: the guided flow A2F executes.</p>
   <figure class="fig">
     <img loading="lazy" src="static/images/denoising_flow.png" alt="Three scenes at three stages of flow integration; orange is the counterfactual prediction, blue the baseline, green the guided prediction.">
-    <figcaption>
-      <strong>Three predictions during one action-chunk integration.</strong> Orange: counterfactual branch <em>v</em><sub>&minus;</sub>.
-      Blue: baseline <em>v</em><sub>+</sub>. Green: the guided prediction A2F executes, steered away from where the policy would act without looking.
-    </figcaption>
   </figure>
 </section>
 
@@ -109,28 +83,22 @@
 
 <section id="study" class="section">
   <h2>Why it works</h2>
-  <p>
-    A toy flow model is cued toward a <em>familiar</em> goal while noisy evidence points to the <em>current</em> goal. Withholding
-    the evidence exposes the familiar-goal bias; adding the contrast back corrects it while keeping the endpoint geometry valid.
-  </p>
+  <p class="key">Withholding the evidence exposes the familiar-goal bias (54.6% &rarr; 9.5% at the current goal); adding the contrast back corrects it (83.0%) while the endpoint geometry stays valid.</p>
   <figure class="fig">
-    <img loading="lazy" src="static/images/three_conditions.png" alt="Endpoint scatter plots for baseline (54.6% at the current goal), evidence removed (9.5%) and guided (83.0%); valid geometry stays at 87 to 89% in all three.">
-    <figcaption>
-      Pooled endpoints over three seeds. Baseline: 54.6% at the current goal. Evidence withheld: 9.5%. Guided (&omega;&nbsp;=&nbsp;1): 83.0%.
-      Against an oracle velocity, the contrast removes 95% of the squared velocity error early in the flow.
-    </figcaption>
+    <img loading="lazy" src="static/images/three_conditions.png" alt="Endpoint scatter plots for baseline, evidence removed and guided conditions.">
   </figure>
 </section>
 
 <hr>
 
 <section id="simulation" class="section">
-  <h2>Simulation results</h2>
+  <h2>Simulation</h2>
 
-  <h3 id="sim-robolab" class="sub">🧪 RoboLab-120: zero-shot task generalization</h3>
+  <h3 id="sim-robolab" class="sub">🧪 RoboLab-120</h3>
+  <p class="key">+6.2 points zero-shot, and the gain grows with difficulty (+8.8 on complex tasks).</p>
   <div class="table-wrap">
     <table class="res-table">
-      <caption><strong>Table 1.</strong> Success rate (%), 120 tasks &times; 10 rollouts, by difficulty. One fixed A2F configuration on all tasks. Best per column in <strong>bold</strong>.</caption>
+      <caption>Success rate (%). Best per column in <strong>bold</strong>.</caption>
       <thead>
         <tr><th scope="col">Method</th><th scope="col">Overall</th><th scope="col">Simple</th><th scope="col">Moderate</th><th scope="col">Complex</th></tr>
       </thead>
@@ -147,10 +115,11 @@
     </table>
   </div>
 
-  <h3 id="sim-libero" class="sub">↔️ LIBERO-PRO position swap: grounding vs. memorised layouts</h3>
+  <h3 id="sim-libero" class="sub">↔️ LIBERO-PRO position swap</h3>
+  <p class="key">The only test-time method that improves all four suites.</p>
   <div class="table-wrap">
     <table class="res-table">
-      <caption><strong>Table 2.</strong> Success rate (%) with frozen &pi;<sub>0.5</sub>, 500 trials per cell. All rows are test-time interventions on the same policy. A2F is the only method that improves all four suites. Best per column in <strong>bold</strong>.</caption>
+      <caption>Success rate (%) with frozen &pi;<sub>0.5</sub>. Best per column in <strong>bold</strong>.</caption>
       <thead>
         <tr><th scope="col">Method</th><th scope="col" style="text-align:left">Key technique</th><th scope="col">Spatial</th><th scope="col">Object</th><th scope="col">Goal</th><th scope="col">Long</th></tr>
       </thead>
@@ -171,28 +140,30 @@
 <hr>
 
 <section id="realworld" class="section">
-  <h2>Real-world results</h2>
+  <h2>Real world</h2>
 
   <h3 id="rw-tasks" class="sub">🦾 Tasks</h3>
+  <p class="key">Three tasks that each end in a fine alignment the policy must servo to.</p>
   <div class="task-grid">
     <figure class="task-card">
       <figcaption><span class="rw-num">1</span><span class="rw-title">Cable insertion</span></figcaption>
-      <img loading="lazy" src="static/images/task_cable_insertion.png" alt="Cable insertion: grasp the cable, align it with the cable manager, insert and release.">
+      <img loading="lazy" src="static/images/task_cable_insertion.png" alt="Cable insertion stages.">
     </figure>
     <figure class="task-card">
       <figcaption><span class="rw-num">2</span><span class="rw-title">Adapter relocation</span></figcaption>
-      <img loading="lazy" src="static/images/task_adapter_relocation.png" alt="Adapter relocation: remove the adapter from a source outlet, move it to the target outlet, fine-align and insert.">
+      <img loading="lazy" src="static/images/task_adapter_relocation.png" alt="Adapter relocation stages.">
     </figure>
     <figure class="task-card">
       <figcaption><span class="rw-num">3</span><span class="rw-title">Burette dispensing</span></figcaption>
-      <img loading="lazy" src="static/images/task_burette_dispensing.png" alt="Burette dispensing: approach the stopcock, open it, stop at the marked liquid level.">
+      <img loading="lazy" src="static/images/task_burette_dispensing.png" alt="Burette dispensing stages.">
     </figure>
   </div>
 
   <h3 id="rw-results" class="sub">📊 Success rates</h3>
+  <p class="key">A2F raises success on every evaluated task and backbone, applied at test time to the same frozen policy.</p>
   <div class="table-wrap">
     <table class="res-table">
-      <caption><strong>Table 3.</strong> Real-world success rate (%) by task and backbone. A2F is applied at test time to the same frozen backbone. &ldquo;&ndash;&rdquo; = not run.</caption>
+      <caption>Success rate (%). &ldquo;&ndash;&rdquo; = not run.</caption>
       <thead>
         <tr><th scope="col">Backbone</th><th scope="col" style="text-align:left">Method</th><th scope="col">Cable insertion</th><th scope="col">Adapter relocation</th></tr>
       </thead>
@@ -207,26 +178,20 @@
     </table>
   </div>
 
-  <h3 id="rw-servoing" class="sub">🎯 A2F keeps converging where the base policy stalls</h3>
+  <h3 id="rw-servoing" class="sub">🎯 Servoing</h3>
+  <p class="key">A2F keeps converging into the expert band where &pi;<sub>0.5</sub> plateaus in position and drifts in orientation.</p>
   <figure class="fig">
-    <img loading="lazy" src="static/images/realworld_servoing_error.png" alt="Position and orientation error over time for cable-insertion rollouts: the base policy plateaus in position and drifts in orientation, while A2F converges into the expert band on both.">
-    <figcaption>
-      Cable-insertion rollouts with &pi;<sub>0.5</sub>: end-effector position (a) and orientation (b) error relative to the expert
-      final pose. Green band: spread of the expert demos. (&ldquo;Counterfactual Evidence Guidance&rdquo; in the legend is an earlier name for A2F.)
-    </figcaption>
+    <img loading="lazy" src="static/images/realworld_servoing_error.png" alt="Position and orientation error over time for cable-insertion rollouts.">
   </figure>
 </section>
 
 <hr>
 
 <section id="analysis" class="section">
-  <h2>Analysis: the words find the evidence first</h2>
+  <h2>Analysis</h2>
+  <p class="key">The instruction words locate the evidence from layer 3; the action expert only catches up at layers 11&ndash;13. A2F reads layer 12, where the two meet.</p>
   <figure class="fig fig-narrow">
-    <img loading="lazy" src="static/images/attention_layer_gap.png" alt="Attention mass and pointing accuracy on the task's objects by PaliGemma layer: the instruction words (orange) locate the evidence from layer 3, the action expert (blue) only at layers 11 to 13.">
-    <figcaption>
-      On 56 &pi;<sub>0.5</sub> RoboLab rollouts, the instruction words&rsquo; attention sits on the task objects from layer 3; the
-      action expert&rsquo;s catches up only at layers 11&ndash;13. A2F reads layer 12 (vertical line), where the two meet.
-    </figcaption>
+    <img loading="lazy" src="static/images/attention_layer_gap.png" alt="Attention mass and pointing accuracy on the task objects by PaliGemma layer.">
   </figure>
 </section>
 
