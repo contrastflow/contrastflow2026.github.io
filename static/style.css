@@ -910,3 +910,7 @@ hr {
 .res-table tr.group td { text-align: center !important; font-weight: 700; color: var(--muted); background: var(--surface); padding-top: 9px; padding-bottom: 9px; }
 .res-table tr.group:hover { background: var(--surface); }
 .abstract { font-size: 16px; line-height: 1.65; color: var(--fg); margin: 10px 0 18px; }
+.res-table-dense { font-size: 12.5px; }
+.res-table-dense th, .res-table-dense td { padding: 6px 3px; }
+.res-table-dense thead th { font-size: 12px; }
+.res-table .pm { color: var(--muted); font-weight: 400; font-size: 11px; }
