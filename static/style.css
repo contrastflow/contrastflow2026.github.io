@@ -905,3 +905,8 @@ hr {
 /* One-line key point above each figure or table */
 .key { font-size: 17px; font-weight: 600; color: var(--fg); margin: 14px 0 6px; line-height: 1.5; }
 .fig { margin-top: 8px; }
+
+/* Group label row spanning a results table (e.g. the backbone a block of rows uses). */
+.res-table tr.group td { text-align: center !important; font-weight: 700; color: var(--muted); background: var(--surface); padding-top: 9px; padding-bottom: 9px; }
+.res-table tr.group:hover { background: var(--surface); }
+.abstract { font-size: 16px; line-height: 1.65; color: var(--fg); margin: 10px 0 18px; }

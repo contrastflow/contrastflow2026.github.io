@@ -1,6 +1,6 @@
-# A2F project page
+# ContrastFlow project page
 
-Project website for **Grounding Generalist Policies via Attention-Guided Action Flows (A2F)**.
+Project website for **Improving Generalist Robot Policies via Attention-Contrastive Guidance (ContrastFlow)**.
 Static HTML, no build step. The layout is adapted from the
 [Anchor-Align project page](https://github.com/anchoralignvla/anchoralignvla.github.io).
 
@@ -19,7 +19,7 @@ Opening `index.html` directly from the file system also works, since all assets 
 
 | Path | What it is |
 | --- | --- |
-| `index.html` | The page: overview, method, controlled study, simulation and real-world results, analysis, BibTeX |
+| `index.html` | The page: overview and abstract, method, simulation and real-world results, analysis, controlled study, BibTeX |
 | `static/style.css`, `static/script.js` | Styles and the side-navigation script (from the template, trimmed) |
 | `static/images/` | PNG renders of the paper's figures, produced by `scripts/render_figures.sh` |
 | `paper/` | Git submodule: the paper's LaTeX source and figures (`adipotnis/nsf_access_robowarp`) |
@@ -40,4 +40,4 @@ The rendered PNGs are committed, so the site displays without the submodule or t
 
 - Author list, affiliations and links in the hero block of `index.html` (search for `TODO(authors)`).
 - Paper and code buttons (currently disabled) and the BibTeX entry.
-- The paper's abstract is still empty, so the overview text is condensed from the introduction.
+- The paper's LaTeX still calls the method AVEC-Flow and some figures (real-world tasks, latency plot) still say A2F; the site uses the name ContrastFlow.
