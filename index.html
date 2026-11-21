@@ -34,6 +34,7 @@
   <a href="#realworld" class="top">Real World</a>
   <div class="sub-links">
     <a class="sub" href="#rw-tasks">&middot; 🦾 Tasks</a>
+    <a class="sub" href="#rw-videos">&middot; Cable insertion videos</a>
     <a class="sub" href="#rw-results">&middot; 📊 Success rates</a>
     <a class="sub" href="#rw-backbones">&middot; 🧩 Other policies</a>
     <a class="sub" href="#rw-attention">&middot; 👁️ Attention</a>
@@ -171,6 +172,35 @@
   <figure class="fig">
     <img loading="lazy" src="static/images/realworld_tasks.png" alt="Top: setups and gripper trajectories for the four tasks. Bottom: final alignment of the base policy (red) and ContrastFlow (green), with the final liquid level in Titration.">
   </figure>
+
+  <div id="rw-videos" class="real-clips">
+  <h3 class="sub">Cable insertion videos</h3>
+  <p>Full real-world recordings across four configurations.</p>
+  <h4 class="real-config">Configuration 2</h4>
+  <div class="real-video-pair"><article class="real-clip">
+  <div class="real-clip-heading"><h4>Baseline</h4><span class="real-result failure">Failure</span></div>
+  <video controls playsinline preload="none" poster="static/videos/baseline_fail_config2.jpg" aria-label="Cable insertion, configuration 2, Baseline · Failure"><source src="static/videos/baseline_fail_config2.mp4" type="video/mp4">Your browser does not support this video. <a href="static/videos/baseline_fail_config2.mp4">Download MP4</a>.</video>
+  <div class="real-clip-details"><span class="real-clip-name">baseline_fail_config2.mp4</span><a href="static/videos/baseline_fail_config2.mp4" download>Download MP4</a></div>
+</article><article class="real-clip">
+  <div class="real-clip-heading"><h4>ContrastFlow</h4><span class="real-result success">Success</span></div>
+  <video controls playsinline preload="none" poster="static/videos/contrastflow_success_config2.jpg" aria-label="Cable insertion, configuration 2, ContrastFlow · Success"><source src="static/videos/contrastflow_success_config2.mp4" type="video/mp4">Your browser does not support this video. <a href="static/videos/contrastflow_success_config2.mp4">Download MP4</a>.</video>
+  <div class="real-clip-details"><span class="real-clip-name">contrastflow_success_config2.mp4</span><a href="static/videos/contrastflow_success_config2.mp4" download>Download MP4</a></div>
+</article></div>
+  <div class="real-video-grid"><div><h4 class="real-config">Configuration 1</h4><article class="real-clip">
+  <div class="real-clip-heading"><h4>ContrastFlow</h4><span class="real-result success">Success</span></div>
+  <video controls playsinline preload="none" poster="static/videos/contrastflow_success_config1.jpg" aria-label="Cable insertion, configuration 1, ContrastFlow · Success"><source src="static/videos/contrastflow_success_config1.mp4" type="video/mp4">Your browser does not support this video. <a href="static/videos/contrastflow_success_config1.mp4">Download MP4</a>.</video>
+  <div class="real-clip-details"><span class="real-clip-name">contrastflow_success_config1.mp4</span><a href="static/videos/contrastflow_success_config1.mp4" download>Download MP4</a></div>
+</article></div><div><h4 class="real-config">Configuration 3</h4><article class="real-clip">
+  <div class="real-clip-heading"><h4>ContrastFlow</h4><span class="real-result success">Success</span></div>
+  <video controls playsinline preload="none" poster="static/videos/contrastflow_success_config3.jpg" aria-label="Cable insertion, configuration 3, ContrastFlow · Success"><source src="static/videos/contrastflow_success_config3.mp4" type="video/mp4">Your browser does not support this video. <a href="static/videos/contrastflow_success_config3.mp4">Download MP4</a>.</video>
+  <div class="real-clip-details"><span class="real-clip-name">contrastflow_success_config3.mp4</span><a href="static/videos/contrastflow_success_config3.mp4" download>Download MP4</a></div>
+</article></div><div><h4 class="real-config">Configuration 4</h4><article class="real-clip">
+  <div class="real-clip-heading"><h4>Baseline</h4><span class="real-result failure">Failure</span></div>
+  <video controls playsinline preload="none" poster="static/videos/baseline_fail_config4.jpg" aria-label="Cable insertion, configuration 4, Baseline · Failure"><source src="static/videos/baseline_fail_config4.mp4" type="video/mp4">Your browser does not support this video. <a href="static/videos/baseline_fail_config4.mp4">Download MP4</a>.</video>
+  <div class="real-clip-details"><span class="real-clip-name">baseline_fail_config4.mp4</span><a href="static/videos/baseline_fail_config4.mp4" download>Download MP4</a></div>
+</article></div></div>
+  <p class="real-video-note">Configuration and outcome labels follow the supplied filenames. Each video plays independently.</p>
+  </div>
 
   <h3 id="rw-results" class="sub">📊 Success rates</h3>
   <p class="key">ContrastFlow raises &pi;<sub>0.5</sub> from 12&ndash;25% to 50&ndash;75% on every task, and from 0% to 70% when the cable manager is moved to an unseen position.</p>
