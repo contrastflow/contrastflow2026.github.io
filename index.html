@@ -21,7 +21,7 @@
 <aside class="sidenav" id="sidenav" aria-label="Section navigation">
   <div class="sidenav-body">
   <div class="sidenav-title">ContrastFlow</div>
-  <a href="#overview">Overview</a>
+  <a href="#overview">Abstract</a>
   <a href="#method">Method</a>
   <div class="sidenav-cat">Results</div>
   <a href="#simulation" class="top">Simulation</a>
@@ -42,28 +42,22 @@
     <a class="sub" href="#rw-servoing">&middot; 🎯 Servoing</a>
   </div>
   <a href="#rollouts">More rollouts</a>
-  <a href="#bibtex">BibTeX</a>
+
   </div>
 </aside>
 
 <header class="hero">
 <div class="hero-inner">
   <h1 class="title">Improving Generalist Policies via <br>Contrastive Flow at Test-Time</h1>
-  <!-- TODO(authors): replace with the real author list and affiliations. -->
-  <p class="authors">Anonymous authors</p>
-  <p class="hero-btns">
-    <span class="btn btn-disabled">📄 Paper (coming soon)</span>
-    <span class="btn btn-disabled">💻 Code (coming soon)</span>
-    <a class="btn" href="#bibtex">📚 BibTeX</a>
-  </p>
+
 </div>
 </header>
 
 <hr>
 
 <section id="overview" class="section">
-  <h2>ContrastFlow</h2>
-  <p class="key">A generalist policy already localizes the action-relevant visual regions, yet its actions stay under-conditioned on them. ContrastFlow masks the attended tokens to get a negative reference from the policy itself and amplifies the contrast during flow integration. No additional training, no auxiliary models.</p>
+  <h2>Abstract</h2>
+
   <figure class="fig">
     <img src="static/images/method_overview.png" alt="With the cable manager at an unseen position, attention localizes it, but the predicted velocity v (blue) points to the memorized position. With the attended tokens masked, v- (red) deviates further. Amplifying the contrast (purple) gives a guided velocity (green) that reaches the cable manager.">
   </figure>
@@ -74,14 +68,14 @@
 
 <section id="method" class="section">
   <h2>Method</h2>
-  <p class="key">The policy&rsquo;s text-to-vision attention tracks the current subgoal: the object to pick during approach, the destination during transport. Because the mask is recomputed at every replan, the negative reference follows the subgoal.</p>
+
   <figure class="fig">
     <img loading="lazy" src="static/images/robolab_onion_subgoal.png" alt="'Put the onion on the plate': attention lies on the onion during approach and on the plate during transport. The base policy grasps the pumpkin; ContrastFlow grasps the onion and completes the task.">
   </figure>
-  <p>The same frozen policy predicts the action velocity twice at each flow step: <em>v</em><sub>+</sub> from the full observation and <em>v</em><sub>&minus;</sub> with the top-&rho; attended visual tokens zeroed. The guided velocity is <em>v</em><sub>+</sub> + &omega;&thinsp;(<em>v</em><sub>+</sub> &minus; <em>v</em><sub>&minus;</sub>). The instruction stays in both predictions, so ContrastFlow is complementary to classifier-free guidance on the instruction. Attention sinks are removed before ranking tokens.</p>
+
   <div class="table-wrap">
-    <table class="res-table res-table-compact" style="max-width:520px">
-      <caption>Attention of the base &pi;<sub>0.5</sub> on RoboLab-120, relative to a no-task caption naming the same objects.</caption>
+    <table class="res-table res-table-compact" style="max-width:520px" aria-label="Attention of the base π 0.5 on RoboLab-120, relative to a no-task caption naming the same objects.">
+
       <thead><tr><th scope="col">Attention on</th><th scope="col">Approach</th><th scope="col">Transport</th></tr></thead>
       <tbody>
         <tr><td>No task (reference)</td><td>1.00</td><td>1.00</td></tr>
@@ -99,10 +93,10 @@
   <h2>Simulation</h2>
 
   <h3 id="sim-table" class="sub">🧪 RoboLab-120 &amp; LIBERO-PRO</h3>
-  <p class="key">ContrastFlow improves &pi;<sub>0.5</sub> and Cosmos3 at every difficulty level and on every position-swap suite. The RoboLab gain grows with difficulty, from +4.9 on simple to +11.8 on complex tasks.</p>
+
   <div class="table-wrap">
-    <table class="res-table res-table-compact">
-      <caption>Success rate (%). &Delta; is the gain in percentage points over the base policy. <sup>&star;</sup>Additional training.</caption>
+    <table class="res-table res-table-compact" aria-label="Success rate (%). Δ is the gain in percentage points over the base policy. ☆ Additional training.">
+
       <thead>
         <tr><th scope="col" rowspan="2">Method</th><th scope="col" rowspan="2" style="text-align:left">Key technique</th><th scope="colgroup" colspan="4" class="grp">RoboLab-120</th><th scope="colgroup" colspan="5" class="grp">LIBERO-PRO</th></tr>
         <tr><th scope="col">Simple</th><th scope="col">Moderate</th><th scope="col">Complex</th><th scope="col">Overall</th><th scope="col">Spatial</th><th scope="col">Object</th><th scope="col">Goal</th><th scope="col">Long</th><th scope="col">Overall</th></tr>
@@ -123,16 +117,15 @@
       </tbody>
     </table>
   </div>
-  <p>RoboLab-120 runs policies trained on real-world data in a high-fidelity simulation, so every scene and object layout is new; one fixed ContrastFlow configuration serves all 120 tasks (10 episodes each). The released Cosmos3 sampler already applies classifier-free guidance to the instruction, and ContrastFlow still improves it at every difficulty level.</p>
 
   <h3 id="sim-swap" class="sub">↔️ LIBERO-PRO position swap</h3>
-  <p class="key">After the plate and ramekin swap positions, the base policy returns the bowl to the plate&rsquo;s training location; ContrastFlow follows the attention to the plate&rsquo;s new location.</p>
+
   <figure class="fig">
     <img loading="lazy" src="static/images/liberopro_rollouts.png" alt="LIBERO-PRO position swap: base (orange) and guided (green) gripper trajectories; attention shifts from the bowl to the plate.">
   </figure>
 
   <h3 id="sim-sensitivity" class="sub">🎚️ Guidance strength and masking ratio</h3>
-  <p class="key">ContrastFlow improves over the base policy at every setting tested, and stays near its best across a wide range of &omega; and &rho;.</p>
+
   <figure class="fig fig-narrow">
     <img loading="lazy" src="static/images/sensitivity.png" alt="Success on a 22-task LIBERO-PRO subset as a function of guidance strength omega and masking ratio rho.">
   </figure>
@@ -142,14 +135,14 @@
 
 <section id="actions" class="section">
   <h2>Effect on action generation</h2>
-  <p class="key">ContrastFlow shifts the action plans toward the target and concentrates them around it: across all 120 RoboLab tasks it reduces the variance of the planned fingertip endpoints by about 49% and their squared bias by about 9%.</p>
+
   <figure class="fig">
     <img loading="lazy" src="static/images/denoising_study.png" alt="'Pick up the yellow cube': during flow generation, guided plans (magenta) move toward the yellow block with less spread than base (cyan) and masked (red) predictions. Right: success over 32 noise initialisations, 25.6% base vs. 31.0% ContrastFlow.">
   </figure>
-  <p class="key">Lower bias and lower variance each raise success, and ContrastFlow, which lowers both, is highest.</p>
+
   <div class="table-wrap">
-    <table class="res-table res-table-compact" style="max-width:520px">
-      <caption>RoboLab-120 success (%) when completed plans are re-centred to separate the two effects.</caption>
+    <table class="res-table res-table-compact" style="max-width:520px" aria-label="RoboLab-120 success (%) when completed plans are re-centred to separate the two effects.">
+
       <thead><tr><th scope="col">Method</th><th scope="col">Success</th></tr></thead>
       <tbody>
         <tr><td>&pi;<sub>0.5</sub></td><td>27.1</td></tr>
@@ -159,7 +152,7 @@
       </tbody>
     </table>
   </div>
-  <p>Why the variance falls: the full and masked predictions vary across sampled plans in nearly the same direction (median cosine 0.94 halfway through generation), but the masked one responds about 12% more strongly to the noise. Subtracting it removes part of the shared variation and pulls samples toward their center at each step.</p>
+
 </section>
 
 <hr>
@@ -168,45 +161,45 @@
   <h2>Real world</h2>
 
   <h3 id="rw-tasks" class="sub">🦾 Tasks</h3>
-  <p class="key">Four tasks on a 7-DoF xArm7, each ending in fine closed-loop alignment: Cable Insertion, Adapter Relocation, Centrifuge Loading and Titration.</p>
+
   <figure class="fig">
     <img loading="lazy" src="static/images/realworld_tasks.png" alt="Top: setups and gripper trajectories for the four tasks. Bottom: final alignment of the base policy (red) and ContrastFlow (green), with the final liquid level in Titration.">
   </figure>
 
   <div id="rw-videos" class="real-clips">
   <h3 class="sub">Cable insertion videos</h3>
-  <p>Full real-world recordings across four configurations.</p>
+
   <h4 class="real-config">Configuration 2</h4>
   <div class="real-video-pair"><article class="real-clip">
-  <div class="real-clip-heading"><h4>Baseline</h4><span class="real-result failure">Failure</span></div>
-  <video controls playsinline preload="none" poster="static/videos/baseline_fail_config2.jpg" aria-label="Cable insertion, configuration 2, Baseline · Failure"><source src="static/videos/baseline_fail_config2.mp4" type="video/mp4">Your browser does not support this video. <a href="static/videos/baseline_fail_config2.mp4">Download MP4</a>.</video>
-  <div class="real-clip-details"><span class="real-clip-name">baseline_fail_config2.mp4</span><a href="static/videos/baseline_fail_config2.mp4" download>Download MP4</a></div>
+  <div class="real-clip-heading"><h4>Baseline</h4></div>
+  <video controls playsinline preload="none" poster="static/videos/baseline_fail_config2.jpg" aria-label="Cable insertion, configuration 2, Baseline · Failure"><source src="static/videos/baseline_fail_config2.mp4" type="video/mp4"></video>
+
 </article><article class="real-clip">
-  <div class="real-clip-heading"><h4>ContrastFlow</h4><span class="real-result success">Success</span></div>
-  <video controls playsinline preload="none" poster="static/videos/contrastflow_success_config2.jpg" aria-label="Cable insertion, configuration 2, ContrastFlow · Success"><source src="static/videos/contrastflow_success_config2.mp4" type="video/mp4">Your browser does not support this video. <a href="static/videos/contrastflow_success_config2.mp4">Download MP4</a>.</video>
-  <div class="real-clip-details"><span class="real-clip-name">contrastflow_success_config2.mp4</span><a href="static/videos/contrastflow_success_config2.mp4" download>Download MP4</a></div>
+  <div class="real-clip-heading"><h4>ContrastFlow</h4></div>
+  <video controls playsinline preload="none" poster="static/videos/contrastflow_success_config2.jpg" aria-label="Cable insertion, configuration 2, ContrastFlow · Success"><source src="static/videos/contrastflow_success_config2.mp4" type="video/mp4"></video>
+
 </article></div>
   <div class="real-video-grid"><div><h4 class="real-config">Configuration 1</h4><article class="real-clip">
-  <div class="real-clip-heading"><h4>ContrastFlow</h4><span class="real-result success">Success</span></div>
-  <video controls playsinline preload="none" poster="static/videos/contrastflow_success_config1.jpg" aria-label="Cable insertion, configuration 1, ContrastFlow · Success"><source src="static/videos/contrastflow_success_config1.mp4" type="video/mp4">Your browser does not support this video. <a href="static/videos/contrastflow_success_config1.mp4">Download MP4</a>.</video>
-  <div class="real-clip-details"><span class="real-clip-name">contrastflow_success_config1.mp4</span><a href="static/videos/contrastflow_success_config1.mp4" download>Download MP4</a></div>
+  <div class="real-clip-heading"><h4>ContrastFlow</h4></div>
+  <video controls playsinline preload="none" poster="static/videos/contrastflow_success_config1.jpg" aria-label="Cable insertion, configuration 1, ContrastFlow · Success"><source src="static/videos/contrastflow_success_config1.mp4" type="video/mp4"></video>
+
 </article></div><div><h4 class="real-config">Configuration 3</h4><article class="real-clip">
-  <div class="real-clip-heading"><h4>ContrastFlow</h4><span class="real-result success">Success</span></div>
-  <video controls playsinline preload="none" poster="static/videos/contrastflow_success_config3.jpg" aria-label="Cable insertion, configuration 3, ContrastFlow · Success"><source src="static/videos/contrastflow_success_config3.mp4" type="video/mp4">Your browser does not support this video. <a href="static/videos/contrastflow_success_config3.mp4">Download MP4</a>.</video>
-  <div class="real-clip-details"><span class="real-clip-name">contrastflow_success_config3.mp4</span><a href="static/videos/contrastflow_success_config3.mp4" download>Download MP4</a></div>
+  <div class="real-clip-heading"><h4>ContrastFlow</h4></div>
+  <video controls playsinline preload="none" poster="static/videos/contrastflow_success_config3.jpg" aria-label="Cable insertion, configuration 3, ContrastFlow · Success"><source src="static/videos/contrastflow_success_config3.mp4" type="video/mp4"></video>
+
 </article></div><div><h4 class="real-config">Configuration 4</h4><article class="real-clip">
-  <div class="real-clip-heading"><h4>Baseline</h4><span class="real-result failure">Failure</span></div>
-  <video controls playsinline preload="none" poster="static/videos/baseline_fail_config4.jpg" aria-label="Cable insertion, configuration 4, Baseline · Failure"><source src="static/videos/baseline_fail_config4.mp4" type="video/mp4">Your browser does not support this video. <a href="static/videos/baseline_fail_config4.mp4">Download MP4</a>.</video>
-  <div class="real-clip-details"><span class="real-clip-name">baseline_fail_config4.mp4</span><a href="static/videos/baseline_fail_config4.mp4" download>Download MP4</a></div>
+  <div class="real-clip-heading"><h4>Baseline</h4></div>
+  <video controls playsinline preload="none" poster="static/videos/baseline_fail_config4.jpg" aria-label="Cable insertion, configuration 4, Baseline · Failure"><source src="static/videos/baseline_fail_config4.mp4" type="video/mp4"></video>
+
 </article></div></div>
-  <p class="real-video-note">Configuration and outcome labels follow the supplied filenames. Each video plays independently.</p>
+
   </div>
 
   <h3 id="rw-results" class="sub">📊 Success rates</h3>
-  <p class="key">ContrastFlow raises &pi;<sub>0.5</sub> from 12&ndash;25% to 50&ndash;75% on every task, and from 0% to 70% when the cable manager is moved to an unseen position.</p>
+
   <div class="table-wrap">
-    <table class="res-table res-table-compact res-table-dense">
-      <caption>Real-world success rate (%) with &pi;<sub>0.5</sub>.</caption>
+    <table class="res-table res-table-compact res-table-dense" aria-label="Real-world success rate (%) with π 0.5 .">
+
       <thead>
         <tr><th scope="col" rowspan="2">Method</th><th scope="colgroup" colspan="4" class="grp">Cable Insertion</th><th scope="colgroup" colspan="4" class="grp">Adapter Relocation</th><th scope="colgroup" colspan="4" class="grp">Centrifuge Loading</th><th scope="colgroup" colspan="4" class="grp">Titration</th></tr>
         <tr><th scope="col">Small rotation</th><th scope="col">Large rotation</th><th scope="col">Target shift</th><th scope="col">Overall</th><th scope="col">Short transfer</th><th scope="col">Medium transfer</th><th scope="col">Long transfer</th><th scope="col">Overall</th><th scope="col">Top slot</th><th scope="col">Middle slot</th><th scope="col">Bottom slot</th><th scope="col">Overall</th><th scope="col">Default</th><th scope="col">Height shift</th><th scope="col">Stand shift</th><th scope="col">Overall</th></tr>
@@ -221,10 +214,10 @@
   </div>
 
   <h3 id="rw-backbones" class="sub">🧩 Other policies and architectures</h3>
-  <p class="key">On three more policies with different architectures, ContrastFlow improves both tasks by 20&ndash;43 points.</p>
+
   <div class="table-wrap">
-    <table class="res-table res-table-compact" style="max-width:720px">
-      <caption>Overall real-world success rate (%).</caption>
+    <table class="res-table res-table-compact" style="max-width:720px" aria-label="Overall real-world success rate (%).">
+
       <thead><tr><th scope="col">Method</th><th scope="col">Architecture</th><th scope="col">Cable Insertion</th><th scope="col">Adapter Relocation</th></tr></thead>
       <tbody>
         <tr><td>Qwen-GR00T</td><td>VLM+DiT</td><td>17.1&nbsp;&plusmn;&nbsp;6.4</td><td>0.0&nbsp;&plusmn;&nbsp;0.0</td></tr>
@@ -238,19 +231,19 @@
   </div>
 
   <h3 id="rw-attention" class="sub">👁️ Attention on the real tasks</h3>
-  <p class="key">The frozen &pi;<sub>0.5</sub>&rsquo;s text-to-vision attention lands on what each task hinges on, in both the stationary and the wrist camera. These are the tokens ContrastFlow masks.</p>
+
   <figure class="fig">
     <img loading="lazy" src="static/images/realworld_attention.png" alt="Text-to-vision attention on the four real-world tasks from the stationary (top) and wrist (bottom) cameras.">
   </figure>
 
   <h3 id="rw-latency" class="sub">⏱️ Success vs. latency</h3>
-  <p class="key">ContrastFlow is the most successful method at a latency close to the base &pi;<sub>0.5</sub>; TAG and PCD are slower, PCD by several times. Both predictions run in one batched pass, and a custom Triton kernel reads the attention so the rest of the forward pass keeps FlashAttention.</p>
+
   <figure class="fig fig-narrow">
     <img loading="lazy" src="static/images/efficiency.png" alt="Task success against inference latency (log scale) on the four real-world tasks; each cluster is one method.">
   </figure>
 
   <h3 id="rw-servoing" class="sub">🎯 Servoing</h3>
-  <p class="key">During Cable Insertion both policies bring the position error to the edge of the expert range, but &pi;<sub>0.5</sub> rotates away from the demonstrated pose while ContrastFlow converges into the expert range.</p>
+
   <figure class="fig">
     <img loading="lazy" src="static/images/realworld_servoing_error.png" alt="End-effector position and orientation error relative to the expert final pose over cable-insertion rollouts.">
   </figure>
@@ -260,28 +253,11 @@
 
 <section id="rollouts" class="section">
   <h2>More RoboLab rollouts</h2>
-  <p class="key">From the same initial state, ContrastFlow completes both tasks while the base policy times out holding the wrong object. Attention peaks on the object to pick before the grasp and on the destination after it.</p>
+
   <figure class="fig">
     <img loading="lazy" src="static/images/robolab_qualitative.png" alt="Two RoboLab tasks: the base policy holds the yellow block or the apple; ContrastFlow completes both, with attention on the object then the destination.">
   </figure>
 </section>
-
-<hr>
-
-<section id="bibtex" class="section">
-  <h2>BibTeX</h2>
-  <!-- TODO(authors): fill in the author list and the arXiv identifier once public. -->
-<pre class="bib">@article{contrastflow2026,
-  title   = {Improving Generalist Policies via Contrastive Flow at Test-Time},
-  author  = {Anonymous},
-  journal = {Under review},
-  year    = {2026}
-}</pre>
-</section>
-
-<footer class="foot">
-  <p>ContrastFlow &middot; 2026</p>
-</footer>
 
 <script src="static/script.js"></script>
 </body>
