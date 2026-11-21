@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="static/style.css?v=focus-v4">
+<link rel="stylesheet" href="static/style.css?v=focus-v5">
 </head>
 <body>
 
@@ -28,6 +28,7 @@
   <div class="sub-links">
     <a class="sub" href="#sim-object-swap">&middot; Object-position swap</a>
     <a class="sub" href="#sim-goal-swap">&middot; Goal-position swap</a>
+    <a class="sub" href="#sim-spatial-recovery">&middot; Placement recovery</a>
     <a class="sub" href="#sim-table">&middot; 🧪 RoboLab-120 &amp; LIBERO-PRO</a>
     <a class="sub" href="#sim-swap">&middot; ↔️ Position swap</a>
     <a class="sub" href="#sim-sensitivity">&middot; 🎚️ Hyperparameters</a>
@@ -95,18 +96,25 @@
 
   <h3 id="sim-object-swap" class="sub">LIBERO-PRO object-position swap</h3>
   <figure class="fig simulation-video">
-    <video controls playsinline preload="none" poster="static/videos/libero_object_swap_06_overlays.jpg?v=focus-v4" aria-label="Sequential training demonstration, π0.5, and ContrastFlow. Speech bubbles above the zoom identify the wrong-object and correct-object grasps; attention registers are removed.">
-      <source src="static/videos/libero_object_swap_06_overlays.mp4?v=focus-v4" type="video/mp4">
+    <video controls playsinline preload="none" poster="static/videos/libero_object_swap_06_overlays.jpg?v=focus-v5" aria-label="Sequential training demonstration, π0.5, and ContrastFlow. Speech bubbles above the zoom identify the wrong-object and correct-object grasps; attention registers are removed.">
+      <source src="static/videos/libero_object_swap_06_overlays.mp4?v=focus-v5" type="video/mp4">
     </video>
     <figcaption>π0.5 favors the training object position; ContrastFlow generalizes to new, out-of-distribution positions.</figcaption>
   </figure>
 
   <h3 id="sim-goal-swap" class="sub">LIBERO-PRO goal-position swap</h3>
   <figure class="fig simulation-video">
-    <video controls playsinline preload="none" poster="static/videos/libero_goal_swap_08_overlays.jpg?v=focus-v4" aria-label="High-resolution training demonstration, π0.5, and ContrastFlow played sequentially. Bubbles above the zoom identify π0.5 reaching toward the old plate position and ContrastFlow placing the bowl on the relocated plate. Attention registers are removed.">
-      <source src="static/videos/libero_goal_swap_08_overlays.mp4?v=focus-v4" type="video/mp4">
+    <video controls playsinline preload="none" poster="static/videos/libero_goal_swap_08_overlays.jpg?v=focus-v5" aria-label="High-resolution training demonstration, π0.5, and ContrastFlow played sequentially. Bubbles above the zoom identify π0.5 reaching toward the old plate position and ContrastFlow placing the bowl on the relocated plate. Attention registers are removed.">
+      <source src="static/videos/libero_goal_swap_08_overlays.mp4?v=focus-v5" type="video/mp4">
     </video>
     <figcaption>π0.5 carries the bowl toward the original plate position; ContrastFlow places it on the relocated plate.</figcaption>
+  </figure>
+
+  <h3 id="sim-spatial-recovery" class="sub">LIBERO-PRO placement recovery</h3>
+  <figure class="fig simulation-video">
+    <video controls playsinline preload="none" poster="static/videos/libero_spatial_swap_01_seed105.jpg?v=focus-v5" aria-label="LIBERO spatial swap task 01, noise seed 105. Full training, π0.5, and ContrastFlow episodes play sequentially. The bubble above the zoom describes recovery through guidance on the action chunk. Inactive views are gray, and the active view has a white border.">
+      <source src="static/videos/libero_spatial_swap_01_seed105.mp4?v=focus-v5" type="video/mp4">
+    </video>
   </figure>
 
   <h3 id="sim-table" class="sub">🧪 RoboLab-120 &amp; LIBERO-PRO</h3>
@@ -266,6 +274,6 @@
   </figure>
 </section>
 
-<script src="static/script.js?v=focus-v4"></script>
+<script src="static/script.js?v=focus-v5"></script>
 </body>
 </html>
