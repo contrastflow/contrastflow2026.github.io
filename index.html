@@ -27,6 +27,7 @@
   <a href="#simulation" class="top">Simulation</a>
   <div class="sub-links">
     <a class="sub" href="#sim-table">&middot; 🧪 RoboLab-120 &amp; LIBERO-PRO</a>
+    <a class="sub" href="#sim-object-swap">&middot; Object-position swap</a>
     <a class="sub" href="#sim-swap">&middot; ↔️ Position swap</a>
     <a class="sub" href="#sim-sensitivity">&middot; 🎚️ Hyperparameters</a>
   </div>
@@ -116,6 +117,14 @@
       </tbody>
     </table>
   </div>
+
+  <h3 id="sim-object-swap" class="sub">LIBERO-PRO object-position swap</h3>
+  <figure class="fig simulation-video">
+    <video controls playsinline preload="none" poster="static/videos/libero_object_swap_06_overlays.jpg" aria-label="Original demonstration, baseline, and ContrastFlow; equal-size attention views and a close-up of the baseline approaching the tomato-sauce can.">
+      <source src="static/videos/libero_object_swap_06_overlays.mp4" type="video/mp4">
+    </video>
+    <figcaption>The baseline favors the training object position; ContrastFlow generalizes to new, out-of-distribution positions.</figcaption>
+  </figure>
 
   <h3 id="sim-swap" class="sub">↔️ LIBERO-PRO position swap</h3>
 
