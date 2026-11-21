@@ -1,7 +1,22 @@
-// Lazy-attach <source> only when a video enters the viewport, and pause it again
-// when it leaves. The page currently has no videos; this is kept so rollout clips
-// can be dropped in later with <video class="vid" data-src="..."> as in the template.
+// Playback focus and section navigation.
 document.addEventListener("DOMContentLoaded", () => {
+  // Keep paused clips subdued and let only the selected clip play.
+  const allVideos = Array.from(document.querySelectorAll("video"));
+  const clearFocus = (video) => video.classList.remove("is-playing");
+  allVideos.forEach(video => {
+    video.addEventListener("play", () => {
+      allVideos.forEach(other => {
+        if (other !== video) {
+          other.pause();
+          clearFocus(other);
+        }
+      });
+      video.classList.add("is-playing");
+    });
+    ["pause", "ended", "error", "emptied"].forEach(event => {
+      video.addEventListener(event, () => clearFocus(video));
+    });
+  });
   const videos = document.querySelectorAll("video.vid[data-src]");
   const attach = (v) => {
     if (v.dataset.loaded) return;

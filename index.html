@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="static/style.css">
+<link rel="stylesheet" href="static/style.css?v=focus-v4">
 </head>
 <body>
 
@@ -26,9 +26,9 @@
   <div class="sidenav-cat">Results</div>
   <a href="#simulation" class="top">Simulation</a>
   <div class="sub-links">
-    <a class="sub" href="#sim-table">&middot; 🧪 RoboLab-120 &amp; LIBERO-PRO</a>
     <a class="sub" href="#sim-object-swap">&middot; Object-position swap</a>
     <a class="sub" href="#sim-goal-swap">&middot; Goal-position swap</a>
+    <a class="sub" href="#sim-table">&middot; 🧪 RoboLab-120 &amp; LIBERO-PRO</a>
     <a class="sub" href="#sim-swap">&middot; ↔️ Position swap</a>
     <a class="sub" href="#sim-sensitivity">&middot; 🎚️ Hyperparameters</a>
   </div>
@@ -93,6 +93,22 @@
 <section id="simulation" class="section">
   <h2>Simulation</h2>
 
+  <h3 id="sim-object-swap" class="sub">LIBERO-PRO object-position swap</h3>
+  <figure class="fig simulation-video">
+    <video controls playsinline preload="none" poster="static/videos/libero_object_swap_06_overlays.jpg?v=focus-v4" aria-label="Sequential training demonstration, π0.5, and ContrastFlow. Speech bubbles above the zoom identify the wrong-object and correct-object grasps; attention registers are removed.">
+      <source src="static/videos/libero_object_swap_06_overlays.mp4?v=focus-v4" type="video/mp4">
+    </video>
+    <figcaption>π0.5 favors the training object position; ContrastFlow generalizes to new, out-of-distribution positions.</figcaption>
+  </figure>
+
+  <h3 id="sim-goal-swap" class="sub">LIBERO-PRO goal-position swap</h3>
+  <figure class="fig simulation-video">
+    <video controls playsinline preload="none" poster="static/videos/libero_goal_swap_08_overlays.jpg?v=focus-v4" aria-label="High-resolution training demonstration, π0.5, and ContrastFlow played sequentially. Bubbles above the zoom identify π0.5 reaching toward the old plate position and ContrastFlow placing the bowl on the relocated plate. Attention registers are removed.">
+      <source src="static/videos/libero_goal_swap_08_overlays.mp4?v=focus-v4" type="video/mp4">
+    </video>
+    <figcaption>π0.5 carries the bowl toward the original plate position; ContrastFlow places it on the relocated plate.</figcaption>
+  </figure>
+
   <h3 id="sim-table" class="sub">🧪 RoboLab-120 &amp; LIBERO-PRO</h3>
 
   <div class="table-wrap">
@@ -118,22 +134,6 @@
       </tbody>
     </table>
   </div>
-
-  <h3 id="sim-object-swap" class="sub">LIBERO-PRO object-position swap</h3>
-  <figure class="fig simulation-video">
-    <video controls playsinline preload="none" poster="static/videos/libero_object_swap_06_overlays.jpg?v=native-hd-v3" aria-label="Sequential training demonstration, baseline, and ContrastFlow. Speech bubbles above the zoom identify the wrong-object and correct-object grasps; attention registers are removed.">
-      <source src="static/videos/libero_object_swap_06_overlays.mp4?v=native-hd-v3" type="video/mp4">
-    </video>
-    <figcaption>The baseline favors the training object position; ContrastFlow generalizes to new, out-of-distribution positions.</figcaption>
-  </figure>
-
-  <h3 id="sim-goal-swap" class="sub">LIBERO-PRO goal-position swap</h3>
-  <figure class="fig simulation-video">
-    <video controls playsinline preload="none" poster="static/videos/libero_goal_swap_08_overlays.jpg?v=native-hd-v3" aria-label="High-resolution training demonstration, baseline, and ContrastFlow played sequentially. Bubbles above the zoom identify the baseline reaching toward the old plate position and ContrastFlow placing the bowl on the relocated plate. Attention registers are removed.">
-      <source src="static/videos/libero_goal_swap_08_overlays.mp4?v=native-hd-v3" type="video/mp4">
-    </video>
-    <figcaption>The baseline carries the bowl toward the original plate position; ContrastFlow places it on the relocated plate.</figcaption>
-  </figure>
 
   <h3 id="sim-swap" class="sub">↔️ LIBERO-PRO position swap</h3>
 
@@ -188,8 +188,8 @@
 
   <h4 class="real-config">Configuration 2</h4>
   <div class="real-video-pair"><article class="real-clip">
-  <div class="real-clip-heading"><h4>Baseline</h4></div>
-  <video controls playsinline preload="none" poster="static/videos/baseline_fail_config2.jpg" aria-label="Cable insertion, configuration 2, Baseline · Failure"><source src="static/videos/baseline_fail_config2.mp4" type="video/mp4"></video>
+  <div class="real-clip-heading"><h4>π0.5</h4></div>
+  <video controls playsinline preload="none" poster="static/videos/baseline_fail_config2.jpg" aria-label="Cable insertion, configuration 2, π0.5 · Failure"><source src="static/videos/baseline_fail_config2.mp4" type="video/mp4"></video>
 
 </article><article class="real-clip">
   <div class="real-clip-heading"><h4>ContrastFlow</h4></div>
@@ -205,8 +205,8 @@
   <video controls playsinline preload="none" poster="static/videos/contrastflow_success_config3.jpg" aria-label="Cable insertion, configuration 3, ContrastFlow · Success"><source src="static/videos/contrastflow_success_config3.mp4" type="video/mp4"></video>
 
 </article></div><div><h4 class="real-config">Configuration 4</h4><article class="real-clip">
-  <div class="real-clip-heading"><h4>Baseline</h4></div>
-  <video controls playsinline preload="none" poster="static/videos/baseline_fail_config4.jpg" aria-label="Cable insertion, configuration 4, Baseline · Failure"><source src="static/videos/baseline_fail_config4.mp4" type="video/mp4"></video>
+  <div class="real-clip-heading"><h4>π0.5</h4></div>
+  <video controls playsinline preload="none" poster="static/videos/baseline_fail_config4.jpg" aria-label="Cable insertion, configuration 4, π0.5 · Failure"><source src="static/videos/baseline_fail_config4.mp4" type="video/mp4"></video>
 
 </article></div></div>
 
@@ -266,6 +266,6 @@
   </figure>
 </section>
 
-<script src="static/script.js"></script>
+<script src="static/script.js?v=focus-v4"></script>
 </body>
 </html>
