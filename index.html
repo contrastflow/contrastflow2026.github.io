@@ -32,10 +32,11 @@
   </div>
   <a href="#simulation" class="top">Simulation</a>
   <div class="sub-links">
-    <a class="sub" href="#sim-object-swap">&middot; Object-position swap</a>
-    <a class="sub" href="#sim-goal-swap">&middot; Goal-position swap</a>
+    <a class="sub" href="#sim-object-swap">&middot; Object relocation</a>
+    <a class="sub" href="#sim-goal-swap">&middot; Goal relocation</a>
     <a class="sub" href="#sim-spatial-recovery">&middot; Placement recovery</a>
-    <a class="sub" href="#sim-wine-plate">&middot; Wine bottle on plate</a>
+    <a class="sub" href="#sim-stove-swap">&middot; Scene rearrangement</a>
+    <a class="sub" href="#sim-wine-plate">&middot; Instruction change</a>
   </div>
 
 
@@ -91,19 +92,19 @@
         <a class="reel-card" href="#rw-adapter-videos" aria-label="Adapter relocation: view full comparisons">
           <video class="reel-video" muted loop playsinline preload="none" poster="static/videos/rw_adapter_cf_success_3to4.jpg" data-src="static/videos/rw_adapter_cf_success_3to4.mp4" aria-label="ContrastFlow: Adapter relocation" data-speed="2" autoplay></video>
         </a>
-        <a class="reel-card" href="#sim-object-swap" aria-label="LIBERO-PRO · Object swap: view full comparison">
+        <a class="reel-card" href="#sim-object-swap" aria-label="Finding the target after objects move: view full comparison">
           <video class="reel-video" muted loop playsinline preload="none" poster="static/videos/libero_object_swap_06_overlays_reel_clean.jpg" data-src="static/videos/libero_object_swap_06_overlays_reel_clean.mp4" aria-label="LIBERO-PRO · Object swap: ContrastFlow rollout" autoplay></video>
         </a>
-        <a class="reel-card" href="#sim-wine-plate" aria-label="Wine bottle on plate: view full comparison">
+        <a class="reel-card" href="#sim-wine-plate" aria-label="Following a new target-object instruction: view full comparison">
           <video class="reel-video" muted loop playsinline preload="none" poster="static/videos/libero_goal_task_08_diverse_sequential_reel_clean.jpg" data-src="static/videos/libero_goal_task_08_diverse_sequential_reel_clean.mp4" aria-label="ContrastFlow places the wine bottle on the plate" autoplay></video>
         </a>
-        <a class="reel-card" href="#sim-goal-swap" aria-label="LIBERO-PRO · Goal swap: view full comparison">
+        <a class="reel-card" href="#sim-goal-swap" aria-label="Following the relocated placement target: view full comparison">
           <video class="reel-video" muted loop playsinline preload="none" poster="static/videos/libero_goal_swap_08_overlays_reel_clean.jpg" data-src="static/videos/libero_goal_swap_08_overlays_reel_clean.mp4" aria-label="LIBERO-PRO · Goal swap: ContrastFlow rollout" autoplay></video>
         </a>
-        <a class="reel-card" href="#sim-stove-swap" aria-label="LIBERO-PRO · Bowl and stove swap: view full comparison">
+        <a class="reel-card" href="#sim-stove-swap" aria-label="Adapting to a rearranged scene: view full comparison">
           <video class="reel-video" muted loop playsinline preload="none" poster="static/videos/libero_goal_swap_01_seed102_reel_clean.jpg" data-src="static/videos/libero_goal_swap_01_seed102_reel_clean.mp4" aria-label="Bowl/bottle and stove/cabinet exchange positions: ContrastFlow rollout" autoplay></video>
         </a>
-        <a class="reel-card" href="#sim-spatial-recovery" aria-label="LIBERO-PRO · Placement recovery: view full comparison">
+        <a class="reel-card" href="#sim-spatial-recovery" aria-label="Correcting an incorrect placement trajectory: view full comparison">
           <video class="reel-video" muted loop playsinline preload="none" poster="static/videos/libero_spatial_swap_01_seed105_reel_clean.jpg" data-src="static/videos/libero_spatial_swap_01_seed105_reel_clean.mp4" aria-label="LIBERO-PRO · Placement recovery: ContrastFlow rollout" autoplay></video>
         </a>
       </div>
@@ -322,9 +323,9 @@
 <hr>
 
 <section id="simulation" class="section">
-  <h2>Simulation</h2>
+  <h2>Simulation: LIBERO-PRO</h2>
 
-  <h3 id="sim-object-swap" class="sub">LIBERO-PRO object-position swap</h3>
+  <h3 id="sim-object-swap" class="sub">Finding the target after objects move</h3>
   <p class="task-prompt"><strong>Task prompt:</strong> Pick the butter and place it in the basket.</p>
   <figure class="fig simulation-video">
     <video controls playsinline preload="none" poster="static/videos/libero_object_swap_06_overlays_marked.jpg?v=zoom-marks-v1" aria-label="Full training demonstration, π0.5, and ContrastFlow played sequentially with cleaned attention, camera zooms, and thicker solid action-chunk lines where available, with a red cross on the π0.5 zoom during the incorrect action and a green tick on the ContrastFlow zoom during the correct action." autoplay muted loop>
@@ -333,7 +334,7 @@
     <figcaption>π0.5 favors the training object position; ContrastFlow generalizes to new, out-of-distribution positions.</figcaption>
   </figure>
 
-  <h3 id="sim-goal-swap" class="sub">LIBERO-PRO goal-position swap</h3>
+  <h3 id="sim-goal-swap" class="sub">Following the relocated placement target</h3>
   <p class="task-prompt"><strong>Task prompt:</strong> Put the bowl on the plate.</p>
   <figure class="fig simulation-video">
     <video controls playsinline preload="none" poster="static/videos/libero_goal_swap_08_overlays_marked.jpg?v=zoom-marks-v1" aria-label="Full training demonstration, π0.5, and ContrastFlow played sequentially with cleaned attention, camera zooms, and thicker solid action-chunk lines where available, with a red cross on the π0.5 zoom during the incorrect action and a green tick on the ContrastFlow zoom during the correct action." autoplay muted loop>
@@ -342,7 +343,7 @@
     <figcaption>π0.5 carries the bowl toward the original plate position; ContrastFlow places it on the relocated plate.</figcaption>
   </figure>
 
-  <h3 id="sim-spatial-recovery" class="sub">LIBERO-PRO placement recovery</h3>
+  <h3 id="sim-spatial-recovery" class="sub">Correcting an incorrect placement trajectory</h3>
   <p class="task-prompt"><strong>Task prompt:</strong> Pick up the black bowl next to the ramekin and place it on the plate.</p>
   <figure class="fig simulation-video">
     <video controls playsinline preload="none" poster="static/videos/libero_spatial_swap_01_seed105_marked.jpg?v=zoom-marks-v1" aria-label="Full training demonstration, π0.5, and ContrastFlow played sequentially with cleaned attention, camera zooms, and thicker solid action-chunk lines where available, with a red cross on the π0.5 zoom during the incorrect action and a green tick on the ContrastFlow zoom during the correct action." autoplay muted loop>
@@ -350,7 +351,7 @@
     </video>
   </figure>
 
-  <h3 id="sim-stove-swap" class="sub">LIBERO-PRO bowl/bottle and stove/cabinet position swap</h3>
+  <h3 id="sim-stove-swap" class="sub">Adapting to a rearranged scene</h3>
   <p class="task-prompt"><strong>Task prompt:</strong> Put the bowl on the stove.</p>
   <figure class="fig simulation-video">
     <video controls playsinline preload="none" poster="static/videos/libero_goal_swap_01_seed102_marked.jpg?v=zoom-marks-v1" aria-label="Full training demonstration, π0.5, and ContrastFlow played sequentially with cleaned attention, camera zooms, and thicker solid action-chunk lines where available, with a red cross on the π0.5 zoom during the incorrect action and a green tick on the ContrastFlow zoom during the correct action." autoplay muted loop>
@@ -358,7 +359,7 @@
     </video>
   </figure>
 
-  <h3 id="sim-wine-plate" class="sub">LIBERO-PRO wine bottle on plate</h3>
+  <h3 id="sim-wine-plate" class="sub">Following a new target-object instruction</h3>
   <p class="task-prompt"><strong>Task prompt:</strong> Put the wine bottle on the plate.</p>
   <figure class="fig simulation-video">
     <video controls playsinline preload="none" poster="static/videos/libero_goal_task_08_diverse_sequential_marked.jpg?v=zoom-marks-v1" aria-label="Full training demonstration, π0.5, and ContrastFlow played sequentially with cleaned attention, camera zooms, and thicker solid action-chunk lines where available, with a red cross on the π0.5 zoom during the incorrect action and a green tick on the ContrastFlow zoom during the correct action." autoplay muted loop>
