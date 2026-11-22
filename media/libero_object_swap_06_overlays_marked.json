@@ -1,0 +1,85 @@
+{
+  "id": "libero_object_swap_06_overlays_marked",
+  "frames": 730,
+  "source_frames": 710,
+  "duration_seconds": 73.0,
+  "width": 2848,
+  "height": 2000,
+  "sha256": "55e1fbaef8e6fdddc83a8354e5c5c028f7edf7d95121bdc59ab8b76664b9ac0e",
+  "fully_decoded": true,
+  "text_bubbles": false,
+  "source_hashes": {
+    "baseline": "b0fe405ea327a16bc3f58d27aa6876bf95f3e70694d56bdc335c5f800e7373b6",
+    "emb-zero": "735c2185613c58c0b35d4ea08f267fea7f02cf3923a2eb4accaca522f77c2bfe"
+  },
+  "playback_order": [
+    {
+      "name": "training",
+      "start_frame": 0,
+      "frames": 169,
+      "start_seconds": 0.0,
+      "end_seconds": 16.9
+    },
+    {
+      "name": "baseline",
+      "start_frame": 169,
+      "frames": 351,
+      "start_seconds": 16.9,
+      "end_seconds": 52.0
+    },
+    {
+      "name": "contrastflow",
+      "start_frame": 520,
+      "frames": 190,
+      "start_seconds": 52.0,
+      "end_seconds": 71.0
+    },
+    {
+      "name": "outcome_hold",
+      "start_frame": 710,
+      "frames": 20,
+      "start_seconds": 71.0,
+      "end_seconds": 73.0
+    }
+  ],
+  "regular_panel_pixels": [
+    896,
+    896
+  ],
+  "attention_panel_pixels": [
+    896,
+    896
+  ],
+  "outcome_markers": {
+    "baseline": {
+      "symbol": "cross",
+      "color": "red",
+      "start_frame": 519,
+      "end_frame": 729,
+      "outcome": "failure"
+    },
+    "contrastflow": {
+      "symbol": "tick",
+      "color": "green",
+      "start_frame": 709,
+      "end_frame": 729,
+      "outcome": "success"
+    },
+    "placement": "top right of each policy camera panel",
+    "source": "archived terminal episode outcomes"
+  },
+  "terminal_hold_seconds": 2.0,
+  "action_chunk_style": {
+    "line": "continuous straight segments",
+    "vertex_markers": false,
+    "dashes": false,
+    "edge_supersampling": 2,
+    "projected_points_unchanged": true,
+    "executed_width_pixels": 18,
+    "future_width_pixels": 14,
+    "dark_outline": true
+  },
+  "previous_comparison": "libero_object_swap_06_overlays_solid.mp4",
+  "previous_sha256": "326b29c209ea9accbebf3e534e0912146c8a2518348b0c6dcd835c8cf25be1ed",
+  "original_preserved": true
+}
