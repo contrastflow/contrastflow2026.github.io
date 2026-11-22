@@ -5,7 +5,7 @@
   "duration_seconds": 62.9,
   "width": 2848,
   "height": 2000,
-  "sha256": "cbe19edc8738473c778fb3d2b2f96f7d7fcd7ad17e7ff87617b2c03887480584",
+  "sha256": "4a4f15145f442d5201aeebe3a3d925882694203aa6bdbf82c1e2cd704f49f4ae",
   "fully_decoded": true,
   "text_bubbles": false,
   "source_hashes": {
@@ -84,14 +84,16 @@
   "poster_frame": 591,
   "trajectory_overlay": {
     "source": "recorded end-effector positions for the complete episode",
-    "full_path_visible": true,
+    "full_path_visible": false,
     "accumulated_executed_path": true,
     "reset_at_replan": false,
     "predicted_chunks": false,
-    "full_path_color": "white",
+    "full_path_color": null,
     "executed_path_color": "green",
-    "full_path_width_pixels": 12,
-    "executed_path_width_pixels": 16,
+    "full_path_width_pixels": 0,
+    "executed_path_width_pixels": 12.8,
+    "outline_width_pixels": 17.6,
+    "width_scale_from_previous": 0.8,
     "vertex_markers": false,
     "dashes": false,
     "edge_supersampling": 2,
@@ -104,5 +106,5 @@
       "emb-zero": "41bb07685eb673367ee51162880ca032f92c5aabf582883be1d1d366b3111b39"
     }
   },
-  "previous_overlay_sha256": "f683d296d836c1bec38adb347159d082a5d4341cec79d7cb6818ddbe0dcc474d"
+  "previous_overlay_sha256": "cbe19edc8738473c778fb3d2b2f96f7d7fcd7ad17e7ff87617b2c03887480584"
 }
