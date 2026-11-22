@@ -1,0 +1,17 @@
+{
+  "id": "libero_object_swap_06_overlays_reel_clean",
+  "original_comparison": "libero_object_swap_06_overlays.mp4",
+  "source": "Native 896x896 saved-state camera render of the same ContrastFlow episode",
+  "frames": 190,
+  "duration_seconds": 19.0,
+  "resolution": [
+    896,
+    896
+  ],
+  "fps": 10,
+  "attention_overlays": false,
+  "action_overlays": false,
+  "full_contrastflow_episode": true,
+  "original_comparison_preserved": true,
+  "sha256": "2c575b68a94ae6d8101c3d263ef5a5375f44a61faa2790c6a8ad249f90254bd5"
+}

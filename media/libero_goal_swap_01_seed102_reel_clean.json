@@ -1,0 +1,17 @@
+{
+  "id": "libero_goal_swap_01_seed102_reel_clean",
+  "original_comparison": "libero_goal_swap_01_seed102.mp4",
+  "source": "Native 896x896 saved-state camera render of the same ContrastFlow episode",
+  "frames": 149,
+  "duration_seconds": 14.9,
+  "resolution": [
+    896,
+    896
+  ],
+  "fps": 10,
+  "attention_overlays": false,
+  "action_overlays": false,
+  "full_contrastflow_episode": true,
+  "original_comparison_preserved": true,
+  "sha256": "0ef8d6f99da335a7ac80a7eae3e6d85a0942e58f7c24d1fac416e9c103b12cab"
+}

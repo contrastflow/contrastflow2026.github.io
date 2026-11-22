@@ -1,0 +1,17 @@
+{
+  "id": "libero_goal_swap_08_overlays_reel_clean",
+  "original_comparison": "libero_goal_swap_08_overlays.mp4",
+  "source": "Native 896x896 saved-state camera render of the same ContrastFlow episode",
+  "frames": 168,
+  "duration_seconds": 16.8,
+  "resolution": [
+    896,
+    896
+  ],
+  "fps": 10,
+  "attention_overlays": false,
+  "action_overlays": false,
+  "full_contrastflow_episode": true,
+  "original_comparison_preserved": true,
+  "sha256": "59e5e4c179972d94e4968725a4cc1fb71f4fa37742d7dfe7c7212b8396a5c5fb"
+}

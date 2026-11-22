@@ -1,5 +1,12 @@
 // Playback focus and section navigation.
 document.addEventListener("DOMContentLoaded", () => {
+  const configureSpeed = video => {
+    const speed = Number(video.dataset.speed || 1);
+    video.defaultPlaybackRate = speed;
+    video.playbackRate = speed;
+    video.addEventListener("loadedmetadata", () => { video.playbackRate = speed; });
+  };
+  document.querySelectorAll("video").forEach(configureSpeed);
   // Keep paused clips subdued and let only the selected clip play.
   const allVideos = Array.from(document.querySelectorAll("video:not(.reel-video)"));
   const clearFocus = (video) => video.classList.remove("is-playing");
@@ -26,6 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const copy = card.cloneNode(true);
       copy.setAttribute("aria-hidden", "true");
       copy.tabIndex = -1;
+      copy.querySelectorAll("video").forEach(configureSpeed);
       track.appendChild(copy);
     });
     const previews = Array.from(track.querySelectorAll("video"));

@@ -276,7 +276,6 @@ hr {
 .reel-card { display:block; flex:0 0 300px; width:300px; overflow:hidden; border-radius:12px; background:#000; color:#fff; border:1px solid #fff; text-decoration:none; }
 .reel-card:hover { color:#fff; text-decoration:none; }
 .reel-card video { display:block; width:100%; aspect-ratio:1; object-fit:contain; border-radius:0; }
-.reel-card h3 { margin:0; padding:12px 14px; font-size:15px; font-weight:600; color:#fff; }
 .reel-card:focus-visible, .reel-toggle:focus-visible, .marquee-btn:focus-visible { outline:3px solid var(--accent); outline-offset:3px; }
 @media(max-width:600px) { .reel-card { flex-basis:240px; width:240px; } }
 

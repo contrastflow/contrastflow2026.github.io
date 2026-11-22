@@ -1,0 +1,17 @@
+{
+  "id": "libero_spatial_swap_01_seed105_reel_clean",
+  "original_comparison": "libero_spatial_swap_01_seed105.mp4",
+  "source": "Native 896x896 saved-state camera render of the same ContrastFlow episode",
+  "frames": 243,
+  "duration_seconds": 24.3,
+  "resolution": [
+    896,
+    896
+  ],
+  "fps": 10,
+  "attention_overlays": false,
+  "action_overlays": false,
+  "full_contrastflow_episode": true,
+  "original_comparison_preserved": true,
+  "sha256": "1aabae51743f8f181c49db67cb004622da6aad976dfc13ba6a78eec980eb36d3"
+}
