@@ -10,7 +10,6 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="ContrastFlow: Improving Generalist Policies via Contrastive Flow at Test-Time">
 <meta property="og:description" content="Grounding the actions of a generalist policy in the visual regions it already localizes. No additional training, no auxiliary models.">
-<meta property="og:image" content="static/images/og_thumb.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -22,30 +21,19 @@
   <div class="sidenav-body">
   <div class="sidenav-title">ContrastFlow</div>
   <a href="#overview">Abstract</a>
-  <a href="#method">Method</a>
   <div class="sidenav-cat">Results</div>
   <a href="#simulation" class="top">Simulation</a>
   <div class="sub-links">
     <a class="sub" href="#sim-object-swap">&middot; Object-position swap</a>
     <a class="sub" href="#sim-goal-swap">&middot; Goal-position swap</a>
     <a class="sub" href="#sim-spatial-recovery">&middot; Placement recovery</a>
-    <a class="sub" href="#sim-table">&middot; 🧪 RoboLab-120 &amp; LIBERO-PRO</a>
-    <a class="sub" href="#sim-swap">&middot; ↔️ Position swap</a>
-    <a class="sub" href="#sim-sensitivity">&middot; 🎚️ Hyperparameters</a>
   </div>
-  <a href="#actions" class="top">Effect on actions</a>
   <a href="#realworld" class="top">Real World</a>
   <div class="sub-links">
-    <a class="sub" href="#rw-tasks">&middot; 🦾 Tasks</a>
     <a class="sub" href="#rw-videos">&middot; Cable insertion</a>
     <a class="sub" href="#rw-adapter-videos">&middot; Adapter relocation</a>
     <a class="sub" href="#rw-centrifuge-videos">&middot; Centrifuge loading</a>
     <a class="sub" href="#rw-titration-videos">&middot; Titration</a>
-    <a class="sub" href="#rw-results">&middot; 📊 Success rates</a>
-    <a class="sub" href="#rw-backbones">&middot; 🧩 Other policies</a>
-    <a class="sub" href="#rw-attention">&middot; 👁️ Attention</a>
-    <a class="sub" href="#rw-latency">&middot; ⏱️ Latency</a>
-    <a class="sub" href="#rw-servoing">&middot; 🎯 Servoing</a>
   </div>
 
   </div>
@@ -63,33 +51,7 @@
 <section id="overview" class="section">
   <h2>Abstract</h2>
 
-  <figure class="fig">
-    <img src="static/images/method_overview.png" alt="With the cable manager at an unseen position, attention localizes it, but the predicted velocity v (blue) points to the memorized position. With the attended tokens masked, v- (red) deviates further. Amplifying the contrast (purple) gives a guided velocity (green) that reaches the cable manager.">
-  </figure>
-  <p class="abstract">Generalist robot policies often generate actions that follow the action distribution learned in the training scenes, even when the current observation differs. We make an interesting observation: such a policy already localizes the action-relevant visual regions in its text-to-vision attention, yet the generated actions remain under-conditioned on those regions. We propose ContrastFlow, a test-time method that turns the localized regions into a correction of the generated actions. ContrastFlow masks the attended visual tokens to obtain a negative reference from the policy itself, and amplifies the contrast between the velocity predictions with and without those tokens during flow integration, with no additional training and no auxiliary models. We show that the guidance shifts action plans toward the target and reduces the variance of the planned fingertip endpoints by about half. ContrastFlow consistently improves &pi;<sub>0.5</sub> and Cosmos3, a vision-language-action model and a world action model, on LIBERO-PRO and RoboLab-120. On a physical robot, across four manipulation tasks that end in fine closed-loop alignment, ContrastFlow raises the per-task success rate of &pi;<sub>0.5</sub> from 12&ndash;25% to 50&ndash;75%. ContrastFlow improves four state-of-the-art model families that span three architectures.</p>
-</section>
-
-<hr>
-
-<section id="method" class="section">
-  <h2>Method</h2>
-
-  <figure class="fig">
-    <img loading="lazy" src="static/images/robolab_onion_subgoal.png" alt="'Put the onion on the plate': attention lies on the onion during approach and on the plate during transport. The base policy grasps the pumpkin; ContrastFlow grasps the onion and completes the task.">
-  </figure>
-
-  <div class="table-wrap">
-    <table class="res-table res-table-compact" style="max-width:520px" aria-label="Attention of the base π 0.5 on RoboLab-120, relative to a no-task caption naming the same objects.">
-
-      <thead><tr><th scope="col">Attention on</th><th scope="col">Approach</th><th scope="col">Transport</th></tr></thead>
-      <tbody>
-        <tr><td>No task (reference)</td><td>1.00</td><td>1.00</td></tr>
-        <tr><td>Object to pick</td><td><strong>1.26</strong></td><td>0.92</td></tr>
-        <tr><td>Destination</td><td>0.99</td><td><strong>1.35</strong></td></tr>
-        <tr><td>Unrelated objects</td><td>1.02</td><td>0.95</td></tr>
-      </tbody>
-    </table>
-  </div>
+<p class="abstract">Generalist robot policies often generate actions that follow the action distribution learned in the training scenes, even when the current observation differs. We make an interesting observation: such a policy already localizes the action-relevant visual regions in its text-to-vision attention, yet the generated actions remain under-conditioned on those regions. We propose ContrastFlow, a test-time method that turns the localized regions into a correction of the generated actions. ContrastFlow masks the attended visual tokens to obtain a negative reference from the policy itself, and amplifies the contrast between the velocity predictions with and without those tokens during flow integration, with no additional training and no auxiliary models. We show that the guidance shifts action plans toward the target and reduces the variance of the planned fingertip endpoints by about half. ContrastFlow consistently improves &pi;<sub>0.5</sub> and Cosmos3, a vision-language-action model and a world action model, on LIBERO-PRO and RoboLab-120. On a physical robot, across four manipulation tasks that end in fine closed-loop alignment, ContrastFlow raises the per-task success rate of &pi;<sub>0.5</sub> from 12&ndash;25% to 50&ndash;75%. ContrastFlow improves four state-of-the-art model families that span three architectures.</p>
 </section>
 
 <hr>
@@ -120,66 +82,9 @@
     </video>
   </figure>
 
-  <h3 id="sim-table" class="sub">🧪 RoboLab-120 &amp; LIBERO-PRO</h3>
+<h3 id="sim-swap" class="sub">↔️ LIBERO-PRO position swap</h3>
 
-  <div class="table-wrap">
-    <table class="res-table res-table-compact" aria-label="Success rate (%). Δ is the gain in percentage points over the base policy. ☆ Additional training.">
-
-      <thead>
-        <tr><th scope="col" rowspan="2">Method</th><th scope="col" rowspan="2" style="text-align:left">Key technique</th><th scope="colgroup" colspan="4" class="grp">RoboLab-120</th><th scope="colgroup" colspan="5" class="grp">LIBERO-PRO</th></tr>
-        <tr><th scope="col">Simple</th><th scope="col">Moderate</th><th scope="col">Complex</th><th scope="col">Overall</th><th scope="col">Spatial</th><th scope="col">Object</th><th scope="col">Goal</th><th scope="col">Long</th><th scope="col">Overall</th></tr>
-      </thead>
-      <tbody>
-        <tr class="group"><td colspan="11">Vision-language-action model (&pi;<sub>0.5</sub>)</td></tr>
-        <tr><td>Base policy</td><td class="tech"></td><td>30.6</td><td>27.2</td><td>13.5</td><td>27.1</td><td>50.0</td><td>17.8</td><td>34.4</td><td>5.2</td><td>26.9</td></tr>
-        <tr><td>ACG</td><td class="tech">Temporal-attention perturbation</td><td>28.1</td><td>22.8</td><td>12.4</td><td>24.2</td><td>52.0</td><td>20.4</td><td>30.0</td><td>6.6</td><td>27.3</td></tr>
-        <tr><td>CAG</td><td class="tech">Language-conditioned action contrast</td><td>34.2</td><td>30.3</td><td><strong>25.3</strong></td><td>31.7</td><td>49.2</td><td>15.2</td><td>26.4</td><td>1.0</td><td>23.0</td></tr>
-        <tr><td>TAG<sup>&star;</sup></td><td class="tech">Classifier-free guidance</td><td>29.1</td><td>25.9</td><td>17.1</td><td>26.3</td><td>50.6</td><td>21.8</td><td>30.4</td><td>10.2</td><td>28.3</td></tr>
-        <tr><td>PCD</td><td class="tech">Action-distribution reweighting</td><td>30.6</td><td>30.8</td><td>14.1</td><td>28.3</td><td>52.2</td><td>17.0</td><td>35.8</td><td>8.6</td><td>28.4</td></tr>
-        <tr class="ours"><td><strong>ContrastFlow (ours)</strong></td><td class="tech">Attention-contrastive guidance</td><td><strong>35.5</strong></td><td><strong>34.4</strong></td><td><strong>25.3</strong></td><td><strong>33.7</strong></td><td><strong>56.0</strong></td><td><strong>24.0</strong></td><td><strong>40.6</strong></td><td><strong>11.8</strong></td><td><strong>33.1</strong></td></tr>
-        <tr class="delta"><td>&Delta; vs. base</td><td class="tech"></td><td>+4.9</td><td>+7.2</td><td>+11.8</td><td>+6.6</td><td>+6.0</td><td>+6.2</td><td>+6.2</td><td>+6.6</td><td>+6.2</td></tr>
-        <tr class="group"><td colspan="11">World action model (Cosmos3)</td></tr>
-        <tr><td>Base policy (with CFG)</td><td class="tech"></td><td>40.6</td><td>35.4</td><td>25.3</td><td>36.8</td><td>41.0</td><td>12.4</td><td>19.6</td><td>3.4</td><td>19.1</td></tr>
-        <tr class="ours"><td><strong>ContrastFlow (ours)</strong></td><td class="tech">Attention-contrastive guidance</td><td><strong>45.5</strong></td><td><strong>36.7</strong></td><td><strong>32.9</strong></td><td><strong>40.8</strong></td><td><strong>45.2</strong></td><td><strong>23.4</strong></td><td><strong>23.2</strong></td><td><strong>3.8</strong></td><td><strong>23.9</strong></td></tr>
-        <tr class="delta"><td>&Delta; vs. base</td><td class="tech"></td><td>+4.9</td><td>+1.3</td><td>+7.6</td><td>+4.0</td><td>+4.2</td><td>+11.0</td><td>+3.6</td><td>+0.4</td><td>+4.8</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h3 id="sim-swap" class="sub">↔️ LIBERO-PRO position swap</h3>
-
-  <figure class="fig">
-    <img loading="lazy" src="static/images/liberopro_rollouts.png" alt="LIBERO-PRO position swap: base (orange) and guided (green) gripper trajectories; attention shifts from the bowl to the plate.">
-  </figure>
-
-  <h3 id="sim-sensitivity" class="sub">🎚️ Guidance strength and masking ratio</h3>
-
-  <figure class="fig fig-narrow">
-    <img loading="lazy" src="static/images/sensitivity.png" alt="Success on a 22-task LIBERO-PRO subset as a function of guidance strength omega and masking ratio rho.">
-  </figure>
-</section>
-
-<hr>
-
-<section id="actions" class="section">
-  <h2>Effect on action generation</h2>
-
-  <figure class="fig">
-    <img loading="lazy" src="static/images/denoising_study.png" alt="'Pick up the yellow cube': during flow generation, guided plans (magenta) move toward the yellow block with less spread than base (cyan) and masked (red) predictions. Right: success over 32 noise initialisations, 25.6% base vs. 31.0% ContrastFlow.">
-  </figure>
-
-  <div class="table-wrap">
-    <table class="res-table res-table-compact" style="max-width:520px" aria-label="RoboLab-120 success (%) when completed plans are re-centred to separate the two effects.">
-
-      <thead><tr><th scope="col">Method</th><th scope="col">Success</th></tr></thead>
-      <tbody>
-        <tr><td>&pi;<sub>0.5</sub></td><td>27.1</td></tr>
-        <tr><td><em>Center shift only</em></td><td>30.8</td></tr>
-        <tr><td><em>Spread reduction only</em></td><td>30.0</td></tr>
-        <tr class="ours"><td><strong>ContrastFlow</strong></td><td><strong>33.7</strong></td></tr>
-      </tbody>
-    </table>
-  </div>
+<h3 id="sim-sensitivity" class="sub">🎚️ Guidance strength and masking ratio</h3>
 
 </section>
 
@@ -188,13 +93,7 @@
 <section id="realworld" class="section">
   <h2>Real world</h2>
 
-  <h3 id="rw-tasks" class="sub">🦾 Tasks</h3>
-
-  <figure class="fig">
-    <img loading="lazy" src="static/images/realworld_tasks.png" alt="Top: setups and gripper trajectories for the four tasks. Bottom: final alignment of the base policy (red) and ContrastFlow (green), with the final liquid level in Titration.">
-  </figure>
-
-  <div id="rw-videos" class="real-clips">
+<div id="rw-videos" class="real-clips">
   <h3 class="sub">Cable insertion videos</h3>
 
   <h4 class="real-config">Configuration 2</h4>
@@ -387,58 +286,14 @@
     </article>
   </div>
 
-  <h3 id="rw-results" class="sub">📊 Success rates</h3>
+<h3 id="rw-backbones" class="sub">🧩 Other policies and architectures</h3>
 
-  <div class="table-wrap">
-    <table class="res-table res-table-compact res-table-dense" aria-label="Real-world success rate (%) with π 0.5 .">
+<h3 id="rw-attention" class="sub">👁️ Attention on the real tasks</h3>
 
-      <thead>
-        <tr><th scope="col" rowspan="2">Method</th><th scope="colgroup" colspan="4" class="grp">Cable Insertion</th><th scope="colgroup" colspan="4" class="grp">Adapter Relocation</th><th scope="colgroup" colspan="4" class="grp">Centrifuge Loading</th><th scope="colgroup" colspan="4" class="grp">Titration</th></tr>
-        <tr><th scope="col">Small rotation</th><th scope="col">Large rotation</th><th scope="col">Target shift</th><th scope="col">Overall</th><th scope="col">Short transfer</th><th scope="col">Medium transfer</th><th scope="col">Long transfer</th><th scope="col">Overall</th><th scope="col">Top slot</th><th scope="col">Middle slot</th><th scope="col">Bottom slot</th><th scope="col">Overall</th><th scope="col">Default</th><th scope="col">Height shift</th><th scope="col">Stand shift</th><th scope="col">Overall</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Base policy</td><td>0</td><td>50</td><td>0</td><td>25.0<br><small class="pm">&plusmn;&nbsp;4.8</small></td><td>10</td><td>20</td><td>30</td><td>20.0<br><small class="pm">&plusmn;&nbsp;6.3</small></td><td>30</td><td>5</td><td>60</td><td>25.0<br><small class="pm">&plusmn;&nbsp;6.8</small></td><td>30</td><td>5</td><td>10</td><td>11.7<br><small class="pm">&plusmn;&nbsp;4.1</small></td></tr>
-        <tr><td>PCD</td><td>0</td><td><strong>83</strong></td><td>60</td><td>63.8<br><small class="pm">&plusmn;&nbsp;5.4</small></td><td>40</td><td>30</td><td>30</td><td>32.5<br><small class="pm">&plusmn;&nbsp;7.4</small></td><td>40</td><td>0</td><td>50</td><td>22.5<br><small class="pm">&plusmn;&nbsp;6.6</small></td><td>40</td><td>30</td><td>27</td><td>30.0<br><small class="pm">&plusmn;&nbsp;5.9</small></td></tr>
-        <tr><td>TAG</td><td><strong>80</strong></td><td>60</td><td>0</td><td>40.0<br><small class="pm">&plusmn;&nbsp;5.5</small></td><td>40</td><td>20</td><td>30</td><td>27.5<br><small class="pm">&plusmn;&nbsp;7.1</small></td><td>50</td><td>10</td><td>50</td><td>30.0<br><small class="pm">&plusmn;&nbsp;7.2</small></td><td>10</td><td>0</td><td>27</td><td>15.0<br><small class="pm">&plusmn;&nbsp;4.6</small></td></tr>
-        <tr class="ours"><td><strong>ContrastFlow (ours)</strong></td><td>60</td><td><strong>83</strong></td><td><strong>70</strong></td><td><strong>75.0</strong><br><small class="pm">&plusmn;&nbsp;4.8</small></td><td><strong>60</strong></td><td><strong>65</strong></td><td><strong>60</strong></td><td><strong>62.5</strong><br><small class="pm">&plusmn;&nbsp;7.7</small></td><td><strong>60</strong></td><td><strong>55</strong></td><td><strong>70</strong></td><td><strong>60.0</strong><br><small class="pm">&plusmn;&nbsp;7.7</small></td><td><strong>70</strong></td><td><strong>35</strong></td><td><strong>53</strong></td><td><strong>50.0</strong><br><small class="pm">&plusmn;&nbsp;6.5</small></td></tr>
-      </tbody>
-    </table>
-  </div>
+<h3 id="rw-latency" class="sub">⏱️ Success vs. latency</h3>
 
-  <h3 id="rw-backbones" class="sub">🧩 Other policies and architectures</h3>
+<h3 id="rw-servoing" class="sub">🎯 Servoing</h3>
 
-  <div class="table-wrap">
-    <table class="res-table res-table-compact" style="max-width:720px" aria-label="Overall real-world success rate (%).">
-
-      <thead><tr><th scope="col">Method</th><th scope="col">Architecture</th><th scope="col">Cable Insertion</th><th scope="col">Adapter Relocation</th></tr></thead>
-      <tbody>
-        <tr><td>Qwen-GR00T</td><td>VLM+DiT</td><td>17.1&nbsp;&plusmn;&nbsp;6.4</td><td>0.0&nbsp;&plusmn;&nbsp;0.0</td></tr>
-        <tr class="ours"><td><strong>ContrastFlow</strong> (Qwen-GR00T)</td><td>VLM+DiT</td><td><strong>40.0&nbsp;&plusmn;&nbsp;8.3</strong></td><td><strong>43.3&nbsp;&plusmn;&nbsp;9.0</strong></td></tr>
-        <tr class="block"><td>Cosmos3-Edge</td><td>WAM</td><td>34.3&nbsp;&plusmn;&nbsp;8.0</td><td>20.0&nbsp;&plusmn;&nbsp;7.3</td></tr>
-        <tr class="ours"><td><strong>ContrastFlow</strong> (Cosmos3-Edge)</td><td>WAM</td><td><strong>54.3&nbsp;&plusmn;&nbsp;8.4</strong></td><td><strong>50.0&nbsp;&plusmn;&nbsp;9.1</strong></td></tr>
-        <tr class="block"><td>MolmoAct2</td><td>VLA</td><td>60.0&nbsp;&plusmn;&nbsp;8.3</td><td>40.0&nbsp;&plusmn;&nbsp;8.9</td></tr>
-        <tr class="ours"><td><strong>ContrastFlow</strong> (MolmoAct2)</td><td>VLA</td><td><strong>88.6&nbsp;&plusmn;&nbsp;5.4</strong></td><td><strong>63.3&nbsp;&plusmn;&nbsp;8.8</strong></td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h3 id="rw-attention" class="sub">👁️ Attention on the real tasks</h3>
-
-  <figure class="fig">
-    <img loading="lazy" src="static/images/realworld_attention.png" alt="Text-to-vision attention on the four real-world tasks from the stationary (top) and wrist (bottom) cameras.">
-  </figure>
-
-  <h3 id="rw-latency" class="sub">⏱️ Success vs. latency</h3>
-
-  <figure class="fig fig-narrow">
-    <img loading="lazy" src="static/images/efficiency.png" alt="Task success against inference latency (log scale) on the four real-world tasks; each cluster is one method.">
-  </figure>
-
-  <h3 id="rw-servoing" class="sub">🎯 Servoing</h3>
-
-  <figure class="fig">
-    <img loading="lazy" src="static/images/realworld_servoing_error.png" alt="End-effector position and orientation error relative to the expert final pose over cable-insertion rollouts.">
-  </figure>
 </section>
 
 <script src="static/script.js?v=focus-v5"></script>
