@@ -1,10 +1,10 @@
 # ContrastFlow project page
 
 Project website for **Improving Generalist Policies via Contrastive Flow at Test-Time (ContrastFlow)**.
-Static HTML, no build step. The layout is adapted from the
+Static HTML with simulation and real-world videos. The layout is adapted from the
 [Anchor-Align project page](https://github.com/anchoralignvla/anchoralignvla.github.io).
 
-This site is **not deployed**. View it locally.
+Live site: https://contrastflow.github.io/contrastflow2026.github.io/
 
 ## View locally
 
@@ -13,30 +13,21 @@ This site is **not deployed**. View it locally.
 ./serve.sh 9000       # any other port
 ```
 
-Opening `index.html` directly from the file system also works, since all assets are relative.
+Opening `index.html` directly also works because the assets use relative paths.
+A regular Git clone is sufficient; no private repositories or submodules are required.
 
 ## Layout
 
 | Path | What it is |
 | --- | --- |
-| `index.html` | The page: overview and abstract, method, simulation results, effect on action generation, real-world results, more rollouts, BibTeX |
-| `static/style.css`, `static/script.js` | Styles and the side-navigation script (from the template, trimmed) |
-| `static/images/` | PNG renders of the paper's figures, produced by `scripts/render_figures.sh` |
-| `paper/` | Git submodule: the paper's LaTeX source and figures (`adipotnis/nsf_access_robowarp`) |
-| `scripts/render_figures.sh` | Renders `paper/**/*.pdf` figures to `static/images/` |
+| `index.html` | Title, abstract, simulation videos, and real-world task videos |
+| `static/style.css`, `static/script.js` | Styles, playback focus, and section navigation |
+| `static/videos/` | Browser-compatible MP4s and video preview images |
+| `media/` | Video provenance and encoding records |
+| `.github/workflows/pages.yml` | GitHub Pages deployment |
 
-## Updating figures after the paper changes
+## Deployment
 
-```sh
-git submodule update --remote paper      # pull the paper repo's latest main
-scripts/render_figures.sh                # re-render PNGs (needs pdftocairo and ImageMagick)
-git add paper static/images && git commit -m "Update figures from paper"
-```
-
-Fresh clone: `git clone --recurse-submodules <url>` or `git submodule update --init` after cloning.
-The rendered PNGs are committed, so the site displays without the submodule or the tools above.
-
-## Left to fill in
-
-- Author list, affiliations and links in the hero block of `index.html` (search for `TODO(authors)`).
-- Paper and code buttons (currently disabled) and the BibTeX entry.
+Pushes to `main` automatically deploy `index.html` and `static/` to GitHub Pages.
+The workflow can also be started manually from the Actions tab.
+There is no build step or dependency on the paper source repository.
