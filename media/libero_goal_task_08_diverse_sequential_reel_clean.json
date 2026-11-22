@@ -1,0 +1,17 @@
+{
+  "id": "libero_goal_task_08_diverse_sequential_reel_clean",
+  "original_comparison": "libero_goal_task_08_diverse_sequential.mp4",
+  "source": "Native 896x896 saved-state camera render of the same ContrastFlow episode",
+  "frames": 90,
+  "duration_seconds": 9.0,
+  "resolution": [
+    896,
+    896
+  ],
+  "fps": 10,
+  "attention_overlays": false,
+  "action_overlays": false,
+  "full_contrastflow_episode": true,
+  "original_comparison_preserved": true,
+  "sha256": "ac659a0619b0d9778ef16ea2051821e152fa63f6e45dc513db394bebd4dc4528"
+}

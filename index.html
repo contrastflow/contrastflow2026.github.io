@@ -27,6 +27,7 @@
     <a class="sub" href="#sim-object-swap">&middot; Object-position swap</a>
     <a class="sub" href="#sim-goal-swap">&middot; Goal-position swap</a>
     <a class="sub" href="#sim-spatial-recovery">&middot; Placement recovery</a>
+    <a class="sub" href="#sim-wine-plate">&middot; Wine bottle on plate</a>
   </div>
   <a href="#realworld" class="top">Real World</a>
   <div class="sub-links">
@@ -64,6 +65,9 @@
         </a>
         <a class="reel-card" href="#rw-adapter-videos" aria-label="Adapter relocation: view full comparisons">
           <video class="reel-video" muted loop playsinline preload="none" poster="static/videos/rw_adapter_cf_success_1to4.jpg" data-src="static/videos/rw_adapter_cf_success_1to4.mp4" aria-label="ContrastFlow: Adapter relocation" data-speed="2"></video>
+        </a>
+        <a class="reel-card" href="#sim-wine-plate" aria-label="Wine bottle on plate: view full comparison">
+          <video class="reel-video" muted loop playsinline preload="none" poster="static/videos/libero_goal_task_08_diverse_sequential_reel_clean.jpg" data-src="static/videos/libero_goal_task_08_diverse_sequential_reel_clean.mp4" aria-label="ContrastFlow places the wine bottle on the plate"></video>
         </a>
         <a class="reel-card" href="#rw-centrifuge-videos" aria-label="Centrifuge loading: view full comparisons">
           <video class="reel-video" muted loop playsinline preload="none" poster="static/videos/rw_centrifuge_cf_success_ood_p1_blue.jpg" data-src="static/videos/rw_centrifuge_cf_success_ood_p1_blue.mp4" aria-label="ContrastFlow: Centrifuge loading" data-speed="2"></video>
@@ -131,6 +135,13 @@
   <figure class="fig simulation-video">
     <video controls playsinline preload="none" poster="static/videos/libero_goal_swap_01_seed102.jpg" aria-label="LIBERO goal swap task 01, seed 102. Full training, π0.5, and ContrastFlow episodes play sequentially with cleaned attention overlays and zoom bubbles. π0.5 moves the bowl toward the plate; ContrastFlow places it on the relocated stove. Inactive views are gray with a white border around the active view.">
       <source src="static/videos/libero_goal_swap_01_seed102.mp4" type="video/mp4">
+    </video>
+  </figure>
+
+  <h3 id="sim-wine-plate" class="sub">LIBERO-PRO wine bottle on plate</h3>
+  <figure class="fig simulation-video">
+    <video controls playsinline preload="none" poster="static/videos/libero_goal_task_08_diverse_sequential.jpg" aria-label="Full training demonstration, π0.5 failure, and ContrastFlow success played sequentially with cleaned attention and zoom bubbles. The target changes from bowl to wine bottle; placement definitions are unchanged.">
+      <source src="static/videos/libero_goal_task_08_diverse_sequential.mp4" type="video/mp4">
     </video>
   </figure>
 

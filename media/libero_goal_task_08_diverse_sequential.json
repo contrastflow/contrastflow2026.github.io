@@ -1,0 +1,129 @@
+{
+  "id": "libero_goal_task_08_diverse_sequential",
+  "task": "Put the wine bottle on the plate",
+  "suite": "libero_goal_task",
+  "task_id": 8,
+  "episode": 0,
+  "noise_seed": 100,
+  "baseline_success": false,
+  "emb_zero_success": true,
+  "frames": 681,
+  "duration_seconds": 68.1,
+  "width": 2848,
+  "height": 2000,
+  "regular_panel_pixels": [
+    896,
+    896
+  ],
+  "attention_panel_pixels": [
+    896,
+    896
+  ],
+  "recorded_attention_chunks": 118,
+  "attention_recording": "Recorded during the original sample inference; exact first-chunk instrumentation parity verified for both methods.",
+  "source_hashes": {
+    "baseline": "ae5cb37bba6298d0dfcaee30a8b8c27508bbde597f26a03c94ae4bd45ec03a69",
+    "emb-zero": "cffd2eef0dca830ce0dbbd7dfe1f137b1f7c0f4e20df772547925a1d0f504366"
+  },
+  "sha256": "1f78400662c869f6975d0f174741971d4fef6f295255d791137daec0111fd734",
+  "positions_changed": false,
+  "position_caption": "Target changes from bowl to wine bottle; placement definitions are unchanged.",
+  "playback_order": [
+    {
+      "name": "training",
+      "start_frame": 0,
+      "frames": 90,
+      "start_seconds": 0.0,
+      "end_seconds": 9.0
+    },
+    {
+      "name": "baseline",
+      "start_frame": 90,
+      "frames": 501,
+      "start_seconds": 9.0,
+      "end_seconds": 59.1
+    },
+    {
+      "name": "contrastflow",
+      "start_frame": 591,
+      "frames": 90,
+      "start_seconds": 59.1,
+      "end_seconds": 68.1
+    }
+  ],
+  "all_source_frames_once_in_active_segment": true,
+  "approximate_path_shown": false,
+  "register_cleaning": {
+    "cache_sha256": "1382072e38e16c891afba73170edd15e279990fb2c83746db809334f65026535",
+    "register_count": 14,
+    "register_coordinates": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        13
+      ],
+      [
+        1,
+        15
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        10,
+        0
+      ],
+      [
+        10,
+        15
+      ],
+      [
+        12,
+        1
+      ],
+      [
+        13,
+        15
+      ],
+      [
+        14,
+        1
+      ],
+      [
+        14,
+        5
+      ],
+      [
+        14,
+        10
+      ],
+      [
+        15,
+        3
+      ],
+      [
+        15,
+        13
+      ]
+    ],
+    "policy_mask_parity": null,
+    "parity_note": "Policy masks were not archived for this sample; cleaner and suite calibration cache match the capture implementation."
+  },
+  "training_reference": {
+    "original_instruction": "put the bowl on the plate",
+    "modified_instruction": "Put the wine bottle on the plate",
+    "demo": "demo_0",
+    "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+    "source_url": "https://huggingface.co/datasets/yifengzhu-hf/LIBERO-datasets/resolve/f13aa24a3da8c43c7225569f28c562979fa0e35a/libero_goal/put_the_bowl_on_the_plate_demo.hdf5",
+    "source_frames_sha256": "fee20927705820dea97ad75844b1561d3a79ba456ab79fd8e06922e5995d8474",
+    "reference_note": "Original human demonstration with a separate initial state; exact policy training split membership is not asserted."
+  }
+}
