@@ -58,40 +58,42 @@ document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("visibilitychange", () => {
     allVideos.forEach(video => document.hidden ? video.pause() : startVideo(video));
   });
-  // Each simulation card has two independent, full-length policy clips.
-  // Play π0.5, then ContrastFlow; inactive clips hold their frame in full color.
+  // Both full policy clips start together; the shorter holds its final frame
+  // until both finish, then the pair restarts together.
   const comparisonVideos = [];
   document.querySelectorAll(".sim-comparison").forEach(group => {
     const videos = Array.from(group.querySelectorAll("video.sim-policy"));
     comparisonVideos.push(...videos);
-    let active = 0;
     let visible = false;
     let manualPause = false;
     const start = () => {
       if (!visible || document.hidden || manualPause) return;
       videos.forEach(loadVideo);
-      videos[active].play().catch(() => {});
+      if (videos.some(video => video.readyState < 2)) return;
+      videos.forEach(video => {
+        if (video.paused && !video.ended) video.play().catch(() => {});
+      });
     };
-    videos.forEach((video, index) => {
+    videos.forEach(video => {
       video.muted = true;
+      video.addEventListener("canplay", start);
       video.addEventListener("play", () => {
         if (!visible || document.hidden) { video.pause(); return; }
-        active = index;
         manualPause = false;
-        videos.forEach(other => { if (other !== video) other.pause(); });
         video.classList.add("is-playing");
+        start();
       });
       video.addEventListener("pause", () => {
         clearFocus(video);
-        if (index === active && visible && !document.hidden && !video.ended) manualPause = true;
+        if (visible && !document.hidden && !video.ended) {
+          manualPause = true;
+          videos.forEach(other => { if (!other.paused) other.pause(); });
+        }
       });
       video.addEventListener("ended", () => {
         clearFocus(video);
-        if (index !== active) return;
-        active = (active + 1) % videos.length;
-        videos[active].currentTime = 0;
-        if (active === 0) videos[1].currentTime = 0;
-        manualPause = false;
+        if (!videos.every(other => other.ended)) return;
+        videos.forEach(other => { other.currentTime = 0; });
         start();
       });
       video.addEventListener("error", () => clearFocus(video));
