@@ -1,0 +1,455 @@
+[
+  {
+    "name": "adapter_pi05",
+    "source_sha256": "49181f06d08e00bfcb102819a6ce5b75df99181f9bab665b633fa0d43254a48e",
+    "source_bytes": 1428721,
+    "output_bytes": 980848,
+    "output_sha256": "0d3dd9060e8a480d978602b39fc3d55884da8dc72c2dc43eed8c1217ee2d32c3",
+    "source_duration": 31.3,
+    "duration": 31.3,
+    "source_frames": 313,
+    "output_frames": 313,
+    "source_streams": [
+      "Stream #0:0[0x1](und): Video: mpeg4 (Simple Profile) (mp4v / 0x7634706D), yuv420p, 640x480 [SAR 1:1 DAR 4:3], 364 kb/s, 10 fps, 10 tbr, 10240 tbn (default)"
+    ],
+    "output_streams": [
+      "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 640x480 [SAR 1:1 DAR 4:3], 249 kb/s, 10 fps, 10 tbr, 10240 tbn (default)"
+    ],
+    "fully_decoded": true,
+    "faststart": true,
+    "video_asset": "static/videos/real_adapter_pi05.mp4",
+    "poster_asset": "static/videos/real_adapter_pi05.jpg",
+    "task": "Adapter relocation",
+    "configuration": "Transfer 1 \u2192 4",
+    "method": "\u03c00.5",
+    "outcome": "failure",
+    "trial": "10",
+    "camera": "cam_high",
+    "outcome_source": "Operator labels in archived trial folders and outcome records; not a new evaluation.",
+    "selection": "Illustrative failure/success examples from the same task configuration; distinct physical trials.",
+    "archive_members": [
+      {
+        "name": "FINAL_Charging_Adapter_1to4_Baseline_AH50_6500_2026-11-07/baseline/trials_1to4/failure/10/outcome.json",
+        "size": 216,
+        "offset": 1912207872,
+        "type": "0",
+        "sha256": "cdb01e2f47face045cfd1344025082fa6bf5de7941ecd017b1c1e396dd1ee05b",
+        "archive_id": "1fBjieLwLZR1ndMWwdjgp_XL_gOPFvcBq"
+      },
+      {
+        "name": "FINAL_Charging_Adapter_1to4_Baseline_AH50_6500_2026-11-07/baseline/trials_1to4/failure/10/recording/cam_high.mp4",
+        "size": 1428721,
+        "offset": 1934248448,
+        "type": "0",
+        "sha256": "49181f06d08e00bfcb102819a6ce5b75df99181f9bab665b633fa0d43254a48e",
+        "archive_id": "1fBjieLwLZR1ndMWwdjgp_XL_gOPFvcBq"
+      }
+    ],
+    "source_drive_folder": "https://drive.google.com/drive/folders/1ci2LuDTFlVxk0eax7L68XXbIT8XO70Zm"
+  },
+  {
+    "name": "adapter_contrastflow",
+    "source_sha256": "629af50ffbd6e5b40de2394d2dc8748919f94727efe149a0a80657e717424628",
+    "source_bytes": 1533340,
+    "output_bytes": 1022379,
+    "output_sha256": "f9da84e5f94eb1c8da5109992a51a73d52cc6a7f9e48cb48434d1007ed6677b0",
+    "source_duration": 31.7,
+    "duration": 31.7,
+    "source_frames": 317,
+    "output_frames": 317,
+    "source_streams": [
+      "Stream #0:0[0x1](und): Video: mpeg4 (Simple Profile) (mp4v / 0x7634706D), yuv420p, 640x480 [SAR 1:1 DAR 4:3], 386 kb/s, 10 fps, 10 tbr, 10240 tbn (default)"
+    ],
+    "output_streams": [
+      "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 640x480 [SAR 1:1 DAR 4:3], 256 kb/s, 10 fps, 10 tbr, 10240 tbn (default)"
+    ],
+    "fully_decoded": true,
+    "faststart": true,
+    "video_asset": "static/videos/real_adapter_contrastflow.mp4",
+    "poster_asset": "static/videos/real_adapter_contrastflow.jpg",
+    "task": "Adapter relocation",
+    "configuration": "Transfer 1 \u2192 4",
+    "method": "ContrastFlow",
+    "outcome": "success",
+    "trial": "10",
+    "camera": "cam_high",
+    "outcome_source": "Operator labels in archived trial folders and outcome records; not a new evaluation.",
+    "selection": "Illustrative failure/success examples from the same task configuration; distinct physical trials.",
+    "archive_members": [
+      {
+        "name": "FINAL_Charging_Adapter_1to4_M18_AH50_6500_2026-11-07/m18-lagged/trials_1to4/success/10/outcome.json",
+        "size": 220,
+        "offset": 3731193344,
+        "type": "0",
+        "sha256": "4079a35fac3b691c017719b57af0c077bf8b36f0840f1d85c8eca069b882a0f5",
+        "archive_id": "parts"
+      },
+      {
+        "name": "FINAL_Charging_Adapter_1to4_M18_AH50_6500_2026-11-07/m18-lagged/trials_1to4/success/10/recording/cam_high.mp4",
+        "size": 1533340,
+        "offset": 3758781952,
+        "type": "0",
+        "sha256": "629af50ffbd6e5b40de2394d2dc8748919f94727efe149a0a80657e717424628",
+        "archive_id": "parts"
+      }
+    ],
+    "source_drive_folder": "https://drive.google.com/drive/folders/1ci2LuDTFlVxk0eax7L68XXbIT8XO70Zm",
+    "archive_parts": [
+      {
+        "id": "1RSyReJTSvx99wRLhl6AmJZfkR63vPUzN",
+        "size": 99614720,
+        "name": "FINAL_Charging_Adapter_1to4_M18_AH50_6500_2026-11-07.tar.part001"
+      },
+      {
+        "id": "1qBXbxbApyb5-g2oKU0sgGdvcZ3hs20sC",
+        "size": 99614720,
+        "name": "FINAL_Charging_Adapter_1to4_M18_AH50_6500_2026-11-07.tar.part002"
+      },
+      {
+        "id": "1soi4VkLTkk9_KRK7BMlW8iECxQ2a7949",
+        "size": 99614720,
+        "name": "FINAL_Charging_Adapter_1to4_M18_AH50_6500_2026-11-07.tar.part003"
+      },
+      {
+        "id": "151WJq9QWerL3x7HeVLiN5OBG7D0jsT6a",
+        "size": 99614720,
+        "name": "FINAL_Charging_Adapter_1to4_M18_AH50_6500_2026-11-07.tar.part004"
+      },
+      {
+        "id": "1LZUp3WxwP3nCWVBWXJYi5g_HYXF4T1Kx",
+        "size": 99614720,
+        "name": "FINAL_Charging_Adapter_1to4_M18_AH50_6500_2026-11-07.tar.part005"
+      },
+      {
+        "id": "1MDostcyy0KQEaMKCRoFXcRhlnMu_2GMV",
+        "size": 99614720,
+        "name": "FINAL_Charging_Adapter_1to4_M18_AH50_6500_2026-11-07.tar.part006"
+      },
+      {
+        "id": "11_WsabPrWa1_zY12QMGilUVI3fkouRqV",
+        "size": 99614720,
+        "name": "FINAL_Charging_Adapter_1to4_M18_AH50_6500_2026-11-07.tar.part007"
+      },
+      {
+        "id": "1acUWTfitHML9I826aWS9AfewAqhNpUUl",
+        "size": 99614720,
+        "name": "FINAL_Charging_Adapter_1to4_M18_AH50_6500_2026-11-07.tar.part008"
+      },
+      {
+        "id": "1ut3JiN-Xn9rABL6yYzTdZj4vRvyG-51j",
+        "size": 99614720,
+        "name": "FINAL_Charging_Adapter_1to4_M18_AH50_6500_2026-11-07.tar.part009"
+      },
+      {
+        "id": "1iGREg2GVpbA-PWVu29NpbvtI9xWPrDCL",
+        "size": 99614720,
+        "name": "FINAL_Charging_Adapter_1to4_M18_AH50_6500_2026-11-07.tar.part010"
+      },
+      {
+        "id": "1YW8oDZMY7mh1YeNsOuCicokJvpwonNDQ",
+        "size": 99614720,
+        "name": "FINAL_Charging_Adapter_1to4_M18_AH50_6500_2026-11-07.tar.part011"
+      },
+      {
+        "id": "1BN5v-yPn7JZA5nQI6-PVVyOy7FUpxGvT",
+        "size": 99614720,
+        "name": "FINAL_Charging_Adapter_1to4_M18_AH50_6500_2026-11-07.tar.part012"
+      },
+      {
+        "id": "1vz6UiPcmv5c0kJ8CrLAbX-Z8EvOtbHi8",
+        "size": 99614720,
+        "name": "FINAL_Charging_Adapter_1to4_M18_AH50_6500_2026-11-07.tar.part013"
+      },
+      {
+        "id": "1zqJsq2K7zRH52c3G5PESfFRX2zB9YKPU",
+        "size": 99614720,
+        "name": "FINAL_Charging_Adapter_1to4_M18_AH50_6500_2026-11-07.tar.part014"
+      },
+      {
+        "id": "1WBJW9ElZs6N096Gx3hFp5w3vvgjHXtRK",
+        "size": 99614720,
+        "name": "FINAL_Charging_Adapter_1to4_M18_AH50_6500_2026-11-07.tar.part015"
+      },
+      {
+        "id": "10pa7AZQIHRbdN0uttw4TwQf62ukFgips",
+        "size": 99614720,
+        "name": "FINAL_Charging_Adapter_1to4_M18_AH50_6500_2026-11-07.tar.part016"
+      },
+      {
+        "id": "1N2EtyH2OOlOyHr_DHCaaFfaps0nDqhUZ",
+        "size": 99614720,
+        "name": "FINAL_Charging_Adapter_1to4_M18_AH50_6500_2026-11-07.tar.part017"
+      },
+      {
+        "id": "1HGzOgwaPa4mEH4mD62iokn_Q5trLsaDM",
+        "size": 99614720,
+        "name": "FINAL_Charging_Adapter_1to4_M18_AH50_6500_2026-11-07.tar.part018"
+      },
+      {
+        "id": "1j-TLccznLeNhbeyK89oewkOnhbhv0HV_",
+        "size": 99614720,
+        "name": "FINAL_Charging_Adapter_1to4_M18_AH50_6500_2026-11-07.tar.part019"
+      },
+      {
+        "id": "1eaYl09ZPX8dsTB3VsPlU1EXUcv8SGcy2",
+        "size": 99614720,
+        "name": "FINAL_Charging_Adapter_1to4_M18_AH50_6500_2026-11-07.tar.part020"
+      },
+      {
+        "id": "17vCLWYNzX-tIATQSPcI137drdfdSH9OX",
+        "size": 99614720,
+        "name": "FINAL_Charging_Adapter_1to4_M18_AH50_6500_2026-11-07.tar.part021"
+      },
+      {
+        "id": "1cV7ZxgdxRqdDMQZaC54HRK7fzXreM3Tv",
+        "size": 99614720,
+        "name": "FINAL_Charging_Adapter_1to4_M18_AH50_6500_2026-11-07.tar.part022"
+      },
+      {
+        "id": "1IqIgZ-VUTBkQg1PZKTo6odiovJzUZkZs",
+        "size": 99614720,
+        "name": "FINAL_Charging_Adapter_1to4_M18_AH50_6500_2026-11-07.tar.part023"
+      },
+      {
+        "id": "10py7I26BiPM_hwfU9Q05FLm8Fd4prwpM",
+        "size": 99614720,
+        "name": "FINAL_Charging_Adapter_1to4_M18_AH50_6500_2026-11-07.tar.part024"
+      },
+      {
+        "id": "1v19Dm-v3JEhWJjau_rJ40r-lPMaLjHQi",
+        "size": 99614720,
+        "name": "FINAL_Charging_Adapter_1to4_M18_AH50_6500_2026-11-07.tar.part025"
+      },
+      {
+        "id": "1euS1fOYGZ1bjYHOQVSidAskjRIZ69vV0",
+        "size": 99614720,
+        "name": "FINAL_Charging_Adapter_1to4_M18_AH50_6500_2026-11-07.tar.part026"
+      },
+      {
+        "id": "1RIfQzpQGGbvUpIYv1NC60bu0ZqE5mcbW",
+        "size": 99614720,
+        "name": "FINAL_Charging_Adapter_1to4_M18_AH50_6500_2026-11-07.tar.part027"
+      },
+      {
+        "id": "1DNue6cQEJjHNMKuKyztGuQr5PT-kU8tS",
+        "size": 99614720,
+        "name": "FINAL_Charging_Adapter_1to4_M18_AH50_6500_2026-11-07.tar.part028"
+      },
+      {
+        "id": "1E2N7BtidjytNCCcaHNSOBQq-_dmgAIDc",
+        "size": 99614720,
+        "name": "FINAL_Charging_Adapter_1to4_M18_AH50_6500_2026-11-07.tar.part029"
+      },
+      {
+        "id": "1RBNnVEt0BS8GCdCGWggUKgRY7NMsGEbM",
+        "size": 99614720,
+        "name": "FINAL_Charging_Adapter_1to4_M18_AH50_6500_2026-11-07.tar.part030"
+      },
+      {
+        "id": "1vEmv9NmWf9i3QlQuz-AAfm3xCJpANkzl",
+        "size": 99614720,
+        "name": "FINAL_Charging_Adapter_1to4_M18_AH50_6500_2026-11-07.tar.part031"
+      },
+      {
+        "id": "1GWQeFKGArXImZLhgeiDCPIz1Qkxu9HJU",
+        "size": 99614720,
+        "name": "FINAL_Charging_Adapter_1to4_M18_AH50_6500_2026-11-07.tar.part032"
+      },
+      {
+        "id": "1VBU86kmCjB1PqO_ShPH3OxORk2sciQaZ",
+        "size": 99614720,
+        "name": "FINAL_Charging_Adapter_1to4_M18_AH50_6500_2026-11-07.tar.part033"
+      },
+      {
+        "id": "1GyjJM6B6YLjsejhc9WhhjFHAG3BfKoVu",
+        "size": 99614720,
+        "name": "FINAL_Charging_Adapter_1to4_M18_AH50_6500_2026-11-07.tar.part034"
+      },
+      {
+        "id": "1MCO5eklChWurvcDSga2xAc4hDlZdOS_J",
+        "size": 99614720,
+        "name": "FINAL_Charging_Adapter_1to4_M18_AH50_6500_2026-11-07.tar.part035"
+      },
+      {
+        "id": "1kU5ciZMYvNrbEYIIqC_ZISyfY8qPaXZY",
+        "size": 99614720,
+        "name": "FINAL_Charging_Adapter_1to4_M18_AH50_6500_2026-11-07.tar.part036"
+      },
+      {
+        "id": "1c_nHpP8ZW-Vy5CKBQORlfJtGgjHQNsRy",
+        "size": 99614720,
+        "name": "FINAL_Charging_Adapter_1to4_M18_AH50_6500_2026-11-07.tar.part037"
+      },
+      {
+        "id": "1nwWqw_ENRN1YXlOQzol2sXE09zpwzSOy",
+        "size": 99614720,
+        "name": "FINAL_Charging_Adapter_1to4_M18_AH50_6500_2026-11-07.tar.part038"
+      },
+      {
+        "id": "1tcILznqRSXcpJBV5n6uUkmKQkDaotlfe",
+        "size": 99614720,
+        "name": "FINAL_Charging_Adapter_1to4_M18_AH50_6500_2026-11-07.tar.part039"
+      },
+      {
+        "id": "1XDTniDH5UoopLBv_C2jV4DaBMJ4q0jZM",
+        "size": 99614720,
+        "name": "FINAL_Charging_Adapter_1to4_M18_AH50_6500_2026-11-07.tar.part040"
+      },
+      {
+        "id": "1tqJRdvMkfcQEHiP0Z44xOC0Lm124smoe",
+        "size": 96307200,
+        "name": "FINAL_Charging_Adapter_1to4_M18_AH50_6500_2026-11-07.tar.part041"
+      }
+    ]
+  },
+  {
+    "name": "centrifuge_pi05",
+    "source_sha256": "eb124ef035637f9cab5f197874582f4d08f17e18673b2f83ad3d79fb454e3b82",
+    "source_bytes": 3335364,
+    "output_bytes": 1468054,
+    "output_sha256": "7e85a1a4e1b2fd2c4922b10946a4cb6e11b078a6cead8d8a8063ac463c70738f",
+    "source_duration": 9.33,
+    "duration": 9.33,
+    "source_frames": 280,
+    "output_frames": 280,
+    "source_streams": [
+      "Stream #0:0[0x1](und): Video: mpeg4 (Simple Profile) (mp4v / 0x7634706D), yuv420p, 1280x800 [SAR 1:1 DAR 8:5], 2857 kb/s, 30 fps, 30 tbr, 15360 tbn (default)"
+    ],
+    "output_streams": [
+      "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x800 [SAR 1:1 DAR 8:5], 1254 kb/s, 30 fps, 30 tbr, 15360 tbn (default)"
+    ],
+    "fully_decoded": true,
+    "faststart": true,
+    "video_asset": "static/videos/real_centrifuge_pi05.mp4",
+    "poster_asset": "static/videos/real_centrifuge_pi05.jpg",
+    "task": "Centrifuge loading",
+    "configuration": "Middle slot",
+    "method": "\u03c00.5",
+    "outcome": "failure",
+    "trial": "ood-middle.baseline.P1.blue.M1",
+    "camera": "cam_high",
+    "outcome_source": "Operator labels in archived trial folders and outcome records; not a new evaluation.",
+    "selection": "Illustrative failure/success examples from the same task configuration; distinct physical trials.",
+    "drive_file_id": "1kbFrJU6ew4sF2dD8AnKEoXThmjkDvgdw",
+    "source_drive_folder": "https://drive.google.com/drive/folders/1HIFQ9uNzZbvbd3uvKRZLsQ4efGM0-b9X"
+  },
+  {
+    "name": "centrifuge_contrastflow",
+    "source_sha256": "38f58a3e1dd7e0e3eebbb0c889807ab1fc3ecd772f111ecdc3e48de56cbab09c",
+    "source_bytes": 11393884,
+    "output_bytes": 5050626,
+    "output_sha256": "56bbc83868f9ebe2d6dafe1aab4b564ad1365eff15a05c54c12411a2296869c9",
+    "source_duration": 31.17,
+    "duration": 31.17,
+    "source_frames": 935,
+    "output_frames": 935,
+    "source_streams": [
+      "Stream #0:0[0x1](und): Video: mpeg4 (Simple Profile) (mp4v / 0x7634706D), yuv420p, 1280x800 [SAR 1:1 DAR 8:5], 2923 kb/s, 30 fps, 30 tbr, 15360 tbn (default)"
+    ],
+    "output_streams": [
+      "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x800 [SAR 1:1 DAR 8:5], 1293 kb/s, 30 fps, 30 tbr, 15360 tbn (default)"
+    ],
+    "fully_decoded": true,
+    "faststart": true,
+    "video_asset": "static/videos/real_centrifuge_contrastflow.mp4",
+    "poster_asset": "static/videos/real_centrifuge_contrastflow.jpg",
+    "task": "Centrifuge loading",
+    "configuration": "Middle slot",
+    "method": "ContrastFlow",
+    "outcome": "success",
+    "trial": "ood-middle.m18.P1.blue.M1",
+    "camera": "cam_high",
+    "outcome_source": "Operator labels in archived trial folders and outcome records; not a new evaluation.",
+    "selection": "Illustrative failure/success examples from the same task configuration; distinct physical trials.",
+    "drive_file_id": "1u6aOHwxJQ2sJnMRclKoDNgQFxEB_oHJV",
+    "source_drive_folder": "https://drive.google.com/drive/folders/1HIFQ9uNzZbvbd3uvKRZLsQ4efGM0-b9X"
+  },
+  {
+    "name": "titration_pi05",
+    "source_sha256": "657f07998d3487ae3c8546074989527243b322add3b3e5aa702b5396280318c7",
+    "source_bytes": 2037435,
+    "output_bytes": 812647,
+    "output_sha256": "29196b12dd05a689596ad61b8259a92dd365c67e6f706a424806076a0d2e1028",
+    "source_duration": 16.83,
+    "duration": 16.83,
+    "source_frames": 505,
+    "output_frames": 505,
+    "source_streams": [
+      "Stream #0:0[0x1](und): Video: mpeg4 (Simple Profile) (mp4v / 0x7634706D), yuv420p, 640x480 [SAR 1:1 DAR 4:3], 966 kb/s, 30 fps, 30 tbr, 15360 tbn (default)"
+    ],
+    "output_streams": [
+      "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 640x480 [SAR 1:1 DAR 4:3], 383 kb/s, 30 fps, 30 tbr, 15360 tbn (default)"
+    ],
+    "fully_decoded": true,
+    "faststart": true,
+    "video_asset": "static/videos/real_titration_pi05.mp4",
+    "poster_asset": "static/videos/real_titration_pi05.jpg",
+    "task": "Titration",
+    "configuration": "Burette raised 2 cm",
+    "method": "\u03c00.5",
+    "outcome": "failure",
+    "trial": "10",
+    "camera": "cam_high",
+    "outcome_source": "Operator labels in archived trial folders and outcome records; not a new evaluation.",
+    "selection": "Illustrative failure/success examples from the same task configuration; distinct physical trials.",
+    "archive_members": [
+      {
+        "name": "baseline/variations70-run1-step9999-burette2cmup/failure/10/outcome.json",
+        "size": 215,
+        "offset": 243200,
+        "type": "0",
+        "sha256": "081c33a17cfb065279f31dea0df208a2c992c06931e686a641b2ddf9e3faaa3e",
+        "archive_id": "1ifSJPl409KRbutgJ2sCqzHpAhCV4DH7_"
+      },
+      {
+        "name": "baseline/variations70-run1-step9999-burette2cmup/failure/10/recording/cam_high.mp4",
+        "size": 2037435,
+        "offset": 11831296,
+        "type": "0",
+        "sha256": "657f07998d3487ae3c8546074989527243b322add3b3e5aa702b5396280318c7",
+        "archive_id": "1ifSJPl409KRbutgJ2sCqzHpAhCV4DH7_"
+      }
+    ],
+    "source_drive_folder": "https://drive.google.com/drive/folders/1HzFW3R3TZmNyJbC0ta1ZdfbK_z6YQf3r"
+  },
+  {
+    "name": "titration_contrastflow",
+    "source_sha256": "4bc25278dee1b18e857a3849fc34194f3f867deb27d7fada31456bf3033ba9ca",
+    "source_bytes": 3832903,
+    "output_bytes": 1588256,
+    "output_sha256": "912167a208c7d4368baf4af72d554c2cacdae9fb88978f2165a143d5eb1d06e4",
+    "source_duration": 34.67,
+    "duration": 34.67,
+    "source_frames": 1040,
+    "output_frames": 1040,
+    "source_streams": [
+      "Stream #0:0[0x1](und): Video: mpeg4 (Simple Profile) (mp4v / 0x7634706D), yuv420p, 640x480 [SAR 1:1 DAR 4:3], 883 kb/s, 30 fps, 30 tbr, 15360 tbn (default)"
+    ],
+    "output_streams": [
+      "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 640x480 [SAR 1:1 DAR 4:3], 363 kb/s, 30 fps, 30 tbr, 15360 tbn (default)"
+    ],
+    "fully_decoded": true,
+    "faststart": true,
+    "video_asset": "static/videos/real_titration_contrastflow.mp4",
+    "poster_asset": "static/videos/real_titration_contrastflow.jpg",
+    "task": "Titration",
+    "configuration": "Burette raised 2 cm",
+    "method": "ContrastFlow",
+    "outcome": "success",
+    "trial": "3",
+    "camera": "cam_high",
+    "outcome_source": "Operator labels in archived trial folders and outcome records; not a new evaluation.",
+    "selection": "Illustrative failure/success examples from the same task configuration; distinct physical trials.",
+    "archive_members": [
+      {
+        "name": "m18-lagged/variations70-run1-step9999-burette2cmup/success/3/recording/cam_high.mp4",
+        "size": 3832903,
+        "offset": 3941496832,
+        "type": "0",
+        "sha256": "4bc25278dee1b18e857a3849fc34194f3f867deb27d7fada31456bf3033ba9ca",
+        "archive_id": "1hBHX0H1pmW1YF3oFg3tzROBjrM-wbh0H"
+      }
+    ],
+    "source_drive_folder": "https://drive.google.com/drive/folders/1HzFW3R3TZmNyJbC0ta1ZdfbK_z6YQf3r"
+  }
+]

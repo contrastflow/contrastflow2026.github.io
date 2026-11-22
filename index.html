@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="static/style.css?v=focus-v5">
+<link rel="stylesheet" href="static/style.css?v=real-tasks-v1">
 </head>
 <body>
 
@@ -37,7 +37,10 @@
   <a href="#realworld" class="top">Real World</a>
   <div class="sub-links">
     <a class="sub" href="#rw-tasks">&middot; 🦾 Tasks</a>
-    <a class="sub" href="#rw-videos">&middot; Cable insertion videos</a>
+    <a class="sub" href="#rw-videos">&middot; Cable insertion</a>
+    <a class="sub" href="#rw-adapter-videos">&middot; Adapter relocation</a>
+    <a class="sub" href="#rw-centrifuge-videos">&middot; Centrifuge loading</a>
+    <a class="sub" href="#rw-titration-videos">&middot; Titration</a>
     <a class="sub" href="#rw-results">&middot; 📊 Success rates</a>
     <a class="sub" href="#rw-backbones">&middot; 🧩 Other policies</a>
     <a class="sub" href="#rw-attention">&middot; 👁️ Attention</a>
@@ -218,6 +221,45 @@
 
 </article></div></div>
 
+  </div>
+
+  <h3 id="rw-adapter-videos" class="sub">Adapter relocation</h3>
+  <h4 class="real-config">Transfer 1 → 4</h4>
+  <div class="real-video-pair real-task-pair">
+    <article class="real-clip" data-task="adapter" data-outcome="failure" data-trial="10">
+      <div class="real-clip-heading"><h4>π0.5</h4></div>
+      <video controls playsinline preload="none" poster="static/videos/real_adapter_pi05.jpg" aria-label="Adapter relocation, Transfer 1 → 4, π0.5, operator-tagged failure, trial 10. Full original stationary-camera recording."><source src="static/videos/real_adapter_pi05.mp4" type="video/mp4"></video>
+    </article>
+    <article class="real-clip" data-task="adapter" data-outcome="success" data-trial="10">
+      <div class="real-clip-heading"><h4>ContrastFlow</h4></div>
+      <video controls playsinline preload="none" poster="static/videos/real_adapter_contrastflow.jpg" aria-label="Adapter relocation, Transfer 1 → 4, ContrastFlow, operator-tagged success, trial 10. Full original stationary-camera recording."><source src="static/videos/real_adapter_contrastflow.mp4" type="video/mp4"></video>
+    </article>
+  </div>
+
+  <h3 id="rw-centrifuge-videos" class="sub">Centrifuge loading</h3>
+  <h4 class="real-config">Middle slot</h4>
+  <div class="real-video-pair real-task-pair">
+    <article class="real-clip" data-task="centrifuge" data-outcome="failure" data-trial="ood-middle.baseline.P1.blue.M1">
+      <div class="real-clip-heading"><h4>π0.5</h4></div>
+      <video controls playsinline preload="none" poster="static/videos/real_centrifuge_pi05.jpg" aria-label="Centrifuge loading, Middle slot, π0.5, operator-tagged failure, trial ood-middle.baseline.P1.blue.M1. Full original stationary-camera recording."><source src="static/videos/real_centrifuge_pi05.mp4" type="video/mp4"></video>
+    </article>
+    <article class="real-clip" data-task="centrifuge" data-outcome="success" data-trial="ood-middle.m18.P1.blue.M1">
+      <div class="real-clip-heading"><h4>ContrastFlow</h4></div>
+      <video controls playsinline preload="none" poster="static/videos/real_centrifuge_contrastflow.jpg" aria-label="Centrifuge loading, Middle slot, ContrastFlow, operator-tagged success, trial ood-middle.m18.P1.blue.M1. Full original stationary-camera recording."><source src="static/videos/real_centrifuge_contrastflow.mp4" type="video/mp4"></video>
+    </article>
+  </div>
+
+  <h3 id="rw-titration-videos" class="sub">Titration</h3>
+  <h4 class="real-config">Burette raised 2 cm</h4>
+  <div class="real-video-pair real-task-pair">
+    <article class="real-clip" data-task="titration" data-outcome="failure" data-trial="10">
+      <div class="real-clip-heading"><h4>π0.5</h4></div>
+      <video controls playsinline preload="none" poster="static/videos/real_titration_pi05.jpg" aria-label="Titration, Burette raised 2 cm, π0.5, operator-tagged failure, trial 10. Full original stationary-camera recording."><source src="static/videos/real_titration_pi05.mp4" type="video/mp4"></video>
+    </article>
+    <article class="real-clip" data-task="titration" data-outcome="success" data-trial="3">
+      <div class="real-clip-heading"><h4>ContrastFlow</h4></div>
+      <video controls playsinline preload="none" poster="static/videos/real_titration_contrastflow.jpg" aria-label="Titration, Burette raised 2 cm, ContrastFlow, operator-tagged success, trial 3. Full original stationary-camera recording."><source src="static/videos/real_titration_contrastflow.mp4" type="video/mp4"></video>
+    </article>
   </div>
 
   <h3 id="rw-results" class="sub">📊 Success rates</h3>

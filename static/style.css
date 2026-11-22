@@ -926,3 +926,6 @@ hr {
 video { background:#000; filter:grayscale(1) brightness(.55); outline:3px solid transparent; outline-offset:-3px; transition:filter .18s ease, outline-color .18s ease; }
 video.is-playing { filter:none; outline-color:#fff; }
 @media (prefers-reduced-motion:reduce) { video { transition:none; } }
+
+/* Preserve the full native camera framing for the three added real-world tasks. */
+.real-task-pair .real-clip video { aspect-ratio:auto; height:auto; }
