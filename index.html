@@ -13,14 +13,14 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="static/style.css?v=real-tasks-v1">
+<link rel="stylesheet" href="static/style.css?v=reel-v1">
 </head>
 <body>
 
 <aside class="sidenav" id="sidenav" aria-label="Section navigation">
   <div class="sidenav-body">
   <div class="sidenav-title">ContrastFlow</div>
-  <a href="#overview">Abstract</a>
+  <a href="#showcase">Showcase</a>
   <div class="sidenav-cat">Results</div>
   <a href="#simulation" class="top">Simulation</a>
   <div class="sub-links">
@@ -48,10 +48,51 @@
 
 <hr>
 
-<section id="overview" class="section">
-  <h2>Abstract</h2>
-
-<p class="abstract">Generalist robot policies often generate actions that follow the action distribution learned in the training scenes, even when the current observation differs. We make an interesting observation: such a policy already localizes the action-relevant visual regions in its text-to-vision attention, yet the generated actions remain under-conditioned on those regions. We propose ContrastFlow, a test-time method that turns the localized regions into a correction of the generated actions. ContrastFlow masks the attended visual tokens to obtain a negative reference from the policy itself, and amplifies the contrast between the velocity predictions with and without those tokens during flow integration, with no additional training and no auxiliary models. We show that the guidance shifts action plans toward the target and reduces the variance of the planned fingertip endpoints by about half. ContrastFlow consistently improves &pi;<sub>0.5</sub> and Cosmos3, a vision-language-action model and a world action model, on LIBERO-PRO and RoboLab-120. On a physical robot, across four manipulation tasks that end in fine closed-loop alignment, ContrastFlow raises the per-task success rate of &pi;<sub>0.5</sub> from 12&ndash;25% to 50&ndash;75%. ContrastFlow improves four state-of-the-art model families that span three architectures.</p>
+<section id="showcase" class="section">
+  <div class="reel-heading">
+    <h2>ContrastFlow in action</h2>
+    <button class="reel-toggle" type="button" aria-label="Pause video reel" aria-pressed="false"><span aria-hidden="true">Ⅱ</span></button>
+  </div>
+  <div class="marquee-wrap">
+    <div class="marquee" aria-label="Scrolling task videos">
+      <div class="marquee-track">
+        <a class="reel-card" href="#rw-videos" aria-label="Cable insertion: view full comparisons">
+          <video class="reel-video" muted loop playsinline preload="none" poster="static/videos/contrastflow_success_config2.jpg" data-src="static/videos/contrastflow_success_config2.mp4" aria-label="ContrastFlow: Cable insertion"></video>
+          <h3>Cable insertion</h3>
+        </a>
+        <a class="reel-card" href="#rw-adapter-videos" aria-label="Adapter relocation: view full comparisons">
+          <video class="reel-video" muted loop playsinline preload="none" poster="static/videos/rw_adapter_cf_success_1to4.jpg" data-src="static/videos/rw_adapter_cf_success_1to4.mp4" aria-label="ContrastFlow: Adapter relocation"></video>
+          <h3>Adapter relocation</h3>
+        </a>
+        <a class="reel-card" href="#rw-centrifuge-videos" aria-label="Centrifuge loading: view full comparisons">
+          <video class="reel-video" muted loop playsinline preload="none" poster="static/videos/rw_centrifuge_cf_success_ood_p1_blue.jpg" data-src="static/videos/rw_centrifuge_cf_success_ood_p1_blue.mp4" aria-label="ContrastFlow: Centrifuge loading"></video>
+          <h3>Centrifuge loading</h3>
+        </a>
+        <a class="reel-card" href="#rw-titration-videos" aria-label="Titration: view full comparisons">
+          <video class="reel-video" muted loop playsinline preload="none" poster="static/videos/rw_titration_cf_success_2cmup.jpg" data-src="static/videos/rw_titration_cf_success_2cmup.mp4" aria-label="ContrastFlow: Titration"></video>
+          <h3>Titration</h3>
+        </a>
+        <a class="reel-card" href="#rw-videos" aria-label="Cable insertion: view full comparisons">
+          <video class="reel-video" muted loop playsinline preload="none" poster="static/videos/contrastflow_success_config3.jpg" data-src="static/videos/contrastflow_success_config3.mp4" aria-label="ContrastFlow: Cable insertion"></video>
+          <h3>Cable insertion</h3>
+        </a>
+        <a class="reel-card" href="#rw-adapter-videos" aria-label="Adapter relocation: view full comparisons">
+          <video class="reel-video" muted loop playsinline preload="none" poster="static/videos/rw_adapter_cf_success_3to4.jpg" data-src="static/videos/rw_adapter_cf_success_3to4.mp4" aria-label="ContrastFlow: Adapter relocation"></video>
+          <h3>Adapter relocation</h3>
+        </a>
+        <a class="reel-card" href="#rw-centrifuge-videos" aria-label="Centrifuge loading: view full comparisons">
+          <video class="reel-video" muted loop playsinline preload="none" poster="static/videos/rw_centrifuge_cf_success_p5_red.jpg" data-src="static/videos/rw_centrifuge_cf_success_p5_red.mp4" aria-label="ContrastFlow: Centrifuge loading"></video>
+          <h3>Centrifuge loading</h3>
+        </a>
+        <a class="reel-card" href="#rw-titration-videos" aria-label="Titration: view full comparisons">
+          <video class="reel-video" muted loop playsinline preload="none" poster="static/videos/rw_titration_cf_success_towardbase.jpg" data-src="static/videos/rw_titration_cf_success_towardbase.mp4" aria-label="ContrastFlow: Titration"></video>
+          <h3>Titration</h3>
+        </a>
+      </div>
+    </div>
+    <button class="marquee-btn prev" type="button" aria-label="Previous clips">←</button>
+    <button class="marquee-btn next" type="button" aria-label="Next clips">→</button>
+  </div>
 </section>
 
 <hr>
@@ -81,10 +122,6 @@
       <source src="static/videos/libero_spatial_swap_01_seed105.mp4?v=focus-v5" type="video/mp4">
     </video>
   </figure>
-
-<h3 id="sim-swap" class="sub">↔️ LIBERO-PRO position swap</h3>
-
-<h3 id="sim-sensitivity" class="sub">🎚️ Guidance strength and masking ratio</h3>
 
 </section>
 
@@ -286,16 +323,8 @@
     </article>
   </div>
 
-<h3 id="rw-backbones" class="sub">🧩 Other policies and architectures</h3>
-
-<h3 id="rw-attention" class="sub">👁️ Attention on the real tasks</h3>
-
-<h3 id="rw-latency" class="sub">⏱️ Success vs. latency</h3>
-
-<h3 id="rw-servoing" class="sub">🎯 Servoing</h3>
-
 </section>
 
-<script src="static/script.js?v=focus-v5"></script>
+<script src="static/script.js?v=reel-v1"></script>
 </body>
 </html>

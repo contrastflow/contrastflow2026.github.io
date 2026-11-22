@@ -19,7 +19,7 @@ A regular Git clone is sufficient; no private repositories or submodules are req
 
 | Path | What it is |
 | --- | --- |
-| `index.html` | Title, abstract, simulation videos, and real-world task videos |
+| `index.html` | Title, rolling video showcase, simulation videos, and real-world task videos |
 | `static/style.css`, `static/script.js` | Styles, playback focus, and section navigation |
 | `static/videos/` | Browser-compatible MP4s and video preview images |
 | `media/` | Video provenance and encoding records |
