@@ -5,7 +5,7 @@
   "duration_seconds": 61.4,
   "width": 2848,
   "height": 2000,
-  "sha256": "52b8cabc74429ff1db3e82dfd149ed739513e6c958f5690f2f13bf64b6ec6646",
+  "sha256": "d60df6f7883c1434fcda0f018d6cedd45c38a44e092f11e4ddb77409de18fc15",
   "fully_decoded": true,
   "text_bubbles": false,
   "source_hashes": {
@@ -75,20 +75,34 @@
     }
   },
   "terminal_hold_seconds": 2.0,
-  "action_chunk_style": {
-    "line": "continuous straight segments",
-    "vertex_markers": false,
-    "dashes": false,
-    "edge_supersampling": 2,
-    "projected_points_unchanged": true,
-    "executed_width_pixels": 18,
-    "future_width_pixels": 14,
-    "dark_outline": true
-  },
+  "action_chunk_style": null,
   "previous_comparison": "libero_goal_swap_01_seed102_solid.mp4",
   "previous_sha256": "1dac177df58268513bbfc7035b6f810e9f01a88d44b3cf0b590ed40d76df6239",
   "original_preserved": false,
   "previous_versions_retention": "Git history before the unused-video cleanup",
   "previous_marker_sha256": "6c31d5b1d61731ea82120f49a3c460460a6f3756abbdb77d7a30854acf716528",
-  "poster_frame": 566
+  "poster_frame": 566,
+  "trajectory_overlay": {
+    "source": "recorded end-effector positions for the complete episode",
+    "full_path_visible": true,
+    "accumulated_executed_path": true,
+    "reset_at_replan": false,
+    "predicted_chunks": false,
+    "full_path_color": "white",
+    "executed_path_color": "green",
+    "full_path_width_pixels": 12,
+    "executed_path_width_pixels": 16,
+    "vertex_markers": false,
+    "dashes": false,
+    "edge_supersampling": 2,
+    "panels": [
+      "policy camera",
+      "active zoom"
+    ],
+    "path_sha256": {
+      "baseline": "1ff649a09f8cd66d1679f8bbf2243a6cd729b5c8240dcaac8b1c7d580d3a9d6d",
+      "emb-zero": "8448ed3ba0f08ef990916499cedc67dd24a6a8cc019d0d0f2a92149048ff76d9"
+    }
+  },
+  "previous_overlay_sha256": "52b8cabc74429ff1db3e82dfd149ed739513e6c958f5690f2f13bf64b6ec6646"
 }

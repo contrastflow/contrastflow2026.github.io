@@ -5,7 +5,7 @@
   "duration_seconds": 70.1,
   "width": 2848,
   "height": 2000,
-  "sha256": "79ef55fd0c3c7535b14262cc87b05116561ccd1a674e2d3fb675c17a5f4ffe7d",
+  "sha256": "eeb076741a210af9869116ccbbcef45cf7d3b55552ff9d373098f4bad31c8cf0",
   "fully_decoded": true,
   "text_bubbles": false,
   "source_hashes": {
@@ -81,5 +81,28 @@
   "original_preserved": false,
   "previous_versions_retention": "Git history before the unused-video cleanup",
   "previous_marker_sha256": "df3cac7390dba27c17dc70ba3e3733e071d564dbb98c0a920ddf5b995d195aea",
-  "poster_frame": 663
+  "poster_frame": 663,
+  "trajectory_overlay": {
+    "source": "recorded end-effector positions for the complete episode",
+    "full_path_visible": true,
+    "accumulated_executed_path": true,
+    "reset_at_replan": false,
+    "predicted_chunks": false,
+    "full_path_color": "white",
+    "executed_path_color": "green",
+    "full_path_width_pixels": 12,
+    "executed_path_width_pixels": 16,
+    "vertex_markers": false,
+    "dashes": false,
+    "edge_supersampling": 2,
+    "panels": [
+      "policy camera",
+      "active zoom"
+    ],
+    "path_sha256": {
+      "baseline": "fb04f14b7a19599a6de1e46bc8b5648a400ff2573cdb41d447f745a8899816fa",
+      "emb-zero": "a9e198150b52d10f916c6b39ecb427e0faeb3a3cb0b663e83a3cce26832c415c"
+    }
+  },
+  "previous_overlay_sha256": "79ef55fd0c3c7535b14262cc87b05116561ccd1a674e2d3fb675c17a5f4ffe7d"
 }

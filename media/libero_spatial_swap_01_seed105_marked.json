@@ -5,7 +5,7 @@
   "duration_seconds": 76.6,
   "width": 2848,
   "height": 2000,
-  "sha256": "2d49fe3a0a7b47f68b2d1bafcf1fc31f9ca661c79ce46babc315d40fe1f59412",
+  "sha256": "8ce12c1854b0996601f2b822dd6d7c229b710afa8b2cfb0eca7018754c7c574a",
   "fully_decoded": true,
   "text_bubbles": false,
   "source_hashes": {
@@ -75,20 +75,34 @@
     }
   },
   "terminal_hold_seconds": 2.0,
-  "action_chunk_style": {
-    "line": "continuous straight segments",
-    "vertex_markers": false,
-    "dashes": false,
-    "edge_supersampling": 2,
-    "projected_points_unchanged": true,
-    "executed_width_pixels": 18,
-    "future_width_pixels": 14,
-    "dark_outline": true
-  },
+  "action_chunk_style": null,
   "previous_comparison": "libero_spatial_swap_01_seed105_solid.mp4",
   "previous_sha256": "4364d9eca8f672d55caf9f0d11b362f92a28e9d72368ad35ba4c4992c5102cdf",
   "original_preserved": false,
   "previous_versions_retention": "Git history before the unused-video cleanup",
   "previous_marker_sha256": "c66bafe976a1ec2dfad18b8cfa7b31d7551ef12a546e7a61533f66724b574d55",
-  "poster_frame": 640
+  "poster_frame": 640,
+  "trajectory_overlay": {
+    "source": "recorded end-effector positions for the complete episode",
+    "full_path_visible": true,
+    "accumulated_executed_path": true,
+    "reset_at_replan": false,
+    "predicted_chunks": false,
+    "full_path_color": "white",
+    "executed_path_color": "green",
+    "full_path_width_pixels": 12,
+    "executed_path_width_pixels": 16,
+    "vertex_markers": false,
+    "dashes": false,
+    "edge_supersampling": 2,
+    "panels": [
+      "policy camera",
+      "active zoom"
+    ],
+    "path_sha256": {
+      "baseline": "623e690e9d9b1c4db00fd1844bc7be0b1af6a48ace0554369601ff707af43152",
+      "emb-zero": "4c0d8b893dbe990e5f29d9c2516f5b70b2bde1a3bfded9867feed573f1b2b29a"
+    }
+  },
+  "previous_overlay_sha256": "2d49fe3a0a7b47f68b2d1bafcf1fc31f9ca661c79ce46babc315d40fe1f59412"
 }
