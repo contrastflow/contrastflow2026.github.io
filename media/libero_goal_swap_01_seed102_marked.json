@@ -5,7 +5,7 @@
   "duration_seconds": 61.4,
   "width": 2848,
   "height": 2000,
-  "sha256": "6c31d5b1d61731ea82120f49a3c460460a6f3756abbdb77d7a30854acf716528",
+  "sha256": "52b8cabc74429ff1db3e82dfd149ed739513e6c958f5690f2f13bf64b6ec6646",
   "fully_decoded": true,
   "text_bubbles": false,
   "source_hashes": {
@@ -51,22 +51,28 @@
     896
   ],
   "outcome_markers": {
+    "placement": "top right inside the active zoom panel",
+    "panel_xyxy": [
+      32,
+      1064,
+      928,
+      1960
+    ],
+    "source": "existing annotated action moments and archived episode outcomes",
     "baseline": {
       "symbol": "cross",
       "color": "red",
-      "start_frame": 444,
-      "end_frame": 613,
+      "start_frame": 334,
+      "end_frame": 414,
       "outcome": "failure"
     },
     "contrastflow": {
       "symbol": "tick",
       "color": "green",
-      "start_frame": 593,
-      "end_frame": 613,
+      "start_frame": 550,
+      "end_frame": 583,
       "outcome": "success"
-    },
-    "placement": "top right of each policy camera panel",
-    "source": "archived terminal episode outcomes"
+    }
   },
   "terminal_hold_seconds": 2.0,
   "action_chunk_style": {
@@ -82,5 +88,7 @@
   "previous_comparison": "libero_goal_swap_01_seed102_solid.mp4",
   "previous_sha256": "1dac177df58268513bbfc7035b6f810e9f01a88d44b3cf0b590ed40d76df6239",
   "original_preserved": false,
-  "previous_versions_retention": "Git history before the unused-video cleanup"
+  "previous_versions_retention": "Git history before the unused-video cleanup",
+  "previous_marker_sha256": "6c31d5b1d61731ea82120f49a3c460460a6f3756abbdb77d7a30854acf716528",
+  "poster_frame": 566
 }

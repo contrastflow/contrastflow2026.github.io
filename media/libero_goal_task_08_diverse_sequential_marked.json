@@ -5,7 +5,7 @@
   "duration_seconds": 70.1,
   "width": 2848,
   "height": 2000,
-  "sha256": "df3cac7390dba27c17dc70ba3e3733e071d564dbb98c0a920ddf5b995d195aea",
+  "sha256": "79ef55fd0c3c7535b14262cc87b05116561ccd1a674e2d3fb675c17a5f4ffe7d",
   "fully_decoded": true,
   "text_bubbles": false,
   "source_hashes": {
@@ -51,27 +51,35 @@
     896
   ],
   "outcome_markers": {
+    "placement": "top right inside the active zoom panel",
+    "panel_xyxy": [
+      32,
+      1064,
+      928,
+      1960
+    ],
+    "source": "existing annotated action moments and archived episode outcomes",
     "baseline": {
       "symbol": "cross",
       "color": "red",
-      "start_frame": 590,
-      "end_frame": 700,
+      "start_frame": 410,
+      "end_frame": 575,
       "outcome": "failure"
     },
     "contrastflow": {
       "symbol": "tick",
       "color": "green",
-      "start_frame": 680,
-      "end_frame": 700,
+      "start_frame": 651,
+      "end_frame": 676,
       "outcome": "success"
-    },
-    "placement": "top right of each policy camera panel",
-    "source": "archived terminal episode outcomes"
+    }
   },
   "terminal_hold_seconds": 2.0,
   "action_chunk_style": null,
   "previous_comparison": "libero_goal_task_08_diverse_sequential_solid.mp4",
   "previous_sha256": "1624b64c21343c9e9565a8cc7ab680b43a3aa9de3a456070d3092d46bb6d30a1",
   "original_preserved": false,
-  "previous_versions_retention": "Git history before the unused-video cleanup"
+  "previous_versions_retention": "Git history before the unused-video cleanup",
+  "previous_marker_sha256": "df3cac7390dba27c17dc70ba3e3733e071d564dbb98c0a920ddf5b995d195aea",
+  "poster_frame": 663
 }

@@ -5,7 +5,7 @@
   "duration_seconds": 76.6,
   "width": 2848,
   "height": 2000,
-  "sha256": "c66bafe976a1ec2dfad18b8cfa7b31d7551ef12a546e7a61533f66724b574d55",
+  "sha256": "2d49fe3a0a7b47f68b2d1bafcf1fc31f9ca661c79ce46babc315d40fe1f59412",
   "fully_decoded": true,
   "text_bubbles": false,
   "source_hashes": {
@@ -51,22 +51,28 @@
     896
   ],
   "outcome_markers": {
+    "placement": "top right inside the active zoom panel",
+    "panel_xyxy": [
+      32,
+      1064,
+      928,
+      1960
+    ],
+    "source": "existing annotated action moments and archived episode outcomes",
     "baseline": {
       "symbol": "cross",
       "color": "red",
-      "start_frame": 502,
-      "end_frame": 765,
+      "start_frame": 262,
+      "end_frame": 302,
       "outcome": "failure"
     },
     "contrastflow": {
       "symbol": "tick",
       "color": "green",
-      "start_frame": 745,
-      "end_frame": 765,
+      "start_frame": 613,
+      "end_frame": 668,
       "outcome": "success"
-    },
-    "placement": "top right of each policy camera panel",
-    "source": "archived terminal episode outcomes"
+    }
   },
   "terminal_hold_seconds": 2.0,
   "action_chunk_style": {
@@ -82,5 +88,7 @@
   "previous_comparison": "libero_spatial_swap_01_seed105_solid.mp4",
   "previous_sha256": "4364d9eca8f672d55caf9f0d11b362f92a28e9d72368ad35ba4c4992c5102cdf",
   "original_preserved": false,
-  "previous_versions_retention": "Git history before the unused-video cleanup"
+  "previous_versions_retention": "Git history before the unused-video cleanup",
+  "previous_marker_sha256": "c66bafe976a1ec2dfad18b8cfa7b31d7551ef12a546e7a61533f66724b574d55",
+  "poster_frame": 640
 }

@@ -5,7 +5,7 @@
   "duration_seconds": 73.0,
   "width": 2848,
   "height": 2000,
-  "sha256": "55e1fbaef8e6fdddc83a8354e5c5c028f7edf7d95121bdc59ab8b76664b9ac0e",
+  "sha256": "87a89396b8d423310956c05fb9ebfacb2fee0108eb91927c8211b3b8733f88ac",
   "fully_decoded": true,
   "text_bubbles": false,
   "source_hashes": {
@@ -51,22 +51,28 @@
     896
   ],
   "outcome_markers": {
+    "placement": "top right inside the active zoom panel",
+    "panel_xyxy": [
+      32,
+      1064,
+      928,
+      1960
+    ],
+    "source": "existing annotated action moments and archived episode outcomes",
     "baseline": {
       "symbol": "cross",
       "color": "red",
-      "start_frame": 519,
-      "end_frame": 729,
+      "start_frame": 219,
+      "end_frame": 259,
       "outcome": "failure"
     },
     "contrastflow": {
       "symbol": "tick",
       "color": "green",
-      "start_frame": 709,
-      "end_frame": 729,
+      "start_frame": 640,
+      "end_frame": 670,
       "outcome": "success"
-    },
-    "placement": "top right of each policy camera panel",
-    "source": "archived terminal episode outcomes"
+    }
   },
   "terminal_hold_seconds": 2.0,
   "action_chunk_style": {
@@ -82,5 +88,7 @@
   "previous_comparison": "libero_object_swap_06_overlays_solid.mp4",
   "previous_sha256": "326b29c209ea9accbebf3e534e0912146c8a2518348b0c6dcd835c8cf25be1ed",
   "original_preserved": false,
-  "previous_versions_retention": "Git history before the unused-video cleanup"
+  "previous_versions_retention": "Git history before the unused-video cleanup",
+  "previous_marker_sha256": "55e1fbaef8e6fdddc83a8354e5c5c028f7edf7d95121bdc59ab8b76664b9ac0e",
+  "poster_frame": 655
 }
