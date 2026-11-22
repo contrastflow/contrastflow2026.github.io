@@ -1,8 +1,7 @@
 # ContrastFlow project page
 
 Project website for **Improving Generalist Policies via Contrastive Flow at Test-Time (ContrastFlow)**.
-Static HTML with simulation and real-world videos. The layout is adapted from the
-[Anchor-Align project page](https://github.com/anchoralignvla/anchoralignvla.github.io).
+Static HTML with simulation and real-world videos.
 
 Live site: https://contrastflow.github.io/contrastflow2026.github.io/
 

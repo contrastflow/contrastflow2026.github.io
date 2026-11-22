@@ -229,7 +229,7 @@ hr {
 }
 
 
-/* ─── Sliding marquee (Anchor-Align in Action) ──────────────────────────────── */
+/* ─── Sliding video marquee ──────────────────────────────── */
 .marquee-wrap { position: relative; }
 .marquee {
   overflow: hidden;
@@ -317,7 +317,7 @@ hr {
   grid-template-columns: 1fr 1fr;
   gap: 14px;
 }
-/* Train/Test setup images + BC/Anchor-Align videos, all side by side at equal size */
+/* Train/Test setup images + policy comparison videos, all side by side at equal size */
 .pair-grid.setup-quad {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 12px;
@@ -343,7 +343,7 @@ hr {
   border-radius: 8px;
   background: #000;
 }
-/* Real-world 4-up (Train | Test setup images + Standard BC | Anchor-Align videos).
+/* Real-world 4-up (Train | Test setup images + policy comparison videos).
    The screenshots AND the rollout videos are all natively 4:3 (640x480), so pin every
    tile to one identical 4:3 box. !important overrides .vid (16:9), the carousel reset,
    and the LIBERO 1:1, so nothing is cropped and all four tiles are the exact same size. */
