@@ -20,6 +20,7 @@
 <aside class="sidenav" id="sidenav" aria-label="Section navigation">
   <div class="sidenav-body">
   <div class="sidenav-title">ContrastFlow</div>
+  <a href="#overview">Abstract</a>
   <a href="#showcase">Showcase</a>
   <div class="sidenav-cat">Results</div>
   <a href="#realworld" class="top">Real World</a>
@@ -47,6 +48,14 @@
 
 </div>
 </header>
+
+<hr>
+
+<section id="overview" class="section">
+  <h2>Abstract</h2>
+
+<p class="abstract">Generalist robot policies often generate actions that follow the action distribution learned in the training scenes, even when the current observation differs. We make an interesting observation: such a policy already localizes the action-relevant visual regions in its text-to-vision attention, yet the generated actions remain under-conditioned on those regions. We propose ContrastFlow, a test-time method that turns the localized regions into a correction of the generated actions. ContrastFlow masks the attended visual tokens to obtain a negative reference from the policy itself, and amplifies the contrast between the velocity predictions with and without those tokens during flow integration, with no additional training and no auxiliary models. We show that the guidance shifts action plans toward the target and reduces the variance of the planned fingertip endpoints by about half. ContrastFlow consistently improves &pi;<sub>0.5</sub> and Cosmos3, a vision-language-action model and a world action model, on LIBERO-PRO and RoboLab-120. On a physical robot, across four manipulation tasks that end in fine closed-loop alignment, ContrastFlow raises the per-task success rate of &pi;<sub>0.5</sub> from 12&ndash;25% to 50&ndash;75%. ContrastFlow improves four state-of-the-art model families that span three architectures.</p>
+</section>
 
 <hr>
 
