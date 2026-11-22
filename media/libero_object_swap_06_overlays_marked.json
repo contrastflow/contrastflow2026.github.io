@@ -81,5 +81,6 @@
   },
   "previous_comparison": "libero_object_swap_06_overlays_solid.mp4",
   "previous_sha256": "326b29c209ea9accbebf3e534e0912146c8a2518348b0c6dcd835c8cf25be1ed",
-  "original_preserved": true
+  "original_preserved": false,
+  "previous_versions_retention": "Git history before the unused-video cleanup"
 }

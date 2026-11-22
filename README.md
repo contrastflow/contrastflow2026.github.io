@@ -21,7 +21,7 @@ A regular Git clone is sufficient; no private repositories or submodules are req
 | --- | --- |
 | `index.html` | Title, rolling video showcase, simulation videos, and real-world task videos |
 | `static/style.css`, `static/script.js` | Styles, playback focus, and section navigation |
-| `static/videos/` | Browser-compatible MP4s and video preview images |
+| `static/videos/` | All displayed browser-compatible MP4s and their video preview images |
 | `media/` | Video provenance and encoding records |
 | `.github/workflows/pages.yml` | GitHub Pages deployment |
 
@@ -30,3 +30,5 @@ A regular Git clone is sufficient; no private repositories or submodules are req
 Pushes to `main` automatically deploy `index.html` and `static/` to GitHub Pages.
 The workflow can also be started manually from the Actions tab.
 There is no build step or dependency on the paper source repository.
+
+All displayed videos are stored directly in this repository. Unused video versions and their posters are removed from the current tree; earlier versions remain available in Git history.

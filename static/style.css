@@ -939,3 +939,7 @@ video.is-playing { filter:none; outline-color:#fff; }
 
 /* Preserve the full native camera framing for the three added real-world tasks. */
 .real-task-pair .real-clip video { aspect-ratio:auto; height:auto; }
+
+/* Task instructions above each full comparison group. */
+.task-prompt { margin: -0.25rem 0 1.25rem; font-size: 1rem; line-height: 1.6; color: var(--fg); }
+.task-prompt strong { font-weight: 600; }

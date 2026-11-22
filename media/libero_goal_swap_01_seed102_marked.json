@@ -81,5 +81,6 @@
   },
   "previous_comparison": "libero_goal_swap_01_seed102_solid.mp4",
   "previous_sha256": "1dac177df58268513bbfc7035b6f810e9f01a88d44b3cf0b590ed40d76df6239",
-  "original_preserved": true
+  "original_preserved": false,
+  "previous_versions_retention": "Git history before the unused-video cleanup"
 }

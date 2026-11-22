@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="static/style.css?v=reel-clean-v2">
+<link rel="stylesheet" href="static/style.css?v=task-prompts-v4">
 </head>
 <body>
 
@@ -110,6 +110,7 @@
   <h2>Real world</h2>
 
 <h3 id="rw-centrifuge-videos" class="sub">Centrifuge loading</h3>
+  <p class="task-prompt"><strong>Task prompt:</strong> Place the test tube into the target centrifuge slot.</p>
 
   <!-- drive-clips-20261122: centrifuge -->
   <h4 class="real-config">P1 · Red</h4>
@@ -180,6 +181,7 @@
   </div>
 
 <h3 id="rw-titration-videos" class="sub">Titration</h3>
+  <p class="task-prompt"><strong>Task prompt:</strong> Turn the burette valve to dispense liquid into the beaker.</p>
 
   <!-- drive-clips-20261122: titration -->
   <h4 class="real-config">Default</h4>
@@ -226,6 +228,7 @@
 
 <div id="rw-videos" class="real-clips">
   <h3 class="sub">Cable insertion videos</h3>
+  <p class="task-prompt"><strong>Task prompt:</strong> Insert the cable into the port.</p>
 
   <h4 class="real-config">Configuration 2</h4>
   <div class="real-video-pair"><article class="real-clip">
@@ -254,6 +257,7 @@
   </div>
 
 <h3 id="rw-adapter-videos" class="sub">Adapter relocation</h3>
+  <p class="task-prompt"><strong>Task prompt:</strong> Move the charging adapter to the target socket.</p>
 
   <!-- drive-clips-20261122: adapter -->
   <h4 class="real-config">Transfer 1 → 4</h4>
@@ -310,6 +314,7 @@
   <h2>Simulation</h2>
 
   <h3 id="sim-object-swap" class="sub">LIBERO-PRO object-position swap</h3>
+  <p class="task-prompt"><strong>Task prompt:</strong> Pick the butter and place it in the basket.</p>
   <figure class="fig simulation-video">
     <video controls playsinline preload="none" poster="static/videos/libero_object_swap_06_overlays_marked.jpg" aria-label="Full training demonstration, π0.5, and ContrastFlow played sequentially with cleaned attention, camera zooms, and thicker solid action-chunk lines where available, with a red cross for failure and a green tick for success at the end of each rollout." autoplay muted loop>
       <source data-src="static/videos/libero_object_swap_06_overlays_marked.mp4" type="video/mp4">
@@ -318,6 +323,7 @@
   </figure>
 
   <h3 id="sim-goal-swap" class="sub">LIBERO-PRO goal-position swap</h3>
+  <p class="task-prompt"><strong>Task prompt:</strong> Put the bowl on the plate.</p>
   <figure class="fig simulation-video">
     <video controls playsinline preload="none" poster="static/videos/libero_goal_swap_08_overlays_marked.jpg" aria-label="Full training demonstration, π0.5, and ContrastFlow played sequentially with cleaned attention, camera zooms, and thicker solid action-chunk lines where available, with a red cross for failure and a green tick for success at the end of each rollout." autoplay muted loop>
       <source data-src="static/videos/libero_goal_swap_08_overlays_marked.mp4" type="video/mp4">
@@ -326,6 +332,7 @@
   </figure>
 
   <h3 id="sim-spatial-recovery" class="sub">LIBERO-PRO placement recovery</h3>
+  <p class="task-prompt"><strong>Task prompt:</strong> Pick up the black bowl next to the ramekin and place it on the plate.</p>
   <figure class="fig simulation-video">
     <video controls playsinline preload="none" poster="static/videos/libero_spatial_swap_01_seed105_marked.jpg" aria-label="Full training demonstration, π0.5, and ContrastFlow played sequentially with cleaned attention, camera zooms, and thicker solid action-chunk lines where available, with a red cross for failure and a green tick for success at the end of each rollout." autoplay muted loop>
       <source data-src="static/videos/libero_spatial_swap_01_seed105_marked.mp4" type="video/mp4">
@@ -333,6 +340,7 @@
   </figure>
 
   <h3 id="sim-stove-swap" class="sub">LIBERO-PRO bowl/bottle and stove/cabinet position swap</h3>
+  <p class="task-prompt"><strong>Task prompt:</strong> Put the bowl on the stove.</p>
   <figure class="fig simulation-video">
     <video controls playsinline preload="none" poster="static/videos/libero_goal_swap_01_seed102_marked.jpg" aria-label="Full training demonstration, π0.5, and ContrastFlow played sequentially with cleaned attention, camera zooms, and thicker solid action-chunk lines where available, with a red cross for failure and a green tick for success at the end of each rollout." autoplay muted loop>
       <source data-src="static/videos/libero_goal_swap_01_seed102_marked.mp4" type="video/mp4">
@@ -340,6 +348,7 @@
   </figure>
 
   <h3 id="sim-wine-plate" class="sub">LIBERO-PRO wine bottle on plate</h3>
+  <p class="task-prompt"><strong>Task prompt:</strong> Put the wine bottle on the plate.</p>
   <figure class="fig simulation-video">
     <video controls playsinline preload="none" poster="static/videos/libero_goal_task_08_diverse_sequential_marked.jpg" aria-label="Full training demonstration, π0.5, and ContrastFlow played sequentially with cleaned attention, camera zooms, and thicker solid action-chunk lines where available, with a red cross for failure and a green tick for success at the end of each rollout." autoplay muted loop>
       <source data-src="static/videos/libero_goal_task_08_diverse_sequential_marked.mp4" type="video/mp4">

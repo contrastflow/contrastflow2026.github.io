@@ -81,5 +81,6 @@
   },
   "previous_comparison": "libero_spatial_swap_01_seed105_solid.mp4",
   "previous_sha256": "4364d9eca8f672d55caf9f0d11b362f92a28e9d72368ad35ba4c4992c5102cdf",
-  "original_preserved": true
+  "original_preserved": false,
+  "previous_versions_retention": "Git history before the unused-video cleanup"
 }

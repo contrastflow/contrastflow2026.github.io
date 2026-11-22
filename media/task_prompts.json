@@ -1,0 +1,56 @@
+[
+  {
+    "section": "rw-centrifuge-videos",
+    "display_prompt": "Place the test tube into the target centrifuge slot.",
+    "source": "Task description based on the centrifuge-loading clips; exact policy prompt was not supplied.",
+    "exact_policy_prompt": false
+  },
+  {
+    "section": "rw-titration-videos",
+    "display_prompt": "Turn the burette valve to dispense liquid into the beaker.",
+    "source": "Task description based on the titration clips; exact policy prompt was not supplied.",
+    "exact_policy_prompt": false
+  },
+  {
+    "section": "rw-videos",
+    "display_prompt": "Insert the cable into the port.",
+    "source": "Task description based on the cable-insertion clips; exact policy prompt was not supplied.",
+    "exact_policy_prompt": false
+  },
+  {
+    "section": "rw-adapter-videos",
+    "display_prompt": "Move the charging adapter to the target socket.",
+    "source": "Task description based on the adapter-relocation clips; exact policy prompt was not supplied.",
+    "exact_policy_prompt": false
+  },
+  {
+    "section": "sim-object-swap",
+    "display_prompt": "Pick the butter and place it in the basket.",
+    "source": "Recorded rollout prompt: noise-conditioning-study/ten-task-object-study/baseline/recordings/libero_object_swap_06/seed100.json",
+    "exact_policy_prompt": true
+  },
+  {
+    "section": "sim-goal-swap",
+    "display_prompt": "Put the bowl on the plate.",
+    "source": "Recorded rollout prompt: noise-conditioning-study/ten-task-object-study/baseline/recordings/libero_goal_swap_08/seed100.json",
+    "exact_policy_prompt": true
+  },
+  {
+    "section": "sim-spatial-recovery",
+    "display_prompt": "Pick up the black bowl next to the ramekin and place it on the plate.",
+    "source": "Recorded rollout prompt: noise-conditioning-study/ten-task-object-study/baseline/recordings/libero_spatial_swap_01/seed105.json",
+    "exact_policy_prompt": true
+  },
+  {
+    "section": "sim-stove-swap",
+    "display_prompt": "Put the bowl on the stove.",
+    "source": "Recorded rollout prompt: noise-conditioning-study/ten-task-object-study/baseline/recordings/libero_goal_swap_01/seed102.json",
+    "exact_policy_prompt": true
+  },
+  {
+    "section": "sim-wine-plate",
+    "display_prompt": "Put the wine bottle on the plate.",
+    "source": "Recorded rollout prompt: libero_goal_task_08_diverse, episode 0, seed 100.",
+    "exact_policy_prompt": true
+  }
+]

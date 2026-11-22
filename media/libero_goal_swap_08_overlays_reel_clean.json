@@ -12,6 +12,7 @@
   "attention_overlays": false,
   "action_overlays": false,
   "full_contrastflow_episode": true,
-  "original_comparison_preserved": true,
-  "sha256": "59e5e4c179972d94e4968725a4cc1fb71f4fa37742d7dfe7c7212b8396a5c5fb"
+  "original_comparison_preserved": false,
+  "sha256": "59e5e4c179972d94e4968725a4cc1fb71f4fa37742d7dfe7c7212b8396a5c5fb",
+  "previous_versions_retention": "Git history before the unused-video cleanup"
 }

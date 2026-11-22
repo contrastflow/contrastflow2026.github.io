@@ -72,5 +72,6 @@
   "action_chunk_style": null,
   "previous_comparison": "libero_goal_task_08_diverse_sequential_solid.mp4",
   "previous_sha256": "1624b64c21343c9e9565a8cc7ab680b43a3aa9de3a456070d3092d46bb6d30a1",
-  "original_preserved": true
+  "original_preserved": false,
+  "previous_versions_retention": "Git history before the unused-video cleanup"
 }

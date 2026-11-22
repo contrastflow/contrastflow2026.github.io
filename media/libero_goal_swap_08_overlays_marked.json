@@ -81,5 +81,6 @@
   },
   "previous_comparison": "libero_goal_swap_08_overlays_solid.mp4",
   "previous_sha256": "05a735e66ee8fde8ca83b26b9b1aeb3d3cff78574625c087035bc680da7b91d1",
-  "original_preserved": true
+  "original_preserved": false,
+  "previous_versions_retention": "Git history before the unused-video cleanup"
 }
