@@ -1,0 +1,116 @@
+{
+  "source_commit": "2c88a07dce717f1bc55a9367beb158b2c11ab97a",
+  "description": "Original published composite simulation clips and darker real-world clips, preserved before the four-view update.",
+  "files": [
+    {
+      "file": "libero_object_swap_06_overlays_marked.mp4",
+      "sha256": "7c2266ad4667a8c86a2f480cdde7690a3841b3c530b18625b333ac88fa229dbf",
+      "bytes": 12185894
+    },
+    {
+      "file": "libero_object_swap_06_overlays_marked.jpg",
+      "sha256": "92f4102ee7839d1190c4d4d075ae2dff060f2e18ce91957e4a4e0689035d9482",
+      "bytes": 983864
+    },
+    {
+      "file": "libero_goal_swap_08_overlays_marked.mp4",
+      "sha256": "4a4f15145f442d5201aeebe3a3d925882694203aa6bdbf82c1e2cd704f49f4ae",
+      "bytes": 11301489
+    },
+    {
+      "file": "libero_goal_swap_08_overlays_marked.jpg",
+      "sha256": "08c0d154892977ba1f232f1e660aac46bbd0ebcd1fa75df731c39748b84dbf53",
+      "bytes": 794506
+    },
+    {
+      "file": "libero_spatial_swap_01_seed105_marked.mp4",
+      "sha256": "c7612a5a989ef57b5c6bb1aa35eb6067e92c4e28ccbea7e2702bde50756cd1a1",
+      "bytes": 15347327
+    },
+    {
+      "file": "libero_spatial_swap_01_seed105_marked.jpg",
+      "sha256": "16897803b6a9fcfc32bc15c2aaeb892382fe24bbae84a76ccbf3df858aa574b9",
+      "bytes": 807207
+    },
+    {
+      "file": "libero_goal_swap_01_seed102_marked.mp4",
+      "sha256": "3cdf15d9f431d105d23f9107b2e83488fbe32be107730ef268b64d4b7dc2385f",
+      "bytes": 11212303
+    },
+    {
+      "file": "libero_goal_swap_01_seed102_marked.jpg",
+      "sha256": "c6b295e2b0651aa1a9cefb48bbd9c75d8cdad86f751dec69d3c66d0ce989e876",
+      "bytes": 766490
+    },
+    {
+      "file": "libero_goal_task_08_diverse_sequential_marked.mp4",
+      "sha256": "04ca3fbf281b51629cad56bdb437de21824a87735165d9c9ad5a92c6dc99d940",
+      "bytes": 13269720
+    },
+    {
+      "file": "libero_goal_task_08_diverse_sequential_marked.jpg",
+      "sha256": "2d4d4d598d5437a8c5493e489d3fdfcd17a685036c005784449cbb07f62d19db",
+      "bytes": 754795
+    },
+    {
+      "file": "real_centrifuge_pi05.mp4",
+      "sha256": "7e85a1a4e1b2fd2c4922b10946a4cb6e11b078a6cead8d8a8063ac463c70738f",
+      "bytes": 1468054
+    },
+    {
+      "file": "real_centrifuge_pi05.jpg",
+      "sha256": "37ea6bc9968cbfbf6d0e89cd116ebf89209b1ab678f3c2d1e664ead6e2b93aa8",
+      "bytes": 15545
+    },
+    {
+      "file": "real_centrifuge_contrastflow.mp4",
+      "sha256": "56bbc83868f9ebe2d6dafe1aab4b564ad1365eff15a05c54c12411a2296869c9",
+      "bytes": 5050626
+    },
+    {
+      "file": "real_centrifuge_contrastflow.jpg",
+      "sha256": "515a13969ef0d9806f71d2bfc7629ab53e66b78d4c4d9d63be6909cb9463bdff",
+      "bytes": 16062
+    },
+    {
+      "file": "real_titration_pi05.mp4",
+      "sha256": "29196b12dd05a689596ad61b8259a92dd365c67e6f706a424806076a0d2e1028",
+      "bytes": 812647
+    },
+    {
+      "file": "real_titration_pi05.jpg",
+      "sha256": "4126eaf97057b34a67528b593d46468b54c695cc58b54e9ef84115149252189e",
+      "bytes": 15199
+    },
+    {
+      "file": "real_titration_contrastflow.mp4",
+      "sha256": "912167a208c7d4368baf4af72d554c2cacdae9fb88978f2165a143d5eb1d06e4",
+      "bytes": 1588256
+    },
+    {
+      "file": "real_titration_contrastflow.jpg",
+      "sha256": "b249655ab83747976bd03b528c88186fe1760184477bab3fa48ce75b9b1c6a00",
+      "bytes": 15149
+    },
+    {
+      "file": "real_adapter_pi05.mp4",
+      "sha256": "0d3dd9060e8a480d978602b39fc3d55884da8dc72c2dc43eed8c1217ee2d32c3",
+      "bytes": 980848
+    },
+    {
+      "file": "real_adapter_pi05.jpg",
+      "sha256": "347319ea941b78237c3e88efb3b3480f436eaf86f8c9703637b5b19a983ee21d",
+      "bytes": 18189
+    },
+    {
+      "file": "real_adapter_contrastflow.mp4",
+      "sha256": "f9da84e5f94eb1c8da5109992a51a73d52cc6a7f9e48cb48434d1007ed6677b0",
+      "bytes": 1022379
+    },
+    {
+      "file": "real_adapter_contrastflow.jpg",
+      "sha256": "9d7bc67b9a004f73d6d3dfc57fda241f3f5ecb753f687c27991ab6a4467f99b1",
+      "bytes": 18001
+    }
+  ]
+}

@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
   document.querySelectorAll("video").forEach(configureSpeed);
   // Start muted full comparisons when visible; paired videos can play together.
-  const allVideos = Array.from(document.querySelectorAll("video:not(.reel-video)"));
+  const allVideos = Array.from(document.querySelectorAll("video:not(.reel-video):not(.sim-policy)"));
   const clearFocus = video => video.classList.remove("is-playing");
   const visibleVideos = new Set();
   const manuallyPaused = new WeakSet();
@@ -58,6 +58,58 @@ document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("visibilitychange", () => {
     allVideos.forEach(video => document.hidden ? video.pause() : startVideo(video));
   });
+  // Each simulation card has two independent, full-length policy clips.
+  // Play π0.5, then ContrastFlow; inactive clips hold their frame in full color.
+  const comparisonVideos = [];
+  document.querySelectorAll(".sim-comparison").forEach(group => {
+    const videos = Array.from(group.querySelectorAll("video.sim-policy"));
+    comparisonVideos.push(...videos);
+    let active = 0;
+    let visible = false;
+    let manualPause = false;
+    const start = () => {
+      if (!visible || document.hidden || manualPause) return;
+      videos.forEach(loadVideo);
+      videos[active].play().catch(() => {});
+    };
+    videos.forEach((video, index) => {
+      video.muted = true;
+      video.addEventListener("play", () => {
+        if (!visible || document.hidden) { video.pause(); return; }
+        active = index;
+        manualPause = false;
+        videos.forEach(other => { if (other !== video) other.pause(); });
+        video.classList.add("is-playing");
+      });
+      video.addEventListener("pause", () => {
+        clearFocus(video);
+        if (index === active && visible && !document.hidden && !video.ended) manualPause = true;
+      });
+      video.addEventListener("ended", () => {
+        clearFocus(video);
+        if (index !== active) return;
+        active = (active + 1) % videos.length;
+        videos[active].currentTime = 0;
+        if (active === 0) videos[1].currentTime = 0;
+        manualPause = false;
+        start();
+      });
+      video.addEventListener("error", () => clearFocus(video));
+    });
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        visible = entry.isIntersecting && entry.intersectionRatio >= 0.1;
+        if (visible) start();
+        else { manualPause = false; videos.forEach(video => video.pause()); }
+      });
+    }, { threshold: [0, 0.1] });
+    observer.observe(group);
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) videos.forEach(video => video.pause());
+      else start();
+    });
+  });
+  const fullPlayers = [...allVideos, ...comparisonVideos];
   // Keep the reel independent of the full-length comparison players.
   const reel = document.querySelector("#showcase");
   if (reel) {
@@ -80,7 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let offset = 0;
     let cycle = 0;
     let last = 0;
-    const enabled = () => !paused && !document.hidden && !allVideos.some(v => !v.paused && !v.ended);
+    const enabled = () => !paused && !document.hidden && !fullPlayers.some(v => !v.paused && !v.ended);
     const sync = () => {
       const active = enabled();
       previews.forEach(video => {
@@ -138,7 +190,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
       requestAnimationFrame(tick);
     };
-    allVideos.forEach(video => ["play", "pause", "ended"].forEach(event => video.addEventListener(event, sync)));
+    fullPlayers.forEach(video => ["play", "pause", "ended"].forEach(event => video.addEventListener(event, sync)));
     document.addEventListener("visibilitychange", sync);
     updateToggle();
     measure();

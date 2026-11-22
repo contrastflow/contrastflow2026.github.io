@@ -31,4 +31,8 @@ Pushes to `main` automatically deploy `index.html` and `static/` to GitHub Pages
 The workflow can also be started manually from the Actions tab.
 There is no build step or dependency on the paper source repository.
 
-All displayed videos are stored directly in this repository. Unused video versions and their posters are removed from the current tree; earlier versions remain available in Git history.
+All displayed videos are stored directly in this repository. Displayed videos are kept in `static/videos/`; retained previous versions are kept in `static/videos/archive/`. Other older versions remain available in Git history.
+
+Previous simulation composites and the original dark real-world clips are preserved in `static/videos/archive/pre_four_view_20261122/`, including hashes and provenance. The current simulation comparisons use separate train/test images and full policy videos.
+
+The separate policy clips before the additional 20% trail reduction are retained in `static/videos/archive/four_view_before_extra20_20261122/`.

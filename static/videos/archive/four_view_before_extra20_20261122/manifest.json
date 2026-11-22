@@ -1,0 +1,105 @@
+{
+  "description": "Separate four-view policy clips before the additional 20 percent line-width reduction; nominal line width 6.4 pixels.",
+  "files": [
+    {
+      "file": "libero_goal_swap_01_seed102_pi05.mp4",
+      "sha256": "fc0007e2b0e0658819fb580f59453e7943a1c51ef0f821479eaf6bb43fdc537d",
+      "bytes": 1983789
+    },
+    {
+      "file": "libero_goal_swap_01_seed102_pi05.jpg",
+      "sha256": "cb503cab4562023674ea41d837c6b3cbfd79c58746e448f215abaa60c7ee7071",
+      "bytes": 161638
+    },
+    {
+      "file": "libero_goal_swap_01_seed102_contrastflow.mp4",
+      "sha256": "8898676834f4c0613e1379e5492cb02083187778a0378d340b824bb476eaab34",
+      "bytes": 904078
+    },
+    {
+      "file": "libero_goal_swap_01_seed102_contrastflow.jpg",
+      "sha256": "b531e36fcafac0eea2337f45140a314f091586c5e78fac38a1f1660fd5042f54",
+      "bytes": 154458
+    },
+    {
+      "file": "libero_goal_swap_08_overlays_pi05.mp4",
+      "sha256": "6cab8dab5ecb54ef1704d98d634c332263e923025c80b7117f8d23ce86561454",
+      "bytes": 2148860
+    },
+    {
+      "file": "libero_goal_swap_08_overlays_pi05.jpg",
+      "sha256": "c34881a20a6a4376c2680bffdcadf517adbf754cbb4efe89596e6f33900a99be",
+      "bytes": 154580
+    },
+    {
+      "file": "libero_goal_swap_08_overlays_contrastflow.mp4",
+      "sha256": "e3ab72838d0c68bd38e6bf04ac28aaff502497c75ed20995db34bf3eada8ee77",
+      "bytes": 1094778
+    },
+    {
+      "file": "libero_goal_swap_08_overlays_contrastflow.jpg",
+      "sha256": "ac65378a91e565633c67bb4dbae83dd1258d14f6b415730f82c845ca9a401940",
+      "bytes": 156119
+    },
+    {
+      "file": "libero_goal_task_08_diverse_sequential_pi05.mp4",
+      "sha256": "aa41ad85b1f7073cb92d0160d18d2d0a947bac65ddb0588d4159a8d517a4a5aa",
+      "bytes": 2722462
+    },
+    {
+      "file": "libero_goal_task_08_diverse_sequential_pi05.jpg",
+      "sha256": "eda908ea5c9abb507f9a6196929a2458503c1df2ca8b2bad78bd08e67e534055",
+      "bytes": 161520
+    },
+    {
+      "file": "libero_goal_task_08_diverse_sequential_contrastflow.mp4",
+      "sha256": "6849cf663efda14adfcf0c13ea598a0955c7a4e7ba6ef3c349f2fd11d9631af0",
+      "bytes": 533967
+    },
+    {
+      "file": "libero_goal_task_08_diverse_sequential_contrastflow.jpg",
+      "sha256": "14401812b44f8a81f8bdf92e018417dff5a811a6db2aa166bb12ac1dd7dc686f",
+      "bytes": 153500
+    },
+    {
+      "file": "libero_object_swap_06_overlays_pi05.mp4",
+      "sha256": "d8375a3748f3123c8dc5d772b5d6c87e1df8006b175d07e34f24b3da74da269d",
+      "bytes": 1584788
+    },
+    {
+      "file": "libero_object_swap_06_overlays_pi05.jpg",
+      "sha256": "b8f585565903b8ef5bae1fccd99b1bbc6d9d863a667436845f0da9228a50d1b8",
+      "bytes": 197023
+    },
+    {
+      "file": "libero_object_swap_06_overlays_contrastflow.mp4",
+      "sha256": "c06e059d3009e31ebfbf90e0980a60e59a6ba2d69d6156611358aa4f3c7d4183",
+      "bytes": 1098584
+    },
+    {
+      "file": "libero_object_swap_06_overlays_contrastflow.jpg",
+      "sha256": "29a926b6553077f12992fb4c51f318a723e582eb148435258195d2a44401dff7",
+      "bytes": 199254
+    },
+    {
+      "file": "libero_spatial_swap_01_seed105_pi05.mp4",
+      "sha256": "76545e3051c478842c7072ccff4b0e7c31be54dd4caae2b2d22cf1c21f8a4373",
+      "bytes": 2776001
+    },
+    {
+      "file": "libero_spatial_swap_01_seed105_pi05.jpg",
+      "sha256": "4be05cc3bc1eb1b702b0fe6b4649a6c4f2b2bb5479958ad614a4e98bd660e458",
+      "bytes": 165709
+    },
+    {
+      "file": "libero_spatial_swap_01_seed105_contrastflow.mp4",
+      "sha256": "fd2743c62235de9aa0d4a7f359b456f7bb35af67ad25866f523fe5650f324f97",
+      "bytes": 1963183
+    },
+    {
+      "file": "libero_spatial_swap_01_seed105_contrastflow.jpg",
+      "sha256": "70866d42a1ae92c4fa246961a64cc70f691f0b9827bf138fe9163803d85c6075",
+      "bytes": 168669
+    }
+  ]
+}

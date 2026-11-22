@@ -1,0 +1,218 @@
+[
+  {
+    "video_asset": "static/videos/real_centrifuge_pi05.mp4",
+    "poster_asset": "static/videos/real_centrifuge_pi05.jpg",
+    "previous_sha256": "7e85a1a4e1b2fd2c4922b10946a4cb6e11b078a6cead8d8a8063ac463c70738f",
+    "sha256": "c1ff402acaa2e0f68bc8e7ac39d344a979ae975d4b1fe4f3cb2caf2767bf6a5d",
+    "output_bytes": 2681438,
+    "frames": 280,
+    "duration": 9.33,
+    "fully_decoded": true,
+    "filter": "lutrgb=r='val+1.3*val*pow(1-val/255,2)':g='val+1.3*val*pow(1-val/255,2)':b='val+1.3*val*pow(1-val/255,2)'",
+    "description": "Monotonic shadow and midtone lift; black and white endpoints preserved; no spatial or temporal edits.",
+    "before": {
+      "sample_frames": [
+        0,
+        70,
+        140,
+        210,
+        279
+      ],
+      "mean_luma": 49.987282975,
+      "p95_luma": 124.1806,
+      "near_white_fraction": 0.0
+    },
+    "after": {
+      "sample_frames": [
+        0,
+        70,
+        140,
+        210,
+        279
+      ],
+      "mean_luma": 84.9935827875,
+      "p95_luma": 164.611,
+      "near_white_fraction": 0.0
+    }
+  },
+  {
+    "video_asset": "static/videos/real_centrifuge_contrastflow.mp4",
+    "poster_asset": "static/videos/real_centrifuge_contrastflow.jpg",
+    "previous_sha256": "56bbc83868f9ebe2d6dafe1aab4b564ad1365eff15a05c54c12411a2296869c9",
+    "sha256": "2f513785b0137659d41058941913a129f4bce3d434274e5d4b317102f6265839",
+    "output_bytes": 9930991,
+    "frames": 935,
+    "duration": 31.17,
+    "fully_decoded": true,
+    "filter": "lutrgb=r='val+1.3*val*pow(1-val/255,2)':g='val+1.3*val*pow(1-val/255,2)':b='val+1.3*val*pow(1-val/255,2)'",
+    "description": "Monotonic shadow and midtone lift; black and white endpoints preserved; no spatial or temporal edits.",
+    "before": {
+      "sample_frames": [
+        0,
+        233,
+        467,
+        701,
+        934
+      ],
+      "mean_luma": 48.98757722,
+      "p95_luma": 123.1404,
+      "near_white_fraction": 0.0
+    },
+    "after": {
+      "sample_frames": [
+        0,
+        233,
+        467,
+        701,
+        934
+      ],
+      "mean_luma": 83.1194148425,
+      "p95_luma": 163.23319999999998,
+      "near_white_fraction": 0.0
+    }
+  },
+  {
+    "video_asset": "static/videos/real_titration_pi05.mp4",
+    "poster_asset": "static/videos/real_titration_pi05.jpg",
+    "previous_sha256": "29196b12dd05a689596ad61b8259a92dd365c67e6f706a424806076a0d2e1028",
+    "sha256": "28dc7fe877580a967b463bd91bb45e044266c301373d3a267fb008c512fa054d",
+    "output_bytes": 1418853,
+    "frames": 505,
+    "duration": 16.83,
+    "fully_decoded": true,
+    "filter": "lutrgb=r='val+1.3*val*pow(1-val/255,2)':g='val+1.3*val*pow(1-val/255,2)':b='val+1.3*val*pow(1-val/255,2)'",
+    "description": "Monotonic shadow and midtone lift; black and white endpoints preserved; no spatial or temporal edits.",
+    "before": {
+      "sample_frames": [
+        0,
+        126,
+        252,
+        378,
+        504
+      ],
+      "mean_luma": 54.52564428750001,
+      "p95_luma": 137.2728,
+      "near_white_fraction": 0.0
+    },
+    "after": {
+      "sample_frames": [
+        0,
+        126,
+        252,
+        378,
+        504
+      ],
+      "mean_luma": 89.0044022125,
+      "p95_luma": 173.094,
+      "near_white_fraction": 0.0
+    }
+  },
+  {
+    "video_asset": "static/videos/real_titration_contrastflow.mp4",
+    "poster_asset": "static/videos/real_titration_contrastflow.jpg",
+    "previous_sha256": "912167a208c7d4368baf4af72d554c2cacdae9fb88978f2165a143d5eb1d06e4",
+    "sha256": "15292aaae510c12af76d23cd0a4e3b539e4d3112aa06cfbd7c6a0bdfa0f9129f",
+    "output_bytes": 2766921,
+    "frames": 1040,
+    "duration": 34.67,
+    "fully_decoded": true,
+    "filter": "lutrgb=r='val+1.3*val*pow(1-val/255,2)':g='val+1.3*val*pow(1-val/255,2)':b='val+1.3*val*pow(1-val/255,2)'",
+    "description": "Monotonic shadow and midtone lift; black and white endpoints preserved; no spatial or temporal edits.",
+    "before": {
+      "sample_frames": [
+        0,
+        260,
+        520,
+        780,
+        1039
+      ],
+      "mean_luma": 56.5076826,
+      "p95_luma": 139.4132,
+      "near_white_fraction": 0.0
+    },
+    "after": {
+      "sample_frames": [
+        0,
+        260,
+        520,
+        780,
+        1039
+      ],
+      "mean_luma": 90.85507956250001,
+      "p95_luma": 174.48539999999997,
+      "near_white_fraction": 0.0
+    }
+  },
+  {
+    "video_asset": "static/videos/real_adapter_pi05.mp4",
+    "poster_asset": "static/videos/real_adapter_pi05.jpg",
+    "previous_sha256": "0d3dd9060e8a480d978602b39fc3d55884da8dc72c2dc43eed8c1217ee2d32c3",
+    "sha256": "60d75c2356e2b2161e8dbd9adfe2055975e9d542fc2083cfff0a9f8841fc7b69",
+    "output_bytes": 1805242,
+    "frames": 313,
+    "duration": 31.3,
+    "fully_decoded": true,
+    "filter": "lutrgb=r='val+1.3*val*pow(1-val/255,2)':g='val+1.3*val*pow(1-val/255,2)':b='val+1.3*val*pow(1-val/255,2)'",
+    "description": "Monotonic shadow and midtone lift; black and white endpoints preserved; no spatial or temporal edits.",
+    "before": {
+      "sample_frames": [
+        0,
+        78,
+        156,
+        234,
+        312
+      ],
+      "mean_luma": 51.9991489125,
+      "p95_luma": 128.279,
+      "near_white_fraction": 0.0
+    },
+    "after": {
+      "sample_frames": [
+        0,
+        78,
+        156,
+        234,
+        312
+      ],
+      "mean_luma": 86.36720513250002,
+      "p95_luma": 166.81199999999998,
+      "near_white_fraction": 0.0
+    }
+  },
+  {
+    "video_asset": "static/videos/real_adapter_contrastflow.mp4",
+    "poster_asset": "static/videos/real_adapter_contrastflow.jpg",
+    "previous_sha256": "f9da84e5f94eb1c8da5109992a51a73d52cc6a7f9e48cb48434d1007ed6677b0",
+    "sha256": "2195f09fabb7de2a83980ce675c57d3c034e32f91e18d30b1e6b625b74919878",
+    "output_bytes": 1901150,
+    "frames": 317,
+    "duration": 31.7,
+    "fully_decoded": true,
+    "filter": "lutrgb=r='val+1.3*val*pow(1-val/255,2)':g='val+1.3*val*pow(1-val/255,2)':b='val+1.3*val*pow(1-val/255,2)'",
+    "description": "Monotonic shadow and midtone lift; black and white endpoints preserved; no spatial or temporal edits.",
+    "before": {
+      "sample_frames": [
+        0,
+        79,
+        158,
+        237,
+        316
+      ],
+      "mean_luma": 52.173276584999996,
+      "p95_luma": 128.42340000000002,
+      "near_white_fraction": 0.0
+    },
+    "after": {
+      "sample_frames": [
+        0,
+        79,
+        158,
+        237,
+        316
+      ],
+      "mean_luma": 86.71292670499999,
+      "p95_luma": 166.80399999999997,
+      "near_white_fraction": 0.0
+    }
+  }
+]

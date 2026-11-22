@@ -1,0 +1,1221 @@
+{
+  "task": "libero_spatial_swap_01",
+  "id": "libero_spatial_swap_01_seed105",
+  "layout": [
+    "Train setup",
+    "Test setup",
+    "\u03c00.5",
+    "ContrastFlow"
+  ],
+  "setup_frames": {
+    "train": 0,
+    "test": 0
+  },
+  "setup_resolution": [
+    896,
+    896
+  ],
+  "policy_camera_resolution": [
+    896,
+    896
+  ],
+  "attention_displayed": false,
+  "clips": [
+    {
+      "method": "pi05",
+      "file": "libero_spatial_swap_01_seed105_pi05.mp4",
+      "source_frames": 351,
+      "frames": 351,
+      "terminal_hold_frames": 0,
+      "duration_seconds": 35.1,
+      "width": 896,
+      "height": 896,
+      "fps": 10,
+      "source_sha256": "ff78b8fe7cc85e6ad293a609027ecf08dca880b6d5a091a2e860beee30b24f91",
+      "sha256": "76545e3051c478842c7072ccff4b0e7c31be54dd4caae2b2d22cf1c21f8a4373",
+      "path_sha256": "623e690e9d9b1c4db00fd1844bc7be0b1af6a48ace0554369601ff707af43152",
+      "fully_decoded": true,
+      "all_source_frames_once": true,
+      "outcome_marker": {
+        "symbol": "cross",
+        "placement": "top right of policy camera",
+        "frame_ranges": [
+          [
+            110,
+            150
+          ],
+          [
+            350,
+            350
+          ]
+        ]
+      }
+    },
+    {
+      "method": "contrastflow",
+      "file": "libero_spatial_swap_01_seed105_contrastflow.mp4",
+      "source_frames": 243,
+      "frames": 263,
+      "terminal_hold_frames": 20,
+      "duration_seconds": 26.3,
+      "width": 896,
+      "height": 896,
+      "fps": 10,
+      "source_sha256": "00172267aef846fcc26b9ce6540c4aa3c02275c14496baaea5393e7abd03742e",
+      "sha256": "fd2743c62235de9aa0d4a7f359b456f7bb35af67ad25866f523fe5650f324f97",
+      "path_sha256": "4c0d8b893dbe990e5f29d9c2516f5b70b2bde1a3bfded9867feed573f1b2b29a",
+      "fully_decoded": true,
+      "all_source_frames_once": true,
+      "outcome_marker": {
+        "symbol": "tick",
+        "placement": "top right of policy camera",
+        "frame_ranges": [
+          [
+            110,
+            165
+          ],
+          [
+            242,
+            262
+          ]
+        ]
+      }
+    }
+  ],
+  "source_hashes": {
+    "baseline": "ff78b8fe7cc85e6ad293a609027ecf08dca880b6d5a091a2e860beee30b24f91",
+    "emb-zero": "00172267aef846fcc26b9ce6540c4aa3c02275c14496baaea5393e7abd03742e"
+  },
+  "register_cleaning": {
+    "cache_path": "/u/apotnis2/robowarp-vision-cluster/noise-conditioning-study/emb-zero/assets/cache_libero_spatial_swap_lang.pt",
+    "cache_sha256": "48065282ef34ea0bd08e54f5a2fdf0cf7f177ec0c9fb7b34e69c40b3414d37ac",
+    "common_source_sha256": "63194aa8185228ca71237719673ef0577aa922fc4aac4639b77049b94417b507",
+    "cleaner_source_sha256": "2b5e947537295f3005eab6d9754e750534884a8bb6e6974a90ca568538acba76",
+    "register_count": 9,
+    "register_coordinates": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        15
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        7,
+        10
+      ],
+      [
+        10,
+        0
+      ],
+      [
+        12,
+        1
+      ],
+      [
+        14,
+        1
+      ],
+      [
+        15,
+        3
+      ],
+      [
+        15,
+        13
+      ]
+    ],
+    "calibration_mask_ratio": 3.0,
+    "calibration_min_count_fraction": 0.5,
+    "dynamic_spike_ratio": 2.0,
+    "dynamic_spike_max_iterations": 15,
+    "gaussian_sigma": 0.8,
+    "policy_mask_parity": [
+      {
+        "chunk": "chunk000",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk001",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk002",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk003",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk004",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk005",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk006",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk007",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk008",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk009",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk010",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk011",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk012",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk013",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk014",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk015",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk016",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk017",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk018",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk019",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk020",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk021",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk022",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk023",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk024",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk025",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk026",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk027",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk028",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk029",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk030",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk031",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk032",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk033",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk034",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk035",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk036",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk037",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk038",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk039",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk040",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk041",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk042",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk043",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk044",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk045",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk046",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk047",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk048",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      }
+    ],
+    "mass_removed": [
+      {
+        "arm": "baseline",
+        "chunk": "chunk000",
+        "register_mass_fraction": 0.14642447233200073
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk001",
+        "register_mass_fraction": 0.18692809343338013
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk002",
+        "register_mass_fraction": 0.2641420066356659
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk003",
+        "register_mass_fraction": 0.25336986780166626
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk004",
+        "register_mass_fraction": 0.20290210843086243
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk005",
+        "register_mass_fraction": 0.1445940136909485
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk006",
+        "register_mass_fraction": 0.12657436728477478
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk007",
+        "register_mass_fraction": 0.12393529713153839
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk008",
+        "register_mass_fraction": 0.12944570183753967
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk009",
+        "register_mass_fraction": 0.12476936727762222
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk010",
+        "register_mass_fraction": 0.13382962346076965
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk011",
+        "register_mass_fraction": 0.12664197385311127
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk012",
+        "register_mass_fraction": 0.14294511079788208
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk013",
+        "register_mass_fraction": 0.16140879690647125
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk014",
+        "register_mass_fraction": 0.14081403613090515
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk015",
+        "register_mass_fraction": 0.14098992943763733
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk016",
+        "register_mass_fraction": 0.16010434925556183
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk017",
+        "register_mass_fraction": 0.19683030247688293
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk018",
+        "register_mass_fraction": 0.18835347890853882
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk019",
+        "register_mass_fraction": 0.18396654725074768
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk020",
+        "register_mass_fraction": 0.16166402399539948
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk021",
+        "register_mass_fraction": 0.21978287398815155
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk022",
+        "register_mass_fraction": 0.3323846459388733
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk023",
+        "register_mass_fraction": 0.25883230566978455
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk024",
+        "register_mass_fraction": 0.24027416110038757
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk025",
+        "register_mass_fraction": 0.3984171748161316
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk026",
+        "register_mass_fraction": 0.251006156206131
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk027",
+        "register_mass_fraction": 0.3510356545448303
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk028",
+        "register_mass_fraction": 0.43815913796424866
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk029",
+        "register_mass_fraction": 0.29356276988983154
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk030",
+        "register_mass_fraction": 0.4042479693889618
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk031",
+        "register_mass_fraction": 0.2581751048564911
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk032",
+        "register_mass_fraction": 0.3203233778476715
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk033",
+        "register_mass_fraction": 0.4135371148586273
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk034",
+        "register_mass_fraction": 0.4034305214881897
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk035",
+        "register_mass_fraction": 0.45941972732543945
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk036",
+        "register_mass_fraction": 0.3590089976787567
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk037",
+        "register_mass_fraction": 0.4106135964393616
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk038",
+        "register_mass_fraction": 0.3293306529521942
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk039",
+        "register_mass_fraction": 0.29346147179603577
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk040",
+        "register_mass_fraction": 0.43406111001968384
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk041",
+        "register_mass_fraction": 0.5343140959739685
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk042",
+        "register_mass_fraction": 0.3854774832725525
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk043",
+        "register_mass_fraction": 0.457956999540329
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk044",
+        "register_mass_fraction": 0.5134935975074768
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk045",
+        "register_mass_fraction": 0.5254445672035217
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk046",
+        "register_mass_fraction": 0.5127553939819336
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk047",
+        "register_mass_fraction": 0.42381271719932556
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk048",
+        "register_mass_fraction": 0.5521373748779297
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk049",
+        "register_mass_fraction": 0.5591697096824646
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk050",
+        "register_mass_fraction": 0.5310415029525757
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk051",
+        "register_mass_fraction": 0.46946603059768677
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk052",
+        "register_mass_fraction": 0.4259386956691742
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk053",
+        "register_mass_fraction": 0.5398439764976501
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk054",
+        "register_mass_fraction": 0.5656886696815491
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk055",
+        "register_mass_fraction": 0.4875484108924866
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk056",
+        "register_mass_fraction": 0.4875545799732208
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk057",
+        "register_mass_fraction": 0.4674537777900696
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk058",
+        "register_mass_fraction": 0.43793821334838867
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk059",
+        "register_mass_fraction": 0.5172680616378784
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk060",
+        "register_mass_fraction": 0.5146529674530029
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk061",
+        "register_mass_fraction": 0.52497398853302
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk062",
+        "register_mass_fraction": 0.5030694603919983
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk063",
+        "register_mass_fraction": 0.4916069209575653
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk064",
+        "register_mass_fraction": 0.4381329417228699
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk065",
+        "register_mass_fraction": 0.4916069209575653
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk066",
+        "register_mass_fraction": 0.4977443516254425
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk067",
+        "register_mass_fraction": 0.5143381357192993
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk068",
+        "register_mass_fraction": 0.5041783452033997
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk069",
+        "register_mass_fraction": 0.5248532295227051
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk000",
+        "register_mass_fraction": 0.14642447233200073
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk001",
+        "register_mass_fraction": 0.1920662522315979
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk002",
+        "register_mass_fraction": 0.2774602174758911
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk003",
+        "register_mass_fraction": 0.22835421562194824
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk004",
+        "register_mass_fraction": 0.18661858141422272
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk005",
+        "register_mass_fraction": 0.14059016108512878
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk006",
+        "register_mass_fraction": 0.14097584784030914
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk007",
+        "register_mass_fraction": 0.1343938559293747
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk008",
+        "register_mass_fraction": 0.10240978002548218
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk009",
+        "register_mass_fraction": 0.10421527922153473
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk010",
+        "register_mass_fraction": 0.13579128682613373
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk011",
+        "register_mass_fraction": 0.1567787379026413
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk012",
+        "register_mass_fraction": 0.1494930237531662
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk013",
+        "register_mass_fraction": 0.1626635491847992
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk014",
+        "register_mass_fraction": 0.11513935029506683
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk015",
+        "register_mass_fraction": 0.16663837432861328
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk016",
+        "register_mass_fraction": 0.18818137049674988
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk017",
+        "register_mass_fraction": 0.17784325778484344
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk018",
+        "register_mass_fraction": 0.2195442020893097
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk019",
+        "register_mass_fraction": 0.20588749647140503
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk020",
+        "register_mass_fraction": 0.31335994601249695
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk021",
+        "register_mass_fraction": 0.2971276044845581
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk022",
+        "register_mass_fraction": 0.3093021810054779
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk023",
+        "register_mass_fraction": 0.27674946188926697
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk024",
+        "register_mass_fraction": 0.30878108739852905
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk025",
+        "register_mass_fraction": 0.23217815160751343
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk026",
+        "register_mass_fraction": 0.17410621047019958
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk027",
+        "register_mass_fraction": 0.14517144858837128
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk028",
+        "register_mass_fraction": 0.1348598152399063
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk029",
+        "register_mass_fraction": 0.1306825876235962
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk030",
+        "register_mass_fraction": 0.13195526599884033
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk031",
+        "register_mass_fraction": 0.12786999344825745
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk032",
+        "register_mass_fraction": 0.13065363466739655
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk033",
+        "register_mass_fraction": 0.13380679488182068
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk034",
+        "register_mass_fraction": 0.1577286720275879
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk035",
+        "register_mass_fraction": 0.08931271731853485
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk036",
+        "register_mass_fraction": 0.11172090470790863
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk037",
+        "register_mass_fraction": 0.14373570680618286
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk038",
+        "register_mass_fraction": 0.13677182793617249
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk039",
+        "register_mass_fraction": 0.09638278931379318
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk040",
+        "register_mass_fraction": 0.10898196697235107
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk041",
+        "register_mass_fraction": 0.12468273937702179
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk042",
+        "register_mass_fraction": 0.13812793791294098
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk043",
+        "register_mass_fraction": 0.1490781009197235
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk044",
+        "register_mass_fraction": 0.0953284502029419
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk045",
+        "register_mass_fraction": 0.10857896506786346
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk046",
+        "register_mass_fraction": 0.18139512836933136
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk047",
+        "register_mass_fraction": 0.11666115373373032
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk048",
+        "register_mass_fraction": 0.12464400380849838
+      }
+    ],
+    "scope": "Same calibration mask and method cleaning for both positive-branch language-to-vision maps. Raw scores and actions untouched."
+  },
+  "zoom": false,
+  "text_bubbles": false,
+  "inactive_grayscale": false,
+  "inactive_brightness": 1,
+  "trajectory_overlay": {
+    "color_rgb": {
+      "pi05": [
+        239,
+        68,
+        68
+      ],
+      "contrastflow": [
+        32,
+        220,
+        90
+      ]
+    },
+    "width_pixels": 6.4,
+    "outline_width_pixels": 8.8,
+    "width_scale_from_previous": 0.5,
+    "accumulated_executed_path": true,
+    "reset_at_replan": false,
+    "future_path_visible": false
+  },
+  "native_state_rerender": {
+    "training": {
+      "task": "libero_spatial_swap_01",
+      "arm": "training",
+      "frames": 152,
+      "rendered": 152,
+      "native_resolution": [
+        896,
+        896
+      ],
+      "physics_steps": 0,
+      "policy_calls": 0,
+      "source_sha256": "08b9fef81fbe664e132b754149762511cef936fdff7763098329afa30b7c3cf5",
+      "checks": [
+        {
+          "frame": 0,
+          "same_frame_mae_255": 1.1316731770833333,
+          "nearby_frame_mae_255": {
+            "0": 1.1316731770833333,
+            "1": 1.3511149088541667,
+            "2": 1.5920206705729167
+          }
+        },
+        {
+          "frame": 76,
+          "same_frame_mae_255": 2.3974202473958335,
+          "nearby_frame_mae_255": {
+            "74": 2.6962076822916665,
+            "75": 0.8872884114583334,
+            "76": 2.3974202473958335,
+            "77": 3.19561767578125,
+            "78": 3.63385009765625
+          }
+        },
+        {
+          "frame": 151,
+          "same_frame_mae_255": 1.2656046549479167,
+          "nearby_frame_mae_255": {
+            "149": 1.3953653971354167,
+            "150": 0.6700236002604166,
+            "151": 1.2656046549479167
+          }
+        }
+      ],
+      "state_roundtrip_atol": 1e-12,
+      "original_resolution": [
+        128,
+        128
+      ],
+      "source_state_frames_preserved": true,
+      "eef_max_abs_m": null,
+      "training_alignment_note": "All original demo states rendered in order; archived RGB observations are post-action and can lead the state stream by one frame."
+    },
+    "baseline": {
+      "task": "libero_spatial_swap_01",
+      "arm": "baseline",
+      "frames": 351,
+      "rendered": 351,
+      "native_resolution": [
+        896,
+        896
+      ],
+      "physics_steps": 0,
+      "policy_calls": 0,
+      "source_sha256": "ff78b8fe7cc85e6ad293a609027ecf08dca880b6d5a091a2e860beee30b24f91",
+      "checks": [
+        {
+          "frame": 0,
+          "same_frame_mae_255": 1.3616434733072917,
+          "nearby_frame_mae_255": {
+            "0": 1.3616434733072917,
+            "1": 1.5380808512369792,
+            "2": 1.8515777587890625
+          },
+          "eef_error_m": 2.8189682645449374e-16
+        },
+        {
+          "frame": 175,
+          "same_frame_mae_255": 1.2673746744791667,
+          "nearby_frame_mae_255": {
+            "173": 4.578816731770833,
+            "174": 2.552576700846354,
+            "175": 1.2673746744791667,
+            "176": 2.630488077799479,
+            "177": 5.0209299723307295
+          },
+          "eef_error_m": 0.00015330990292172775
+        },
+        {
+          "frame": 350,
+          "same_frame_mae_255": 1.169342041015625,
+          "nearby_frame_mae_255": {
+            "348": 2.454564412434896,
+            "349": 1.61578369140625,
+            "350": 1.169342041015625
+          },
+          "eef_error_m": 8.135838853851052e-05
+        }
+      ],
+      "state_roundtrip_atol": 1e-12,
+      "original_resolution": [
+        256,
+        256
+      ],
+      "source_state_frames_preserved": true,
+      "eef_max_abs_m": 0.00110132336630131,
+      "training_alignment_note": null
+    },
+    "emb-zero": {
+      "task": "libero_spatial_swap_01",
+      "arm": "emb-zero",
+      "frames": 243,
+      "rendered": 243,
+      "native_resolution": [
+        896,
+        896
+      ],
+      "physics_steps": 0,
+      "policy_calls": 0,
+      "source_sha256": "00172267aef846fcc26b9ce6540c4aa3c02275c14496baaea5393e7abd03742e",
+      "checks": [
+        {
+          "frame": 0,
+          "same_frame_mae_255": 1.3616434733072917,
+          "nearby_frame_mae_255": {
+            "0": 1.3616434733072917,
+            "1": 1.5746205647786458,
+            "2": 1.931488037109375
+          },
+          "eef_error_m": 2.8189682645449374e-16
+        },
+        {
+          "frame": 121,
+          "same_frame_mae_255": 1.5853220621744792,
+          "nearby_frame_mae_255": {
+            "119": 6.556203206380208,
+            "120": 4.7523040771484375,
+            "121": 1.5853220621744792,
+            "122": 4.607615152994792,
+            "123": 7.146565755208333
+          },
+          "eef_error_m": 0.0006226116125758185
+        },
+        {
+          "frame": 242,
+          "same_frame_mae_255": 1.6360626220703125,
+          "nearby_frame_mae_255": {
+            "240": 5.822275797526042,
+            "241": 4.4486033121744795,
+            "242": 1.6360626220703125
+          },
+          "eef_error_m": 0.0007007731537859163
+        }
+      ],
+      "state_roundtrip_atol": 1e-12,
+      "original_resolution": [
+        256,
+        256
+      ],
+      "source_state_frames_preserved": true,
+      "eef_max_abs_m": 0.001113425530383294,
+      "training_alignment_note": null
+    }
+  }
+}

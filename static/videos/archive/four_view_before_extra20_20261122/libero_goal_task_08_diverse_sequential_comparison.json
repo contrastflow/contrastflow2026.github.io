@@ -1,0 +1,942 @@
+{
+  "task": "libero_goal_task_08_diverse",
+  "id": "libero_goal_task_08_diverse_sequential",
+  "layout": [
+    "Train setup",
+    "Test setup",
+    "\u03c00.5",
+    "ContrastFlow"
+  ],
+  "setup_frames": {
+    "train": 0,
+    "test": 0
+  },
+  "setup_resolution": [
+    896,
+    896
+  ],
+  "policy_camera_resolution": [
+    896,
+    896
+  ],
+  "attention_displayed": false,
+  "clips": [
+    {
+      "method": "pi05",
+      "file": "libero_goal_task_08_diverse_sequential_pi05.mp4",
+      "source_frames": 501,
+      "frames": 501,
+      "terminal_hold_frames": 0,
+      "duration_seconds": 50.1,
+      "width": 896,
+      "height": 896,
+      "fps": 10,
+      "source_sha256": "ae5cb37bba6298d0dfcaee30a8b8c27508bbde597f26a03c94ae4bd45ec03a69",
+      "sha256": "aa41ad85b1f7073cb92d0160d18d2d0a947bac65ddb0588d4159a8d517a4a5aa",
+      "path_sha256": "fb04f14b7a19599a6de1e46bc8b5648a400ff2573cdb41d447f745a8899816fa",
+      "fully_decoded": true,
+      "all_source_frames_once": true,
+      "outcome_marker": {
+        "symbol": "cross",
+        "placement": "top right of policy camera",
+        "frame_ranges": [
+          [
+            320,
+            485
+          ],
+          [
+            500,
+            500
+          ]
+        ]
+      }
+    },
+    {
+      "method": "contrastflow",
+      "file": "libero_goal_task_08_diverse_sequential_contrastflow.mp4",
+      "source_frames": 90,
+      "frames": 110,
+      "terminal_hold_frames": 20,
+      "duration_seconds": 11.0,
+      "width": 896,
+      "height": 896,
+      "fps": 10,
+      "source_sha256": "cffd2eef0dca830ce0dbbd7dfe1f137b1f7c0f4e20df772547925a1d0f504366",
+      "sha256": "6849cf663efda14adfcf0c13ea598a0955c7a4e7ba6ef3c349f2fd11d9631af0",
+      "path_sha256": "a9e198150b52d10f916c6b39ecb427e0faeb3a3cb0b663e83a3cce26832c415c",
+      "fully_decoded": true,
+      "all_source_frames_once": true,
+      "outcome_marker": {
+        "symbol": "tick",
+        "placement": "top right of policy camera",
+        "frame_ranges": [
+          [
+            60,
+            85
+          ],
+          [
+            89,
+            109
+          ]
+        ]
+      }
+    }
+  ],
+  "source_hashes": {
+    "baseline": "ae5cb37bba6298d0dfcaee30a8b8c27508bbde597f26a03c94ae4bd45ec03a69",
+    "emb-zero": "cffd2eef0dca830ce0dbbd7dfe1f137b1f7c0f4e20df772547925a1d0f504366"
+  },
+  "register_cleaning": {
+    "cache_path": "/taiga/illinois/eng/cs/daf/apotnis2/openpi_cache/cache_libero_goal_task_lang.pt",
+    "cache_sha256": "1382072e38e16c891afba73170edd15e279990fb2c83746db809334f65026535",
+    "common_source_sha256": "a4f7ef397976881d6116e0aa784061be121f2c8ea427ce59cf5378d8424e530e",
+    "cleaner_source_sha256": "2b5e947537295f3005eab6d9754e750534884a8bb6e6974a90ca568538acba76",
+    "register_count": 14,
+    "register_coordinates": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        13
+      ],
+      [
+        1,
+        15
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        10,
+        0
+      ],
+      [
+        10,
+        15
+      ],
+      [
+        12,
+        1
+      ],
+      [
+        13,
+        15
+      ],
+      [
+        14,
+        1
+      ],
+      [
+        14,
+        5
+      ],
+      [
+        14,
+        10
+      ],
+      [
+        15,
+        3
+      ],
+      [
+        15,
+        13
+      ]
+    ],
+    "calibration_mask_ratio": 3.0,
+    "calibration_min_count_fraction": 0.5,
+    "dynamic_spike_ratio": 2.0,
+    "dynamic_spike_max_iterations": 15,
+    "gaussian_sigma": 0.8,
+    "policy_mask_parity": null,
+    "parity_note": "Policy masks were not archived for this sample; cleaner and suite calibration cache match the capture implementation.",
+    "mass_removed": [
+      {
+        "arm": "baseline",
+        "chunk": 0,
+        "register_mass_fraction": 0.20358699560165405
+      },
+      {
+        "arm": "baseline",
+        "chunk": 1,
+        "register_mass_fraction": 0.18490740656852722
+      },
+      {
+        "arm": "baseline",
+        "chunk": 2,
+        "register_mass_fraction": 0.18366293609142303
+      },
+      {
+        "arm": "baseline",
+        "chunk": 3,
+        "register_mass_fraction": 0.20624497532844543
+      },
+      {
+        "arm": "baseline",
+        "chunk": 4,
+        "register_mass_fraction": 0.2867679297924042
+      },
+      {
+        "arm": "baseline",
+        "chunk": 5,
+        "register_mass_fraction": 0.3700817823410034
+      },
+      {
+        "arm": "baseline",
+        "chunk": 6,
+        "register_mass_fraction": 0.41197749972343445
+      },
+      {
+        "arm": "baseline",
+        "chunk": 7,
+        "register_mass_fraction": 0.44024914503097534
+      },
+      {
+        "arm": "baseline",
+        "chunk": 8,
+        "register_mass_fraction": 0.27592983841896057
+      },
+      {
+        "arm": "baseline",
+        "chunk": 9,
+        "register_mass_fraction": 0.15769541263580322
+      },
+      {
+        "arm": "baseline",
+        "chunk": 10,
+        "register_mass_fraction": 0.14427530765533447
+      },
+      {
+        "arm": "baseline",
+        "chunk": 11,
+        "register_mass_fraction": 0.09996937960386276
+      },
+      {
+        "arm": "baseline",
+        "chunk": 12,
+        "register_mass_fraction": 0.06974690407514572
+      },
+      {
+        "arm": "baseline",
+        "chunk": 13,
+        "register_mass_fraction": 0.05851401761174202
+      },
+      {
+        "arm": "baseline",
+        "chunk": 14,
+        "register_mass_fraction": 0.04079480841755867
+      },
+      {
+        "arm": "baseline",
+        "chunk": 15,
+        "register_mass_fraction": 0.022332729771733284
+      },
+      {
+        "arm": "baseline",
+        "chunk": 16,
+        "register_mass_fraction": 0.018316049128770828
+      },
+      {
+        "arm": "baseline",
+        "chunk": 17,
+        "register_mass_fraction": 0.011258203536272049
+      },
+      {
+        "arm": "baseline",
+        "chunk": 18,
+        "register_mass_fraction": 0.02137203887104988
+      },
+      {
+        "arm": "baseline",
+        "chunk": 19,
+        "register_mass_fraction": 0.039465490728616714
+      },
+      {
+        "arm": "baseline",
+        "chunk": 20,
+        "register_mass_fraction": 0.06863151490688324
+      },
+      {
+        "arm": "baseline",
+        "chunk": 21,
+        "register_mass_fraction": 0.07073374837636948
+      },
+      {
+        "arm": "baseline",
+        "chunk": 22,
+        "register_mass_fraction": 0.06814157217741013
+      },
+      {
+        "arm": "baseline",
+        "chunk": 23,
+        "register_mass_fraction": 0.06870298832654953
+      },
+      {
+        "arm": "baseline",
+        "chunk": 24,
+        "register_mass_fraction": 0.08327579498291016
+      },
+      {
+        "arm": "baseline",
+        "chunk": 25,
+        "register_mass_fraction": 0.04905903711915016
+      },
+      {
+        "arm": "baseline",
+        "chunk": 26,
+        "register_mass_fraction": 0.03458600118756294
+      },
+      {
+        "arm": "baseline",
+        "chunk": 27,
+        "register_mass_fraction": 0.034563589841127396
+      },
+      {
+        "arm": "baseline",
+        "chunk": 28,
+        "register_mass_fraction": 0.09856798499822617
+      },
+      {
+        "arm": "baseline",
+        "chunk": 29,
+        "register_mass_fraction": 0.08845169842243195
+      },
+      {
+        "arm": "baseline",
+        "chunk": 30,
+        "register_mass_fraction": 0.0748382955789566
+      },
+      {
+        "arm": "baseline",
+        "chunk": 31,
+        "register_mass_fraction": 0.06188931688666344
+      },
+      {
+        "arm": "baseline",
+        "chunk": 32,
+        "register_mass_fraction": 0.06736326217651367
+      },
+      {
+        "arm": "baseline",
+        "chunk": 33,
+        "register_mass_fraction": 0.06231532245874405
+      },
+      {
+        "arm": "baseline",
+        "chunk": 34,
+        "register_mass_fraction": 0.06538854539394379
+      },
+      {
+        "arm": "baseline",
+        "chunk": 35,
+        "register_mass_fraction": 0.06796738505363464
+      },
+      {
+        "arm": "baseline",
+        "chunk": 36,
+        "register_mass_fraction": 0.06897679716348648
+      },
+      {
+        "arm": "baseline",
+        "chunk": 37,
+        "register_mass_fraction": 0.07789594680070877
+      },
+      {
+        "arm": "baseline",
+        "chunk": 38,
+        "register_mass_fraction": 0.08065811544656754
+      },
+      {
+        "arm": "baseline",
+        "chunk": 39,
+        "register_mass_fraction": 0.07918797433376312
+      },
+      {
+        "arm": "baseline",
+        "chunk": 40,
+        "register_mass_fraction": 0.08342107385396957
+      },
+      {
+        "arm": "baseline",
+        "chunk": 41,
+        "register_mass_fraction": 0.0881834477186203
+      },
+      {
+        "arm": "baseline",
+        "chunk": 42,
+        "register_mass_fraction": 0.09227994084358215
+      },
+      {
+        "arm": "baseline",
+        "chunk": 43,
+        "register_mass_fraction": 0.1017107367515564
+      },
+      {
+        "arm": "baseline",
+        "chunk": 44,
+        "register_mass_fraction": 0.11156023293733597
+      },
+      {
+        "arm": "baseline",
+        "chunk": 45,
+        "register_mass_fraction": 0.12211594730615616
+      },
+      {
+        "arm": "baseline",
+        "chunk": 46,
+        "register_mass_fraction": 0.11899105459451675
+      },
+      {
+        "arm": "baseline",
+        "chunk": 47,
+        "register_mass_fraction": 0.16256684064865112
+      },
+      {
+        "arm": "baseline",
+        "chunk": 48,
+        "register_mass_fraction": 0.1641429364681244
+      },
+      {
+        "arm": "baseline",
+        "chunk": 49,
+        "register_mass_fraction": 0.1671394556760788
+      },
+      {
+        "arm": "baseline",
+        "chunk": 50,
+        "register_mass_fraction": 0.1748993992805481
+      },
+      {
+        "arm": "baseline",
+        "chunk": 51,
+        "register_mass_fraction": 0.19336669147014618
+      },
+      {
+        "arm": "baseline",
+        "chunk": 52,
+        "register_mass_fraction": 0.21441447734832764
+      },
+      {
+        "arm": "baseline",
+        "chunk": 53,
+        "register_mass_fraction": 0.21703185141086578
+      },
+      {
+        "arm": "baseline",
+        "chunk": 54,
+        "register_mass_fraction": 0.2556365728378296
+      },
+      {
+        "arm": "baseline",
+        "chunk": 55,
+        "register_mass_fraction": 0.23827698826789856
+      },
+      {
+        "arm": "baseline",
+        "chunk": 56,
+        "register_mass_fraction": 0.24060414731502533
+      },
+      {
+        "arm": "baseline",
+        "chunk": 57,
+        "register_mass_fraction": 0.2804814577102661
+      },
+      {
+        "arm": "baseline",
+        "chunk": 58,
+        "register_mass_fraction": 0.23740558326244354
+      },
+      {
+        "arm": "baseline",
+        "chunk": 59,
+        "register_mass_fraction": 0.22623878717422485
+      },
+      {
+        "arm": "baseline",
+        "chunk": 60,
+        "register_mass_fraction": 0.19903908669948578
+      },
+      {
+        "arm": "baseline",
+        "chunk": 61,
+        "register_mass_fraction": 0.1735367327928543
+      },
+      {
+        "arm": "baseline",
+        "chunk": 62,
+        "register_mass_fraction": 0.13710345327854156
+      },
+      {
+        "arm": "baseline",
+        "chunk": 63,
+        "register_mass_fraction": 0.10420393198728561
+      },
+      {
+        "arm": "baseline",
+        "chunk": 64,
+        "register_mass_fraction": 0.08707323670387268
+      },
+      {
+        "arm": "baseline",
+        "chunk": 65,
+        "register_mass_fraction": 0.08056594431400299
+      },
+      {
+        "arm": "baseline",
+        "chunk": 66,
+        "register_mass_fraction": 0.08834376186132431
+      },
+      {
+        "arm": "baseline",
+        "chunk": 67,
+        "register_mass_fraction": 0.08668966591358185
+      },
+      {
+        "arm": "baseline",
+        "chunk": 68,
+        "register_mass_fraction": 0.09323523938655853
+      },
+      {
+        "arm": "baseline",
+        "chunk": 69,
+        "register_mass_fraction": 0.09516590088605881
+      },
+      {
+        "arm": "baseline",
+        "chunk": 70,
+        "register_mass_fraction": 0.09356989711523056
+      },
+      {
+        "arm": "baseline",
+        "chunk": 71,
+        "register_mass_fraction": 0.09444938600063324
+      },
+      {
+        "arm": "baseline",
+        "chunk": 72,
+        "register_mass_fraction": 0.09267092496156693
+      },
+      {
+        "arm": "baseline",
+        "chunk": 73,
+        "register_mass_fraction": 0.09068761020898819
+      },
+      {
+        "arm": "baseline",
+        "chunk": 74,
+        "register_mass_fraction": 0.09606862813234329
+      },
+      {
+        "arm": "baseline",
+        "chunk": 75,
+        "register_mass_fraction": 0.10081300139427185
+      },
+      {
+        "arm": "baseline",
+        "chunk": 76,
+        "register_mass_fraction": 0.09788653999567032
+      },
+      {
+        "arm": "baseline",
+        "chunk": 77,
+        "register_mass_fraction": 0.1022769957780838
+      },
+      {
+        "arm": "baseline",
+        "chunk": 78,
+        "register_mass_fraction": 0.1054355651140213
+      },
+      {
+        "arm": "baseline",
+        "chunk": 79,
+        "register_mass_fraction": 0.10859035700559616
+      },
+      {
+        "arm": "baseline",
+        "chunk": 80,
+        "register_mass_fraction": 0.10520455241203308
+      },
+      {
+        "arm": "baseline",
+        "chunk": 81,
+        "register_mass_fraction": 0.11055655777454376
+      },
+      {
+        "arm": "baseline",
+        "chunk": 82,
+        "register_mass_fraction": 0.11556383222341537
+      },
+      {
+        "arm": "baseline",
+        "chunk": 83,
+        "register_mass_fraction": 0.11590684205293655
+      },
+      {
+        "arm": "baseline",
+        "chunk": 84,
+        "register_mass_fraction": 0.11729511618614197
+      },
+      {
+        "arm": "baseline",
+        "chunk": 85,
+        "register_mass_fraction": 0.11601556837558746
+      },
+      {
+        "arm": "baseline",
+        "chunk": 86,
+        "register_mass_fraction": 0.12323995679616928
+      },
+      {
+        "arm": "baseline",
+        "chunk": 87,
+        "register_mass_fraction": 0.12374047935009003
+      },
+      {
+        "arm": "baseline",
+        "chunk": 88,
+        "register_mass_fraction": 0.12371053546667099
+      },
+      {
+        "arm": "baseline",
+        "chunk": 89,
+        "register_mass_fraction": 0.11830069124698639
+      },
+      {
+        "arm": "baseline",
+        "chunk": 90,
+        "register_mass_fraction": 0.11721834540367126
+      },
+      {
+        "arm": "baseline",
+        "chunk": 91,
+        "register_mass_fraction": 0.12492914497852325
+      },
+      {
+        "arm": "baseline",
+        "chunk": 92,
+        "register_mass_fraction": 0.12660981714725494
+      },
+      {
+        "arm": "baseline",
+        "chunk": 93,
+        "register_mass_fraction": 0.12183353304862976
+      },
+      {
+        "arm": "baseline",
+        "chunk": 94,
+        "register_mass_fraction": 0.12124795466661453
+      },
+      {
+        "arm": "baseline",
+        "chunk": 95,
+        "register_mass_fraction": 0.13034260272979736
+      },
+      {
+        "arm": "baseline",
+        "chunk": 96,
+        "register_mass_fraction": 0.11536981165409088
+      },
+      {
+        "arm": "baseline",
+        "chunk": 97,
+        "register_mass_fraction": 0.11952033638954163
+      },
+      {
+        "arm": "baseline",
+        "chunk": 98,
+        "register_mass_fraction": 0.10006687045097351
+      },
+      {
+        "arm": "baseline",
+        "chunk": 99,
+        "register_mass_fraction": 0.13584448397159576
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": 0,
+        "register_mass_fraction": 0.20358699560165405
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": 1,
+        "register_mass_fraction": 0.1738399863243103
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": 2,
+        "register_mass_fraction": 0.17286355793476105
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": 3,
+        "register_mass_fraction": 0.23533187806606293
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": 4,
+        "register_mass_fraction": 0.3275481164455414
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": 5,
+        "register_mass_fraction": 0.3557558059692383
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": 6,
+        "register_mass_fraction": 0.4539097547531128
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": 7,
+        "register_mass_fraction": 0.37653687596321106
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": 8,
+        "register_mass_fraction": 0.27772653102874756
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": 9,
+        "register_mass_fraction": 0.24967265129089355
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": 10,
+        "register_mass_fraction": 0.20671837031841278
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": 11,
+        "register_mass_fraction": 0.14424467086791992
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": 12,
+        "register_mass_fraction": 0.13699091970920563
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": 13,
+        "register_mass_fraction": 0.154831200838089
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": 14,
+        "register_mass_fraction": 0.19086608290672302
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": 15,
+        "register_mass_fraction": 0.20489001274108887
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": 16,
+        "register_mass_fraction": 0.24765394628047943
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": 17,
+        "register_mass_fraction": 0.22497017681598663
+      }
+    ],
+    "scope": "Same calibration mask and method cleaning for both positive-branch language-to-vision maps. Raw scores and actions untouched."
+  },
+  "zoom": false,
+  "text_bubbles": false,
+  "inactive_grayscale": false,
+  "inactive_brightness": 1,
+  "trajectory_overlay": {
+    "color_rgb": {
+      "pi05": [
+        239,
+        68,
+        68
+      ],
+      "contrastflow": [
+        32,
+        220,
+        90
+      ]
+    },
+    "width_pixels": 6.4,
+    "outline_width_pixels": 8.8,
+    "width_scale_from_previous": 0.5,
+    "accumulated_executed_path": true,
+    "reset_at_replan": false,
+    "future_path_visible": false
+  },
+  "native_state_rerender": {
+    "training": {
+      "task": "libero_goal_swap_08",
+      "arm": "training",
+      "frames": 90,
+      "rendered": 90,
+      "native_resolution": [
+        896,
+        896
+      ],
+      "physics_steps": 0,
+      "policy_calls": 0,
+      "source_sha256": "572256d85e0a0d851b331fdf1ac373a40d61d1049710691e1cd7050208b6d9ac",
+      "checks": [
+        {
+          "frame": 0,
+          "same_frame_mae_255": 1.0014241536458333,
+          "nearby_frame_mae_255": {
+            "0": 1.0014241536458333,
+            "1": 1.2016398111979167,
+            "2": 1.4931233723958333
+          }
+        },
+        {
+          "frame": 45,
+          "same_frame_mae_255": 2.5981241861979165,
+          "nearby_frame_mae_255": {
+            "43": 2.5784098307291665,
+            "44": 0.8571370442708334,
+            "45": 2.5981241861979165,
+            "46": 3.9704182942708335,
+            "47": 4.9754638671875
+          }
+        },
+        {
+          "frame": 89,
+          "same_frame_mae_255": 1.052978515625,
+          "nearby_frame_mae_255": {
+            "87": 1.46435546875,
+            "88": 0.6444498697916666,
+            "89": 1.052978515625
+          }
+        }
+      ],
+      "state_roundtrip_atol": 1e-12,
+      "original_resolution": [
+        128,
+        128
+      ],
+      "source_state_frames_preserved": true,
+      "eef_max_abs_m": null,
+      "training_alignment_note": "All original demo states rendered in order; archived RGB observations are post-action and can lead the state stream by one frame."
+    },
+    "baseline": {
+      "task": "libero_goal_task_08_diverse",
+      "arm": "baseline",
+      "frames": 501,
+      "rendered": 501,
+      "native_resolution": [
+        896,
+        896
+      ],
+      "physics_steps": 0,
+      "policy_calls": 0,
+      "source_sha256": "ae5cb37bba6298d0dfcaee30a8b8c27508bbde597f26a03c94ae4bd45ec03a69",
+      "checks": [
+        {
+          "frame": 0,
+          "same_frame_mae_255": 1.278289794921875,
+          "nearby_frame_mae_255": {
+            "0": 1.278289794921875,
+            "1": 1.314361572265625,
+            "2": 1.4802347819010417
+          },
+          "eef_error_m": 2.689961133923174e-16
+        },
+        {
+          "frame": 250,
+          "same_frame_mae_255": 1.1696675618489583,
+          "nearby_frame_mae_255": {
+            "248": 2.578887939453125,
+            "249": 1.9889068603515625,
+            "250": 1.1696675618489583,
+            "251": 1.7128194173177083,
+            "252": 2.233637491861979
+          },
+          "eef_error_m": 6.83720827928877e-05
+        },
+        {
+          "frame": 500,
+          "same_frame_mae_255": 1.0781606038411458,
+          "nearby_frame_mae_255": {
+            "498": 1.6709187825520833,
+            "499": 1.5158589680989583,
+            "500": 1.0781606038411458
+          },
+          "eef_error_m": 8.800537529340957e-05
+        }
+      ],
+      "state_roundtrip_atol": 1e-12,
+      "original_resolution": [
+        256,
+        256
+      ],
+      "source_state_frames_preserved": true,
+      "eef_max_abs_m": 0.0008645296179945472,
+      "training_alignment_note": null
+    },
+    "emb-zero": {
+      "task": "libero_goal_task_08_diverse",
+      "arm": "emb-zero",
+      "frames": 90,
+      "rendered": 90,
+      "native_resolution": [
+        896,
+        896
+      ],
+      "physics_steps": 0,
+      "policy_calls": 0,
+      "source_sha256": "cffd2eef0dca830ce0dbbd7dfe1f137b1f7c0f4e20df772547925a1d0f504366",
+      "checks": [
+        {
+          "frame": 0,
+          "same_frame_mae_255": 1.278289794921875,
+          "nearby_frame_mae_255": {
+            "0": 1.278289794921875,
+            "1": 1.3075052897135417,
+            "2": 1.4554697672526042
+          },
+          "eef_error_m": 2.689961133923174e-16
+        },
+        {
+          "frame": 45,
+          "same_frame_mae_255": 1.3092905680338542,
+          "nearby_frame_mae_255": {
+            "43": 2.740666707356771,
+            "44": 2.3627726236979165,
+            "45": 1.3092905680338542,
+            "46": 1.8691762288411458,
+            "47": 2.490758260091146
+          },
+          "eef_error_m": 0.00029645006590262035
+        },
+        {
+          "frame": 89,
+          "same_frame_mae_255": 1.28302001953125,
+          "nearby_frame_mae_255": {
+            "87": 6.968780517578125,
+            "88": 4.1619822184244795,
+            "89": 1.28302001953125
+          },
+          "eef_error_m": 0.00026962231306315587
+        }
+      ],
+      "state_roundtrip_atol": 1e-12,
+      "original_resolution": [
+        256,
+        256
+      ],
+      "source_state_frames_preserved": true,
+      "eef_max_abs_m": 0.001358390428629841,
+      "training_alignment_note": null
+    }
+  }
+}

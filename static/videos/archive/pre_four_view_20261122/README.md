@@ -1,0 +1,1 @@
+Original clips retained in the repository before the four-view layout and brightness update. Simulation composites retain the previous attention and zoom views. See manifest.json for file hashes and the source commit.

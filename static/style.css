@@ -932,8 +932,8 @@ hr {
 .simulation-video video { display:block; width:100%; height:auto; aspect-ratio:1424/1000; background:#000; border-radius:10px; }
 .simulation-video figcaption { font-size:16px; line-height:1.5; margin-top:12px; color:var(--muted); }
 
-/* Paused clips are subdued; the playing clip stays in color with a white border. */
-video { background:#000; filter:grayscale(1) brightness(.55); outline:3px solid transparent; outline-offset:-3px; transition:filter .18s ease, outline-color .18s ease; }
+/* Preserve natural color while paused; a white border identifies playback. */
+video { background:#000; filter:none; outline:3px solid transparent; outline-offset:-3px; transition:outline-color .18s ease; }
 video.is-playing { filter:none; outline-color:#fff; }
 @media (prefers-reduced-motion:reduce) { video { transition:none; } }
 
@@ -943,3 +943,14 @@ video.is-playing { filter:none; outline-color:#fff; }
 /* Task instructions above each full comparison group. */
 .task-prompt { margin: -0.25rem 0 1.25rem; font-size: 1rem; line-height: 1.6; color: var(--fg); }
 .task-prompt strong { font-weight: 600; }
+
+/* Four independent views with natural-color paused policy frames. */
+.sim-comparison { padding:20px; border:1px solid var(--line); border-radius:20px; background:var(--surface); box-shadow:var(--shadow); }
+.sim-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px; align-items:start; }
+.sim-view { min-width:0; }
+.sim-view h4 { margin:0 0 12px; font-size:17px; line-height:1.4; }
+.sim-view.pi05 h4 { color:#dc2626; }
+.sim-view.contrastflow h4 { color:#15803d; }
+.sim-view img, .sim-view video { display:block; width:100%; height:auto; aspect-ratio:1; object-fit:contain; border-radius:10px; background:#000; filter:none; }
+.sim-comparison figcaption { margin:14px 0 0; color:var(--muted); font-size:15px; line-height:1.5; }
+@media (max-width:750px) { .sim-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px 12px; } .sim-comparison { padding:14px; } .sim-view h4 { font-size:15px; margin-bottom:8px; } }
