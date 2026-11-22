@@ -1,218 +1,477 @@
 [
   {
-    "video_asset": "static/videos/real_centrifuge_pi05.mp4",
-    "poster_asset": "static/videos/real_centrifuge_pi05.jpg",
-    "previous_sha256": "7e85a1a4e1b2fd2c4922b10946a4cb6e11b078a6cead8d8a8063ac463c70738f",
-    "sha256": "c1ff402acaa2e0f68bc8e7ac39d344a979ae975d4b1fe4f3cb2caf2767bf6a5d",
-    "output_bytes": 2681438,
-    "frames": 280,
-    "duration": 9.33,
-    "fully_decoded": true,
-    "filter": "lutrgb=r='val+1.3*val*pow(1-val/255,2)':g='val+1.3*val*pow(1-val/255,2)':b='val+1.3*val*pow(1-val/255,2)'",
-    "description": "Monotonic shadow and midtone lift; black and white endpoints preserved; no spatial or temporal edits.",
+    "video_asset": "static/videos/rw_adapter_base_fail_1to4.mp4",
+    "camera_device": "iPhone 15 Pro",
+    "strength": 0.45,
+    "filter": "zscale=w=1080:h=1080:filter=lanczos:matrix=709:primaries=709:transfer=709:range=limited,format=yuv420p,lutrgb=r='val+0.45*val*pow(1-val/255,2)':g='val+0.45*val*pow(1-val/255,2)':b='val+0.45*val*pow(1-val/255,2)'",
     "before": {
-      "sample_frames": [
-        0,
-        70,
-        140,
-        210,
-        279
-      ],
-      "mean_luma": 49.987282975,
-      "p95_luma": 124.1806,
-      "near_white_fraction": 0.0
+      "mean_luma": 147.37664372499998,
+      "p95_luma": 203.06539999999998,
+      "near_white_fraction": 0.0012265625
     },
     "after": {
-      "sample_frames": [
-        0,
-        70,
-        140,
-        210,
-        279
-      ],
-      "mean_luma": 84.9935827875,
-      "p95_luma": 164.611,
-      "near_white_fraction": 0.0
-    }
+      "mean_luma": 154.96557224687498,
+      "p95_luma": 205.1462,
+      "near_white_fraction": 0.0010859375
+    },
+    "output_sha256": "ff0a284abf9694ed651166acc75cb4a1670d94701885f8b5ec6e20e04d1e37ea",
+    "frames": 949,
+    "fully_decoded": true
   },
   {
-    "video_asset": "static/videos/real_centrifuge_contrastflow.mp4",
-    "poster_asset": "static/videos/real_centrifuge_contrastflow.jpg",
-    "previous_sha256": "56bbc83868f9ebe2d6dafe1aab4b564ad1365eff15a05c54c12411a2296869c9",
-    "sha256": "2f513785b0137659d41058941913a129f4bce3d434274e5d4b317102f6265839",
-    "output_bytes": 9930991,
-    "frames": 935,
-    "duration": 31.17,
-    "fully_decoded": true,
-    "filter": "lutrgb=r='val+1.3*val*pow(1-val/255,2)':g='val+1.3*val*pow(1-val/255,2)':b='val+1.3*val*pow(1-val/255,2)'",
-    "description": "Monotonic shadow and midtone lift; black and white endpoints preserved; no spatial or temporal edits.",
+    "video_asset": "static/videos/rw_adapter_base_fail_2to4.mp4",
+    "camera_device": "iPhone 15 Pro",
+    "strength": 0.45,
+    "filter": "zscale=w=1080:h=1080:filter=lanczos:matrix=709:primaries=709:transfer=709:range=limited,format=yuv420p,lutrgb=r='val+0.45*val*pow(1-val/255,2)':g='val+0.45*val*pow(1-val/255,2)':b='val+0.45*val*pow(1-val/255,2)'",
     "before": {
-      "sample_frames": [
-        0,
-        233,
-        467,
-        701,
-        934
-      ],
-      "mean_luma": 48.98757722,
-      "p95_luma": 123.1404,
-      "near_white_fraction": 0.0
+      "mean_luma": 148.34533442968748,
+      "p95_luma": 204.91979999999998,
+      "near_white_fraction": 0.002421875
     },
     "after": {
-      "sample_frames": [
-        0,
-        233,
-        467,
-        701,
-        934
-      ],
-      "mean_luma": 83.1194148425,
-      "p95_luma": 163.23319999999998,
-      "near_white_fraction": 0.0
-    }
+      "mean_luma": 155.7929238859375,
+      "p95_luma": 206.84359999999998,
+      "near_white_fraction": 0.0015703125
+    },
+    "output_sha256": "21d317e29a5948f82f35bc9a46fbd8877d5c384466b11ccec522debaee7b9390",
+    "frames": 799,
+    "fully_decoded": true
   },
   {
-    "video_asset": "static/videos/real_titration_pi05.mp4",
-    "poster_asset": "static/videos/real_titration_pi05.jpg",
-    "previous_sha256": "29196b12dd05a689596ad61b8259a92dd365c67e6f706a424806076a0d2e1028",
-    "sha256": "28dc7fe877580a967b463bd91bb45e044266c301373d3a267fb008c512fa054d",
-    "output_bytes": 1418853,
-    "frames": 505,
-    "duration": 16.83,
-    "fully_decoded": true,
-    "filter": "lutrgb=r='val+1.3*val*pow(1-val/255,2)':g='val+1.3*val*pow(1-val/255,2)':b='val+1.3*val*pow(1-val/255,2)'",
-    "description": "Monotonic shadow and midtone lift; black and white endpoints preserved; no spatial or temporal edits.",
+    "video_asset": "static/videos/rw_adapter_base_fail_3to4.mp4",
+    "camera_device": "iPhone 15 Pro",
+    "strength": 0.45,
+    "filter": "zscale=w=1080:h=1080:filter=lanczos:matrix=709:primaries=709:transfer=709:range=limited,format=yuv420p,lutrgb=r='val+0.45*val*pow(1-val/255,2)':g='val+0.45*val*pow(1-val/255,2)':b='val+0.45*val*pow(1-val/255,2)'",
     "before": {
-      "sample_frames": [
-        0,
-        126,
-        252,
-        378,
-        504
-      ],
-      "mean_luma": 54.52564428750001,
-      "p95_luma": 137.2728,
-      "near_white_fraction": 0.0
+      "mean_luma": 147.011656675,
+      "p95_luma": 202.9118,
+      "near_white_fraction": 0.0014375
     },
     "after": {
-      "sample_frames": [
-        0,
-        126,
-        252,
-        378,
-        504
-      ],
-      "mean_luma": 89.0044022125,
-      "p95_luma": 173.094,
-      "near_white_fraction": 0.0
-    }
+      "mean_luma": 154.5412173109375,
+      "p95_luma": 204.91979999999998,
+      "near_white_fraction": 0.0011640625
+    },
+    "output_sha256": "7fc6d2aa3f14c72ebbaf53c17f588946c6e5daadbbe5e2adaeade81f7fc3b03f",
+    "frames": 608,
+    "fully_decoded": true
   },
   {
-    "video_asset": "static/videos/real_titration_contrastflow.mp4",
-    "poster_asset": "static/videos/real_titration_contrastflow.jpg",
-    "previous_sha256": "912167a208c7d4368baf4af72d554c2cacdae9fb88978f2165a143d5eb1d06e4",
-    "sha256": "15292aaae510c12af76d23cd0a4e3b539e4d3112aa06cfbd7c6a0bdfa0f9129f",
-    "output_bytes": 2766921,
-    "frames": 1040,
-    "duration": 34.67,
-    "fully_decoded": true,
-    "filter": "lutrgb=r='val+1.3*val*pow(1-val/255,2)':g='val+1.3*val*pow(1-val/255,2)':b='val+1.3*val*pow(1-val/255,2)'",
-    "description": "Monotonic shadow and midtone lift; black and white endpoints preserved; no spatial or temporal edits.",
+    "video_asset": "static/videos/rw_adapter_cf_success_1to4.mp4",
+    "camera_device": "iPhone 15 Pro",
+    "strength": 0.45,
+    "filter": "zscale=w=1080:h=1080:filter=lanczos:matrix=709:primaries=709:transfer=709:range=limited,format=yuv420p,lutrgb=r='val+0.45*val*pow(1-val/255,2)':g='val+0.45*val*pow(1-val/255,2)':b='val+0.45*val*pow(1-val/255,2)'",
     "before": {
-      "sample_frames": [
-        0,
-        260,
-        520,
-        780,
-        1039
-      ],
-      "mean_luma": 56.5076826,
-      "p95_luma": 139.4132,
-      "near_white_fraction": 0.0
+      "mean_luma": 149.0522102140625,
+      "p95_luma": 205.2064,
+      "near_white_fraction": 0.0021796875
     },
     "after": {
-      "sample_frames": [
-        0,
-        260,
-        520,
-        780,
-        1039
-      ],
-      "mean_luma": 90.85507956250001,
-      "p95_luma": 174.48539999999997,
-      "near_white_fraction": 0.0
-    }
+      "mean_luma": 156.55773154218747,
+      "p95_luma": 207.4184,
+      "near_white_fraction": 0.0015390625
+    },
+    "output_sha256": "c5b98fde5fe723bc9df307e01e8942d5b127c0eec4218f6ea62daf9214f8bf85",
+    "frames": 995,
+    "fully_decoded": true
   },
   {
-    "video_asset": "static/videos/real_adapter_pi05.mp4",
-    "poster_asset": "static/videos/real_adapter_pi05.jpg",
-    "previous_sha256": "0d3dd9060e8a480d978602b39fc3d55884da8dc72c2dc43eed8c1217ee2d32c3",
-    "sha256": "60d75c2356e2b2161e8dbd9adfe2055975e9d542fc2083cfff0a9f8841fc7b69",
-    "output_bytes": 1805242,
-    "frames": 313,
-    "duration": 31.3,
-    "fully_decoded": true,
-    "filter": "lutrgb=r='val+1.3*val*pow(1-val/255,2)':g='val+1.3*val*pow(1-val/255,2)':b='val+1.3*val*pow(1-val/255,2)'",
-    "description": "Monotonic shadow and midtone lift; black and white endpoints preserved; no spatial or temporal edits.",
+    "video_asset": "static/videos/rw_adapter_cf_success_2to4.mp4",
+    "camera_device": "iPhone 15 Pro",
+    "strength": 0.45,
+    "filter": "zscale=w=1080:h=1080:filter=lanczos:matrix=709:primaries=709:transfer=709:range=limited,format=yuv420p,lutrgb=r='val+0.45*val*pow(1-val/255,2)':g='val+0.45*val*pow(1-val/255,2)':b='val+0.45*val*pow(1-val/255,2)'",
     "before": {
-      "sample_frames": [
-        0,
-        78,
-        156,
-        234,
-        312
-      ],
-      "mean_luma": 51.9991489125,
-      "p95_luma": 128.279,
-      "near_white_fraction": 0.0
+      "mean_luma": 148.37793017656244,
+      "p95_luma": 203.3468,
+      "near_white_fraction": 0.0014140625
     },
     "after": {
-      "sample_frames": [
-        0,
-        78,
-        156,
-        234,
-        312
-      ],
-      "mean_luma": 86.36720513250002,
-      "p95_luma": 166.81199999999998,
-      "near_white_fraction": 0.0
-    }
+      "mean_luma": 155.9513148609375,
+      "p95_luma": 205.5674,
+      "near_white_fraction": 0.00115625
+    },
+    "output_sha256": "e4b355745e1fff979bb63ae1e8eb784347f058e3c34b65cd40a9052da28b2678",
+    "frames": 470,
+    "fully_decoded": true
   },
   {
-    "video_asset": "static/videos/real_adapter_contrastflow.mp4",
-    "poster_asset": "static/videos/real_adapter_contrastflow.jpg",
-    "previous_sha256": "f9da84e5f94eb1c8da5109992a51a73d52cc6a7f9e48cb48434d1007ed6677b0",
-    "sha256": "2195f09fabb7de2a83980ce675c57d3c034e32f91e18d30b1e6b625b74919878",
-    "output_bytes": 1901150,
-    "frames": 317,
-    "duration": 31.7,
-    "fully_decoded": true,
-    "filter": "lutrgb=r='val+1.3*val*pow(1-val/255,2)':g='val+1.3*val*pow(1-val/255,2)':b='val+1.3*val*pow(1-val/255,2)'",
-    "description": "Monotonic shadow and midtone lift; black and white endpoints preserved; no spatial or temporal edits.",
+    "video_asset": "static/videos/rw_adapter_cf_success_3to4.mp4",
+    "camera_device": "iPhone 15 Pro",
+    "strength": 0.45,
+    "filter": "zscale=w=1080:h=1080:filter=lanczos:matrix=709:primaries=709:transfer=709:range=limited,format=yuv420p,lutrgb=r='val+0.45*val*pow(1-val/255,2)':g='val+0.45*val*pow(1-val/255,2)':b='val+0.45*val*pow(1-val/255,2)'",
     "before": {
-      "sample_frames": [
-        0,
-        79,
-        158,
-        237,
-        316
-      ],
-      "mean_luma": 52.173276584999996,
-      "p95_luma": 128.42340000000002,
-      "near_white_fraction": 0.0
+      "mean_luma": 149.013650403125,
+      "p95_luma": 205.2024,
+      "near_white_fraction": 0.002375
     },
     "after": {
-      "sample_frames": [
-        0,
-        79,
-        158,
-        237,
-        316
-      ],
-      "mean_luma": 86.71292670499999,
-      "p95_luma": 166.80399999999997,
+      "mean_luma": 156.51488772343748,
+      "p95_luma": 207.35879999999997,
+      "near_white_fraction": 0.0015078125
+    },
+    "output_sha256": "6c3cb42772c54c44428779c4972990ac2e1e61dffeb980d0696d607b86609129",
+    "frames": 496,
+    "fully_decoded": true
+  },
+  {
+    "video_asset": "static/videos/rw_centrifuge_base_fail_ood_p1_blue.mp4",
+    "camera_device": "iPhone 15 Pro",
+    "strength": 0.9,
+    "filter": "zscale=w=1080:h=1080:filter=lanczos:matrix=709:primaries=709:transfer=709:range=limited,format=yuv420p,lutrgb=r='val+0.9*val*pow(1-val/255,2)':g='val+0.9*val*pow(1-val/255,2)':b='val+0.9*val*pow(1-val/255,2)'",
+    "before": {
+      "mean_luma": 140.646206228125,
+      "p95_luma": 211.1062,
+      "near_white_fraction": 0.0001328125
+    },
+    "after": {
+      "mean_luma": 157.38197860781247,
+      "p95_luma": 215.1284,
+      "near_white_fraction": 7.8125e-05
+    },
+    "output_sha256": "765c331fc0c3780ca62a62fccb15073346a14debc496ed90a76076f3cde3af55",
+    "frames": 591,
+    "fully_decoded": true
+  },
+  {
+    "video_asset": "static/videos/rw_centrifuge_base_fail_ood_p1_red.mp4",
+    "camera_device": "iPhone 15 Pro",
+    "strength": 0.9,
+    "filter": "zscale=w=1080:h=1080:filter=lanczos:matrix=709:primaries=709:transfer=709:range=limited,format=yuv420p,lutrgb=r='val+0.9*val*pow(1-val/255,2)':g='val+0.9*val*pow(1-val/255,2)':b='val+0.9*val*pow(1-val/255,2)'",
+    "before": {
+      "mean_luma": 140.56293773906248,
+      "p95_luma": 210.752,
+      "near_white_fraction": 0.000140625
+    },
+    "after": {
+      "mean_luma": 157.23958123281253,
+      "p95_luma": 214.8522,
+      "near_white_fraction": 0.0001015625
+    },
+    "output_sha256": "b895d9b51d0a70f366f761aa189d1bba89a9170bf2808976d5f79269503fcb7a",
+    "frames": 486,
+    "fully_decoded": true
+  },
+  {
+    "video_asset": "static/videos/rw_centrifuge_base_fail_p1_red.mp4",
+    "camera_device": "iPhone 15 Pro",
+    "strength": 0.9,
+    "filter": "zscale=w=1080:h=1080:filter=lanczos:matrix=709:primaries=709:transfer=709:range=limited,format=yuv420p,lutrgb=r='val+0.9*val*pow(1-val/255,2)':g='val+0.9*val*pow(1-val/255,2)':b='val+0.9*val*pow(1-val/255,2)'",
+    "before": {
+      "mean_luma": 138.56447908125,
+      "p95_luma": 209.62359999999998,
+      "near_white_fraction": 0.0001484375
+    },
+    "after": {
+      "mean_luma": 155.87792356875,
+      "p95_luma": 213.99676999999997,
+      "near_white_fraction": 0.0001015625
+    },
+    "output_sha256": "de5f1273e10ddf62a34b88e3d555a8bcf820194b286446b4eb65ee99a819e4f0",
+    "frames": 1523,
+    "fully_decoded": true
+  },
+  {
+    "video_asset": "static/videos/rw_centrifuge_base_fail_p5_red.mp4",
+    "camera_device": "iPhone 15 Pro",
+    "strength": 0.9,
+    "filter": "zscale=w=1080:h=1080:filter=lanczos:matrix=709:primaries=709:transfer=709:range=limited,format=yuv420p,lutrgb=r='val+0.9*val*pow(1-val/255,2)':g='val+0.9*val*pow(1-val/255,2)':b='val+0.9*val*pow(1-val/255,2)'",
+    "before": {
+      "mean_luma": 138.12433947812502,
+      "p95_luma": 211.1182,
+      "near_white_fraction": 7.8125e-05
+    },
+    "after": {
+      "mean_luma": 155.666404215625,
+      "p95_luma": 215.4184,
+      "near_white_fraction": 3.125e-05
+    },
+    "output_sha256": "2e00a27deba709bb587bb59bf4f97b48103c5e78005a5b9f3aceb8c026c62741",
+    "frames": 1509,
+    "fully_decoded": true
+  },
+  {
+    "video_asset": "static/videos/rw_centrifuge_cf_success_ood_p1_blue.mp4",
+    "camera_device": "iPhone 15 Pro",
+    "strength": 0.9,
+    "filter": "zscale=w=1080:h=1080:filter=lanczos:matrix=709:primaries=709:transfer=709:range=limited,format=yuv420p,lutrgb=r='val+0.9*val*pow(1-val/255,2)':g='val+0.9*val*pow(1-val/255,2)':b='val+0.9*val*pow(1-val/255,2)'",
+    "before": {
+      "mean_luma": 141.1407780828125,
+      "p95_luma": 211.1852,
+      "near_white_fraction": 0.0001015625
+    },
+    "after": {
+      "mean_luma": 157.70715046093747,
+      "p95_luma": 215.13240000000002,
+      "near_white_fraction": 4.6875e-05
+    },
+    "output_sha256": "d87de12e858808fea5300e73280ce928d967155349a87b309fe0e5d35f543403",
+    "frames": 1220,
+    "fully_decoded": true
+  },
+  {
+    "video_asset": "static/videos/rw_centrifuge_cf_success_p1_red.mp4",
+    "camera_device": "iPhone 15 Pro",
+    "strength": 0.9,
+    "filter": "zscale=w=1080:h=1080:filter=lanczos:matrix=709:primaries=709:transfer=709:range=limited,format=yuv420p,lutrgb=r='val+0.9*val*pow(1-val/255,2)':g='val+0.9*val*pow(1-val/255,2)':b='val+0.9*val*pow(1-val/255,2)'",
+    "before": {
+      "mean_luma": 139.25467028593746,
+      "p95_luma": 209.41099999999997,
+      "near_white_fraction": 0.000125
+    },
+    "after": {
+      "mean_luma": 156.43317407343753,
+      "p95_luma": 213.84359999999998,
+      "near_white_fraction": 6.25e-05
+    },
+    "output_sha256": "bf24262cc76ac593c5c197e20b37c689c748509af76ad9afc5a2dd8b9a48174b",
+    "frames": 1662,
+    "fully_decoded": true
+  },
+  {
+    "video_asset": "static/videos/rw_centrifuge_cf_success_p2_blue.mp4",
+    "camera_device": "iPhone 15 Pro",
+    "strength": 0.9,
+    "filter": "zscale=w=1080:h=1080:filter=lanczos:matrix=709:primaries=709:transfer=709:range=limited,format=yuv420p,lutrgb=r='val+0.9*val*pow(1-val/255,2)':g='val+0.9*val*pow(1-val/255,2)':b='val+0.9*val*pow(1-val/255,2)'",
+    "before": {
+      "mean_luma": 138.50571542812503,
+      "p95_luma": 209.20713999999995,
+      "near_white_fraction": 7.8125e-05
+    },
+    "after": {
+      "mean_luma": 155.8239488828125,
+      "p95_luma": 213.70662999999996,
+      "near_white_fraction": 3.125e-05
+    },
+    "output_sha256": "cfdcf3ee12086cb622c5277124d5a6264c90d041613429063f0dc2e2b640c87a",
+    "frames": 1427,
+    "fully_decoded": true
+  },
+  {
+    "video_asset": "static/videos/rw_centrifuge_cf_success_p3_blue.mp4",
+    "camera_device": "iPhone 15 Pro",
+    "strength": 0.9,
+    "filter": "zscale=w=1080:h=1080:filter=lanczos:matrix=709:primaries=709:transfer=709:range=limited,format=yuv420p,lutrgb=r='val+0.9*val*pow(1-val/255,2)':g='val+0.9*val*pow(1-val/255,2)':b='val+0.9*val*pow(1-val/255,2)'",
+    "before": {
+      "mean_luma": 139.7091477109375,
+      "p95_luma": 211.3978,
+      "near_white_fraction": 0.0001640625
+    },
+    "after": {
+      "mean_luma": 156.3474906671875,
+      "p95_luma": 215.84359999999998,
+      "near_white_fraction": 5.46875e-05
+    },
+    "output_sha256": "1681164ec39791fef740545f1cc7095d267e2ef4b84590a8fd5e6819f01f8fbb",
+    "frames": 1341,
+    "fully_decoded": true
+  },
+  {
+    "video_asset": "static/videos/rw_centrifuge_cf_success_p5_red.mp4",
+    "camera_device": "iPhone 15 Pro",
+    "strength": 0.9,
+    "filter": "zscale=w=1080:h=1080:filter=lanczos:matrix=709:primaries=709:transfer=709:range=limited,format=yuv420p,lutrgb=r='val+0.9*val*pow(1-val/255,2)':g='val+0.9*val*pow(1-val/255,2)':b='val+0.9*val*pow(1-val/255,2)'",
+    "before": {
+      "mean_luma": 137.53519091718752,
+      "p95_luma": 209.19439999999997,
+      "near_white_fraction": 7.8125e-05
+    },
+    "after": {
+      "mean_luma": 155.22648703906248,
+      "p95_luma": 213.63899999999998,
+      "near_white_fraction": 1.5625e-05
+    },
+    "output_sha256": "7a64db4ba4f38efc8a1c6ff52637ee48193462711c6db3129df861466524e04e",
+    "frames": 1186,
+    "fully_decoded": true
+  },
+  {
+    "video_asset": "static/videos/rw_titration_base_fail_2cmup.mp4",
+    "camera_device": "iPhone 15 Pro",
+    "strength": 0.9,
+    "filter": "zscale=w=1080:h=1080:filter=lanczos:matrix=709:primaries=709:transfer=709:range=limited,format=yuv420p,lutrgb=r='val+0.9*val*pow(1-val/255,2)':g='val+0.9*val*pow(1-val/255,2)':b='val+0.9*val*pow(1-val/255,2)'",
+    "before": {
+      "mean_luma": 130.53348655781252,
+      "p95_luma": 211.8252,
+      "near_white_fraction": 1.5625e-05
+    },
+    "after": {
+      "mean_luma": 149.11833544218743,
+      "p95_luma": 215.988,
+      "near_white_fraction": 1.5625e-05
+    },
+    "output_sha256": "1a15d8ab7a25dd746e488273680ac2982df5ef586d167e14deb9bc7fa821f2f1",
+    "frames": 1705,
+    "fully_decoded": true
+  },
+  {
+    "video_asset": "static/videos/rw_titration_base_fail_default.mp4",
+    "camera_device": "iPhone 15 Pro",
+    "strength": 0.9,
+    "filter": "zscale=w=1080:h=1080:filter=lanczos:matrix=709:primaries=709:transfer=709:range=limited,format=yuv420p,lutrgb=r='val+0.9*val*pow(1-val/255,2)':g='val+0.9*val*pow(1-val/255,2)':b='val+0.9*val*pow(1-val/255,2)'",
+    "before": {
+      "mean_luma": 128.6806960515625,
+      "p95_luma": 212.28536999999952,
+      "near_white_fraction": 5.46875e-05
+    },
+    "after": {
+      "mean_luma": 146.9312518109375,
+      "p95_luma": 216.49519999999998,
+      "near_white_fraction": 3.125e-05
+    },
+    "output_sha256": "e46fa4c834707c98a370ae3936c5e8e251b551b0d8ebaf67972810ee7f7e7333",
+    "frames": 1262,
+    "fully_decoded": true
+  },
+  {
+    "video_asset": "static/videos/rw_titration_cf_success_2cmup.mp4",
+    "camera_device": "iPhone 15 Pro",
+    "strength": 0.9,
+    "filter": "zscale=w=1080:h=1080:filter=lanczos:matrix=709:primaries=709:transfer=709:range=limited,format=yuv420p,lutrgb=r='val+0.9*val*pow(1-val/255,2)':g='val+0.9*val*pow(1-val/255,2)':b='val+0.9*val*pow(1-val/255,2)'",
+    "before": {
+      "mean_luma": 130.4287126296875,
+      "p95_luma": 212.92030999999952,
+      "near_white_fraction": 3.125e-05
+    },
+    "after": {
+      "mean_luma": 149.08392019531246,
+      "p95_luma": 216.76739999999998,
+      "near_white_fraction": 1.5625e-05
+    },
+    "output_sha256": "8240392f3a88871ffb89b676b1541bfa40ac5a2c8015360e005eef5e48d60b61",
+    "frames": 1862,
+    "fully_decoded": true
+  },
+  {
+    "video_asset": "static/videos/rw_titration_cf_success_default.mp4",
+    "camera_device": "iPhone 15 Pro",
+    "strength": 0.9,
+    "filter": "zscale=w=1080:h=1080:filter=lanczos:matrix=709:primaries=709:transfer=709:range=limited,format=yuv420p,lutrgb=r='val+0.9*val*pow(1-val/255,2)':g='val+0.9*val*pow(1-val/255,2)':b='val+0.9*val*pow(1-val/255,2)'",
+    "before": {
+      "mean_luma": 128.5162185109375,
+      "p95_luma": 212.051,
+      "near_white_fraction": 2.34375e-05
+    },
+    "after": {
+      "mean_luma": 147.4528926,
+      "p95_luma": 216.1342,
       "near_white_fraction": 0.0
-    }
+    },
+    "output_sha256": "97459f2751316bef300c7abbda914dc7ba61a0772db44274abd71e52268dc2ea",
+    "frames": 1824,
+    "fully_decoded": true
+  },
+  {
+    "video_asset": "static/videos/rw_titration_cf_success_towardbase.mp4",
+    "camera_device": "iPhone 15 Pro",
+    "strength": 0.9,
+    "filter": "zscale=w=1080:h=1080:filter=lanczos:matrix=709:primaries=709:transfer=709:range=limited,format=yuv420p,lutrgb=r='val+0.9*val*pow(1-val/255,2)':g='val+0.9*val*pow(1-val/255,2)':b='val+0.9*val*pow(1-val/255,2)'",
+    "before": {
+      "mean_luma": 128.9488023765625,
+      "p95_luma": 214.0562,
+      "near_white_fraction": 6.25e-05
+    },
+    "after": {
+      "mean_luma": 147.48353811093745,
+      "p95_luma": 217.345,
+      "near_white_fraction": 5.46875e-05
+    },
+    "output_sha256": "3cbe766d18c00949051290b26c4512d49d2eaca5c572bd59562280167fcb63c6",
+    "frames": 2229,
+    "fully_decoded": true
+  },
+  {
+    "video_asset": "static/videos/contrastflow_success_config3.mp4",
+    "camera_device": "iPhone 15 Pro",
+    "strength": 0.45,
+    "filter": "zscale=w=1080:h=1080:filter=lanczos:matrix=709:primaries=709:transfer=709:range=limited,format=yuv420p,lutrgb=r='val+0.45*val*pow(1-val/255,2)':g='val+0.45*val*pow(1-val/255,2)':b='val+0.45*val*pow(1-val/255,2)'",
+    "before": {
+      "mean_luma": 140.73504864531253,
+      "p95_luma": 207.05619999999996,
+      "near_white_fraction": 3.125e-05
+    },
+    "after": {
+      "mean_luma": 149.034892003125,
+      "p95_luma": 208.345,
+      "near_white_fraction": 0.0
+    },
+    "output_sha256": "595816fcf7a415a39e57c97fb36568c221b364c486c73ee1ecfc17d826f5b7e4",
+    "frames": 715,
+    "fully_decoded": true
+  },
+  {
+    "video_asset": "static/videos/baseline_fail_config2.mp4",
+    "camera_device": "iPhone 15 Pro",
+    "strength": 0.45,
+    "filter": "zscale=w=1080:h=1080:filter=lanczos:matrix=709:primaries=709:transfer=709:range=limited,format=yuv420p,lutrgb=r='val+0.45*val*pow(1-val/255,2)':g='val+0.45*val*pow(1-val/255,2)':b='val+0.45*val*pow(1-val/255,2)'",
+    "before": {
+      "mean_luma": 146.82266925312499,
+      "p95_luma": 211.4132,
+      "near_white_fraction": 7.03125e-05
+    },
+    "after": {
+      "mean_luma": 154.20407290156248,
+      "p95_luma": 212.345,
+      "near_white_fraction": 3.125e-05
+    },
+    "output_sha256": "92678741b3fd77a3c1fd4e41ff85ce1f3f82a48aff1e08412fefee5d8d9922e1",
+    "frames": 780,
+    "fully_decoded": true
+  },
+  {
+    "video_asset": "static/videos/baseline_fail_config4.mp4",
+    "camera_device": "iPhone 15 Pro",
+    "strength": 0.45,
+    "filter": "zscale=w=1080:h=1080:filter=lanczos:matrix=709:primaries=709:transfer=709:range=limited,format=yuv420p,lutrgb=r='val+0.45*val*pow(1-val/255,2)':g='val+0.45*val*pow(1-val/255,2)':b='val+0.45*val*pow(1-val/255,2)'",
+    "before": {
+      "mean_luma": 148.15393523125002,
+      "p95_luma": 211.341,
+      "near_white_fraction": 5.46875e-05
+    },
+    "after": {
+      "mean_luma": 155.41799567968752,
+      "p95_luma": 212.34099999999998,
+      "near_white_fraction": 2.34375e-05
+    },
+    "output_sha256": "06b26b24d27f518896c3d81612917133b03e75a0d451d278fd3afecf7b502eed",
+    "frames": 778,
+    "fully_decoded": true
+  },
+  {
+    "video_asset": "static/videos/contrastflow_success_config1.mp4",
+    "camera_device": "iPhone 15 Pro",
+    "strength": 0.45,
+    "filter": "zscale=w=1080:h=1080:filter=lanczos:matrix=709:primaries=709:transfer=709:range=limited,format=yuv420p,lutrgb=r='val+0.45*val*pow(1-val/255,2)':g='val+0.45*val*pow(1-val/255,2)':b='val+0.45*val*pow(1-val/255,2)'",
+    "before": {
+      "mean_luma": 144.41504713593753,
+      "p95_luma": 207.12839999999997,
+      "near_white_fraction": 2.34375e-05
+    },
+    "after": {
+      "mean_luma": 151.99404752812498,
+      "p95_luma": 208.345,
+      "near_white_fraction": 1.5625e-05
+    },
+    "output_sha256": "256fda0f7dd128c245377cd151ec93e333d9486f21d06a2974264780c5a04855",
+    "frames": 531,
+    "fully_decoded": true
+  },
+  {
+    "video_asset": "static/videos/contrastflow_success_config2.mp4",
+    "camera_device": "iPhone 15 Pro",
+    "strength": 0.45,
+    "filter": "zscale=w=1080:h=1080:filter=lanczos:matrix=709:primaries=709:transfer=709:range=limited,format=yuv420p,lutrgb=r='val+0.45*val*pow(1-val/255,2)':g='val+0.45*val*pow(1-val/255,2)':b='val+0.45*val*pow(1-val/255,2)'",
+    "before": {
+      "mean_luma": 142.63361445156252,
+      "p95_luma": 207.84359999999998,
+      "near_white_fraction": 3.90625e-05
+    },
+    "after": {
+      "mean_luma": 150.42079627031248,
+      "p95_luma": 209.13240000000002,
+      "near_white_fraction": 7.8125e-06
+    },
+    "output_sha256": "72828c96552b1e40209eaf3963a5caea5a2e44daa6a31802d9e9ebd8b0305db3",
+    "frames": 790,
+    "fully_decoded": true
   }
 ]

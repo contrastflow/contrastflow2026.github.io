@@ -1,0 +1,315 @@
+{
+  "reason": "Preserve all previously displayed real-world clips before preferring iPhone footage and increasing brightness.",
+  "files": [
+    {
+      "original_asset": "static/videos/rw_adapter_base_fail_1to4.mp4",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/rw_adapter_base_fail_1to4.mp4",
+      "sha256": "4947e95ae3b70f762ae520ff67631d6cf1b39c70a54be6b0224a34abaada6628"
+    },
+    {
+      "original_asset": "static/videos/rw_adapter_base_fail_1to4.jpg",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/rw_adapter_base_fail_1to4.jpg",
+      "sha256": "604591dc8074aa4e830b2cac338863588fb9f6cdde4f5fb155d45d58fcf6b0eb"
+    },
+    {
+      "original_asset": "static/videos/rw_adapter_base_fail_2to4.mp4",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/rw_adapter_base_fail_2to4.mp4",
+      "sha256": "3e54a91e15491a0a442568fd3220dfb82db008717def3538567eb29ebfe55859"
+    },
+    {
+      "original_asset": "static/videos/rw_adapter_base_fail_2to4.jpg",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/rw_adapter_base_fail_2to4.jpg",
+      "sha256": "6808a28496562933749c995c99a9448c7911eb193a990a67a8a256a73f83d8f0"
+    },
+    {
+      "original_asset": "static/videos/rw_adapter_base_fail_3to4.mp4",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/rw_adapter_base_fail_3to4.mp4",
+      "sha256": "84b5581b6f5598172542f88fb11ce6fcab759de8a0a1223c6ffc81f44f200264"
+    },
+    {
+      "original_asset": "static/videos/rw_adapter_base_fail_3to4.jpg",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/rw_adapter_base_fail_3to4.jpg",
+      "sha256": "5a90893250fe84bb78109bf12f91d7597802989c73ab4db00127b9cd6d7862ad"
+    },
+    {
+      "original_asset": "static/videos/rw_adapter_cf_success_1to4.mp4",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/rw_adapter_cf_success_1to4.mp4",
+      "sha256": "520dac2f44a745ada07e1cdbafad8a2996ee86321b494120eaded9d94eeeb9df"
+    },
+    {
+      "original_asset": "static/videos/rw_adapter_cf_success_1to4.jpg",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/rw_adapter_cf_success_1to4.jpg",
+      "sha256": "32d3d22b2491ec5622c59c081c39a4b217905e6df5747f2895428a78553abbd5"
+    },
+    {
+      "original_asset": "static/videos/rw_adapter_cf_success_2to4.mp4",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/rw_adapter_cf_success_2to4.mp4",
+      "sha256": "d6dd0115c82637271e849c616ca1a76a6c4391799053b4253dc5050bc7ca6783"
+    },
+    {
+      "original_asset": "static/videos/rw_adapter_cf_success_2to4.jpg",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/rw_adapter_cf_success_2to4.jpg",
+      "sha256": "742037bed6cc296e703a9e76433d2adfe01ff8c8f6568f8b8d4905c8ac6c11e6"
+    },
+    {
+      "original_asset": "static/videos/rw_adapter_cf_success_3to4.mp4",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/rw_adapter_cf_success_3to4.mp4",
+      "sha256": "2f5c8ac0a3bc69b33821e9a593848bdb5699d4a7bdb9b774b3c9b2e9646b1744"
+    },
+    {
+      "original_asset": "static/videos/rw_adapter_cf_success_3to4.jpg",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/rw_adapter_cf_success_3to4.jpg",
+      "sha256": "5c19923663813892855526c327f06e98db72623b44f411515085c2e66085b2d9"
+    },
+    {
+      "original_asset": "static/videos/rw_centrifuge_base_fail_ood_p1_blue.mp4",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/rw_centrifuge_base_fail_ood_p1_blue.mp4",
+      "sha256": "929a2282c3702c30ee866f6df6997653923969d53477068c92ed7b7fa1cd796e"
+    },
+    {
+      "original_asset": "static/videos/rw_centrifuge_base_fail_ood_p1_blue.jpg",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/rw_centrifuge_base_fail_ood_p1_blue.jpg",
+      "sha256": "50d0a2ab8272c399614b133637e77b6566289e0cdef54cc3dd70e2b9f395191f"
+    },
+    {
+      "original_asset": "static/videos/rw_centrifuge_base_fail_ood_p1_red.mp4",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/rw_centrifuge_base_fail_ood_p1_red.mp4",
+      "sha256": "dfab422fee34a50584191041a15dc5353d8e3a80fc3446a163cecdb556b6f1e0"
+    },
+    {
+      "original_asset": "static/videos/rw_centrifuge_base_fail_ood_p1_red.jpg",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/rw_centrifuge_base_fail_ood_p1_red.jpg",
+      "sha256": "fcb28bd97dab639a57c80affc6f1c41173714f863c6aba0017774f2cf069716a"
+    },
+    {
+      "original_asset": "static/videos/rw_centrifuge_base_fail_p1_red.mp4",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/rw_centrifuge_base_fail_p1_red.mp4",
+      "sha256": "57e726daa24a59c8d409030106e7835b62241c95aece5aa5674a19e73e3412c3"
+    },
+    {
+      "original_asset": "static/videos/rw_centrifuge_base_fail_p1_red.jpg",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/rw_centrifuge_base_fail_p1_red.jpg",
+      "sha256": "909c26f51e6d90813d65061c11fb88c3400d79afe0126aab32bef6909f893829"
+    },
+    {
+      "original_asset": "static/videos/rw_centrifuge_base_fail_p5_red.mp4",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/rw_centrifuge_base_fail_p5_red.mp4",
+      "sha256": "4bdef8b74be71de3a55719d7a48fa8a9ff5c616592db86140ecb3e8951f40e73"
+    },
+    {
+      "original_asset": "static/videos/rw_centrifuge_base_fail_p5_red.jpg",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/rw_centrifuge_base_fail_p5_red.jpg",
+      "sha256": "bf2be465b2751ac14d58d9f1c927aeac2f11104bae4a7db6a6c33fd4bf6569b0"
+    },
+    {
+      "original_asset": "static/videos/rw_centrifuge_cf_success_ood_p1_blue.mp4",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/rw_centrifuge_cf_success_ood_p1_blue.mp4",
+      "sha256": "a69586f78e1055912502c84ec3c92d00512c09680f75b0684f39d0f4eb9b1288"
+    },
+    {
+      "original_asset": "static/videos/rw_centrifuge_cf_success_ood_p1_blue.jpg",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/rw_centrifuge_cf_success_ood_p1_blue.jpg",
+      "sha256": "eb0654734055fe48c64b04f54a3c2b425e1b0851855c8ea5241203431e2f1b8a"
+    },
+    {
+      "original_asset": "static/videos/rw_centrifuge_cf_success_p1_red.mp4",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/rw_centrifuge_cf_success_p1_red.mp4",
+      "sha256": "c6b3d4cd6f698ef51ff531730870a8f9e57d45576c03d6d8b87087a03bb0e144"
+    },
+    {
+      "original_asset": "static/videos/rw_centrifuge_cf_success_p1_red.jpg",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/rw_centrifuge_cf_success_p1_red.jpg",
+      "sha256": "1a94e32e5eb58eaedaa1595f8baa8ea673344a0dc3ec6f04d3c3f0e5f12cc249"
+    },
+    {
+      "original_asset": "static/videos/rw_centrifuge_cf_success_p2_blue.mp4",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/rw_centrifuge_cf_success_p2_blue.mp4",
+      "sha256": "68a4ea16187d6b42fda587ac19a770d3898ef431d91f1bc03a0dfc2ea6a7a654"
+    },
+    {
+      "original_asset": "static/videos/rw_centrifuge_cf_success_p2_blue.jpg",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/rw_centrifuge_cf_success_p2_blue.jpg",
+      "sha256": "9d7ddf9373bdb896fef9781dfed2242ed2c702b9e8d258e08a4c212667dd0322"
+    },
+    {
+      "original_asset": "static/videos/rw_centrifuge_cf_success_p3_blue.mp4",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/rw_centrifuge_cf_success_p3_blue.mp4",
+      "sha256": "c9397fddc26e04e6baabb556c8c0c48df8eee76183963632adaa74f88d78364f"
+    },
+    {
+      "original_asset": "static/videos/rw_centrifuge_cf_success_p3_blue.jpg",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/rw_centrifuge_cf_success_p3_blue.jpg",
+      "sha256": "c5b2c997f042a514cc6af071dd58677fc0fbc14e21676409c6a893409b233f7f"
+    },
+    {
+      "original_asset": "static/videos/rw_centrifuge_cf_success_p5_red.mp4",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/rw_centrifuge_cf_success_p5_red.mp4",
+      "sha256": "1078fafdb29317c75a0a439f80ab4020836a78ae55b698d051ca81b3ff8ed53a"
+    },
+    {
+      "original_asset": "static/videos/rw_centrifuge_cf_success_p5_red.jpg",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/rw_centrifuge_cf_success_p5_red.jpg",
+      "sha256": "43779f619f207c602cfea01a8a4b7561b124af4c710e6d2dc9451059e62790f1"
+    },
+    {
+      "original_asset": "static/videos/rw_titration_base_fail_2cmup.mp4",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/rw_titration_base_fail_2cmup.mp4",
+      "sha256": "3cd639946af22fda885d5af30c90c45ec240739f1122e9cee3b54c1d7c91305a"
+    },
+    {
+      "original_asset": "static/videos/rw_titration_base_fail_2cmup.jpg",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/rw_titration_base_fail_2cmup.jpg",
+      "sha256": "4f5ed628ee834a35ffdee0c42991e5d36c9cb968dc2bec1e30ccd9a1620d479e"
+    },
+    {
+      "original_asset": "static/videos/rw_titration_base_fail_default.mp4",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/rw_titration_base_fail_default.mp4",
+      "sha256": "dff009c47a888c9820a3d82ab5f476b22c83ff7addf4f4919f09b7cb4fd9b0d7"
+    },
+    {
+      "original_asset": "static/videos/rw_titration_base_fail_default.jpg",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/rw_titration_base_fail_default.jpg",
+      "sha256": "57987dd15ba12146530b19e3041e429bb9d617926f0749d58cb7bae2e376f77a"
+    },
+    {
+      "original_asset": "static/videos/rw_titration_cf_success_2cmup.mp4",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/rw_titration_cf_success_2cmup.mp4",
+      "sha256": "2a6c306328b339f4ce6c2e97a76449fd225d55e7cb1c1516a0ffc412b5fe933a"
+    },
+    {
+      "original_asset": "static/videos/rw_titration_cf_success_2cmup.jpg",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/rw_titration_cf_success_2cmup.jpg",
+      "sha256": "fbd901dc8b0ffa823c46c98ed90f5f293c1292080c79da00fee89c83335b721f"
+    },
+    {
+      "original_asset": "static/videos/rw_titration_cf_success_default.mp4",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/rw_titration_cf_success_default.mp4",
+      "sha256": "4cd977a312f14b102af9c773bcfc4038e0eb32471e7277285d1c46cb84dcfc85"
+    },
+    {
+      "original_asset": "static/videos/rw_titration_cf_success_default.jpg",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/rw_titration_cf_success_default.jpg",
+      "sha256": "3c750b65af3609b7bf206ec94cc40265e91a05887ec597dc87d7f306bdea7634"
+    },
+    {
+      "original_asset": "static/videos/rw_titration_cf_success_towardbase.mp4",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/rw_titration_cf_success_towardbase.mp4",
+      "sha256": "b75fd6d33c3127b725586975e0d4463d56169000262448338e69d160691c5022"
+    },
+    {
+      "original_asset": "static/videos/rw_titration_cf_success_towardbase.jpg",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/rw_titration_cf_success_towardbase.jpg",
+      "sha256": "856adcde89663bebafbbf0c750fe3fa943eeb337ed55907f6567539b7b995383"
+    },
+    {
+      "original_asset": "static/videos/contrastflow_success_config3.mp4",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/contrastflow_success_config3.mp4",
+      "sha256": "665f71bd84cfa170780e4ae066b5e2f805a90c9bca969292f0a0d5777ee38080"
+    },
+    {
+      "original_asset": "static/videos/contrastflow_success_config3.jpg",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/contrastflow_success_config3.jpg",
+      "sha256": "a84bdc8c46ee4cb11e433c19cb1f4dec86b0511a9d899333ed59aec95f9f1402"
+    },
+    {
+      "original_asset": "static/videos/baseline_fail_config2.mp4",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/baseline_fail_config2.mp4",
+      "sha256": "3411150b60d026f49c1792ab6662bd7f3baba1b0f5f91de1c9dacec335aed1ab"
+    },
+    {
+      "original_asset": "static/videos/baseline_fail_config2.jpg",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/baseline_fail_config2.jpg",
+      "sha256": "bc3e7648af4cb1a252fc915a7845ac3682a68d9ca3c3866f6e5f10b6aaa5d634"
+    },
+    {
+      "original_asset": "static/videos/baseline_fail_config4.mp4",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/baseline_fail_config4.mp4",
+      "sha256": "f8488f7415e7a9aaddc8087d3d0e49e3225de84ac427b0a074860f4488f5b271"
+    },
+    {
+      "original_asset": "static/videos/baseline_fail_config4.jpg",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/baseline_fail_config4.jpg",
+      "sha256": "cba3b94864922da6e799583163bfed15b7df44888471ee71432922f8a8c8c48e"
+    },
+    {
+      "original_asset": "static/videos/contrastflow_success_config1.mp4",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/contrastflow_success_config1.mp4",
+      "sha256": "d579273c6410d14c34d5012bc1af6747d1f96ee965049a294e11b54ea43071b9"
+    },
+    {
+      "original_asset": "static/videos/contrastflow_success_config1.jpg",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/contrastflow_success_config1.jpg",
+      "sha256": "130b69dbcc4b8b1273a911d13927144698e729ade73bc999920e2acdd4b4e1bd"
+    },
+    {
+      "original_asset": "static/videos/contrastflow_success_config2.mp4",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/contrastflow_success_config2.mp4",
+      "sha256": "c84854c93c4726e842f36a0809376447a12e43ff53023042b294cd255a4768d6"
+    },
+    {
+      "original_asset": "static/videos/contrastflow_success_config2.jpg",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/contrastflow_success_config2.jpg",
+      "sha256": "dacb72583961e4e0b05757d776462f55d0cf6bb5c8302fa9f68ca2980df7d7c5"
+    },
+    {
+      "original_asset": "static/videos/real_adapter_pi05.mp4",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/real_adapter_pi05.mp4",
+      "sha256": "60d75c2356e2b2161e8dbd9adfe2055975e9d542fc2083cfff0a9f8841fc7b69"
+    },
+    {
+      "original_asset": "static/videos/real_adapter_pi05.jpg",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/real_adapter_pi05.jpg",
+      "sha256": "e67f26a70f699c684e24eae99bcab4fc6514df3aabd096cbc58baa3cfd2ccd7f"
+    },
+    {
+      "original_asset": "static/videos/real_adapter_contrastflow.mp4",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/real_adapter_contrastflow.mp4",
+      "sha256": "2195f09fabb7de2a83980ce675c57d3c034e32f91e18d30b1e6b625b74919878"
+    },
+    {
+      "original_asset": "static/videos/real_adapter_contrastflow.jpg",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/real_adapter_contrastflow.jpg",
+      "sha256": "e47d9fd4a86d537180cba77e3435c1f46d4bfa87ca7fb2f830114071a16f4768"
+    },
+    {
+      "original_asset": "static/videos/real_centrifuge_pi05.mp4",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/real_centrifuge_pi05.mp4",
+      "sha256": "c1ff402acaa2e0f68bc8e7ac39d344a979ae975d4b1fe4f3cb2caf2767bf6a5d"
+    },
+    {
+      "original_asset": "static/videos/real_centrifuge_pi05.jpg",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/real_centrifuge_pi05.jpg",
+      "sha256": "40fbab7d74ae4ce39105a5832fdd8d5f7fc1a78c932d3797ce3fd4a21e79da98"
+    },
+    {
+      "original_asset": "static/videos/real_centrifuge_contrastflow.mp4",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/real_centrifuge_contrastflow.mp4",
+      "sha256": "2f513785b0137659d41058941913a129f4bce3d434274e5d4b317102f6265839"
+    },
+    {
+      "original_asset": "static/videos/real_centrifuge_contrastflow.jpg",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/real_centrifuge_contrastflow.jpg",
+      "sha256": "f59a639230726ead676a08e2cbea8a32c9e4b32d1e56245da70d6ff88553773f"
+    },
+    {
+      "original_asset": "static/videos/real_titration_pi05.mp4",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/real_titration_pi05.mp4",
+      "sha256": "28dc7fe877580a967b463bd91bb45e044266c301373d3a267fb008c512fa054d"
+    },
+    {
+      "original_asset": "static/videos/real_titration_pi05.jpg",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/real_titration_pi05.jpg",
+      "sha256": "6e220dda7ea678c2cc1ca7556d3573567e7c5aca67c5da760cae895b1f458b94"
+    },
+    {
+      "original_asset": "static/videos/real_titration_contrastflow.mp4",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/real_titration_contrastflow.mp4",
+      "sha256": "15292aaae510c12af76d23cd0a4e3b539e4d3112aa06cfbd7c6a0bdfa0f9129f"
+    },
+    {
+      "original_asset": "static/videos/real_titration_contrastflow.jpg",
+      "archive_asset": "static/videos/archive/before_iphone_preference_20261122/real_titration_contrastflow.jpg",
+      "sha256": "adba20184a3daf4f0f15a6857674a8d30e69f2b1c988628fe219f3605f376153"
+    }
+  ]
+}

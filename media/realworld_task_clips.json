@@ -17,8 +17,8 @@
     ],
     "fully_decoded": true,
     "faststart": true,
-    "video_asset": "static/videos/real_adapter_pi05.mp4",
-    "poster_asset": "static/videos/real_adapter_pi05.jpg",
+    "video_asset": "static/videos/archive/before_iphone_preference_20261122/real_adapter_pi05.mp4",
+    "poster_asset": "static/videos/archive/before_iphone_preference_20261122/real_adapter_pi05.jpg",
     "task": "Adapter relocation",
     "configuration": "Transfer 1 \u2192 4",
     "method": "\u03c00.5",
@@ -48,7 +48,10 @@
     "source_drive_folder": "https://drive.google.com/drive/folders/1ci2LuDTFlVxk0eax7L68XXbIT8XO70Zm",
     "previous_output_sha256": "0d3dd9060e8a480d978602b39fc3d55884da8dc72c2dc43eed8c1217ee2d32c3",
     "brightness_adjustment": "lutrgb=r='val+1.3*val*pow(1-val/255,2)':g='val+1.3*val*pow(1-val/255,2)':b='val+1.3*val*pow(1-val/255,2)'",
-    "previous_version_archive": "static/videos/archive/pre_four_view_20261122/real_adapter_pi05.mp4"
+    "previous_version_archive": "static/videos/archive/pre_four_view_20261122/real_adapter_pi05.mp4",
+    "displayed": false,
+    "replaced_by_iphone_asset": "static/videos/rw_adapter_base_fail_1to4.mp4",
+    "replacement_note": "Existing iPhone clip for the corresponding task and condition; not asserted to be the same trial."
   },
   {
     "name": "adapter_contrastflow",
@@ -68,8 +71,8 @@
     ],
     "fully_decoded": true,
     "faststart": true,
-    "video_asset": "static/videos/real_adapter_contrastflow.mp4",
-    "poster_asset": "static/videos/real_adapter_contrastflow.jpg",
+    "video_asset": "static/videos/archive/before_iphone_preference_20261122/real_adapter_contrastflow.mp4",
+    "poster_asset": "static/videos/archive/before_iphone_preference_20261122/real_adapter_contrastflow.jpg",
     "task": "Adapter relocation",
     "configuration": "Transfer 1 \u2192 4",
     "method": "ContrastFlow",
@@ -306,7 +309,10 @@
     ],
     "previous_output_sha256": "f9da84e5f94eb1c8da5109992a51a73d52cc6a7f9e48cb48434d1007ed6677b0",
     "brightness_adjustment": "lutrgb=r='val+1.3*val*pow(1-val/255,2)':g='val+1.3*val*pow(1-val/255,2)':b='val+1.3*val*pow(1-val/255,2)'",
-    "previous_version_archive": "static/videos/archive/pre_four_view_20261122/real_adapter_contrastflow.mp4"
+    "previous_version_archive": "static/videos/archive/pre_four_view_20261122/real_adapter_contrastflow.mp4",
+    "displayed": false,
+    "replaced_by_iphone_asset": "static/videos/rw_adapter_cf_success_1to4.mp4",
+    "replacement_note": "Existing iPhone clip for the corresponding task and condition; not asserted to be the same trial."
   },
   {
     "name": "centrifuge_pi05",
@@ -326,8 +332,8 @@
     ],
     "fully_decoded": true,
     "faststart": true,
-    "video_asset": "static/videos/real_centrifuge_pi05.mp4",
-    "poster_asset": "static/videos/real_centrifuge_pi05.jpg",
+    "video_asset": "static/videos/archive/before_iphone_preference_20261122/real_centrifuge_pi05.mp4",
+    "poster_asset": "static/videos/archive/before_iphone_preference_20261122/real_centrifuge_pi05.jpg",
     "task": "Centrifuge loading",
     "configuration": "Middle slot",
     "method": "\u03c00.5",
@@ -340,7 +346,10 @@
     "source_drive_folder": "https://drive.google.com/drive/folders/1HIFQ9uNzZbvbd3uvKRZLsQ4efGM0-b9X",
     "previous_output_sha256": "7e85a1a4e1b2fd2c4922b10946a4cb6e11b078a6cead8d8a8063ac463c70738f",
     "brightness_adjustment": "lutrgb=r='val+1.3*val*pow(1-val/255,2)':g='val+1.3*val*pow(1-val/255,2)':b='val+1.3*val*pow(1-val/255,2)'",
-    "previous_version_archive": "static/videos/archive/pre_four_view_20261122/real_centrifuge_pi05.mp4"
+    "previous_version_archive": "static/videos/archive/pre_four_view_20261122/real_centrifuge_pi05.mp4",
+    "displayed": false,
+    "replaced_by_iphone_asset": "static/videos/rw_centrifuge_base_fail_ood_p1_blue.mp4",
+    "replacement_note": "Existing iPhone clip for the corresponding task and condition; not asserted to be the same trial."
   },
   {
     "name": "centrifuge_contrastflow",
@@ -360,8 +369,8 @@
     ],
     "fully_decoded": true,
     "faststart": true,
-    "video_asset": "static/videos/real_centrifuge_contrastflow.mp4",
-    "poster_asset": "static/videos/real_centrifuge_contrastflow.jpg",
+    "video_asset": "static/videos/archive/before_iphone_preference_20261122/real_centrifuge_contrastflow.mp4",
+    "poster_asset": "static/videos/archive/before_iphone_preference_20261122/real_centrifuge_contrastflow.jpg",
     "task": "Centrifuge loading",
     "configuration": "Middle slot",
     "method": "ContrastFlow",
@@ -374,7 +383,10 @@
     "source_drive_folder": "https://drive.google.com/drive/folders/1HIFQ9uNzZbvbd3uvKRZLsQ4efGM0-b9X",
     "previous_output_sha256": "56bbc83868f9ebe2d6dafe1aab4b564ad1365eff15a05c54c12411a2296869c9",
     "brightness_adjustment": "lutrgb=r='val+1.3*val*pow(1-val/255,2)':g='val+1.3*val*pow(1-val/255,2)':b='val+1.3*val*pow(1-val/255,2)'",
-    "previous_version_archive": "static/videos/archive/pre_four_view_20261122/real_centrifuge_contrastflow.mp4"
+    "previous_version_archive": "static/videos/archive/pre_four_view_20261122/real_centrifuge_contrastflow.mp4",
+    "displayed": false,
+    "replaced_by_iphone_asset": "static/videos/rw_centrifuge_cf_success_ood_p1_blue.mp4",
+    "replacement_note": "Existing iPhone clip for the corresponding task and condition; not asserted to be the same trial."
   },
   {
     "name": "titration_pi05",
@@ -394,8 +406,8 @@
     ],
     "fully_decoded": true,
     "faststart": true,
-    "video_asset": "static/videos/real_titration_pi05.mp4",
-    "poster_asset": "static/videos/real_titration_pi05.jpg",
+    "video_asset": "static/videos/archive/before_iphone_preference_20261122/real_titration_pi05.mp4",
+    "poster_asset": "static/videos/archive/before_iphone_preference_20261122/real_titration_pi05.jpg",
     "task": "Titration",
     "configuration": "Burette raised 2 cm",
     "method": "\u03c00.5",
@@ -425,7 +437,10 @@
     "source_drive_folder": "https://drive.google.com/drive/folders/1HzFW3R3TZmNyJbC0ta1ZdfbK_z6YQf3r",
     "previous_output_sha256": "29196b12dd05a689596ad61b8259a92dd365c67e6f706a424806076a0d2e1028",
     "brightness_adjustment": "lutrgb=r='val+1.3*val*pow(1-val/255,2)':g='val+1.3*val*pow(1-val/255,2)':b='val+1.3*val*pow(1-val/255,2)'",
-    "previous_version_archive": "static/videos/archive/pre_four_view_20261122/real_titration_pi05.mp4"
+    "previous_version_archive": "static/videos/archive/pre_four_view_20261122/real_titration_pi05.mp4",
+    "displayed": false,
+    "replaced_by_iphone_asset": "static/videos/rw_titration_base_fail_2cmup.mp4",
+    "replacement_note": "Existing iPhone clip for the corresponding task and condition; not asserted to be the same trial."
   },
   {
     "name": "titration_contrastflow",
@@ -445,8 +460,8 @@
     ],
     "fully_decoded": true,
     "faststart": true,
-    "video_asset": "static/videos/real_titration_contrastflow.mp4",
-    "poster_asset": "static/videos/real_titration_contrastflow.jpg",
+    "video_asset": "static/videos/archive/before_iphone_preference_20261122/real_titration_contrastflow.mp4",
+    "poster_asset": "static/videos/archive/before_iphone_preference_20261122/real_titration_contrastflow.jpg",
     "task": "Titration",
     "configuration": "Burette raised 2 cm",
     "method": "ContrastFlow",
@@ -468,6 +483,9 @@
     "source_drive_folder": "https://drive.google.com/drive/folders/1HzFW3R3TZmNyJbC0ta1ZdfbK_z6YQf3r",
     "previous_output_sha256": "912167a208c7d4368baf4af72d554c2cacdae9fb88978f2165a143d5eb1d06e4",
     "brightness_adjustment": "lutrgb=r='val+1.3*val*pow(1-val/255,2)':g='val+1.3*val*pow(1-val/255,2)':b='val+1.3*val*pow(1-val/255,2)'",
-    "previous_version_archive": "static/videos/archive/pre_four_view_20261122/real_titration_contrastflow.mp4"
+    "previous_version_archive": "static/videos/archive/pre_four_view_20261122/real_titration_contrastflow.mp4",
+    "displayed": false,
+    "replaced_by_iphone_asset": "static/videos/rw_titration_cf_success_2cmup.mp4",
+    "replacement_note": "Existing iPhone clip for the corresponding task and condition; not asserted to be the same trial."
   }
 ]
