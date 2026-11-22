@@ -1,0 +1,55 @@
+{
+  "id": "libero_goal_swap_08_overlays_solid",
+  "frames": 609,
+  "duration_seconds": 60.9,
+  "width": 2848,
+  "height": 2000,
+  "sha256": "05a735e66ee8fde8ca83b26b9b1aeb3d3cff78574625c087035bc680da7b91d1",
+  "fully_decoded": true,
+  "text_bubbles": false,
+  "source_hashes": {
+    "baseline": "de549b96f586cab7b95af3e1b7389e662d5db2d1f2a6dd367da02c9f98751c3b",
+    "emb-zero": "47ea030038b02348b1eca037527b5bb7dcf1a5d77dd6622e7f49d4750b392b59"
+  },
+  "playback_order": [
+    {
+      "name": "training",
+      "start_frame": 0,
+      "frames": 90,
+      "start_seconds": 0.0,
+      "end_seconds": 9.0
+    },
+    {
+      "name": "baseline",
+      "start_frame": 90,
+      "frames": 351,
+      "start_seconds": 9.0,
+      "end_seconds": 44.1
+    },
+    {
+      "name": "contrastflow",
+      "start_frame": 441,
+      "frames": 168,
+      "start_seconds": 44.1,
+      "end_seconds": 60.9
+    }
+  ],
+  "regular_panel_pixels": [
+    896,
+    896
+  ],
+  "attention_panel_pixels": [
+    896,
+    896
+  ],
+  "action_chunk_style": {
+    "line": "continuous straight segments",
+    "vertex_markers": false,
+    "dashes": false,
+    "edge_supersampling": 2,
+    "projected_points_unchanged": true
+  },
+  "previous_comparison": "libero_goal_swap_08_overlays.mp4",
+  "previous_sha256": "18db020684b2e07a301ba1ec074b5a3ba089963a7fc32037728b2830516e1299",
+  "original_preserved": true
+}

@@ -7,22 +7,56 @@ document.addEventListener("DOMContentLoaded", () => {
     video.addEventListener("loadedmetadata", () => { video.playbackRate = speed; });
   };
   document.querySelectorAll("video").forEach(configureSpeed);
-  // Keep paused clips subdued and let only the selected clip play.
+  // Start muted full comparisons when visible; paired videos can play together.
   const allVideos = Array.from(document.querySelectorAll("video:not(.reel-video)"));
-  const clearFocus = (video) => video.classList.remove("is-playing");
+  const clearFocus = video => video.classList.remove("is-playing");
+  const visibleVideos = new Set();
+  const manuallyPaused = new WeakSet();
+  const loadVideo = video => {
+    if (video.dataset.loaded) return;
+    video.querySelectorAll("source[data-src]").forEach(source => { source.src = source.dataset.src; });
+    video.dataset.loaded = "1";
+    video.load();
+  };
+  const startVideo = video => {
+    if (document.hidden || !visibleVideos.has(video) || manuallyPaused.has(video)) return;
+    loadVideo(video);
+    video.playbackRate = Number(video.dataset.speed || 1);
+    if (video.paused) video.play().catch(() => {});
+  };
   allVideos.forEach(video => {
+    video.muted = true;
     video.addEventListener("play", () => {
-      allVideos.forEach(other => {
-        if (other !== video) {
-          other.pause();
-          clearFocus(other);
-        }
-      });
+      if (document.hidden || !visibleVideos.has(video)) { video.pause(); return; }
+      manuallyPaused.delete(video);
       video.classList.add("is-playing");
     });
-    ["pause", "ended", "error", "emptied"].forEach(event => {
-      video.addEventListener(event, () => clearFocus(video));
+    video.addEventListener("pause", () => {
+      if (visibleVideos.has(video) && !document.hidden && !video.ended) manuallyPaused.add(video);
+      clearFocus(video);
     });
+    ["ended", "error", "emptied"].forEach(event => video.addEventListener(event, () => clearFocus(video)));
+  });
+  if ("IntersectionObserver" in window) {
+    const playbackVisibility = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        const video = entry.target;
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.1) {
+          visibleVideos.add(video);
+          startVideo(video);
+        } else {
+          visibleVideos.delete(video);
+          manuallyPaused.delete(video);
+          video.pause();
+        }
+      });
+    }, { threshold: [0, 0.1] });
+    allVideos.forEach(video => playbackVisibility.observe(video));
+  } else {
+    allVideos.forEach(video => { visibleVideos.add(video); startVideo(video); });
+  }
+  document.addEventListener("visibilitychange", () => {
+    allVideos.forEach(video => document.hidden ? video.pause() : startVideo(video));
   });
   // Keep the reel independent of the full-length comparison players.
   const reel = document.querySelector("#showcase");
@@ -110,34 +144,6 @@ document.addEventListener("DOMContentLoaded", () => {
     measure();
     requestAnimationFrame(tick);
   }
-  const videos = document.querySelectorAll("video.vid[data-src]");
-  const attach = (v) => {
-    if (v.dataset.loaded) return;
-    const s = document.createElement("source");
-    s.src = v.dataset.src;
-    s.type = "video/mp4";
-    v.appendChild(s);
-    v.load();
-    v.dataset.loaded = "1";
-  };
-  if (!("IntersectionObserver" in window)) {
-    videos.forEach(attach);
-  } else {
-    const io = new IntersectionObserver((entries) => {
-      for (const e of entries) {
-        const v = e.target;
-        if (e.isIntersecting) {
-          attach(v);
-          v.playbackRate = parseFloat(v.dataset.speed || "1");
-          v.play().catch(() => { /* autoplay blocked */ });
-        } else {
-          v.pause();
-        }
-      }
-    }, { threshold: 0.25 });
-    videos.forEach(v => io.observe(v));
-  }
-
   // Sticky side nav: highlight the current section and sub-section while scrolling.
   const navLinks = document.querySelectorAll(".sidenav a");
   const linkById = new Map();
