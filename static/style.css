@@ -989,3 +989,5 @@ video.is-playing { filter:none; outline-color:#fff; }
   .case-carousel .case-arrow.prev { left:2px; }
   .case-carousel .case-arrow.next { right:2px; }
 }
+
+.attention-comparison.direct-overlay .attention-view video { aspect-ratio:1/1; }

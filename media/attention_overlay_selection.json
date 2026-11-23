@@ -1,0 +1,56 @@
+{
+  "cases": [
+    {
+      "task": "libero_object_swap_06",
+      "category": "Different Object (Object Swap)",
+      "seed": 100,
+      "omega": 0,
+      "method": "pi05",
+      "success": false
+    },
+    {
+      "task": "libero_object_swap_06",
+      "category": "Different Object (Object Swap)",
+      "seed": 100,
+      "omega": 1.0,
+      "method": "contrastflow",
+      "success": true
+    },
+    {
+      "task": "libero_goal_swap_08",
+      "category": "Goal relocation (Goal Swap)",
+      "seed": 100,
+      "omega": 0.0,
+      "method": "pi05",
+      "success": false
+    },
+    {
+      "task": "libero_goal_swap_08",
+      "category": "Goal relocation (Goal Swap)",
+      "seed": 100,
+      "omega": 1.0,
+      "method": "contrastflow",
+      "success": true
+    },
+    {
+      "task": "libero_spatial_swap_01",
+      "category": "New Location (Spatial Swap)",
+      "seed": 105,
+      "omega": 0,
+      "method": "pi05",
+      "success": false
+    },
+    {
+      "task": "libero_spatial_swap_01",
+      "category": "New Location (Spatial Swap)",
+      "seed": 105,
+      "omega": 1.0,
+      "method": "contrastflow",
+      "success": true
+    }
+  ],
+  "layout": "One direct image overlay per method; pi0.5 and ContrastFlow side by side.",
+  "long_swap_excluded": true,
+  "spatial_source_note": "Earlier seed105 sample has verified attention; the newer task01/task04 trial24 camera archives contain no attention tensors.",
+  "previous_media_preserved": true
+}
