@@ -1,0 +1,178 @@
+{
+  "task": "libero_spatial_swap_04",
+  "title": "New Location (Spatial Swap)",
+  "episode": 24,
+  "environment_seed": 7,
+  "noise_seed": 100,
+  "method": "contrastflow",
+  "omega": 2,
+  "success": true,
+  "policy_steps": 119,
+  "source_sha256": "3652190df42978974c5be6bddac918553bd7fb78d27079f18204a1beea61f054",
+  "output_sha256": "6190c3ef90e527131b706c2261162fa38035502676e7b988c13c0f723bc80b4f",
+  "video_asset": "static/videos/attention_camera_overlay_libero_spatial_swap_04_episode24_contrastflow.mp4",
+  "poster_asset": "static/videos/attention_camera_overlay_libero_spatial_swap_04_episode24_contrastflow.jpg",
+  "source_frames": 120,
+  "output_frames": 120,
+  "width": 1792,
+  "height": 896,
+  "panel_resolution": [
+    896,
+    896
+  ],
+  "fps": 10,
+  "duration_seconds": 12.0,
+  "fully_decoded": true,
+  "full_episode_duration": true,
+  "all_camera_frames_once": true,
+  "all_recorded_replans_present": true,
+  "panels": [
+    "Original camera",
+    "Attention overlay"
+  ],
+  "attention_kind": "positive-branch language-to-vision attention, layer 12",
+  "attention_style": {
+    "version": "direct-overlay-v1",
+    "color": "blue-cyan-green-yellow-red",
+    "normalization": "Unit sum over 256 method-cleaned camera patches",
+    "color_min": 0.0,
+    "color_max": 0.05,
+    "opacity_min": 0.16,
+    "opacity_max": 0.78,
+    "interpolation": "bilinear",
+    "extra_smoothing": false,
+    "temporal_smoothing": false,
+    "raw_scores_modified": false
+  },
+  "replan_frame_indices": [
+    0,
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45,
+    50,
+    55,
+    60,
+    65,
+    70,
+    75,
+    80,
+    85,
+    90,
+    95,
+    100,
+    105,
+    110,
+    115
+  ],
+  "attention_sampling": "Exact replan observation and its recorded attention held until next replan; original camera shows every frame.",
+  "register_cleaning": {
+    "cache_sha256": "48065282ef34ea0bd08e54f5a2fdf0cf7f177ec0c9fb7b34e69c40b3414d37ac",
+    "register_coordinates": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        15
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        7,
+        10
+      ],
+      [
+        10,
+        0
+      ],
+      [
+        12,
+        1
+      ],
+      [
+        14,
+        1
+      ],
+      [
+        15,
+        3
+      ],
+      [
+        15,
+        13
+      ]
+    ],
+    "dynamic_spike_ratio": 2.0,
+    "dynamic_spike_max_iterations": 15,
+    "gaussian_sigma": 0.8,
+    "raw_scores_modified": false
+  },
+  "native_replay": {
+    "task": "libero_spatial_swap_04_episode24",
+    "arm": "emb_zero",
+    "frames": 120,
+    "rendered": 120,
+    "native_resolution": [
+      896,
+      896
+    ],
+    "physics_steps": 0,
+    "policy_calls": 0,
+    "source_sha256": "3652190df42978974c5be6bddac918553bd7fb78d27079f18204a1beea61f054",
+    "checks": [
+      {
+        "frame": 0,
+        "same_frame_mae_255": 1.327545166015625,
+        "nearby_frame_mae_255": {
+          "0": 1.327545166015625,
+          "1": 1.3731892903645833,
+          "2": 1.4736582438151042
+        },
+        "eef_error_m": 2.6899611500426946e-16
+      },
+      {
+        "frame": 60,
+        "same_frame_mae_255": 1.4247182210286458,
+        "nearby_frame_mae_255": {
+          "58": 4.613474527994792,
+          "59": 2.968571980794271,
+          "60": 1.4247182210286458,
+          "61": 2.9126739501953125,
+          "62": 4.263356526692708
+        },
+        "eef_error_m": 0.0003275624527034615
+      },
+      {
+        "frame": 119,
+        "same_frame_mae_255": 1.2648773193359375,
+        "nearby_frame_mae_255": {
+          "117": 4.1446584065755205,
+          "118": 2.7598063151041665,
+          "119": 1.2648773193359375
+        },
+        "eef_error_m": 0.00033602594205917047
+      }
+    ],
+    "state_roundtrip_atol": 1e-12,
+    "original_resolution": [
+      256,
+      256
+    ],
+    "source_state_frames_preserved": true,
+    "eef_max_abs_m": 0.000899544738571928,
+    "training_alignment_note": null
+  },
+  "selection_note": "Both methods succeed in this matched omega-2 sample; this is an attention illustration, not a baseline-failure example.",
+  "zoom": false,
+  "trajectory_overlay": false,
+  "header_band": false
+}

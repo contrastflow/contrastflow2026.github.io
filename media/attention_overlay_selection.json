@@ -33,25 +33,29 @@
       "success": true
     },
     {
-      "task": "libero_spatial_swap_01",
+      "task": "libero_spatial_swap_04",
       "category": "New Location (Spatial Swap)",
-      "seed": 105,
+      "episode": 24,
+      "environment_seed": 7,
+      "noise_seed": 100,
       "omega": 0,
       "method": "pi05",
-      "success": false
+      "success": true
     },
     {
-      "task": "libero_spatial_swap_01",
+      "task": "libero_spatial_swap_04",
       "category": "New Location (Spatial Swap)",
-      "seed": 105,
-      "omega": 1.0,
+      "episode": 24,
+      "environment_seed": 7,
+      "noise_seed": 100,
+      "omega": 2,
       "method": "contrastflow",
       "success": true
     }
   ],
   "layout": "For each method, Original camera on the left and Attention overlay on the right; pi0.5 and ContrastFlow play side by side.",
   "long_swap_excluded": true,
-  "spatial_source_note": "Earlier seed105 sample has verified attention; the newer task01/task04 trial24 camera archives contain no attention tensors.",
+  "spatial_source_note": "New matched task04 episode24 capture with real attention tensors. Both methods succeed; this is an attention illustration, not a baseline-failure example. Archived task01 seed105 media are preserved.",
   "previous_media_preserved": true,
   "original_camera_frames_preserved": true
 }
