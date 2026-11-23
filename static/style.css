@@ -967,5 +967,5 @@ video.is-playing { filter:none; outline-color:#fff; }
 .attention-view h4 { margin:0 0 12px; font-size:17px; }
 .attention-view.pi05 h4 { color:#dc2626; }
 .attention-view.contrastflow h4 { color:#15803d; }
-.attention-view video { display:block; width:100%; height:auto; aspect-ratio:1792/944; border-radius:10px; background:#000; }
+.attention-view video { display:block; width:100%; height:auto; aspect-ratio:2/1; border-radius:10px; background:#000; }
 @media(max-width:750px) { .attention-comparison { padding:14px; } .attention-comparison.paired { grid-template-columns:1fr; } }

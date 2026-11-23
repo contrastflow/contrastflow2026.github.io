@@ -9,13 +9,13 @@
   "fps": 10,
   "duration": 9.0,
   "width": 1792,
-  "height": 944,
+  "height": 896,
   "panel_resolution": [
     896,
     896
   ],
   "source_sha256": "cffd2eef0dca830ce0dbbd7dfe1f137b1f7c0f4e20df772547925a1d0f504366",
-  "output_sha256": "aaca7b60849ea8e452c5aaf9baf016c993fcc9637e8f96b3aee9d628f89da116",
+  "output_sha256": "d38235e3a2a0bd8cf8a4dc5e398930e9c99241694eae3d053cf11fba913bc584",
   "fully_decoded": true,
   "all_camera_frames_once": true,
   "attention_sampling": "Attention overlay uses its exact replan camera frame and is held until the next replan; the camera panel plays all recorded frames.",
@@ -722,5 +722,6 @@
   "zoom": false,
   "text_bubbles": false,
   "trajectory_overlay": false,
+  "header_band": false,
   "policy_calls": 0
 }

@@ -1,0 +1,65 @@
+{
+  "reason": "Preserved attention clips with Camera / Attention header before removal.",
+  "assets": [
+    {
+      "original": "static/videos/attention_libero_goal_swap_01_contrastflow.mp4",
+      "archive": "static/videos/archive/attention_with_headers_20261122/attention_libero_goal_swap_01_contrastflow.mp4",
+      "sha256": "19cc7a8c63077feba18173c0bf3fe6ce31f679fda01a070d56a4d7b62675cca8"
+    },
+    {
+      "original": "static/videos/attention_libero_goal_swap_01_contrastflow.jpg",
+      "archive": "static/videos/archive/attention_with_headers_20261122/attention_libero_goal_swap_01_contrastflow.jpg",
+      "sha256": "0741bad93fe03cbe14f3b3ea8824803542800c5168be2c98711ef23fc53e2e00"
+    },
+    {
+      "original": "static/videos/attention_libero_goal_swap_08_contrastflow.mp4",
+      "archive": "static/videos/archive/attention_with_headers_20261122/attention_libero_goal_swap_08_contrastflow.mp4",
+      "sha256": "78ec2b4b09391b38ebce9427b1683964911e073a3a99c77e1a90896e6a9ea12b"
+    },
+    {
+      "original": "static/videos/attention_libero_goal_swap_08_contrastflow.jpg",
+      "archive": "static/videos/archive/attention_with_headers_20261122/attention_libero_goal_swap_08_contrastflow.jpg",
+      "sha256": "3a0afec726ebe2b4f06b84657a43e994d6f4a993208cf13af63df52935306aeb"
+    },
+    {
+      "original": "static/videos/attention_libero_goal_task_08_diverse_contrastflow.mp4",
+      "archive": "static/videos/archive/attention_with_headers_20261122/attention_libero_goal_task_08_diverse_contrastflow.mp4",
+      "sha256": "aaca7b60849ea8e452c5aaf9baf016c993fcc9637e8f96b3aee9d628f89da116"
+    },
+    {
+      "original": "static/videos/attention_libero_goal_task_08_diverse_contrastflow.jpg",
+      "archive": "static/videos/archive/attention_with_headers_20261122/attention_libero_goal_task_08_diverse_contrastflow.jpg",
+      "sha256": "19bfe423a91cd7b00cd7fa4a25c5dd2fa3159297154f36ec3a0090167214c57b"
+    },
+    {
+      "original": "static/videos/attention_libero_object_swap_06_contrastflow.mp4",
+      "archive": "static/videos/archive/attention_with_headers_20261122/attention_libero_object_swap_06_contrastflow.mp4",
+      "sha256": "52d4ba9c72443c4b6e3383d8f604c475462569d58a1dca9dc7c0505bfe6dade8"
+    },
+    {
+      "original": "static/videos/attention_libero_object_swap_06_contrastflow.jpg",
+      "archive": "static/videos/archive/attention_with_headers_20261122/attention_libero_object_swap_06_contrastflow.jpg",
+      "sha256": "383402ac28ecda89b987720715741a6d95a28b5063653049c58a6b9b14a41dfc"
+    },
+    {
+      "original": "static/videos/attention_libero_object_swap_06_pi05.mp4",
+      "archive": "static/videos/archive/attention_with_headers_20261122/attention_libero_object_swap_06_pi05.mp4",
+      "sha256": "4dc964324f1438de0cddfe80c4d9a1b956e8330245374799a2c821ca4de7a9b1"
+    },
+    {
+      "original": "static/videos/attention_libero_object_swap_06_pi05.jpg",
+      "archive": "static/videos/archive/attention_with_headers_20261122/attention_libero_object_swap_06_pi05.jpg",
+      "sha256": "b132e472cde73e3554a8fcb77508725770b4af08b6b7824ea35075fc74b8cad7"
+    },
+    {
+      "original": "static/videos/attention_libero_spatial_swap_01_contrastflow.mp4",
+      "archive": "static/videos/archive/attention_with_headers_20261122/attention_libero_spatial_swap_01_contrastflow.mp4",
+      "sha256": "5db33d6cb9ec96851e629fd835f6a04a62748c2c8aec55e8defdb030e87b5936"
+    },
+    {
+      "original": "static/videos/attention_libero_spatial_swap_01_contrastflow.jpg",
+      "archive": "static/videos/archive/attention_with_headers_20261122/attention_libero_spatial_swap_01_contrastflow.jpg",
+      "sha256": "fad07a29d229aa2772df2e17b96c0a5e885135034c1b496f293a6ef40ef187ba"
+    }
+  ]
+}
