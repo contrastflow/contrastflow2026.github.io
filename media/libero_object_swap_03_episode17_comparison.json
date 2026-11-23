@@ -1,0 +1,443 @@
+{
+  "task": "libero_object_swap_03",
+  "episode": 17,
+  "omega": 2,
+  "prompt": "Pick up the bbq sauce and place it in the basket.",
+  "simulation_anchor": "sim-object-03-episode17",
+  "baseline_success": false,
+  "contrastflow_success": true,
+  "policy_steps": [
+    500,
+    200
+  ],
+  "pair_verification": {
+    "initial_state_exact": true,
+    "initial_frame_exact": true,
+    "shared_noise_exact": true,
+    "common_replans": 40
+  },
+  "records": {
+    "train": {
+      "file": "libero_object_swap_03_episode17_train.mp4",
+      "frames": 134,
+      "source_frames": 134,
+      "fps": 10,
+      "width": 896,
+      "height": 896,
+      "fully_decoded": true,
+      "sha256": "eb985502cf74dfbd1d15c3868a26be9bcb8138a9be253c4e3e91628d7b7a41be",
+      "native_state_rerender": {
+        "task": "libero_object_swap_03",
+        "arm": "training",
+        "frames": 134,
+        "rendered": 134,
+        "native_resolution": [
+          896,
+          896
+        ],
+        "physics_steps": 0,
+        "policy_calls": 0,
+        "source_sha256": "6d75242c6787ed81172795bb8447662450cecec1c8bbecb9fe5deda10b67ce79",
+        "checks": [
+          {
+            "frame": 0,
+            "same_frame_mae_255": 1.5251871744791667,
+            "nearby_frame_mae_255": {
+              "0": 1.5251871744791667,
+              "1": 1.5878499348958333,
+              "2": 1.6785481770833333
+            }
+          },
+          {
+            "frame": 67,
+            "same_frame_mae_255": 3.1279703776041665,
+            "nearby_frame_mae_255": {
+              "65": 2.9607137044270835,
+              "66": 0.7603759765625,
+              "67": 3.1279703776041665,
+              "68": 4.8057861328125,
+              "69": 6.102376302083333
+            }
+          },
+          {
+            "frame": 133,
+            "same_frame_mae_255": 1.0826009114583333,
+            "nearby_frame_mae_255": {
+              "131": 1.186767578125,
+              "132": 0.5706380208333334,
+              "133": 1.0826009114583333
+            }
+          }
+        ],
+        "state_roundtrip_atol": 1e-12,
+        "original_resolution": [
+          128,
+          128
+        ],
+        "source_state_frames_preserved": true,
+        "eef_max_abs_m": null,
+        "training_alignment_note": "All original demo states rendered in order; archived RGB observations are post-action and can lead the state stream by one frame."
+      },
+      "training_reference": {
+        "task_key": "libero_object_swap_03_episode7",
+        "original_suite": "libero_object",
+        "original_task": "pick_up_the_bbq_sauce_and_place_it_in_the_basket",
+        "original_instruction": "pick up the bbq sauce and place it in the basket",
+        "modified_instruction": "Pick the bbq sauce and place it in the basket",
+        "demo": "demo_0",
+        "dataset": "yifengzhu-hf/LIBERO-datasets",
+        "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+        "source_url": "https://huggingface.co/datasets/yifengzhu-hf/LIBERO-datasets/resolve/f13aa24a3da8c43c7225569f28c562979fa0e35a/libero_object/pick_up_the_bbq_sauce_and_place_it_in_the_basket_demo.hdf5",
+        "source_dataset_page": "https://huggingface.co/datasets/yifengzhu-hf/LIBERO-datasets",
+        "source_bddl": "libero/libero/bddl_files/libero_object/pick_up_the_bbq_sauce_and_place_it_in_the_basket.bddl",
+        "frames": 134,
+        "width": 128,
+        "height": 128,
+        "source_frames_sha256": "fdf66fc2bf4c4e19a1e8233a19b1a82619a2f4ebe06e590b6381ee7a0fda83eb",
+        "display_frames_sha256": "472719f4b36005a571c762665f7da65d5c80fa3554ea2247bad0556f06a9c670",
+        "rotation_degrees": 180,
+        "control_hz": 20,
+        "change": "Barbecue sauce and chocolate pudding exchange positions.",
+        "position_caption": "Barbecue sauce and chocolate pudding exchange positions.",
+        "positions_changed": true,
+        "placement_definitions_exact": false,
+        "bddl_diff_file": "libero_object_swap_03_episode7.bddl.diff",
+        "original_bddl_sha256": "8a7e37b76fce5621e649e260dbcfcec7ce2f9a055ca09a4f1ebaf5ca74a739c2",
+        "pro_bddl_sha256": "7e652c93a6d8613cd35add8dc4353567bbf8527147cbc93e5e9c5506326d6f1b",
+        "selection": "demo_0 for every task; no outcome selection",
+        "reference_note": "Original human demonstration with a separate initial state; exact policy training split membership is not asserted."
+      }
+    },
+    "pi05": {
+      "task": "libero_object_swap_03",
+      "id": "libero_object_swap_03_episode17",
+      "method": "pi05",
+      "omega": 0,
+      "source_frames": 501,
+      "frames": 501,
+      "terminal_hold_frames": 0,
+      "fps": 10,
+      "width": 896,
+      "height": 896,
+      "file": "libero_object_swap_03_episode17_pi05.mp4",
+      "source_sha256": "715ab046633f484c5088b499c7a8d99e7e7aa62cf418a6b1d21e7076e10c58ac",
+      "sha256": "08293257ca30e6ee5f30fa6edbcdb053fdacf3e3d48d4f350dd1ca4683f9fa71",
+      "fully_decoded": true,
+      "all_source_frames_once": true,
+      "success": false,
+      "native_state_rerender": {
+        "task": "libero_object_swap_03_episode17",
+        "arm": "baseline",
+        "frames": 501,
+        "rendered": 501,
+        "native_resolution": [
+          896,
+          896
+        ],
+        "physics_steps": 0,
+        "policy_calls": 0,
+        "source_sha256": "715ab046633f484c5088b499c7a8d99e7e7aa62cf418a6b1d21e7076e10c58ac",
+        "checks": [
+          {
+            "frame": 0,
+            "same_frame_mae_255": 1.9288177490234375,
+            "nearby_frame_mae_255": {
+              "0": 1.9288177490234375,
+              "1": 1.9474080403645833,
+              "2": 2.046574910481771
+            },
+            "eef_error_m": 2.6899611411610043e-16
+          },
+          {
+            "frame": 250,
+            "same_frame_mae_255": 1.8236541748046875,
+            "nearby_frame_mae_255": {
+              "248": 2.059260050455729,
+              "249": 1.9760030110677083,
+              "250": 1.8236541748046875,
+              "251": 1.9297434488932292,
+              "252": 1.9990692138671875
+            },
+            "eef_error_m": 1.4908692661796952e-05
+          },
+          {
+            "frame": 500,
+            "same_frame_mae_255": 1.7975514729817708,
+            "nearby_frame_mae_255": {
+              "498": 1.9025319417317708,
+              "499": 1.8545481363932292,
+              "500": 1.7975514729817708
+            },
+            "eef_error_m": 8.098915771692639e-06
+          }
+        ],
+        "state_roundtrip_atol": 1e-12,
+        "original_resolution": [
+          256,
+          256
+        ],
+        "source_state_frames_preserved": true,
+        "eef_max_abs_m": 0.0009101417863123795,
+        "training_alignment_note": null
+      },
+      "trajectory_overlay": {
+        "color_rgb": [
+          239,
+          68,
+          68
+        ],
+        "width_pixels": 5.12,
+        "outline_width_pixels": 7.04,
+        "accumulated_executed_path": true,
+        "reset_at_replan": false
+      },
+      "capture_metadata": {
+        "name": "libero_object_swap_03_episode17",
+        "suite": "libero_object_swap",
+        "task_id": 3,
+        "episode": 17,
+        "task_name": "pick_up_the_bbq_sauce_and_place_it_in_the_basket",
+        "axis": "Object Swap",
+        "contrastflow_omega": 2,
+        "prompt_source": "task.language",
+        "sampling": "Two qualitative matched episodes on each of three additional tasks, historical successful omega2 episodes guide candidates; fresh outcomes unknown. 500 policy actions plus10 settling, replan5. Full language attention and object poses recorded. No full evaluation.",
+        "prompt": "pick up the bbq sauce and place it in the basket",
+        "arm": "baseline",
+        "success": false,
+        "steps": 500,
+        "frames": 501,
+        "chunks": 100,
+        "noise_seed": 100,
+        "environment_seed": 7,
+        "control_horizon": 500,
+        "warmup_steps": 10,
+        "replan": 5,
+        "denoise_steps": 10,
+        "omega": 0,
+        "attention_layer": 12,
+        "attention_branch": "all recorded prefix calls",
+        "attention_call_order": [
+          "policy positive"
+        ],
+        "attention_tensor_axes": [
+          "replan",
+          "prefix_call",
+          "head",
+          "language_query",
+          "camera",
+          "image_patch"
+        ],
+        "attention_cameras": [
+          "agentview",
+          "robot0_eye_in_hand"
+        ],
+        "attention_tensor_dtype": "float32",
+        "attention_tensor_shape": [
+          100,
+          1,
+          8,
+          11,
+          2,
+          256
+        ],
+        "attention_layout": {
+          "image_spans": [
+            [
+              0,
+              256
+            ],
+            [
+              256,
+              512
+            ],
+            [
+              512,
+              768
+            ]
+          ],
+          "lang_span": [
+            768,
+            968
+          ],
+          "prefix_len": 968
+        },
+        "attention_instrumentation_max_error": 0.0,
+        "initial_state_sha256": "0f5581bb149bc77e6f21b5b75296d35b393ba46e3a96e5d0fe2a04e2087068e7",
+        "initial_frame_sha256": "c647a87b8dbc0d907a7455a79c4b1f1412893d279a1e58d0d61fa5e247b7b214",
+        "source_sha256": "715ab046633f484c5088b499c7a8d99e7e7aa62cf418a6b1d21e7076e10c58ac",
+        "checkpoint": "/shared/rsaas/apotnis2/openpi_cache/openpi-assets/checkpoints/pi05_libero_pytorch",
+        "job_id": "29804.0",
+        "gpu": "NVIDIA A40",
+        "seconds": 42.49704885482788
+      }
+    },
+    "contrastflow": {
+      "task": "libero_object_swap_03",
+      "id": "libero_object_swap_03_episode17",
+      "method": "contrastflow",
+      "omega": 2,
+      "source_frames": 201,
+      "frames": 201,
+      "terminal_hold_frames": 0,
+      "fps": 10,
+      "width": 896,
+      "height": 896,
+      "file": "libero_object_swap_03_episode17_contrastflow.mp4",
+      "source_sha256": "90d6dcf8da3af10c39a7d034d1389949330beccf1bbbb4fdd420746b39b2c96f",
+      "sha256": "703f1b2628ae69360bc306c84f707e62fc1c528bb811a965578aa8b7d8e5a50e",
+      "fully_decoded": true,
+      "all_source_frames_once": true,
+      "success": true,
+      "native_state_rerender": {
+        "task": "libero_object_swap_03_episode17",
+        "arm": "emb_zero",
+        "frames": 201,
+        "rendered": 201,
+        "native_resolution": [
+          896,
+          896
+        ],
+        "physics_steps": 0,
+        "policy_calls": 0,
+        "source_sha256": "90d6dcf8da3af10c39a7d034d1389949330beccf1bbbb4fdd420746b39b2c96f",
+        "checks": [
+          {
+            "frame": 0,
+            "same_frame_mae_255": 1.9288177490234375,
+            "nearby_frame_mae_255": {
+              "0": 1.9288177490234375,
+              "1": 1.9707285563151042,
+              "2": 2.0800933837890625
+            },
+            "eef_error_m": 2.6899611411610043e-16
+          },
+          {
+            "frame": 100,
+            "same_frame_mae_255": 1.9008839925130208,
+            "nearby_frame_mae_255": {
+              "98": 2.824467976888021,
+              "99": 2.4080912272135415,
+              "100": 1.9008839925130208,
+              "101": 2.1290435791015625,
+              "102": 2.2661285400390625
+            },
+            "eef_error_m": 1.993000271813261e-05
+          },
+          {
+            "frame": 200,
+            "same_frame_mae_255": 2.0239156087239585,
+            "nearby_frame_mae_255": {
+              "198": 4.642079671223958,
+              "199": 3.67242431640625,
+              "200": 2.0239156087239585
+            },
+            "eef_error_m": 0.00037494193343765025
+          }
+        ],
+        "state_roundtrip_atol": 1e-12,
+        "original_resolution": [
+          256,
+          256
+        ],
+        "source_state_frames_preserved": true,
+        "eef_max_abs_m": 0.0010098828412067329,
+        "training_alignment_note": null
+      },
+      "trajectory_overlay": {
+        "color_rgb": [
+          32,
+          220,
+          90
+        ],
+        "width_pixels": 5.12,
+        "outline_width_pixels": 7.04,
+        "accumulated_executed_path": true,
+        "reset_at_replan": false
+      },
+      "capture_metadata": {
+        "name": "libero_object_swap_03_episode17",
+        "suite": "libero_object_swap",
+        "task_id": 3,
+        "episode": 17,
+        "task_name": "pick_up_the_bbq_sauce_and_place_it_in_the_basket",
+        "axis": "Object Swap",
+        "contrastflow_omega": 2,
+        "prompt_source": "task.language",
+        "sampling": "Two qualitative matched episodes on each of three additional tasks, historical successful omega2 episodes guide candidates; fresh outcomes unknown. 500 policy actions plus10 settling, replan5. Full language attention and object poses recorded. No full evaluation.",
+        "prompt": "pick up the bbq sauce and place it in the basket",
+        "arm": "emb_zero",
+        "success": true,
+        "steps": 200,
+        "frames": 201,
+        "chunks": 40,
+        "noise_seed": 100,
+        "environment_seed": 7,
+        "control_horizon": 500,
+        "warmup_steps": 10,
+        "replan": 5,
+        "denoise_steps": 10,
+        "omega": 2,
+        "attention_layer": 12,
+        "attention_branch": "all recorded prefix calls",
+        "attention_call_order": [
+          "mask-selection positive",
+          "policy positive",
+          "policy masked negative"
+        ],
+        "attention_tensor_axes": [
+          "replan",
+          "prefix_call",
+          "head",
+          "language_query",
+          "camera",
+          "image_patch"
+        ],
+        "attention_cameras": [
+          "agentview",
+          "robot0_eye_in_hand"
+        ],
+        "attention_tensor_dtype": "float32",
+        "attention_tensor_shape": [
+          40,
+          3,
+          8,
+          11,
+          2,
+          256
+        ],
+        "attention_layout": {
+          "image_spans": [
+            [
+              0,
+              256
+            ],
+            [
+              256,
+              512
+            ],
+            [
+              512,
+              768
+            ]
+          ],
+          "lang_span": [
+            768,
+            968
+          ],
+          "prefix_len": 968
+        },
+        "attention_instrumentation_max_error": 0.0,
+        "initial_state_sha256": "0f5581bb149bc77e6f21b5b75296d35b393ba46e3a96e5d0fe2a04e2087068e7",
+        "initial_frame_sha256": "c647a87b8dbc0d907a7455a79c4b1f1412893d279a1e58d0d61fa5e247b7b214",
+        "source_sha256": "90d6dcf8da3af10c39a7d034d1389949330beccf1bbbb4fdd420746b39b2c96f",
+        "checkpoint": "/shared/rsaas/apotnis2/openpi_cache/openpi-assets/checkpoints/pi05_libero_pytorch",
+        "job_id": "29804.0",
+        "gpu": "NVIDIA A40",
+        "seconds": 34.1209671497345
+      }
+    }
+  },
+  "full_episodes": true,
+  "attention": false,
+  "zoom": false
+}

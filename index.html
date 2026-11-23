@@ -228,37 +228,46 @@
   <p class="trajectory-legend">Red: <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" aria-label="pi 0.5"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math>. Green: ContrastFlow. Trails show recorded motion across replans.</p>
 
   <h3 id="sim-object-swap" class="sub">Different Object (Object Swap)</h3>
-<div id="sim-object-examples" class="case-carousel" role="region" aria-roledescription="carousel" aria-labelledby="sim-object-swap" tabindex="0" data-category-anchor="sim-object-swap">
-  <span class="case-counter" aria-live="polite" aria-atomic="true">1/2</span>
-  <div class="case-slide" id="sim-object-example-1" role="group" aria-roledescription="slide" aria-label="Example 1 of 2">
+<div aria-labelledby="sim-object-swap" aria-roledescription="carousel" class="case-carousel" data-category-anchor="sim-object-swap" id="sim-object-examples" role="region" tabindex="0">
+<span aria-atomic="true" aria-live="polite" class="case-counter">1/3</span>
+<div aria-label="Example 1 of 3" aria-roledescription="slide" class="case-slide" id="sim-object-example-1" role="group">
 <p class="task-prompt"><strong>Task prompt:</strong> Pick the butter and place it in the basket.</p>
-  <figure class="fig sim-comparison" data-task="libero_object_swap_06">
-    <div class="sim-grid">
-      <article class="sim-view train"><h4>Train setup</h4><video class="sim-policy training-demo" data-method="training" controls playsinline muted preload="none" poster="static/videos/libero_object_swap_06_overlays_train.jpg" aria-label="Original training demonstration: pick up the butter and place it in the basket"><source data-src="static/videos/libero_object_swap_06_overlays_train.mp4" type="video/mp4"></video></article>
-      <article class="sim-view test"><h4>Test setup</h4><img src="static/videos/libero_object_swap_06_overlays_test.jpg" alt="Test setup for this task" loading="lazy" decoding="async" width="896" height="896"></article>
-      <article class="sim-view pi05"><h4><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" aria-label="pi 0.5"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math></h4><video class="sim-policy" data-method="pi05" controls playsinline muted preload="none" poster="static/videos/libero_object_swap_06_overlays_pi05.jpg?v=thin20-v1" aria-label="Full π0.5 rollout with a continuous red recorded trajectory"><source data-src="static/videos/libero_object_swap_06_overlays_pi05.mp4?v=thin20-v1" type="video/mp4"></video></article>
-      <article class="sim-view contrastflow"><h4>ContrastFlow</h4><video class="sim-policy" data-method="contrastflow" controls playsinline muted preload="none" poster="static/videos/libero_object_swap_06_overlays_contrastflow.jpg?v=thin20-v1" aria-label="Full ContrastFlow rollout with a continuous green recorded trajectory"><source data-src="static/videos/libero_object_swap_06_overlays_contrastflow.mp4?v=thin20-v1" type="video/mp4"></video></article>
-    </div>
-
-  </figure>
-  </div>
-  <div class="case-slide" id="sim-wine-plate" role="group" aria-roledescription="slide" aria-label="Example 2 of 2" hidden inert>
+<figure class="fig sim-comparison" data-task="libero_object_swap_06">
+<div class="sim-grid">
+<article class="sim-view train"><h4>Train setup</h4><video aria-label="Original training demonstration: pick up the butter and place it in the basket" class="sim-policy training-demo" controls="" data-method="training" muted="" playsinline="" poster="static/videos/libero_object_swap_06_overlays_train.jpg" preload="none"><source data-src="static/videos/libero_object_swap_06_overlays_train.mp4" type="video/mp4"/></video></article>
+<article class="sim-view test"><h4>Test setup</h4><img alt="Test setup for this task" decoding="async" height="896" loading="lazy" src="static/videos/libero_object_swap_06_overlays_test.jpg" width="896"/></article>
+<article class="sim-view pi05"><h4><math aria-label="pi 0.5" display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math></h4><video aria-label="Full π0.5 rollout with a continuous red recorded trajectory" class="sim-policy" controls="" data-method="pi05" muted="" playsinline="" poster="static/videos/libero_object_swap_06_overlays_pi05.jpg?v=thin20-v1" preload="none"><source data-src="static/videos/libero_object_swap_06_overlays_pi05.mp4?v=thin20-v1" type="video/mp4"/></video></article>
+<article class="sim-view contrastflow"><h4>ContrastFlow</h4><video aria-label="Full ContrastFlow rollout with a continuous green recorded trajectory" class="sim-policy" controls="" data-method="contrastflow" muted="" playsinline="" poster="static/videos/libero_object_swap_06_overlays_contrastflow.jpg?v=thin20-v1" preload="none"><source data-src="static/videos/libero_object_swap_06_overlays_contrastflow.mp4?v=thin20-v1" type="video/mp4"/></video></article>
+</div>
+</figure>
+</div>
+<div aria-label="Example 2 of 3" aria-roledescription="slide" class="case-slide" hidden="" id="sim-wine-plate" inert="" role="group">
 <p class="task-prompt"><strong>Task prompt:</strong> Put the wine bottle on the plate.</p>
-  <figure class="fig sim-comparison" data-task="libero_goal_task_08_diverse">
-    <div class="sim-grid">
-      <article class="sim-view train"><h4>Train setup</h4><video class="sim-policy training-demo" data-method="training" controls playsinline muted preload="none" poster="static/videos/libero_goal_task_08_diverse_sequential_train.jpg" aria-label="Original training demonstration: put the bowl on the plate"><source data-src="static/videos/libero_goal_task_08_diverse_sequential_train.mp4" type="video/mp4"></video></article>
-      <article class="sim-view test"><h4>Test setup</h4><img src="static/videos/libero_goal_task_08_diverse_sequential_test.jpg" alt="Test setup for this task" loading="lazy" decoding="async" width="896" height="896"></article>
-      <article class="sim-view pi05"><h4><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" aria-label="pi 0.5"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math></h4><video class="sim-policy" data-method="pi05" controls playsinline muted preload="none" poster="static/videos/libero_goal_task_08_diverse_sequential_pi05.jpg?v=thin20-v1" aria-label="Full π0.5 rollout with a continuous red recorded trajectory"><source data-src="static/videos/libero_goal_task_08_diverse_sequential_pi05.mp4?v=thin20-v1" type="video/mp4"></video></article>
-      <article class="sim-view contrastflow"><h4>ContrastFlow</h4><video class="sim-policy" data-method="contrastflow" controls playsinline muted preload="none" poster="static/videos/libero_goal_task_08_diverse_sequential_contrastflow.jpg?v=thin20-v1" aria-label="Full ContrastFlow rollout with a continuous green recorded trajectory"><source data-src="static/videos/libero_goal_task_08_diverse_sequential_contrastflow.mp4?v=thin20-v1" type="video/mp4"></video></article>
-    </div>
-  </figure>
-  </div>
-  <button class="carousel-btn case-arrow prev" type="button" aria-label="Previous Different Object (Object Swap) example">←</button>
-  <button class="carousel-btn case-arrow next" type="button" aria-label="Next Different Object (Object Swap) example">→</button>
-  <div class="carousel-dots case-dots" aria-label="Choose Different Object (Object Swap) example">
-    <button class="dot active" type="button" aria-label="Show example 1" aria-controls="sim-object-example-1" aria-pressed="true"></button>
-    <button class="dot" type="button" aria-label="Show example 2" aria-controls="sim-wine-plate" aria-pressed="false"></button>
-  </div>
+<figure class="fig sim-comparison" data-task="libero_goal_task_08_diverse">
+<div class="sim-grid">
+<article class="sim-view train"><h4>Train setup</h4><video aria-label="Original training demonstration: put the bowl on the plate" class="sim-policy training-demo" controls="" data-method="training" muted="" playsinline="" poster="static/videos/libero_goal_task_08_diverse_sequential_train.jpg" preload="none"><source data-src="static/videos/libero_goal_task_08_diverse_sequential_train.mp4" type="video/mp4"/></video></article>
+<article class="sim-view test"><h4>Test setup</h4><img alt="Test setup for this task" decoding="async" height="896" loading="lazy" src="static/videos/libero_goal_task_08_diverse_sequential_test.jpg" width="896"/></article>
+<article class="sim-view pi05"><h4><math aria-label="pi 0.5" display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math></h4><video aria-label="Full π0.5 rollout with a continuous red recorded trajectory" class="sim-policy" controls="" data-method="pi05" muted="" playsinline="" poster="static/videos/libero_goal_task_08_diverse_sequential_pi05.jpg?v=thin20-v1" preload="none"><source data-src="static/videos/libero_goal_task_08_diverse_sequential_pi05.mp4?v=thin20-v1" type="video/mp4"/></video></article>
+<article class="sim-view contrastflow"><h4>ContrastFlow</h4><video aria-label="Full ContrastFlow rollout with a continuous green recorded trajectory" class="sim-policy" controls="" data-method="contrastflow" muted="" playsinline="" poster="static/videos/libero_goal_task_08_diverse_sequential_contrastflow.jpg?v=thin20-v1" preload="none"><source data-src="static/videos/libero_goal_task_08_diverse_sequential_contrastflow.mp4?v=thin20-v1" type="video/mp4"/></video></article>
+</div>
+</figure>
+</div>
+<div aria-label="Example 3 of 3" aria-roledescription="slide" class="case-slide" hidden="" id="sim-object-03-episode17" inert="" role="group">
+<p class="task-prompt"><strong>Task prompt:</strong> Pick up the bbq sauce and place it in the basket.</p>
+<figure class="fig sim-comparison" data-example="episode17" data-omega="2" data-task="libero_object_swap_03">
+<div class="sim-grid">
+<article class="sim-view train"><h4>Train setup</h4><video aria-label="Original training demonstration: pick up the bbq sauce and place it in the basket" class="sim-policy training-demo" controls="" data-method="training" muted="" playsinline="" poster="static/videos/libero_object_swap_03_episode17_train.jpg" preload="none"><source data-src="static/videos/libero_object_swap_03_episode17_train.mp4" type="video/mp4"/></video></article>
+<article class="sim-view test"><h4>Test setup</h4><img alt="Object Swap test setup: barbecue sauce and chocolate pudding exchange positions" decoding="async" height="896" loading="lazy" src="static/videos/libero_object_swap_03_episode17_test.jpg" width="896"/></article>
+<article class="sim-view pi05"><h4><math aria-label="pi 0.5" display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math></h4><video aria-label="Full π0.5 rollout with a continuous red recorded trajectory" class="sim-policy" controls="" data-method="pi05" muted="" playsinline="" poster="static/videos/libero_object_swap_03_episode17_pi05.jpg" preload="none"><source data-src="static/videos/libero_object_swap_03_episode17_pi05.mp4" type="video/mp4"/></video></article>
+<article class="sim-view contrastflow"><h4>ContrastFlow</h4><video aria-label="Full ContrastFlow rollout with a continuous green recorded trajectory" class="sim-policy" controls="" data-method="contrastflow" muted="" playsinline="" poster="static/videos/libero_object_swap_03_episode17_contrastflow.jpg" preload="none"><source data-src="static/videos/libero_object_swap_03_episode17_contrastflow.mp4" type="video/mp4"/></video></article>
+</div>
+</figure>
+</div><button aria-label="Previous Different Object (Object Swap) example" class="carousel-btn case-arrow prev" type="button">←</button>
+<button aria-label="Next Different Object (Object Swap) example" class="carousel-btn case-arrow next" type="button">→</button>
+<div aria-label="Choose Different Object (Object Swap) example" class="carousel-dots case-dots">
+<button aria-controls="sim-object-example-1" aria-label="Show example 1" aria-pressed="true" class="dot active" type="button"></button>
+<button aria-controls="sim-wine-plate" aria-label="Show example 2" aria-pressed="false" class="dot" type="button"></button>
+<button aria-controls="sim-object-03-episode17" aria-label="Show example 3" aria-pressed="false" class="dot" type="button"></button></div>
 </div>
 
   <h3 id="sim-goal-swap" class="sub">Goal relocation (Goal Swap)</h3>
