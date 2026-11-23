@@ -35,27 +35,29 @@
     {
       "task": "libero_spatial_swap_04",
       "category": "New Location (Spatial Swap)",
-      "episode": 24,
+      "episode": 3,
       "environment_seed": 7,
       "noise_seed": 100,
       "omega": 0,
       "method": "pi05",
-      "success": true
+      "success": false,
+      "policy_steps": 500
     },
     {
       "task": "libero_spatial_swap_04",
       "category": "New Location (Spatial Swap)",
-      "episode": 24,
+      "episode": 3,
       "environment_seed": 7,
       "noise_seed": 100,
       "omega": 2,
       "method": "contrastflow",
-      "success": true
+      "success": true,
+      "policy_steps": 112
     }
   ],
   "layout": "For each method, Original camera on the left and Attention overlay on the right; pi0.5 and ContrastFlow play side by side.",
   "long_swap_excluded": true,
-  "spatial_source_note": "New matched task04 episode24 capture with real attention tensors. Both methods succeed; this is an attention illustration, not a baseline-failure example. Archived task01 seed105 media are preserved.",
+  "spatial_source_note": "Matched task04 episode3, actual language attention captured during inference. pi0.5 fails at500 steps after a missed pickup and empty-gripper placement motion; ContrastFlow omega2 succeeds at112 steps. Exact shared initial state and noise verified. Prompt uses task.language (top drawer). Previous task04 episode24 and task01 seed105 clips preserved.",
   "previous_media_preserved": true,
   "original_camera_frames_preserved": true
 }

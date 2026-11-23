@@ -1,0 +1,177 @@
+{
+  "task": "libero_spatial_swap_04",
+  "title": "New Location (Spatial Swap)",
+  "episode": 3,
+  "environment_seed": 7,
+  "noise_seed": 100,
+  "method": "contrastflow",
+  "omega": 2,
+  "success": true,
+  "policy_steps": 112,
+  "source_sha256": "01506fe66453d6feab54072a31d3ca37e122de9fa53b4d0c3a100c3852e51342",
+  "output_sha256": "ed9d960f73b4c23d5b3557fd31f1ed013cb1a168bc94f9073d71350bb75c5136",
+  "video_asset": "static/videos/attention_camera_overlay_libero_spatial_swap_04_episode3_contrastflow.mp4",
+  "poster_asset": "static/videos/attention_camera_overlay_libero_spatial_swap_04_episode3_contrastflow.jpg",
+  "source_frames": 113,
+  "output_frames": 113,
+  "width": 1792,
+  "height": 896,
+  "panel_resolution": [
+    896,
+    896
+  ],
+  "fps": 10,
+  "duration_seconds": 11.3,
+  "fully_decoded": true,
+  "full_episode_duration": true,
+  "all_camera_frames_once": true,
+  "all_recorded_replans_present": true,
+  "panels": [
+    "Original camera",
+    "Attention overlay"
+  ],
+  "attention_kind": "positive-branch language-to-vision attention, layer 12",
+  "attention_style": {
+    "version": "direct-overlay-v1",
+    "color": "blue-cyan-green-yellow-red",
+    "normalization": "Unit sum over 256 method-cleaned camera patches",
+    "color_min": 0.0,
+    "color_max": 0.05,
+    "opacity_min": 0.16,
+    "opacity_max": 0.78,
+    "interpolation": "bilinear",
+    "extra_smoothing": false,
+    "temporal_smoothing": false,
+    "raw_scores_modified": false
+  },
+  "replan_frame_indices": [
+    0,
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45,
+    50,
+    55,
+    60,
+    65,
+    70,
+    75,
+    80,
+    85,
+    90,
+    95,
+    100,
+    105,
+    110
+  ],
+  "attention_sampling": "Exact replan observation and its recorded attention held until next replan; original camera shows every frame.",
+  "register_cleaning": {
+    "cache_sha256": "48065282ef34ea0bd08e54f5a2fdf0cf7f177ec0c9fb7b34e69c40b3414d37ac",
+    "register_coordinates": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        15
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        7,
+        10
+      ],
+      [
+        10,
+        0
+      ],
+      [
+        12,
+        1
+      ],
+      [
+        14,
+        1
+      ],
+      [
+        15,
+        3
+      ],
+      [
+        15,
+        13
+      ]
+    ],
+    "dynamic_spike_ratio": 2.0,
+    "dynamic_spike_max_iterations": 15,
+    "gaussian_sigma": 0.8,
+    "raw_scores_modified": false
+  },
+  "native_replay": {
+    "task": "libero_spatial_swap_04_episode3",
+    "arm": "emb_zero",
+    "frames": 113,
+    "rendered": 113,
+    "native_resolution": [
+      896,
+      896
+    ],
+    "physics_steps": 0,
+    "policy_calls": 0,
+    "source_sha256": "01506fe66453d6feab54072a31d3ca37e122de9fa53b4d0c3a100c3852e51342",
+    "checks": [
+      {
+        "frame": 0,
+        "same_frame_mae_255": 1.3304443359375,
+        "nearby_frame_mae_255": {
+          "0": 1.3304443359375,
+          "1": 1.3940277099609375,
+          "2": 1.5391082763671875
+        },
+        "eef_error_m": 2.6899611474133265e-16
+      },
+      {
+        "frame": 56,
+        "same_frame_mae_255": 1.5051930745442708,
+        "nearby_frame_mae_255": {
+          "54": 4.016591389973958,
+          "55": 2.8639017740885415,
+          "56": 1.5051930745442708,
+          "57": 3.453852335611979,
+          "58": 5.088887532552083
+        },
+        "eef_error_m": 0.00018775320666694628
+      },
+      {
+        "frame": 112,
+        "same_frame_mae_255": 1.2367909749348958,
+        "nearby_frame_mae_255": {
+          "110": 3.1605682373046875,
+          "111": 2.3904571533203125,
+          "112": 1.2367909749348958
+        },
+        "eef_error_m": 0.00031371993354056826
+      }
+    ],
+    "state_roundtrip_atol": 1e-12,
+    "original_resolution": [
+      256,
+      256
+    ],
+    "source_state_frames_preserved": true,
+    "eef_max_abs_m": 0.0009705915638771323,
+    "training_alignment_note": null
+  },
+  "selection_note": "Qualitative sample from task selected by historical success-rate gain. Refer to recorded success flag for this episode.",
+  "zoom": false,
+  "trajectory_overlay": false,
+  "header_band": false
+}
