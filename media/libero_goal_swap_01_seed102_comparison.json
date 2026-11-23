@@ -1016,5 +1016,21 @@
       "eef_max_abs_m": 0.0009875914526471519,
       "training_alignment_note": null
     }
+  },
+  "training_video": {
+    "file": "libero_goal_swap_01_seed102_train.mp4",
+    "frames": 94,
+    "source_frames": 94,
+    "fps": 10,
+    "duration_seconds": 9.4,
+    "width": 896,
+    "height": 896,
+    "sha256": "dcd2bf812fc78c228e61da642faf34e00180d87b0f9bfcdc64e605e60e2e2ecd",
+    "fully_decoded": true,
+    "playback": "Starts with the two policy clips; holds the final frame until the group restarts."
+  },
+  "setup_display": {
+    "train": "full training demonstration video",
+    "test": "original initial frame image"
   }
 }

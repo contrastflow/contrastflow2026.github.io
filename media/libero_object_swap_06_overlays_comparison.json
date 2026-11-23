@@ -1104,5 +1104,21 @@
       "eef_max_abs_m": 0.000972384067936885,
       "training_alignment_note": null
     }
+  },
+  "training_video": {
+    "file": "libero_object_swap_06_overlays_train.mp4",
+    "frames": 169,
+    "source_frames": 169,
+    "fps": 10,
+    "duration_seconds": 16.9,
+    "width": 896,
+    "height": 896,
+    "sha256": "d0b0090fb428b776589c370bcb56e875971829170f85c23d46110360441f3472",
+    "fully_decoded": true,
+    "playback": "Starts with the two policy clips; holds the final frame until the group restarts."
+  },
+  "setup_display": {
+    "train": "full training demonstration video",
+    "test": "original initial frame image"
   }
 }

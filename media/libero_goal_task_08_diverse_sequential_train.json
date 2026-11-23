@@ -1,0 +1,96 @@
+{
+  "task": "libero_goal_task_08_diverse",
+  "file": "libero_goal_task_08_diverse_sequential_train.mp4",
+  "frames": 90,
+  "source_frames": 90,
+  "fps": 10,
+  "duration_seconds": 9.0,
+  "width": 896,
+  "height": 896,
+  "fully_decoded": true,
+  "all_source_frames_once": true,
+  "sha256": "20874adb0c9ad87056494f5bb2b268d105a32680939e742952482f482c841bb6",
+  "native_state_rerender": {
+    "task": "libero_goal_swap_08",
+    "arm": "training",
+    "frames": 90,
+    "rendered": 90,
+    "native_resolution": [
+      896,
+      896
+    ],
+    "physics_steps": 0,
+    "policy_calls": 0,
+    "source_sha256": "572256d85e0a0d851b331fdf1ac373a40d61d1049710691e1cd7050208b6d9ac",
+    "checks": [
+      {
+        "frame": 0,
+        "same_frame_mae_255": 1.0014241536458333,
+        "nearby_frame_mae_255": {
+          "0": 1.0014241536458333,
+          "1": 1.2016398111979167,
+          "2": 1.4931233723958333
+        }
+      },
+      {
+        "frame": 45,
+        "same_frame_mae_255": 2.5981241861979165,
+        "nearby_frame_mae_255": {
+          "43": 2.5784098307291665,
+          "44": 0.8571370442708334,
+          "45": 2.5981241861979165,
+          "46": 3.9704182942708335,
+          "47": 4.9754638671875
+        }
+      },
+      {
+        "frame": 89,
+        "same_frame_mae_255": 1.052978515625,
+        "nearby_frame_mae_255": {
+          "87": 1.46435546875,
+          "88": 0.6444498697916666,
+          "89": 1.052978515625
+        }
+      }
+    ],
+    "state_roundtrip_atol": 1e-12,
+    "original_resolution": [
+      128,
+      128
+    ],
+    "source_state_frames_preserved": true,
+    "eef_max_abs_m": null,
+    "training_alignment_note": "All original demo states rendered in order; archived RGB observations are post-action and can lead the state stream by one frame."
+  },
+  "training_reference": {
+    "task_key": "libero_goal_task_08_diverse",
+    "original_suite": "libero_goal",
+    "original_task": "put_the_bowl_on_the_plate",
+    "original_instruction": "put the bowl on the plate",
+    "modified_instruction": "Put the wine bottle on the plate",
+    "demo": "demo_0",
+    "dataset": "yifengzhu-hf/LIBERO-datasets",
+    "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+    "source_url": "https://huggingface.co/datasets/yifengzhu-hf/LIBERO-datasets/resolve/f13aa24a3da8c43c7225569f28c562979fa0e35a/libero_goal/put_the_bowl_on_the_plate_demo.hdf5",
+    "source_dataset_page": "https://huggingface.co/datasets/yifengzhu-hf/LIBERO-datasets",
+    "source_bddl": "libero/libero/bddl_files/libero_goal/put_the_bowl_on_the_plate.bddl",
+    "frames": 90,
+    "width": 128,
+    "height": 128,
+    "source_frames_sha256": "fee20927705820dea97ad75844b1561d3a79ba456ab79fd8e06922e5995d8474",
+    "display_frames_sha256": "abc110c432c28d07b6d4626dd5162cec4f591e0594f58b72a809e85db46e85ac",
+    "rotation_degrees": 180,
+    "control_hz": 20,
+    "change": "Target or goal changes; object and fixture placement definitions are unchanged. Training demo and sampled policy episode have independent initial states.",
+    "position_caption": "Task placements unchanged; target or goal changed.",
+    "positions_changed": false,
+    "placement_definitions_exact": true,
+    "bddl_diff_file": "libero_goal_task_08_diverse.bddl.diff",
+    "original_bddl_sha256": "358b7781437e412c67d6a7648c1c28796b6b1bf117a25e61316cb8dfeb940e5b",
+    "pro_bddl_sha256": "f00c9a34c2af8e88a4819acc215e410abe9176484ebedf35bd13c99b52bcc560",
+    "selection": "demo_0 for every task; no outcome selection",
+    "reference_note": "Original human demonstration with a separate initial state; exact policy training split membership is not asserted."
+  },
+  "playback": "Starts with the two policy clips; holds the final frame until the group restarts.",
+  "original_setup_still_retained_as_poster": true
+}

@@ -1,0 +1,94 @@
+{
+  "task": "libero_spatial_swap_01",
+  "file": "libero_spatial_swap_01_seed105_train.mp4",
+  "frames": 152,
+  "source_frames": 152,
+  "fps": 10,
+  "duration_seconds": 15.2,
+  "width": 896,
+  "height": 896,
+  "fully_decoded": true,
+  "all_source_frames_once": true,
+  "sha256": "33f9e749de551991722411f8f089e638d9e496259c5807263156afaf1f08e1c9",
+  "native_state_rerender": {
+    "task": "libero_spatial_swap_01",
+    "arm": "training",
+    "frames": 152,
+    "rendered": 152,
+    "native_resolution": [
+      896,
+      896
+    ],
+    "physics_steps": 0,
+    "policy_calls": 0,
+    "source_sha256": "08b9fef81fbe664e132b754149762511cef936fdff7763098329afa30b7c3cf5",
+    "checks": [
+      {
+        "frame": 0,
+        "same_frame_mae_255": 1.1316731770833333,
+        "nearby_frame_mae_255": {
+          "0": 1.1316731770833333,
+          "1": 1.3511149088541667,
+          "2": 1.5920206705729167
+        }
+      },
+      {
+        "frame": 76,
+        "same_frame_mae_255": 2.3974202473958335,
+        "nearby_frame_mae_255": {
+          "74": 2.6962076822916665,
+          "75": 0.8872884114583334,
+          "76": 2.3974202473958335,
+          "77": 3.19561767578125,
+          "78": 3.63385009765625
+        }
+      },
+      {
+        "frame": 151,
+        "same_frame_mae_255": 1.2656046549479167,
+        "nearby_frame_mae_255": {
+          "149": 1.3953653971354167,
+          "150": 0.6700236002604166,
+          "151": 1.2656046549479167
+        }
+      }
+    ],
+    "state_roundtrip_atol": 1e-12,
+    "original_resolution": [
+      128,
+      128
+    ],
+    "source_state_frames_preserved": true,
+    "eef_max_abs_m": null,
+    "training_alignment_note": "All original demo states rendered in order; archived RGB observations are post-action and can lead the state stream by one frame."
+  },
+  "training_reference": {
+    "task_key": "libero_spatial_swap_01",
+    "original_suite": "libero_spatial",
+    "original_task": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate",
+    "original_instruction": "pick up the black bowl next to the ramekin and place it on the plate",
+    "demo": "demo_0",
+    "dataset": "yifengzhu-hf/LIBERO-datasets",
+    "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+    "source_url": "https://huggingface.co/datasets/yifengzhu-hf/LIBERO-datasets/resolve/f13aa24a3da8c43c7225569f28c562979fa0e35a/libero_spatial/pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate_demo.hdf5",
+    "source_dataset_page": "https://huggingface.co/datasets/yifengzhu-hf/LIBERO-datasets",
+    "source_bddl": "libero/libero/bddl_files/libero_spatial/pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate.bddl",
+    "frames": 152,
+    "width": 128,
+    "height": 128,
+    "source_frames_sha256": "29e37ac052751851bc4c7955ecfc27c0edacdd84543d6f3fd5c9d8de9c7657c4",
+    "display_frames_sha256": "33b0cf589aabd420f377648c4f520dcf7b4164d1377b19606f47e465a95376a3",
+    "rotation_degrees": 180,
+    "control_hz": 20,
+    "change": "The plate and the second bowl exchange starting positions.",
+    "bddl_diff_file": "libero_spatial_swap_01.bddl.diff",
+    "original_bddl_sha256": "53a7516571412a2f46a27cbf8482d3b76dbad4221858c8f6b565d506c274e61d",
+    "pro_bddl_sha256": "d2d1f28ac727dc4223e23432ffc56847044efd178b7042c9d74b9208002f05f9",
+    "selection": "demo_0 for every task; no outcome-based selection",
+    "reference_note": "Original LIBERO human demonstration; separate initial state, not a matched evaluation episode. Training split membership for this specific policy checkpoint is not asserted.",
+    "positions_changed": true,
+    "position_caption": "Task positions changed: The plate and the second bowl exchange starting positions."
+  },
+  "playback": "Starts with the two policy clips; holds the final frame until the group restarts.",
+  "original_setup_still_retained_as_poster": true
+}

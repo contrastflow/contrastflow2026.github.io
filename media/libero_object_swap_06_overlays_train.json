@@ -1,0 +1,94 @@
+{
+  "task": "libero_object_swap_06",
+  "file": "libero_object_swap_06_overlays_train.mp4",
+  "frames": 169,
+  "source_frames": 169,
+  "fps": 10,
+  "duration_seconds": 16.9,
+  "width": 896,
+  "height": 896,
+  "fully_decoded": true,
+  "all_source_frames_once": true,
+  "sha256": "d0b0090fb428b776589c370bcb56e875971829170f85c23d46110360441f3472",
+  "native_state_rerender": {
+    "task": "libero_object_swap_06",
+    "arm": "training",
+    "frames": 169,
+    "rendered": 169,
+    "native_resolution": [
+      896,
+      896
+    ],
+    "physics_steps": 0,
+    "policy_calls": 0,
+    "source_sha256": "d3df4de368e8fe0590f0a602b830122cb3fd40fff0423d247ac05a15c2d4d51b",
+    "checks": [
+      {
+        "frame": 0,
+        "same_frame_mae_255": 1.1552530924479167,
+        "nearby_frame_mae_255": {
+          "0": 1.1552530924479167,
+          "1": 1.3450520833333333,
+          "2": 1.526611328125
+        }
+      },
+      {
+        "frame": 84,
+        "same_frame_mae_255": 2.7157999674479165,
+        "nearby_frame_mae_255": {
+          "82": 2.8209025065104165,
+          "83": 0.80401611328125,
+          "84": 2.7157999674479165,
+          "85": 3.7820841471354165,
+          "86": 4.487467447916667
+        }
+      },
+      {
+        "frame": 168,
+        "same_frame_mae_255": 0.645751953125,
+        "nearby_frame_mae_255": {
+          "166": 0.7438761393229166,
+          "167": 0.5274658203125,
+          "168": 0.645751953125
+        }
+      }
+    ],
+    "state_roundtrip_atol": 1e-12,
+    "original_resolution": [
+      128,
+      128
+    ],
+    "source_state_frames_preserved": true,
+    "eef_max_abs_m": null,
+    "training_alignment_note": "All original demo states rendered in order; archived RGB observations are post-action and can lead the state stream by one frame."
+  },
+  "training_reference": {
+    "task_key": "libero_object_swap_06",
+    "original_suite": "libero_object",
+    "original_task": "pick_up_the_butter_and_place_it_in_the_basket",
+    "original_instruction": "pick up the butter and place it in the basket",
+    "demo": "demo_0",
+    "dataset": "yifengzhu-hf/LIBERO-datasets",
+    "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+    "source_url": "https://huggingface.co/datasets/yifengzhu-hf/LIBERO-datasets/resolve/f13aa24a3da8c43c7225569f28c562979fa0e35a/libero_object/pick_up_the_butter_and_place_it_in_the_basket_demo.hdf5",
+    "source_dataset_page": "https://huggingface.co/datasets/yifengzhu-hf/LIBERO-datasets",
+    "source_bddl": "libero/libero/bddl_files/libero_object/pick_up_the_butter_and_place_it_in_the_basket.bddl",
+    "frames": 169,
+    "width": 128,
+    "height": 128,
+    "source_frames_sha256": "b7f192a0d79439e6cedad9559a18e0b138f35addf94b6f0d9c4926f5b8fbde9c",
+    "display_frames_sha256": "947451bc15c4b090b6d6e92932c27f3a2bf3810d035119152d61ceb89e45c349",
+    "rotation_degrees": 180,
+    "control_hz": 20,
+    "change": "Butter and tomato sauce exchange starting positions.",
+    "bddl_diff_file": "libero_object_swap_06.bddl.diff",
+    "original_bddl_sha256": "5d8053b40ff33246fdbcc38548db84032c6bb647b4b88b6646d9cf6b73a5006c",
+    "pro_bddl_sha256": "3fa926a878d441bcc061a2f7578e4938e40ddcdd08b4336fd326271fc8bfffe4",
+    "selection": "demo_0 for every task; no outcome-based selection",
+    "reference_note": "Original LIBERO human demonstration; separate initial state, not a matched evaluation episode. Training split membership for this specific policy checkpoint is not asserted.",
+    "positions_changed": true,
+    "position_caption": "Task positions changed: Butter and tomato sauce exchange starting positions."
+  },
+  "playback": "Starts with the two policy clips; holds the final frame until the group restarts.",
+  "original_setup_still_retained_as_poster": true
+}

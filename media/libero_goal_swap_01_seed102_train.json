@@ -1,0 +1,94 @@
+{
+  "task": "libero_goal_swap_01",
+  "file": "libero_goal_swap_01_seed102_train.mp4",
+  "frames": 94,
+  "source_frames": 94,
+  "fps": 10,
+  "duration_seconds": 9.4,
+  "width": 896,
+  "height": 896,
+  "fully_decoded": true,
+  "all_source_frames_once": true,
+  "sha256": "dcd2bf812fc78c228e61da642faf34e00180d87b0f9bfcdc64e605e60e2e2ecd",
+  "native_state_rerender": {
+    "task": "libero_goal_swap_01",
+    "arm": "training",
+    "frames": 94,
+    "rendered": 94,
+    "native_resolution": [
+      896,
+      896
+    ],
+    "physics_steps": 0,
+    "policy_calls": 0,
+    "source_sha256": "eea72b5246ffc9db945b73e0c432e2df65c9fd686c57b3a353ccff2c2f09832f",
+    "checks": [
+      {
+        "frame": 0,
+        "same_frame_mae_255": 1.0544026692708333,
+        "nearby_frame_mae_255": {
+          "0": 1.0544026692708333,
+          "1": 1.1495768229166667,
+          "2": 1.24029541015625
+        }
+      },
+      {
+        "frame": 47,
+        "same_frame_mae_255": 1.3182169596354167,
+        "nearby_frame_mae_255": {
+          "45": 1.3105061848958333,
+          "46": 0.64495849609375,
+          "47": 1.3182169596354167,
+          "48": 1.8357950846354167,
+          "49": 2.6845906575520835
+        }
+      },
+      {
+        "frame": 93,
+        "same_frame_mae_255": 2.11077880859375,
+        "nearby_frame_mae_255": {
+          "91": 2.3695271809895835,
+          "92": 0.75506591796875,
+          "93": 2.11077880859375
+        }
+      }
+    ],
+    "state_roundtrip_atol": 1e-12,
+    "original_resolution": [
+      128,
+      128
+    ],
+    "source_state_frames_preserved": true,
+    "eef_max_abs_m": null,
+    "training_alignment_note": "All original demo states rendered in order; archived RGB observations are post-action and can lead the state stream by one frame."
+  },
+  "training_reference": {
+    "task_key": "libero_goal_swap_01",
+    "original_suite": "libero_goal",
+    "original_task": "put_the_bowl_on_the_stove",
+    "original_instruction": "put the bowl on the stove",
+    "demo": "demo_0",
+    "dataset": "yifengzhu-hf/LIBERO-datasets",
+    "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+    "source_url": "https://huggingface.co/datasets/yifengzhu-hf/LIBERO-datasets/resolve/f13aa24a3da8c43c7225569f28c562979fa0e35a/libero_goal/put_the_bowl_on_the_stove_demo.hdf5",
+    "source_dataset_page": "https://huggingface.co/datasets/yifengzhu-hf/LIBERO-datasets",
+    "source_bddl": "libero/libero/bddl_files/libero_goal/put_the_bowl_on_the_stove.bddl",
+    "frames": 94,
+    "width": 128,
+    "height": 128,
+    "source_frames_sha256": "7bc0a0c694d8c84201d54d4f950057332d0d7e213fdaee7f2ec1bbf7d3a316ff",
+    "display_frames_sha256": "545a52bd2d28c244e1c2964cd21928c8b0084924ea0ffd85861f8cbe9c69eb64",
+    "rotation_degrees": 180,
+    "control_hz": 20,
+    "change": "Bowl and wine bottle exchange positions; stove and cabinet also exchange positions.",
+    "bddl_diff_file": "libero_goal_swap_01.bddl.diff",
+    "original_bddl_sha256": "c6812d6c988be830412aa6fc4801af04d60f8c4565d2625763b6a0f2b843a87f",
+    "pro_bddl_sha256": "64c1cfbd554f241b3881731df9def88e24ae1d9f42896584b7d1b0b3d036dee8",
+    "selection": "demo_0 for every task; no outcome-based selection",
+    "reference_note": "Original LIBERO human demonstration; separate initial state, not a matched evaluation episode. Training split membership for this specific policy checkpoint is not asserted.",
+    "positions_changed": true,
+    "position_caption": "Task positions changed: Bowl and wine bottle exchange positions; stove and cabinet also exchange positions."
+  },
+  "playback": "Starts with the two policy clips; holds the final frame until the group restarts.",
+  "original_setup_still_retained_as_poster": true
+}
