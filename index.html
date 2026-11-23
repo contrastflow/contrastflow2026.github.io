@@ -103,7 +103,7 @@
           <video class="reel-video" muted loop playsinline preload="none" poster="static/videos/rw_centrifuge_cf_success_p5_red.jpg?v=iphone-bright-v2" data-src="static/videos/rw_centrifuge_cf_success_p5_red.mp4?v=iphone-bright-v2" aria-label="ContrastFlow: Centrifuge loading" data-speed="2" autoplay></video>
         </a>
         <a class="reel-card" href="#sim-spatial-recovery" aria-label="New Location (Spatial Swap): view full comparison">
-          <video class="reel-video" muted loop playsinline preload="none" poster="static/videos/libero_spatial_swap_01_seed105_reel_clean.jpg" data-src="static/videos/libero_spatial_swap_01_seed105_reel_clean.mp4" aria-label="LIBERO-PRO · New Location (Spatial Swap): ContrastFlow rollout" autoplay></video>
+          <video class="reel-video" muted loop playsinline preload="none" poster="static/videos/libero_spatial_swap_04_trial24_reel_clean.jpg" data-src="static/videos/libero_spatial_swap_04_trial24_reel_clean.mp4" aria-label="LIBERO-PRO · New Location (Spatial Swap): ContrastFlow rollout" autoplay></video>
         </a>
       </div>
     </div>
@@ -295,17 +295,37 @@
 </div>
 
   <h3 id="sim-spatial-recovery" class="sub">New Location (Spatial Swap)</h3>
-  <p class="task-prompt"><strong>Task prompt:</strong> Pick up the black bowl next to the ramekin and place it on the plate.</p>
-  <figure class="fig sim-comparison" data-task="libero_spatial_swap_01">
+<div id="sim-spatial-examples" class="case-carousel" role="region" aria-roledescription="carousel" aria-labelledby="sim-spatial-recovery" tabindex="0" data-category-anchor="sim-spatial-recovery">
+  <span class="case-counter" aria-live="polite" aria-atomic="true">1/2</span>
+  <div class="case-slide" id="sim-spatial-04-trial24" role="group" aria-roledescription="slide" aria-label="Example 1 of 2">
+<p class="task-prompt"><strong>Task prompt:</strong> Pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate.</p>
+  <figure class="fig sim-comparison" data-task="libero_spatial_swap_04" data-example="trial24">
     <div class="sim-grid">
-      <article class="sim-view train"><h4>Train setup</h4><video class="sim-policy training-demo" data-method="training" controls playsinline muted preload="none" poster="static/videos/libero_spatial_swap_01_seed105_train.jpg" aria-label="Original training demonstration: pick up the black bowl next to the ramekin and place it on the plate"><source data-src="static/videos/libero_spatial_swap_01_seed105_train.mp4" type="video/mp4"></video></article>
-      <article class="sim-view test"><h4>Test setup</h4><img src="static/videos/libero_spatial_swap_01_seed105_test.jpg" alt="Test setup for this task" loading="lazy" decoding="async" width="896" height="896"></article>
-      <article class="sim-view pi05"><h4><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" aria-label="pi 0.5"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math></h4><video class="sim-policy" data-method="pi05" controls playsinline muted preload="none" poster="static/videos/libero_spatial_swap_01_seed105_pi05.jpg?v=thin20-v1" aria-label="Full π0.5 rollout with a continuous red recorded trajectory"><source data-src="static/videos/libero_spatial_swap_01_seed105_pi05.mp4?v=thin20-v1" type="video/mp4"></video></article>
-      <article class="sim-view contrastflow"><h4>ContrastFlow</h4><video class="sim-policy" data-method="contrastflow" controls playsinline muted preload="none" poster="static/videos/libero_spatial_swap_01_seed105_contrastflow.jpg?v=thin20-v1" aria-label="Full ContrastFlow rollout with a continuous green recorded trajectory"><source data-src="static/videos/libero_spatial_swap_01_seed105_contrastflow.mp4?v=thin20-v1" type="video/mp4"></video></article>
+      <article class="sim-view train"><h4>Train setup</h4><video class="sim-policy training-demo" data-method="training" controls playsinline muted preload="none" poster="static/videos/libero_spatial_swap_04_train.jpg" aria-label="Original training demonstration: pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate"><source data-src="static/videos/libero_spatial_swap_04_train.mp4" type="video/mp4"></video></article>
+      <article class="sim-view test"><h4>Test setup</h4><img src="static/videos/libero_spatial_swap_04_trial24_test.jpg" alt="Test setup for this task" loading="lazy" decoding="async" width="896" height="896"></article>
+      <article class="sim-view pi05"><h4><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" aria-label="pi 0.5"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math></h4><video class="sim-policy" data-method="pi05" controls playsinline muted preload="none" poster="static/videos/libero_spatial_swap_04_trial24_pi05.jpg" aria-label="Full π0.5 rollout with a continuous red recorded trajectory"><source data-src="static/videos/libero_spatial_swap_04_trial24_pi05.mp4" type="video/mp4"></video></article>
+      <article class="sim-view contrastflow"><h4>ContrastFlow</h4><video class="sim-policy" data-method="contrastflow" controls playsinline muted preload="none" poster="static/videos/libero_spatial_swap_04_trial24_contrastflow.jpg" aria-label="Full ContrastFlow rollout with a continuous green recorded trajectory"><source data-src="static/videos/libero_spatial_swap_04_trial24_contrastflow.mp4" type="video/mp4"></video></article>
     </div>
   </figure>
-
-
+  </div>
+  <div class="case-slide" id="sim-spatial-01-trial24" role="group" aria-roledescription="slide" aria-label="Example 2 of 2" hidden inert>
+<p class="task-prompt"><strong>Task prompt:</strong> Pick up the black bowl next to the ramekin and place it on the plate.</p>
+  <figure class="fig sim-comparison" data-task="libero_spatial_swap_01" data-example="trial24">
+    <div class="sim-grid">
+      <article class="sim-view train"><h4>Train setup</h4><video class="sim-policy training-demo" data-method="training" controls playsinline muted preload="none" poster="static/videos/libero_spatial_swap_01_seed105_train.jpg" aria-label="Original training demonstration: pick up the black bowl next to the ramekin and place it on the plate"><source data-src="static/videos/libero_spatial_swap_01_seed105_train.mp4" type="video/mp4"></video></article>
+      <article class="sim-view test"><h4>Test setup</h4><img src="static/videos/libero_spatial_swap_01_trial24_test.jpg" alt="Test setup for this task" loading="lazy" decoding="async" width="896" height="896"></article>
+      <article class="sim-view pi05"><h4><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" aria-label="pi 0.5"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math></h4><video class="sim-policy" data-method="pi05" controls playsinline muted preload="none" poster="static/videos/libero_spatial_swap_01_trial24_pi05.jpg" aria-label="Full π0.5 rollout with a continuous red recorded trajectory"><source data-src="static/videos/libero_spatial_swap_01_trial24_pi05.mp4" type="video/mp4"></video></article>
+      <article class="sim-view contrastflow"><h4>ContrastFlow</h4><video class="sim-policy" data-method="contrastflow" controls playsinline muted preload="none" poster="static/videos/libero_spatial_swap_01_trial24_contrastflow.jpg" aria-label="Full ContrastFlow rollout with a continuous green recorded trajectory"><source data-src="static/videos/libero_spatial_swap_01_trial24_contrastflow.mp4" type="video/mp4"></video></article>
+    </div>
+  </figure>
+  </div>
+  <button class="carousel-btn case-arrow prev" type="button" aria-label="Previous New Location example">←</button>
+  <button class="carousel-btn case-arrow next" type="button" aria-label="Next New Location example">→</button>
+  <div class="carousel-dots case-dots" aria-label="Choose New Location example">
+    <button class="dot active" type="button" aria-label="Show example 1" aria-controls="sim-spatial-04-trial24" aria-pressed="true"></button>
+    <button class="dot" type="button" aria-label="Show example 2" aria-controls="sim-spatial-01-trial24" aria-pressed="false"></button>
+  </div>
+</div>
 
 <h3 id="sim-long-swap" class="sub">Long swap</h3>
 <p class="task-prompt"><strong>Task prompt:</strong> Pick up the book and place it in the back compartment of the caddy.</p>

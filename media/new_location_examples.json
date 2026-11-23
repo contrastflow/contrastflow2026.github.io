@@ -1,0 +1,279 @@
+{
+  "category": "New Location (Spatial Swap)",
+  "examples": [
+    {
+      "task": "libero_spatial_swap_04",
+      "trial": 24,
+      "omega": 1,
+      "simulation_anchor": "sim-spatial-04-trial24",
+      "baseline_success": false,
+      "contrastflow_success": true,
+      "training_video": "libero_spatial_swap_04_train.mp4",
+      "records": {
+        "pi05": {
+          "id": "libero_spatial_swap_04_trial24",
+          "method": "pi05",
+          "frames": 361,
+          "source_frames": 361,
+          "fps": 10,
+          "width": 896,
+          "height": 896,
+          "fully_decoded": true,
+          "all_source_frames_once": true,
+          "sha256": "5da6fad1701d142d537725810409f4d5d041bfdf4b778d73793f07cf9c1c4ffe",
+          "source": "/scratch/apotnis2/libero_more_candidates_20261122/historical_hires/task04_trial24/baseline/traj.npz",
+          "source_sha256": "457fcad5a31c98ddf545f4f6e88d10f0ae9578f96f9ce3f71e104864d5e98224",
+          "capture_metadata": {
+            "suite": "libero_spatial_swap",
+            "task_id": 4,
+            "trial": 24,
+            "resolution": 1024,
+            "omega_cf": 1.0,
+            "omega_base": 0.0,
+            "m18_mode": "emb_zero",
+            "erase_pct": 0.85,
+            "max_steps": 350,
+            "seed": 7,
+            "use_bddl_language": false,
+            "baseline_success": false,
+            "cf_success": true,
+            "baseline_fallback": 0,
+            "cf_fallback": 0,
+            "instruction": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate"
+          },
+          "common_noise_verified": false,
+          "trajectory_overlay": {
+            "color_rgb": [
+              239,
+              68,
+              68
+            ],
+            "width_pixels": 5.12,
+            "outline_width_pixels": 7.04,
+            "accumulated_executed_path": true,
+            "reset_at_replan": false
+          },
+          "original_resolution": 1024
+        },
+        "contrastflow": {
+          "id": "libero_spatial_swap_04_trial24",
+          "method": "contrastflow",
+          "frames": 133,
+          "source_frames": 133,
+          "fps": 10,
+          "width": 896,
+          "height": 896,
+          "fully_decoded": true,
+          "all_source_frames_once": true,
+          "sha256": "574f8cab87162fa3e168734e4660d6570605284274834f7b2f1364b6582376c8",
+          "source": "/scratch/apotnis2/libero_more_candidates_20261122/historical_hires/task04_trial24/cfsz/traj.npz",
+          "source_sha256": "b9af9b7ec7db09a6b70c2980b56570d3691a21285b3fe9f3b1f3fc6dadfd31fe",
+          "capture_metadata": {
+            "suite": "libero_spatial_swap",
+            "task_id": 4,
+            "trial": 24,
+            "resolution": 1024,
+            "omega_cf": 1.0,
+            "omega_base": 0.0,
+            "m18_mode": "emb_zero",
+            "erase_pct": 0.85,
+            "max_steps": 350,
+            "seed": 7,
+            "use_bddl_language": false,
+            "baseline_success": false,
+            "cf_success": true,
+            "baseline_fallback": 0,
+            "cf_fallback": 0,
+            "instruction": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate"
+          },
+          "common_noise_verified": false,
+          "trajectory_overlay": {
+            "color_rgb": [
+              32,
+              220,
+              90
+            ],
+            "width_pixels": 5.12,
+            "outline_width_pixels": 7.04,
+            "accumulated_executed_path": true,
+            "reset_at_replan": false
+          },
+          "original_resolution": 1024
+        }
+      }
+    },
+    {
+      "task": "libero_spatial_swap_01",
+      "trial": 24,
+      "omega": 1,
+      "simulation_anchor": "sim-spatial-01-trial24",
+      "baseline_success": false,
+      "contrastflow_success": true,
+      "training_video": "libero_spatial_swap_01_seed105_train.mp4",
+      "records": {
+        "pi05": {
+          "id": "libero_spatial_swap_01_trial24",
+          "method": "pi05",
+          "frames": 361,
+          "source_frames": 361,
+          "fps": 10,
+          "width": 896,
+          "height": 896,
+          "fully_decoded": true,
+          "all_source_frames_once": true,
+          "sha256": "10125a8b0214106c4d8592971e36bcbb15de69abad6f02d254b800f4b3d40705",
+          "source": "/scratch/apotnis2/recovery_scene_examples_20261122/selected/task01_trial24/baseline/traj.npz",
+          "source_sha256": "e8c2221bfe1fa985395ea87e2e225dbd11296b4c4a7f3a66001fae62fedc00e9",
+          "capture_metadata": {
+            "suite": "libero_spatial_swap",
+            "task_id": 1,
+            "trial": 24,
+            "resolution": 1024,
+            "omega_cf": 1.0,
+            "omega_base": 0.0,
+            "m18_mode": "emb_zero",
+            "erase_pct": 0.85,
+            "max_steps": 350,
+            "seed": 7,
+            "use_bddl_language": false,
+            "baseline_success": false,
+            "cf_success": true,
+            "select": "cf_win",
+            "baseline_fallback": 0,
+            "cf_fallback": 0,
+            "instruction": "pick up the black bowl next to the ramekin and place it on the plate"
+          },
+          "common_noise_verified": false,
+          "trajectory_overlay": {
+            "color_rgb": [
+              239,
+              68,
+              68
+            ],
+            "width_pixels": 5.12,
+            "outline_width_pixels": 7.04,
+            "accumulated_executed_path": true,
+            "reset_at_replan": false
+          },
+          "original_resolution": 1024
+        },
+        "contrastflow": {
+          "id": "libero_spatial_swap_01_trial24",
+          "method": "contrastflow",
+          "frames": 214,
+          "source_frames": 214,
+          "fps": 10,
+          "width": 896,
+          "height": 896,
+          "fully_decoded": true,
+          "all_source_frames_once": true,
+          "sha256": "b60c422d6ed08accff9bf1962b1cccc556bd840f3bfa44fe10c71c903f0b6039",
+          "source": "/scratch/apotnis2/recovery_scene_examples_20261122/selected/task01_trial24/cfsz/traj.npz",
+          "source_sha256": "56348633f3b64f63be8bb1ebc8b47077c62cb3e7e0a71ad052f4af3a57585a85",
+          "capture_metadata": {
+            "suite": "libero_spatial_swap",
+            "task_id": 1,
+            "trial": 24,
+            "resolution": 1024,
+            "omega_cf": 1.0,
+            "omega_base": 0.0,
+            "m18_mode": "emb_zero",
+            "erase_pct": 0.85,
+            "max_steps": 350,
+            "seed": 7,
+            "use_bddl_language": false,
+            "baseline_success": false,
+            "cf_success": true,
+            "select": "cf_win",
+            "baseline_fallback": 0,
+            "cf_fallback": 0,
+            "instruction": "pick up the black bowl next to the ramekin and place it on the plate"
+          },
+          "common_noise_verified": false,
+          "trajectory_overlay": {
+            "color_rgb": [
+              32,
+              220,
+              90
+            ],
+            "width_pixels": 5.12,
+            "outline_width_pixels": 7.04,
+            "accumulated_executed_path": true,
+            "reset_at_replan": false
+          },
+          "original_resolution": 1024
+        }
+      }
+    }
+  ],
+  "task04_training": {
+    "id": "libero_spatial_swap_04",
+    "method": "train",
+    "frames": 153,
+    "source_frames": 153,
+    "fps": 10,
+    "width": 896,
+    "height": 896,
+    "fully_decoded": true,
+    "all_source_frames_once": true,
+    "sha256": "1308983df0a1698ee09fd524891c584db573eb07c338411826e93cc89ccc0b89",
+    "native_state_rerender": {
+      "task": "libero_spatial_swap_04",
+      "arm": "training",
+      "frames": 153,
+      "rendered": 153,
+      "native_resolution": [
+        896,
+        896
+      ],
+      "physics_steps": 0,
+      "policy_calls": 0,
+      "source_sha256": "9a04ecdbb9e9045ea4692e78fd7f5f442d3e3fe837c4bae15726961cddc8e1ee",
+      "checks": [
+        {
+          "frame": 0,
+          "same_frame_mae_255": 0.94549560546875,
+          "nearby_frame_mae_255": {
+            "0": 0.94549560546875,
+            "1": 1.06793212890625,
+            "2": 1.1396891276041667
+          }
+        },
+        {
+          "frame": 76,
+          "same_frame_mae_255": 3.4413655598958335,
+          "nearby_frame_mae_255": {
+            "74": 3.68255615234375,
+            "75": 1.0550944010416667,
+            "76": 3.4413655598958335,
+            "77": 4.671915690104167,
+            "78": 5.5604248046875
+          }
+        },
+        {
+          "frame": 152,
+          "same_frame_mae_255": 3.7170003255208335,
+          "nearby_frame_mae_255": {
+            "150": 3.9022216796875,
+            "151": 0.8543497721354166,
+            "152": 3.7170003255208335
+          }
+        }
+      ],
+      "state_roundtrip_atol": 1e-12,
+      "original_resolution": [
+        128,
+        128
+      ],
+      "source_state_frames_preserved": true,
+      "eef_max_abs_m": null,
+      "training_alignment_note": "All original demo states rendered in order; archived RGB observations are post-action and can lead the state stream by one frame."
+    }
+  },
+  "replaced": {
+    "task": "libero_spatial_swap_01",
+    "seed": 105,
+    "files_preserved": true
+  },
+  "shared_raw_noise_recorded": false
+}
