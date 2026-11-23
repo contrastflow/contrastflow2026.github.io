@@ -36,6 +36,7 @@
     <a class="sub" href="#sim-goal-swap">&middot; Goal relocation</a>
     <a class="sub" href="#sim-spatial-recovery">&middot; Placement recovery</a>
     <a class="sub" href="#sim-stove-swap">&middot; Scene rearrangement</a>
+    <a class="sub" href="#sim-long-swap">&middot; Long swap</a>
 
   </div>
   <a href="#attention-analysis" class="top">Attention analysis</a>
@@ -296,6 +297,16 @@
     </div>
   </figure>
 
+<h3 id="sim-long-swap" class="sub">Long swap</h3>
+<p class="task-prompt"><strong>Task prompt:</strong> Pick up the book and place it in the back compartment of the caddy.</p>
+<figure class="fig sim-comparison" data-task="libero_10_swap_05" data-example="episode10">
+  <div class="sim-grid">
+    <article class="sim-view train"><h4>Train setup</h4><video class="sim-policy training-demo" data-method="training" controls playsinline muted preload="none" poster="static/videos/libero_10_swap_05_train.jpg" aria-label="Original training demonstration: book into the back compartment of the caddy"><source data-src="static/videos/libero_10_swap_05_train.mp4" type="video/mp4"></video></article>
+    <article class="sim-view test"><h4>Test setup</h4><img src="static/videos/libero_10_swap_05_episode10_test.jpg" alt="Test setup: book and mug exchange positions" loading="lazy" decoding="async" width="896" height="896"></article>
+    <article class="sim-view pi05"><h4><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" aria-label="pi 0.5"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math></h4><video class="sim-policy" data-method="pi05" controls playsinline muted preload="none" poster="static/videos/libero_10_swap_05_episode10_pi05.jpg" aria-label="Full pi0.5 rollout with a continuous red recorded trajectory"><source data-src="static/videos/libero_10_swap_05_episode10_pi05.mp4" type="video/mp4"></video></article>
+    <article class="sim-view contrastflow"><h4>ContrastFlow</h4><video class="sim-policy" data-method="contrastflow" controls playsinline muted preload="none" poster="static/videos/libero_10_swap_05_episode10_contrastflow.jpg" aria-label="Full ContrastFlow rollout, omega 2, with a continuous green recorded trajectory"><source data-src="static/videos/libero_10_swap_05_episode10_contrastflow.mp4" type="video/mp4"></video></article>
+  </div>
+</figure>
 </section>
 
 

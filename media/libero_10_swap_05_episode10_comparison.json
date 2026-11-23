@@ -1,0 +1,267 @@
+{
+  "name": "libero_10_swap_05_episode10",
+  "suite": "libero_10_swap",
+  "task_id": 5,
+  "episode": 10,
+  "task_name": "STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy",
+  "axis": "Long swap",
+  "sampling": "Qualitative matched sample selected from historical winning initial-state IDs; noise seed 100, 500 policy steps plus 10 settling steps. Outcomes are independently recorded.",
+  "change": "Book and mug exchange positions.",
+  "contrastflow_omega": 2,
+  "clips": [
+    {
+      "task": "libero_10_swap_05",
+      "id": "libero_10_swap_05_episode10",
+      "method": "pi05",
+      "omega": 0,
+      "source_frames": 501,
+      "frames": 501,
+      "terminal_hold_frames": 0,
+      "fps": 10,
+      "width": 896,
+      "height": 896,
+      "file": "libero_10_swap_05_episode10_pi05.mp4",
+      "source_sha256": "41c0c1a0dfe8e112e92912f41aad24d41b711e85a2a3e56e3160fc3f91e6d86c",
+      "sha256": "81efbc5660fcd78d27f61ff354b7422ae37ba2ebfea93b13c0829515cf5dd032",
+      "fully_decoded": true,
+      "all_source_frames_once": true,
+      "success": false,
+      "native_state_rerender": {
+        "task": "libero_10_swap_05",
+        "arm": "baseline",
+        "frames": 501,
+        "rendered": 501,
+        "native_resolution": [
+          896,
+          896
+        ],
+        "physics_steps": 0,
+        "policy_calls": 0,
+        "source_sha256": "41c0c1a0dfe8e112e92912f41aad24d41b711e85a2a3e56e3160fc3f91e6d86c",
+        "checks": [
+          {
+            "frame": 0,
+            "same_frame_mae_255": 0.8630167643229166,
+            "nearby_frame_mae_255": {
+              "0": 0.8630167643229166,
+              "1": 1.0036722819010417,
+              "2": 1.2708536783854167
+            },
+            "eef_error_m": 2.6899611422596035e-16
+          },
+          {
+            "frame": 250,
+            "same_frame_mae_255": 0.8196614583333334,
+            "nearby_frame_mae_255": {
+              "248": 1.1755777994791667,
+              "249": 1.0063323974609375,
+              "250": 0.8196614583333334,
+              "251": 0.9162445068359375,
+              "252": 1.0431009928385417
+            },
+            "eef_error_m": 6.870984970835936e-05
+          },
+          {
+            "frame": 500,
+            "same_frame_mae_255": 0.839447021484375,
+            "nearby_frame_mae_255": {
+              "498": 1.1192830403645833,
+              "499": 0.990570068359375,
+              "500": 0.839447021484375
+            },
+            "eef_error_m": 8.805478397655442e-05
+          }
+        ],
+        "state_roundtrip_atol": 1e-12,
+        "original_resolution": [
+          256,
+          256
+        ],
+        "source_state_frames_preserved": true,
+        "eef_max_abs_m": 0.0007488636071240062,
+        "training_alignment_note": null
+      },
+      "trajectory_overlay": {
+        "color_rgb": [
+          239,
+          68,
+          68
+        ],
+        "width_pixels": 5.12,
+        "outline_width_pixels": 7.04,
+        "accumulated_executed_path": true,
+        "reset_at_replan": false
+      },
+      "capture_metadata": {
+        "name": "libero_10_swap_05_episode10",
+        "suite": "libero_10_swap",
+        "task_id": 5,
+        "episode": 10,
+        "task_name": "STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy",
+        "axis": "Long swap",
+        "sampling": "Qualitative matched sample selected from historical winning initial-state IDs; noise seed 100, 500 policy steps plus 10 settling steps. Outcomes are independently recorded.",
+        "change": "Book and mug exchange positions.",
+        "contrastflow_omega": 2,
+        "prompt": "pick up the book and place it in the back compartment of the caddy",
+        "arm": "baseline",
+        "success": false,
+        "steps": 500,
+        "frames": 501,
+        "chunks": 100,
+        "noise_seed": 100,
+        "environment_seed": 7,
+        "control_horizon": 500,
+        "warmup_steps": 10,
+        "replan": 5,
+        "denoise_steps": 10,
+        "omega": 0,
+        "attention_layer": 12,
+        "attention_branch": "positive",
+        "attention_instrumentation_max_error": 0.0,
+        "initial_state_sha256": "313c34097facb30c7cf2ac8d6c807b709f90f5fc4aecc8b759cef4e28080cf0b",
+        "initial_frame_sha256": "6368297adaa34b9194ba5d5da8103b4e1e6ee9a0a46cc86806af3253ae2a596f",
+        "source_sha256": "41c0c1a0dfe8e112e92912f41aad24d41b711e85a2a3e56e3160fc3f91e6d86c",
+        "checkpoint": "/shared/rsaas/apotnis2/openpi_cache/openpi-assets/checkpoints/pi05_libero_pytorch",
+        "job_id": "29314.1",
+        "gpu": "NVIDIA A40",
+        "seconds": 40.8742196559906
+      }
+    },
+    {
+      "task": "libero_10_swap_05",
+      "id": "libero_10_swap_05_episode10",
+      "method": "contrastflow",
+      "omega": 2,
+      "source_frames": 150,
+      "frames": 170,
+      "terminal_hold_frames": 20,
+      "fps": 10,
+      "width": 896,
+      "height": 896,
+      "file": "libero_10_swap_05_episode10_contrastflow.mp4",
+      "source_sha256": "2dcae3e8d3957277dfdad6b16eba47e1686eafdf52fdb3b3e109afc4a03a113e",
+      "sha256": "556cf4b544a9138496eeeb90a2e0c358192a285dca1c53b2caad8d766f53de2a",
+      "fully_decoded": true,
+      "all_source_frames_once": true,
+      "success": true,
+      "native_state_rerender": {
+        "task": "libero_10_swap_05",
+        "arm": "emb_zero",
+        "frames": 150,
+        "rendered": 150,
+        "native_resolution": [
+          896,
+          896
+        ],
+        "physics_steps": 0,
+        "policy_calls": 0,
+        "source_sha256": "2dcae3e8d3957277dfdad6b16eba47e1686eafdf52fdb3b3e109afc4a03a113e",
+        "checks": [
+          {
+            "frame": 0,
+            "same_frame_mae_255": 0.8630167643229166,
+            "nearby_frame_mae_255": {
+              "0": 0.8630167643229166,
+              "1": 1.0032806396484375,
+              "2": 1.2898457845052083
+            },
+            "eef_error_m": 2.6899611422596035e-16
+          },
+          {
+            "frame": 75,
+            "same_frame_mae_255": 1.1354878743489583,
+            "nearby_frame_mae_255": {
+              "73": 6.209523518880208,
+              "74": 4.4691619873046875,
+              "75": 1.1354878743489583,
+              "76": 3.977727254231771,
+              "77": 6.0473988850911455
+            },
+            "eef_error_m": 0.0007957521832355763
+          },
+          {
+            "frame": 149,
+            "same_frame_mae_255": 0.841400146484375,
+            "nearby_frame_mae_255": {
+              "147": 1.5070902506510417,
+              "148": 1.2100372314453125,
+              "149": 0.841400146484375
+            },
+            "eef_error_m": 0.0004928789242383269
+          }
+        ],
+        "state_roundtrip_atol": 1e-12,
+        "original_resolution": [
+          256,
+          256
+        ],
+        "source_state_frames_preserved": true,
+        "eef_max_abs_m": 0.0008459235958411249,
+        "training_alignment_note": null
+      },
+      "trajectory_overlay": {
+        "color_rgb": [
+          32,
+          220,
+          90
+        ],
+        "width_pixels": 5.12,
+        "outline_width_pixels": 7.04,
+        "accumulated_executed_path": true,
+        "reset_at_replan": false
+      },
+      "capture_metadata": {
+        "name": "libero_10_swap_05_episode10",
+        "suite": "libero_10_swap",
+        "task_id": 5,
+        "episode": 10,
+        "task_name": "STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy",
+        "axis": "Long swap",
+        "sampling": "Qualitative matched sample selected from historical winning initial-state IDs; noise seed 100, 500 policy steps plus 10 settling steps. Outcomes are independently recorded.",
+        "change": "Book and mug exchange positions.",
+        "contrastflow_omega": 2,
+        "prompt": "pick up the book and place it in the back compartment of the caddy",
+        "arm": "emb_zero",
+        "success": true,
+        "steps": 149,
+        "frames": 150,
+        "chunks": 30,
+        "noise_seed": 100,
+        "environment_seed": 7,
+        "control_horizon": 500,
+        "warmup_steps": 10,
+        "replan": 5,
+        "denoise_steps": 10,
+        "omega": 2,
+        "attention_layer": 12,
+        "attention_branch": "positive",
+        "attention_instrumentation_max_error": 0.0,
+        "initial_state_sha256": "313c34097facb30c7cf2ac8d6c807b709f90f5fc4aecc8b759cef4e28080cf0b",
+        "initial_frame_sha256": "6368297adaa34b9194ba5d5da8103b4e1e6ee9a0a46cc86806af3253ae2a596f",
+        "source_sha256": "2dcae3e8d3957277dfdad6b16eba47e1686eafdf52fdb3b3e109afc4a03a113e",
+        "checkpoint": "/shared/rsaas/apotnis2/openpi_cache/openpi-assets/checkpoints/pi05_libero_pytorch",
+        "job_id": "29315.0",
+        "gpu": "NVIDIA A40",
+        "seconds": 24.124666690826416
+      }
+    }
+  ],
+  "pair_verified": {
+    "initial_frame_exact": true,
+    "initial_state_exact": true,
+    "common_noise_exact": true,
+    "full_control_horizon": 500
+  },
+  "training_reference": "media/libero_10_swap_05_training_reference.json",
+  "training_video": "static/videos/libero_10_swap_05_train.mp4",
+  "layout": [
+    "Train setup",
+    "Test setup",
+    "pi0.5",
+    "ContrastFlow"
+  ],
+  "attention_displayed": false,
+  "zoom": false,
+  "text_bubbles": false,
+  "position_change": "Book and mug exchange positions."
+}

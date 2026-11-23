@@ -1,0 +1,101 @@
+{
+  "task_key": "libero_10_swap_05_episode2",
+  "original_suite": "libero_10",
+  "original_task": "STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy",
+  "original_instruction": "pick up the book and place it in the back compartment of the caddy",
+  "modified_instruction": "pick up the book and place it in the back compartment of the caddy",
+  "demo": "demo_0",
+  "dataset": "yifengzhu-hf/LIBERO-datasets",
+  "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+  "source_url": "https://huggingface.co/datasets/yifengzhu-hf/LIBERO-datasets/resolve/f13aa24a3da8c43c7225569f28c562979fa0e35a/libero_10/STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy_demo.hdf5",
+  "source_dataset_page": "https://huggingface.co/datasets/yifengzhu-hf/LIBERO-datasets",
+  "source_bddl": "libero/libero/bddl_files/libero_10/STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy.bddl",
+  "frames": 234,
+  "width": 128,
+  "height": 128,
+  "source_frames_sha256": "9a401cb710bdf29141a04a20b31cfbecd2739449b6bbfad554f08d73bc56b263",
+  "display_frames_sha256": "f91ecda09fe1a4a51d154b53f122028d91f11a5a568f677c427aad62a5b10ba2",
+  "rotation_degrees": 180,
+  "control_hz": 20,
+  "change": "Book and mug exchange positions.",
+  "position_caption": "Book and mug exchange positions.",
+  "positions_changed": true,
+  "placement_definitions_exact": false,
+  "bddl_diff_file": "libero_10_swap_05_episode2.bddl.diff",
+  "original_bddl_sha256": "07ca32c940d70c065e870452ef9c63e6dfa1d8506e6a86cf9b3763f652ba2d9f",
+  "pro_bddl_sha256": "3f9677df26af84b85bc1db4ac9818c5b608e710712677e8d728f7d24d10e881c",
+  "selection": "demo_0 for every task; no outcome selection",
+  "reference_note": "Original human demonstration with a separate initial state; exact policy training split membership is not asserted.",
+  "native_video": {
+    "task": "libero_10_swap_05",
+    "id": "libero_10_swap_05",
+    "method": "train",
+    "omega": null,
+    "source_frames": 234,
+    "frames": 234,
+    "terminal_hold_frames": 0,
+    "fps": 10,
+    "width": 896,
+    "height": 896,
+    "file": "libero_10_swap_05_train.mp4",
+    "source_sha256": "853085bb5661e47baa814545bea08daaf442339d9d336f977835aceba3db1d6e",
+    "sha256": "bedd9b641ed5a760decf256badb304eef577c7c010b4b5f7216e2de9a07f4349",
+    "fully_decoded": true,
+    "all_source_frames_once": true,
+    "success": null,
+    "native_state_rerender": {
+      "task": "libero_10_swap_05",
+      "arm": "training",
+      "frames": 234,
+      "rendered": 234,
+      "native_resolution": [
+        896,
+        896
+      ],
+      "physics_steps": 0,
+      "policy_calls": 0,
+      "source_sha256": "853085bb5661e47baa814545bea08daaf442339d9d336f977835aceba3db1d6e",
+      "checks": [
+        {
+          "frame": 0,
+          "same_frame_mae_255": 1.43548583984375,
+          "nearby_frame_mae_255": {
+            "0": 1.43548583984375,
+            "1": 1.50592041015625,
+            "2": 1.5634969075520833
+          }
+        },
+        {
+          "frame": 117,
+          "same_frame_mae_255": 2.1651204427083335,
+          "nearby_frame_mae_255": {
+            "115": 2.2267049153645835,
+            "116": 1.2698160807291667,
+            "117": 2.1651204427083335,
+            "118": 2.8541259765625,
+            "119": 3.34014892578125
+          }
+        },
+        {
+          "frame": 233,
+          "same_frame_mae_255": 2.0153401692708335,
+          "nearby_frame_mae_255": {
+            "231": 2.13067626953125,
+            "232": 1.2366536458333333,
+            "233": 2.0153401692708335
+          }
+        }
+      ],
+      "state_roundtrip_atol": 1e-12,
+      "original_resolution": [
+        128,
+        128
+      ],
+      "source_state_frames_preserved": true,
+      "eef_max_abs_m": null,
+      "training_alignment_note": "All original demo states rendered in order; archived RGB observations are post-action and can lead the state stream by one frame."
+    },
+    "trajectory_overlay": null,
+    "capture_metadata": null
+  }
+}
