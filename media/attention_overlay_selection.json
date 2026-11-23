@@ -49,8 +49,9 @@
       "success": true
     }
   ],
-  "layout": "One direct image overlay per method; pi0.5 and ContrastFlow side by side.",
+  "layout": "For each method, Original camera on the left and Attention overlay on the right; pi0.5 and ContrastFlow play side by side.",
   "long_swap_excluded": true,
   "spatial_source_note": "Earlier seed105 sample has verified attention; the newer task01/task04 trial24 camera archives contain no attention tensors.",
-  "previous_media_preserved": true
+  "previous_media_preserved": true,
+  "original_camera_frames_preserved": true
 }
