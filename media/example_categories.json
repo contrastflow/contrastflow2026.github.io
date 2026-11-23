@@ -1,0 +1,15 @@
+{
+  "Object change": [
+    "libero_object_swap_06",
+    "libero_goal_task_08_diverse"
+  ],
+  "Goal relocation": [
+    "libero_goal_swap_08"
+  ],
+  "Placement recovery": [
+    "libero_spatial_swap_01"
+  ],
+  "Scene rearrangement": [
+    "libero_goal_swap_01"
+  ]
+}

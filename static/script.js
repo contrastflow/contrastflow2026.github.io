@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let visible = false;
     let manualPause = false;
     const start = () => {
-      if (!visible || document.hidden || manualPause) return;
+      if (!visible || document.hidden || manualPause || group.closest("[hidden]")) return;
       videos.forEach(loadVideo);
       if (videos.some(video => video.readyState < 2)) return;
       videos.forEach(video => {
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
       video.muted = true;
       video.addEventListener("canplay", start);
       video.addEventListener("play", () => {
-        if (!visible || document.hidden) { video.pause(); return; }
+        if (!visible || document.hidden || group.closest("[hidden]")) { video.pause(); return; }
         manualPause = false;
         video.classList.add("is-playing");
         start();
@@ -105,12 +105,70 @@ document.addEventListener("DOMContentLoaded", () => {
         else { manualPause = false; videos.forEach(video => video.pause()); }
       });
     }, { threshold: [0, 0.1] });
+    group.addEventListener("examplechange", () => {
+      visible = false;
+      manualPause = false;
+      videos.forEach(video => { video.pause(); if (video.readyState >= 1) video.currentTime = 0; });
+      observer.unobserve(group);
+      observer.observe(group);
+    });
     observer.observe(group);
     document.addEventListener("visibilitychange", () => {
       if (document.hidden) videos.forEach(video => video.pause());
       else start();
     });
   });
+  // Switch examples only on request; hidden slides never play in the background.
+  const caseCarousels = Array.from(document.querySelectorAll(".case-carousel"));
+  caseCarousels.forEach(carousel => {
+    const slides = Array.from(carousel.querySelectorAll(":scope > .case-slide"));
+    const dots = Array.from(carousel.querySelectorAll(".case-dots .dot"));
+    const counter = carousel.querySelector(".case-counter");
+    let active = 0;
+    const show = index => {
+      active = (index + slides.length) % slides.length;
+      slides.forEach((slide, i) => {
+        slide.hidden = i !== active;
+        slide.inert = i !== active;
+        slide.querySelectorAll(".sim-comparison, .attention-comparison").forEach(group => {
+          group.dispatchEvent(new Event("examplechange"));
+        });
+        dots[i].classList.toggle("active", i === active);
+        dots[i].setAttribute("aria-pressed", String(i === active));
+      });
+      counter.textContent = `${active + 1}/${slides.length}`;
+    };
+    carousel.querySelector(".prev").addEventListener("click", () => show(active - 1));
+    carousel.querySelector(".next").addEventListener("click", () => show(active + 1));
+    dots.forEach((dot, i) => dot.addEventListener("click", () => show(i)));
+    carousel.addEventListener("keydown", event => {
+      if (event.target.closest("video")) return;
+      if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+        event.preventDefault();
+        show(active + (event.key === "ArrowRight" ? 1 : -1));
+      }
+    });
+    carousel.showLinkedExample = id => {
+      const index = slides.findIndex(slide => slide.id === id);
+      if (index >= 0) { show(index); return true; }
+      if (id === carousel.dataset.categoryAnchor) show(0);
+      return false;
+    };
+  });
+  const revealExample = hash => {
+    const id = hash.replace(/^#/, "");
+    caseCarousels.forEach(carousel => {
+      if (carousel.showLinkedExample(id)) {
+        requestAnimationFrame(() => carousel.scrollIntoView({ block:"start" }));
+      }
+    });
+  };
+  window.addEventListener("hashchange", () => revealExample(location.hash));
+  document.addEventListener("click", event => {
+    const link = event.target.closest("a[href^='#']");
+    if (link) revealExample(link.getAttribute("href"));
+  });
+  revealExample(location.hash);
   const fullPlayers = [...allVideos, ...comparisonVideos];
   // Keep the reel independent of the full-length comparison players.
   const reel = document.querySelector("#showcase");
@@ -207,7 +265,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   const sections = document.querySelectorAll("section.section");
-  const subAnchors = document.querySelectorAll("[id^='m-'], [id^='rw-'], [id^='sim-']");
+  const subAnchors = Array.from(document.querySelectorAll(".sidenav a.sub")).map(a => document.getElementById(a.hash.slice(1))).filter(Boolean);
 
   const setActive = (id, isSub) => {
     navLinks.forEach(a => {

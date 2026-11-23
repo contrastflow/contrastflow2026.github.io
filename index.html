@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="static/style.css?v=attention-no-header-v1">
+<link rel="stylesheet" href="static/style.css?v=object-carousel-v1">
 </head>
 <body>
 
@@ -32,19 +32,19 @@
   </div>
   <a href="#simulation" class="top">Simulation</a>
   <div class="sub-links">
-    <a class="sub" href="#sim-object-swap">&middot; Object relocation</a>
+    <a class="sub" href="#sim-object-swap">&middot; Object change</a>
     <a class="sub" href="#sim-goal-swap">&middot; Goal relocation</a>
     <a class="sub" href="#sim-spatial-recovery">&middot; Placement recovery</a>
     <a class="sub" href="#sim-stove-swap">&middot; Scene rearrangement</a>
-    <a class="sub" href="#sim-wine-plate">&middot; Instruction change</a>
+
   </div>
   <a href="#attention-analysis" class="top">Attention analysis</a>
   <div class="sub-links">
-    <a class="sub" href="#attention-object-swap">&middot; Object relocation</a>
+    <a class="sub" href="#attention-object-swap">&middot; Object change</a>
     <a class="sub" href="#attention-goal-swap">&middot; Goal relocation</a>
     <a class="sub" href="#attention-spatial-recovery">&middot; Placement recovery</a>
     <a class="sub" href="#attention-stove-swap">&middot; Scene rearrangement</a>
-    <a class="sub" href="#attention-wine-plate">&middot; Instruction change</a>
+
   </div>
 
 
@@ -80,13 +80,13 @@
         <a class="reel-card" href="#rw-centrifuge-videos" aria-label="Centrifuge loading: view full comparisons">
           <video class="reel-video" muted loop playsinline preload="none" poster="static/videos/rw_centrifuge_cf_success_ood_p1_blue.jpg?v=iphone-bright-v2" data-src="static/videos/rw_centrifuge_cf_success_ood_p1_blue.mp4?v=iphone-bright-v2" aria-label="ContrastFlow: Centrifuge loading" data-speed="2" autoplay></video>
         </a>
-        <a class="reel-card" href="#sim-object-swap" aria-label="Object relocation: view full comparison">
+        <a class="reel-card" href="#sim-object-swap" aria-label="Object change: view full comparison">
           <video class="reel-video" muted loop playsinline preload="none" poster="static/videos/libero_object_swap_06_overlays_reel_clean.jpg" data-src="static/videos/libero_object_swap_06_overlays_reel_clean.mp4" aria-label="LIBERO-PRO · Object swap: ContrastFlow rollout" autoplay></video>
         </a>
         <a class="reel-card" href="#rw-titration-videos" aria-label="Titration: view full comparisons">
           <video class="reel-video" muted loop playsinline preload="none" poster="static/videos/rw_titration_cf_success_2cmup.jpg?v=iphone-bright-v2" data-src="static/videos/rw_titration_cf_success_2cmup.mp4?v=iphone-bright-v2" aria-label="ContrastFlow: Titration" data-speed="2" autoplay></video>
         </a>
-        <a class="reel-card" href="#sim-wine-plate" aria-label="Instruction change: view full comparison">
+        <a class="reel-card" href="#sim-wine-plate" aria-label="Object change, example 2: view full comparison">
           <video class="reel-video" muted loop playsinline preload="none" poster="static/videos/libero_goal_task_08_diverse_sequential_reel_clean.jpg" data-src="static/videos/libero_goal_task_08_diverse_sequential_reel_clean.mp4" aria-label="ContrastFlow places the wine bottle on the plate" autoplay></video>
         </a>
         <a class="reel-card" href="#rw-videos" aria-label="Cable insertion: view full comparisons">
@@ -228,8 +228,11 @@
   <h2>Simulation: LIBERO-PRO</h2>
   <p class="trajectory-legend">Red: <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" aria-label="pi 0.5"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math>. Green: ContrastFlow. Trails show recorded motion across replans.</p>
 
-  <h3 id="sim-object-swap" class="sub">Object relocation</h3>
-  <p class="task-prompt"><strong>Task prompt:</strong> Pick the butter and place it in the basket.</p>
+  <h3 id="sim-object-swap" class="sub">Object change</h3>
+<div id="sim-object-examples" class="case-carousel" role="region" aria-roledescription="carousel" aria-labelledby="sim-object-swap" tabindex="0" data-category-anchor="sim-object-swap">
+  <span class="case-counter" aria-live="polite" aria-atomic="true">1/2</span>
+  <div class="case-slide" id="sim-object-example-1" role="group" aria-roledescription="slide" aria-label="Example 1 of 2">
+<p class="task-prompt"><strong>Task prompt:</strong> Pick the butter and place it in the basket.</p>
   <figure class="fig sim-comparison" data-task="libero_object_swap_06">
     <div class="sim-grid">
       <article class="sim-view train"><h4>Train setup</h4><video class="sim-policy training-demo" data-method="training" controls playsinline muted preload="none" poster="static/videos/libero_object_swap_06_overlays_train.jpg" aria-label="Original training demonstration: pick up the butter and place it in the basket"><source data-src="static/videos/libero_object_swap_06_overlays_train.mp4" type="video/mp4"></video></article>
@@ -239,6 +242,25 @@
     </div>
 
   </figure>
+  </div>
+  <div class="case-slide" id="sim-wine-plate" role="group" aria-roledescription="slide" aria-label="Example 2 of 2" hidden inert>
+<p class="task-prompt"><strong>Task prompt:</strong> Put the wine bottle on the plate.</p>
+  <figure class="fig sim-comparison" data-task="libero_goal_task_08_diverse">
+    <div class="sim-grid">
+      <article class="sim-view train"><h4>Train setup</h4><video class="sim-policy training-demo" data-method="training" controls playsinline muted preload="none" poster="static/videos/libero_goal_task_08_diverse_sequential_train.jpg" aria-label="Original training demonstration: put the bowl on the plate"><source data-src="static/videos/libero_goal_task_08_diverse_sequential_train.mp4" type="video/mp4"></video></article>
+      <article class="sim-view test"><h4>Test setup</h4><img src="static/videos/libero_goal_task_08_diverse_sequential_test.jpg" alt="Test setup for this task" loading="lazy" decoding="async" width="896" height="896"></article>
+      <article class="sim-view pi05"><h4><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" aria-label="pi 0.5"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math></h4><video class="sim-policy" data-method="pi05" controls playsinline muted preload="none" poster="static/videos/libero_goal_task_08_diverse_sequential_pi05.jpg?v=thin20-v1" aria-label="Full π0.5 rollout with a continuous red recorded trajectory"><source data-src="static/videos/libero_goal_task_08_diverse_sequential_pi05.mp4?v=thin20-v1" type="video/mp4"></video></article>
+      <article class="sim-view contrastflow"><h4>ContrastFlow</h4><video class="sim-policy" data-method="contrastflow" controls playsinline muted preload="none" poster="static/videos/libero_goal_task_08_diverse_sequential_contrastflow.jpg?v=thin20-v1" aria-label="Full ContrastFlow rollout with a continuous green recorded trajectory"><source data-src="static/videos/libero_goal_task_08_diverse_sequential_contrastflow.mp4?v=thin20-v1" type="video/mp4"></video></article>
+    </div>
+  </figure>
+  </div>
+  <button class="carousel-btn case-arrow prev" type="button" aria-label="Previous Object change example">←</button>
+  <button class="carousel-btn case-arrow next" type="button" aria-label="Next Object change example">→</button>
+  <div class="carousel-dots case-dots" aria-label="Choose Object change example">
+    <button class="dot active" type="button" aria-label="Show example 1" aria-controls="sim-object-example-1" aria-pressed="true"></button>
+    <button class="dot" type="button" aria-label="Show example 2" aria-controls="sim-wine-plate" aria-pressed="false"></button>
+  </div>
+</div>
 
   <h3 id="sim-goal-swap" class="sub">Goal relocation</h3>
   <p class="task-prompt"><strong>Task prompt:</strong> Put the bowl on the plate.</p>
@@ -274,16 +296,7 @@
     </div>
   </figure>
 
-  <h3 id="sim-wine-plate" class="sub">Instruction change</h3>
-  <p class="task-prompt"><strong>Task prompt:</strong> Put the wine bottle on the plate.</p>
-  <figure class="fig sim-comparison" data-task="libero_goal_task_08_diverse">
-    <div class="sim-grid">
-      <article class="sim-view train"><h4>Train setup</h4><video class="sim-policy training-demo" data-method="training" controls playsinline muted preload="none" poster="static/videos/libero_goal_task_08_diverse_sequential_train.jpg" aria-label="Original training demonstration: put the bowl on the plate"><source data-src="static/videos/libero_goal_task_08_diverse_sequential_train.mp4" type="video/mp4"></video></article>
-      <article class="sim-view test"><h4>Test setup</h4><img src="static/videos/libero_goal_task_08_diverse_sequential_test.jpg" alt="Test setup for this task" loading="lazy" decoding="async" width="896" height="896"></article>
-      <article class="sim-view pi05"><h4><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" aria-label="pi 0.5"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math></h4><video class="sim-policy" data-method="pi05" controls playsinline muted preload="none" poster="static/videos/libero_goal_task_08_diverse_sequential_pi05.jpg?v=thin20-v1" aria-label="Full π0.5 rollout with a continuous red recorded trajectory"><source data-src="static/videos/libero_goal_task_08_diverse_sequential_pi05.mp4?v=thin20-v1" type="video/mp4"></video></article>
-      <article class="sim-view contrastflow"><h4>ContrastFlow</h4><video class="sim-policy" data-method="contrastflow" controls playsinline muted preload="none" poster="static/videos/libero_goal_task_08_diverse_sequential_contrastflow.jpg?v=thin20-v1" aria-label="Full ContrastFlow rollout with a continuous green recorded trajectory"><source data-src="static/videos/libero_goal_task_08_diverse_sequential_contrastflow.mp4?v=thin20-v1" type="video/mp4"></video></article>
-    </div>
-  </figure>
+
 
 </section>
 
@@ -292,11 +305,29 @@
 <section id="attention-analysis" class="section">
 <h2>Attention analysis</h2>
 <p class="attention-legend">Attention shows each replan observation. Blue → red: low → high intensity.</p>
-<h3 id="attention-object-swap" class="sub">Object relocation</h3>
+<h3 id="attention-object-swap" class="sub">Object change</h3>
+<div id="attention-object-examples" class="case-carousel" role="region" aria-roledescription="carousel" aria-labelledby="attention-object-swap" tabindex="0" data-category-anchor="attention-object-swap">
+  <span class="case-counter" aria-live="polite" aria-atomic="true">1/2</span>
+  <div class="case-slide" id="attention-object-example-1" role="group" aria-roledescription="slide" aria-label="Example 1 of 2">
 <p class="task-prompt"><strong>Task prompt:</strong> Pick the butter and place it in the basket.</p>
 <div class="attention-comparison paired" data-task="libero_object_swap_06">
-<article class="attention-view pi05"><h4><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" aria-label="pi 0.5"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math></h4><video class="sim-policy attention-policy" data-method="pi05" controls playsinline muted preload="none" poster="static/videos/attention_libero_object_swap_06_pi05.jpg?v=no-header-v1" aria-label="Object relocation, π0.5, full rollout with camera and cleaned attention side by side"><source data-src="static/videos/attention_libero_object_swap_06_pi05.mp4?v=no-header-v1" type="video/mp4"></video></article>
-<article class="attention-view contrastflow"><h4>ContrastFlow</h4><video class="sim-policy attention-policy" data-method="contrastflow" controls playsinline muted preload="none" poster="static/videos/attention_libero_object_swap_06_contrastflow.jpg?v=no-header-v1" aria-label="Object relocation, ContrastFlow, full rollout with camera and cleaned attention side by side"><source data-src="static/videos/attention_libero_object_swap_06_contrastflow.mp4?v=no-header-v1" type="video/mp4"></video></article>
+<article class="attention-view pi05"><h4><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" aria-label="pi 0.5"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math></h4><video class="sim-policy attention-policy" data-method="pi05" controls playsinline muted preload="none" poster="static/videos/attention_libero_object_swap_06_pi05.jpg?v=no-header-v1" aria-label="Object change, π0.5, full rollout with camera and cleaned attention side by side"><source data-src="static/videos/attention_libero_object_swap_06_pi05.mp4?v=no-header-v1" type="video/mp4"></video></article>
+<article class="attention-view contrastflow"><h4>ContrastFlow</h4><video class="sim-policy attention-policy" data-method="contrastflow" controls playsinline muted preload="none" poster="static/videos/attention_libero_object_swap_06_contrastflow.jpg?v=no-header-v1" aria-label="Object change, ContrastFlow, full rollout with camera and cleaned attention side by side"><source data-src="static/videos/attention_libero_object_swap_06_contrastflow.mp4?v=no-header-v1" type="video/mp4"></video></article>
+</div>
+  </div>
+  <div class="case-slide" id="attention-wine-plate" role="group" aria-roledescription="slide" aria-label="Example 2 of 2" hidden inert>
+<p class="task-prompt"><strong>Task prompt:</strong> Put the wine bottle on the plate.</p>
+<div class="attention-comparison paired" data-task="libero_goal_task_08_diverse">
+<article class="attention-view pi05"><h4><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" aria-label="pi 0.5"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math></h4><video class="sim-policy attention-policy" data-method="pi05" controls playsinline muted preload="none" poster="static/videos/attention_libero_goal_task_08_diverse_pi05.jpg" aria-label="Object change, example 2, π0.5, full rollout with camera and cleaned attention side by side"><source data-src="static/videos/attention_libero_goal_task_08_diverse_pi05.mp4" type="video/mp4"></video></article>
+<article class="attention-view contrastflow"><h4>ContrastFlow</h4><video class="sim-policy attention-policy" data-method="contrastflow" controls playsinline muted preload="none" poster="static/videos/attention_libero_goal_task_08_diverse_contrastflow.jpg?v=no-header-v1" aria-label="Object change, example 2, ContrastFlow, full rollout with camera and cleaned attention side by side"><source data-src="static/videos/attention_libero_goal_task_08_diverse_contrastflow.mp4?v=no-header-v1" type="video/mp4"></video></article>
+</div>
+  </div>
+  <button class="carousel-btn case-arrow prev" type="button" aria-label="Previous Object change example">←</button>
+  <button class="carousel-btn case-arrow next" type="button" aria-label="Next Object change example">→</button>
+  <div class="carousel-dots case-dots" aria-label="Choose Object change example">
+    <button class="dot active" type="button" aria-label="Show example 1" aria-controls="attention-object-example-1" aria-pressed="true"></button>
+    <button class="dot" type="button" aria-label="Show example 2" aria-controls="attention-wine-plate" aria-pressed="false"></button>
+  </div>
 </div>
 <h3 id="attention-goal-swap" class="sub">Goal relocation</h3>
 <p class="task-prompt"><strong>Task prompt:</strong> Put the bowl on the plate.</p>
@@ -316,14 +347,9 @@
 <article class="attention-view pi05"><h4><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" aria-label="pi 0.5"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math></h4><video class="sim-policy attention-policy" data-method="pi05" controls playsinline muted preload="none" poster="static/videos/attention_libero_goal_swap_01_pi05.jpg" aria-label="Scene rearrangement, π0.5, full rollout with camera and cleaned attention side by side"><source data-src="static/videos/attention_libero_goal_swap_01_pi05.mp4" type="video/mp4"></video></article>
 <article class="attention-view contrastflow"><h4>ContrastFlow</h4><video class="sim-policy attention-policy" data-method="contrastflow" controls playsinline muted preload="none" poster="static/videos/attention_libero_goal_swap_01_contrastflow.jpg?v=no-header-v1" aria-label="Scene rearrangement, ContrastFlow, full rollout with camera and cleaned attention side by side"><source data-src="static/videos/attention_libero_goal_swap_01_contrastflow.mp4?v=no-header-v1" type="video/mp4"></video></article>
 </div>
-<h3 id="attention-wine-plate" class="sub">Instruction change</h3>
-<p class="task-prompt"><strong>Task prompt:</strong> Put the wine bottle on the plate.</p>
-<div class="attention-comparison paired" data-task="libero_goal_task_08_diverse">
-<article class="attention-view pi05"><h4><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" aria-label="pi 0.5"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math></h4><video class="sim-policy attention-policy" data-method="pi05" controls playsinline muted preload="none" poster="static/videos/attention_libero_goal_task_08_diverse_pi05.jpg" aria-label="Instruction change, π0.5, full rollout with camera and cleaned attention side by side"><source data-src="static/videos/attention_libero_goal_task_08_diverse_pi05.mp4" type="video/mp4"></video></article>
-<article class="attention-view contrastflow"><h4>ContrastFlow</h4><video class="sim-policy attention-policy" data-method="contrastflow" controls playsinline muted preload="none" poster="static/videos/attention_libero_goal_task_08_diverse_contrastflow.jpg?v=no-header-v1" aria-label="Instruction change, ContrastFlow, full rollout with camera and cleaned attention side by side"><source data-src="static/videos/attention_libero_goal_task_08_diverse_contrastflow.mp4?v=no-header-v1" type="video/mp4"></video></article>
-</div>
+
 </section>
 
-<script src="static/script.js?v=attention-v1"></script>
+<script src="static/script.js?v=object-carousel-v1"></script>
 </body>
 </html>

@@ -969,3 +969,23 @@ video.is-playing { filter:none; outline-color:#fff; }
 .attention-view.contrastflow h4 { color:#15803d; }
 .attention-view video { display:block; width:100%; height:auto; aspect-ratio:2/1; border-radius:10px; background:#000; }
 @media(max-width:750px) { .attention-comparison { padding:14px; } .attention-comparison.paired { grid-template-columns:1fr; } }
+
+/* Multiple examples share a category, with explicit arrow/dot navigation. */
+.case-carousel { position:relative; margin:10px 0 30px; padding:24px 56px 48px; border:1px solid var(--line); border-radius:20px; background:var(--surface); box-shadow:var(--shadow); }
+.case-slide[hidden] { display:none !important; }
+.case-carousel .task-prompt { padding-right:36px; margin:0 0 18px; }
+.case-counter { position:absolute; top:24px; right:56px; color:var(--muted); font-size:15px; line-height:1.6; }
+.case-carousel .sim-comparison, .case-carousel .attention-comparison { margin:0; padding:0; border:0; border-radius:0; box-shadow:none; }
+.case-carousel .case-arrow { width:40px; height:40px; }
+.case-carousel .case-arrow.prev { left:7px; }
+.case-carousel .case-arrow.next { right:7px; }
+.case-carousel .case-dots { bottom:17px; }
+.case-carousel:focus-visible, .case-carousel button:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
+@media(max-width:750px) {
+  .case-carousel { padding:16px 38px 44px; }
+  .case-counter { top:16px; right:38px; font-size:13px; }
+  .case-carousel .task-prompt { padding-right:30px; }
+  .case-carousel .case-arrow { width:32px; height:44px; font-size:20px; }
+  .case-carousel .case-arrow.prev { left:2px; }
+  .case-carousel .case-arrow.next { right:2px; }
+}
