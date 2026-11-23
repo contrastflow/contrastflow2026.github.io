@@ -1,0 +1,15 @@
+{
+  "category": "Scene rearrangement",
+  "examples": [
+    {
+      "task": "libero_goal_swap_01",
+      "seed": 102
+    },
+    {
+      "task": "libero_goal_swap_01",
+      "seed": 105
+    }
+  ],
+  "full_episodes": true,
+  "archived_policy_horizon": 350
+}

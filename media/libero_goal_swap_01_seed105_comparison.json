@@ -1,0 +1,408 @@
+{
+  "task": "libero_goal_swap_01",
+  "id": "libero_goal_swap_01_seed105",
+  "layout": [
+    "Train setup",
+    "Test setup",
+    "\u03c00.5",
+    "ContrastFlow"
+  ],
+  "setup_frames": {
+    "train": 0,
+    "test": 0
+  },
+  "setup_resolution": [
+    896,
+    896
+  ],
+  "policy_camera_resolution": [
+    896,
+    896
+  ],
+  "attention_displayed": false,
+  "clips": [
+    {
+      "task": "libero_goal_swap_01",
+      "id": "libero_goal_swap_01_seed105",
+      "method": "pi05",
+      "source_frames": 351,
+      "frames": 351,
+      "terminal_hold_frames": 0,
+      "duration_seconds": 35.1,
+      "fps": 10,
+      "width": 896,
+      "height": 896,
+      "file": "libero_goal_swap_01_seed105_pi05.mp4",
+      "source_sha256": "e3c82160a2c0edb6483a5860f10d413318a0ad29f1d2e257b841460d75aa9b78",
+      "sha256": "ea8422e6434b974e80584318b6fafd748d50f7f34af8e9f96b18ced256d44abb",
+      "fully_decoded": true,
+      "all_source_frames_once": true,
+      "success": false,
+      "native_state_rerender": {
+        "task": "libero_goal_swap_01",
+        "arm": "baseline",
+        "frames": 351,
+        "rendered": 351,
+        "native_resolution": [
+          896,
+          896
+        ],
+        "physics_steps": 0,
+        "policy_calls": 0,
+        "source_sha256": "e3c82160a2c0edb6483a5860f10d413318a0ad29f1d2e257b841460d75aa9b78",
+        "checks": [
+          {
+            "frame": 0,
+            "same_frame_mae_255": 1.2616933186848958,
+            "nearby_frame_mae_255": {
+              "0": 1.2616933186848958,
+              "1": 1.350616455078125,
+              "2": 1.5180867513020833
+            },
+            "eef_error_m": 2.6899611358659175e-16
+          },
+          {
+            "frame": 175,
+            "same_frame_mae_255": 1.3846689860026042,
+            "nearby_frame_mae_255": {
+              "173": 4.2532806396484375,
+              "174": 3.013086954752604,
+              "175": 1.3846689860026042,
+              "176": 2.6752421061197915,
+              "177": 3.7437235514322915
+            },
+            "eef_error_m": 0.0002839834048777856
+          },
+          {
+            "frame": 350,
+            "same_frame_mae_255": 1.285919189453125,
+            "nearby_frame_mae_255": {
+              "348": 2.165679931640625,
+              "349": 1.6535797119140625,
+              "350": 1.285919189453125
+            },
+            "eef_error_m": 4.595452047871651e-05
+          }
+        ],
+        "state_roundtrip_atol": 1e-12,
+        "original_resolution": [
+          256,
+          256
+        ],
+        "source_state_frames_preserved": true,
+        "eef_max_abs_m": 0.0008884804065005802,
+        "training_alignment_note": null
+      },
+      "trajectory_overlay": {
+        "color_rgb": [
+          239,
+          68,
+          68
+        ],
+        "width_pixels": 5.12,
+        "outline_width_pixels": 7.04,
+        "accumulated_executed_path": true,
+        "reset_at_replan": false
+      },
+      "outcome_marker": "cross"
+    },
+    {
+      "task": "libero_goal_swap_01",
+      "id": "libero_goal_swap_01_seed105",
+      "method": "contrastflow",
+      "source_frames": 137,
+      "frames": 157,
+      "terminal_hold_frames": 20,
+      "duration_seconds": 15.7,
+      "fps": 10,
+      "width": 896,
+      "height": 896,
+      "file": "libero_goal_swap_01_seed105_contrastflow.mp4",
+      "source_sha256": "250e0dba44d310f1e913a1140ec8757639f19c44bdbc5c55bc650fdce261de02",
+      "sha256": "15f95b5c9a94bfb21d2b6c38b4305c352d20e3d13c7dd6330af11b11785ab978",
+      "fully_decoded": true,
+      "all_source_frames_once": true,
+      "success": true,
+      "native_state_rerender": {
+        "task": "libero_goal_swap_01",
+        "arm": "emb-zero",
+        "frames": 137,
+        "rendered": 137,
+        "native_resolution": [
+          896,
+          896
+        ],
+        "physics_steps": 0,
+        "policy_calls": 0,
+        "source_sha256": "250e0dba44d310f1e913a1140ec8757639f19c44bdbc5c55bc650fdce261de02",
+        "checks": [
+          {
+            "frame": 0,
+            "same_frame_mae_255": 1.2616933186848958,
+            "nearby_frame_mae_255": {
+              "0": 1.2616933186848958,
+              "1": 1.3565216064453125,
+              "2": 1.6033732096354167
+            },
+            "eef_error_m": 2.6899611358659175e-16
+          },
+          {
+            "frame": 68,
+            "same_frame_mae_255": 1.20782470703125,
+            "nearby_frame_mae_255": {
+              "66": 2.1108805338541665,
+              "67": 1.7110137939453125,
+              "68": 1.20782470703125,
+              "69": 1.5864461263020833,
+              "70": 1.885528564453125
+            },
+            "eef_error_m": 6.155713526201367e-05
+          },
+          {
+            "frame": 136,
+            "same_frame_mae_255": 1.241729736328125,
+            "nearby_frame_mae_255": {
+              "134": 3.0158233642578125,
+              "135": 2.583185831705729,
+              "136": 1.241729736328125
+            },
+            "eef_error_m": 0.00035039052812080307
+          }
+        ],
+        "state_roundtrip_atol": 1e-12,
+        "original_resolution": [
+          256,
+          256
+        ],
+        "source_state_frames_preserved": true,
+        "eef_max_abs_m": 0.0009354566239370143,
+        "training_alignment_note": null
+      },
+      "trajectory_overlay": {
+        "color_rgb": [
+          32,
+          220,
+          90
+        ],
+        "width_pixels": 5.12,
+        "outline_width_pixels": 7.04,
+        "accumulated_executed_path": true,
+        "reset_at_replan": false
+      },
+      "outcome_marker": "tick"
+    }
+  ],
+  "source_hashes": {
+    "baseline": "e3c82160a2c0edb6483a5860f10d413318a0ad29f1d2e257b841460d75aa9b78",
+    "emb-zero": "250e0dba44d310f1e913a1140ec8757639f19c44bdbc5c55bc650fdce261de02"
+  },
+  "zoom": false,
+  "text_bubbles": false,
+  "inactive_grayscale": false,
+  "inactive_brightness": 1,
+  "trajectory_overlay": {
+    "color_rgb": {
+      "pi05": [
+        239,
+        68,
+        68
+      ],
+      "contrastflow": [
+        32,
+        220,
+        90
+      ]
+    },
+    "width_pixels": 5.12,
+    "outline_width_pixels": 7.04,
+    "width_scale_from_previous": 0.8,
+    "accumulated_executed_path": true,
+    "reset_at_replan": false,
+    "future_path_visible": false
+  },
+  "native_state_rerender": {
+    "training": {
+      "task": "libero_goal_swap_01",
+      "arm": "training",
+      "frames": 94,
+      "rendered": 94,
+      "native_resolution": [
+        896,
+        896
+      ],
+      "physics_steps": 0,
+      "policy_calls": 0,
+      "source_sha256": "eea72b5246ffc9db945b73e0c432e2df65c9fd686c57b3a353ccff2c2f09832f",
+      "checks": [
+        {
+          "frame": 0,
+          "same_frame_mae_255": 1.0544026692708333,
+          "nearby_frame_mae_255": {
+            "0": 1.0544026692708333,
+            "1": 1.1495768229166667,
+            "2": 1.24029541015625
+          }
+        },
+        {
+          "frame": 47,
+          "same_frame_mae_255": 1.3182169596354167,
+          "nearby_frame_mae_255": {
+            "45": 1.3105061848958333,
+            "46": 0.64495849609375,
+            "47": 1.3182169596354167,
+            "48": 1.8357950846354167,
+            "49": 2.6845906575520835
+          }
+        },
+        {
+          "frame": 93,
+          "same_frame_mae_255": 2.11077880859375,
+          "nearby_frame_mae_255": {
+            "91": 2.3695271809895835,
+            "92": 0.75506591796875,
+            "93": 2.11077880859375
+          }
+        }
+      ],
+      "state_roundtrip_atol": 1e-12,
+      "original_resolution": [
+        128,
+        128
+      ],
+      "source_state_frames_preserved": true,
+      "eef_max_abs_m": null,
+      "training_alignment_note": "All original demo states rendered in order; archived RGB observations are post-action and can lead the state stream by one frame."
+    },
+    "baseline": {
+      "task": "libero_goal_swap_01",
+      "arm": "baseline",
+      "frames": 351,
+      "rendered": 351,
+      "native_resolution": [
+        896,
+        896
+      ],
+      "physics_steps": 0,
+      "policy_calls": 0,
+      "source_sha256": "e3c82160a2c0edb6483a5860f10d413318a0ad29f1d2e257b841460d75aa9b78",
+      "checks": [
+        {
+          "frame": 0,
+          "same_frame_mae_255": 1.2616933186848958,
+          "nearby_frame_mae_255": {
+            "0": 1.2616933186848958,
+            "1": 1.350616455078125,
+            "2": 1.5180867513020833
+          },
+          "eef_error_m": 2.6899611358659175e-16
+        },
+        {
+          "frame": 175,
+          "same_frame_mae_255": 1.3846689860026042,
+          "nearby_frame_mae_255": {
+            "173": 4.2532806396484375,
+            "174": 3.013086954752604,
+            "175": 1.3846689860026042,
+            "176": 2.6752421061197915,
+            "177": 3.7437235514322915
+          },
+          "eef_error_m": 0.0002839834048777856
+        },
+        {
+          "frame": 350,
+          "same_frame_mae_255": 1.285919189453125,
+          "nearby_frame_mae_255": {
+            "348": 2.165679931640625,
+            "349": 1.6535797119140625,
+            "350": 1.285919189453125
+          },
+          "eef_error_m": 4.595452047871651e-05
+        }
+      ],
+      "state_roundtrip_atol": 1e-12,
+      "original_resolution": [
+        256,
+        256
+      ],
+      "source_state_frames_preserved": true,
+      "eef_max_abs_m": 0.0008884804065005802,
+      "training_alignment_note": null
+    },
+    "emb-zero": {
+      "task": "libero_goal_swap_01",
+      "arm": "emb-zero",
+      "frames": 137,
+      "rendered": 137,
+      "native_resolution": [
+        896,
+        896
+      ],
+      "physics_steps": 0,
+      "policy_calls": 0,
+      "source_sha256": "250e0dba44d310f1e913a1140ec8757639f19c44bdbc5c55bc650fdce261de02",
+      "checks": [
+        {
+          "frame": 0,
+          "same_frame_mae_255": 1.2616933186848958,
+          "nearby_frame_mae_255": {
+            "0": 1.2616933186848958,
+            "1": 1.3565216064453125,
+            "2": 1.6033732096354167
+          },
+          "eef_error_m": 2.6899611358659175e-16
+        },
+        {
+          "frame": 68,
+          "same_frame_mae_255": 1.20782470703125,
+          "nearby_frame_mae_255": {
+            "66": 2.1108805338541665,
+            "67": 1.7110137939453125,
+            "68": 1.20782470703125,
+            "69": 1.5864461263020833,
+            "70": 1.885528564453125
+          },
+          "eef_error_m": 6.155713526201367e-05
+        },
+        {
+          "frame": 136,
+          "same_frame_mae_255": 1.241729736328125,
+          "nearby_frame_mae_255": {
+            "134": 3.0158233642578125,
+            "135": 2.583185831705729,
+            "136": 1.241729736328125
+          },
+          "eef_error_m": 0.00035039052812080307
+        }
+      ],
+      "state_roundtrip_atol": 1e-12,
+      "original_resolution": [
+        256,
+        256
+      ],
+      "source_state_frames_preserved": true,
+      "eef_max_abs_m": 0.0009354566239370143,
+      "training_alignment_note": null
+    }
+  },
+  "training_video": {
+    "file": "libero_goal_swap_01_seed102_train.mp4",
+    "frames": 94,
+    "source_frames": 94,
+    "fps": 10,
+    "duration_seconds": 9.4,
+    "width": 896,
+    "height": 896,
+    "sha256": "dcd2bf812fc78c228e61da642faf34e00180d87b0f9bfcdc64e605e60e2e2ecd",
+    "fully_decoded": true,
+    "playback": "Starts with the two policy clips; holds the final frame until the group restarts."
+  },
+  "setup_display": {
+    "train": "full training demonstration video",
+    "test": "original initial frame image"
+  },
+  "noise_seed": 105,
+  "attention_status": "Not published: reconstructed actions failed replay parity on A40; existing seed102 attention comparison retained.",
+  "initial_state_equal": true,
+  "initial_camera_equal": true,
+  "common_noise_equal": true
+}
