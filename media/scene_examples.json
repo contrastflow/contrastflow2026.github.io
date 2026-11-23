@@ -4,12 +4,15 @@
     {
       "task": "libero_goal_swap_01",
       "seed": 102
-    },
-    {
-      "task": "libero_goal_swap_01",
-      "seed": 105
     }
   ],
   "full_episodes": true,
-  "archived_policy_horizon": 350
+  "archived_policy_horizon": 350,
+  "archived_examples": [
+    {
+      "task": "libero_goal_swap_01",
+      "seed": 105,
+      "reason": "Removed from active page at user request; source clips preserved."
+    }
+  ]
 }
