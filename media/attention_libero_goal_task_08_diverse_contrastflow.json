@@ -1,6 +1,6 @@
 {
   "task": "libero_goal_task_08_diverse",
-  "title": "Instruction change",
+  "title": "Object change",
   "method": "contrastflow",
   "video_asset": "static/videos/attention_libero_goal_task_08_diverse_contrastflow.mp4",
   "poster_asset": "static/videos/attention_libero_goal_task_08_diverse_contrastflow.jpg",
