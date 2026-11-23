@@ -3,45 +3,91 @@
   "examples": [
     {
       "task": "libero_spatial_swap_04",
-      "trial": 24,
-      "omega": 1,
-      "simulation_anchor": "sim-spatial-04-trial24",
+      "episode": 3,
+      "omega": 2,
+      "simulation_anchor": "sim-spatial-04-episode3",
       "baseline_success": false,
       "contrastflow_success": true,
       "training_video": "libero_spatial_swap_04_train.mp4",
+      "shared_raw_noise_recorded": true,
+      "initial_state_exact": true,
+      "policy_steps": [
+        500,
+        112
+      ],
       "records": {
         "pi05": {
-          "id": "libero_spatial_swap_04_trial24",
+          "task": "libero_spatial_swap_04",
+          "id": "libero_spatial_swap_04_episode3",
           "method": "pi05",
-          "frames": 361,
-          "source_frames": 361,
+          "omega": 0,
+          "source_frames": 501,
+          "frames": 501,
+          "terminal_hold_frames": 0,
           "fps": 10,
           "width": 896,
           "height": 896,
+          "file": "libero_spatial_swap_04_episode3_pi05.mp4",
+          "source_sha256": "c511c25ac3012ba981046e8fc3de8ff4cf7638628d47ef1bbaa18c3b3cdb8b7d",
+          "sha256": "1804c4826ffb3dac4ca259ee2f8f0f2a0dfd2931f498803a8378050506ff0209",
           "fully_decoded": true,
           "all_source_frames_once": true,
-          "sha256": "5da6fad1701d142d537725810409f4d5d041bfdf4b778d73793f07cf9c1c4ffe",
-          "source": "/scratch/apotnis2/libero_more_candidates_20261122/historical_hires/task04_trial24/baseline/traj.npz",
-          "source_sha256": "457fcad5a31c98ddf545f4f6e88d10f0ae9578f96f9ce3f71e104864d5e98224",
-          "capture_metadata": {
-            "suite": "libero_spatial_swap",
-            "task_id": 4,
-            "trial": 24,
-            "resolution": 1024,
-            "omega_cf": 1.0,
-            "omega_base": 0.0,
-            "m18_mode": "emb_zero",
-            "erase_pct": 0.85,
-            "max_steps": 350,
-            "seed": 7,
-            "use_bddl_language": false,
-            "baseline_success": false,
-            "cf_success": true,
-            "baseline_fallback": 0,
-            "cf_fallback": 0,
-            "instruction": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate"
+          "success": false,
+          "native_state_rerender": {
+            "task": "libero_spatial_swap_04_episode3",
+            "arm": "baseline",
+            "frames": 501,
+            "rendered": 501,
+            "native_resolution": [
+              896,
+              896
+            ],
+            "physics_steps": 0,
+            "policy_calls": 0,
+            "source_sha256": "c511c25ac3012ba981046e8fc3de8ff4cf7638628d47ef1bbaa18c3b3cdb8b7d",
+            "checks": [
+              {
+                "frame": 0,
+                "same_frame_mae_255": 1.3304443359375,
+                "nearby_frame_mae_255": {
+                  "0": 1.3304443359375,
+                  "1": 1.3523712158203125,
+                  "2": 1.3852945963541667
+                },
+                "eef_error_m": 2.6899611474133265e-16
+              },
+              {
+                "frame": 250,
+                "same_frame_mae_255": 1.43548583984375,
+                "nearby_frame_mae_255": {
+                  "248": 4.849934895833333,
+                  "249": 3.4642333984375,
+                  "250": 1.43548583984375,
+                  "251": 2.786890665690104,
+                  "252": 3.486419677734375
+                },
+                "eef_error_m": 0.0007244043328318295
+              },
+              {
+                "frame": 500,
+                "same_frame_mae_255": 1.2814178466796875,
+                "nearby_frame_mae_255": {
+                  "498": 2.1399027506510415,
+                  "499": 1.77410888671875,
+                  "500": 1.2814178466796875
+                },
+                "eef_error_m": 0.0001618710765186604
+              }
+            ],
+            "state_roundtrip_atol": 1e-12,
+            "original_resolution": [
+              256,
+              256
+            ],
+            "source_state_frames_preserved": true,
+            "eef_max_abs_m": 0.0009155577411859017,
+            "training_alignment_note": null
           },
-          "common_noise_verified": false,
           "trajectory_overlay": {
             "color_rgb": [
               239,
@@ -53,40 +99,158 @@
             "accumulated_executed_path": true,
             "reset_at_replan": false
           },
-          "original_resolution": 1024
+          "capture_metadata": {
+            "name": "libero_spatial_swap_04_episode3",
+            "suite": "libero_spatial_swap",
+            "task_id": 4,
+            "episode": 3,
+            "task_name": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate",
+            "axis": "Spatial Swap",
+            "contrastflow_omega": 2,
+            "prompt_source": "task.language: top drawer instruction requested by user",
+            "sampling": "Four qualitative matched cabinet-task pairs; archived omega1 failure-success cases guide candidate selection. New omega2 runs use 500 policy actions plus 10 settling, replan5, full attention tensors. Not a success-rate evaluation.",
+            "prompt": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+            "arm": "baseline",
+            "success": false,
+            "steps": 500,
+            "frames": 501,
+            "chunks": 100,
+            "noise_seed": 100,
+            "environment_seed": 7,
+            "control_horizon": 500,
+            "warmup_steps": 10,
+            "replan": 5,
+            "denoise_steps": 10,
+            "omega": 0,
+            "attention_layer": 12,
+            "attention_branch": "all recorded prefix calls",
+            "attention_call_order": [
+              "policy positive"
+            ],
+            "attention_tensor_axes": [
+              "replan",
+              "prefix_call",
+              "head",
+              "language_query",
+              "camera",
+              "image_patch"
+            ],
+            "attention_cameras": [
+              "agentview",
+              "robot0_eye_in_hand"
+            ],
+            "attention_tensor_dtype": "float32",
+            "attention_tensor_shape": [
+              100,
+              1,
+              8,
+              19,
+              2,
+              256
+            ],
+            "attention_layout": {
+              "image_spans": [
+                [
+                  0,
+                  256
+                ],
+                [
+                  256,
+                  512
+                ],
+                [
+                  512,
+                  768
+                ]
+              ],
+              "lang_span": [
+                768,
+                968
+              ],
+              "prefix_len": 968
+            },
+            "attention_instrumentation_max_error": 0.0,
+            "initial_state_sha256": "6ea947add1b57c78fe524983a9ef7468e22f73362d5d38b8a26f810a94f70990",
+            "initial_frame_sha256": "5589566e19605c7538b43807dc29674cfd1d450aefbe6dc451a36b87e73eea77",
+            "source_sha256": "c511c25ac3012ba981046e8fc3de8ff4cf7638628d47ef1bbaa18c3b3cdb8b7d",
+            "checkpoint": "/shared/rsaas/apotnis2/openpi_cache/openpi-assets/checkpoints/pi05_libero_pytorch",
+            "job_id": "29324.0",
+            "gpu": "NVIDIA A40",
+            "seconds": 45.958134174346924
+          }
         },
         "contrastflow": {
-          "id": "libero_spatial_swap_04_trial24",
+          "task": "libero_spatial_swap_04",
+          "id": "libero_spatial_swap_04_episode3",
           "method": "contrastflow",
-          "frames": 133,
-          "source_frames": 133,
+          "omega": 2,
+          "source_frames": 113,
+          "frames": 113,
+          "terminal_hold_frames": 0,
           "fps": 10,
           "width": 896,
           "height": 896,
+          "file": "libero_spatial_swap_04_episode3_contrastflow.mp4",
+          "source_sha256": "01506fe66453d6feab54072a31d3ca37e122de9fa53b4d0c3a100c3852e51342",
+          "sha256": "861218a35677aafe5b0872e21245a7cbd2303585c1aec4564da3c63b23bdda3e",
           "fully_decoded": true,
           "all_source_frames_once": true,
-          "sha256": "574f8cab87162fa3e168734e4660d6570605284274834f7b2f1364b6582376c8",
-          "source": "/scratch/apotnis2/libero_more_candidates_20261122/historical_hires/task04_trial24/cfsz/traj.npz",
-          "source_sha256": "b9af9b7ec7db09a6b70c2980b56570d3691a21285b3fe9f3b1f3fc6dadfd31fe",
-          "capture_metadata": {
-            "suite": "libero_spatial_swap",
-            "task_id": 4,
-            "trial": 24,
-            "resolution": 1024,
-            "omega_cf": 1.0,
-            "omega_base": 0.0,
-            "m18_mode": "emb_zero",
-            "erase_pct": 0.85,
-            "max_steps": 350,
-            "seed": 7,
-            "use_bddl_language": false,
-            "baseline_success": false,
-            "cf_success": true,
-            "baseline_fallback": 0,
-            "cf_fallback": 0,
-            "instruction": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate"
+          "success": true,
+          "native_state_rerender": {
+            "task": "libero_spatial_swap_04_episode3",
+            "arm": "emb_zero",
+            "frames": 113,
+            "rendered": 113,
+            "native_resolution": [
+              896,
+              896
+            ],
+            "physics_steps": 0,
+            "policy_calls": 0,
+            "source_sha256": "01506fe66453d6feab54072a31d3ca37e122de9fa53b4d0c3a100c3852e51342",
+            "checks": [
+              {
+                "frame": 0,
+                "same_frame_mae_255": 1.3304443359375,
+                "nearby_frame_mae_255": {
+                  "0": 1.3304443359375,
+                  "1": 1.3940277099609375,
+                  "2": 1.5391082763671875
+                },
+                "eef_error_m": 2.6899611474133265e-16
+              },
+              {
+                "frame": 56,
+                "same_frame_mae_255": 1.5051930745442708,
+                "nearby_frame_mae_255": {
+                  "54": 4.016591389973958,
+                  "55": 2.8639017740885415,
+                  "56": 1.5051930745442708,
+                  "57": 3.453852335611979,
+                  "58": 5.088887532552083
+                },
+                "eef_error_m": 0.00018775320666694628
+              },
+              {
+                "frame": 112,
+                "same_frame_mae_255": 1.2367909749348958,
+                "nearby_frame_mae_255": {
+                  "110": 3.1605682373046875,
+                  "111": 2.3904571533203125,
+                  "112": 1.2367909749348958
+                },
+                "eef_error_m": 0.00031371993354056826
+              }
+            ],
+            "state_roundtrip_atol": 1e-12,
+            "original_resolution": [
+              256,
+              256
+            ],
+            "source_state_frames_preserved": true,
+            "eef_max_abs_m": 0.0009705915638771323,
+            "training_alignment_note": null
           },
-          "common_noise_verified": false,
           "trajectory_overlay": {
             "color_rgb": [
               32,
@@ -98,7 +262,87 @@
             "accumulated_executed_path": true,
             "reset_at_replan": false
           },
-          "original_resolution": 1024
+          "capture_metadata": {
+            "name": "libero_spatial_swap_04_episode3",
+            "suite": "libero_spatial_swap",
+            "task_id": 4,
+            "episode": 3,
+            "task_name": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate",
+            "axis": "Spatial Swap",
+            "contrastflow_omega": 2,
+            "prompt_source": "task.language: top drawer instruction requested by user",
+            "sampling": "Four qualitative matched cabinet-task pairs; archived omega1 failure-success cases guide candidate selection. New omega2 runs use 500 policy actions plus 10 settling, replan5, full attention tensors. Not a success-rate evaluation.",
+            "prompt": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+            "arm": "emb_zero",
+            "success": true,
+            "steps": 112,
+            "frames": 113,
+            "chunks": 23,
+            "noise_seed": 100,
+            "environment_seed": 7,
+            "control_horizon": 500,
+            "warmup_steps": 10,
+            "replan": 5,
+            "denoise_steps": 10,
+            "omega": 2,
+            "attention_layer": 12,
+            "attention_branch": "all recorded prefix calls",
+            "attention_call_order": [
+              "mask-selection positive",
+              "policy positive",
+              "policy masked negative"
+            ],
+            "attention_tensor_axes": [
+              "replan",
+              "prefix_call",
+              "head",
+              "language_query",
+              "camera",
+              "image_patch"
+            ],
+            "attention_cameras": [
+              "agentview",
+              "robot0_eye_in_hand"
+            ],
+            "attention_tensor_dtype": "float32",
+            "attention_tensor_shape": [
+              23,
+              3,
+              8,
+              19,
+              2,
+              256
+            ],
+            "attention_layout": {
+              "image_spans": [
+                [
+                  0,
+                  256
+                ],
+                [
+                  256,
+                  512
+                ],
+                [
+                  512,
+                  768
+                ]
+              ],
+              "lang_span": [
+                768,
+                968
+              ],
+              "prefix_len": 968
+            },
+            "attention_instrumentation_max_error": 0.0,
+            "initial_state_sha256": "6ea947add1b57c78fe524983a9ef7468e22f73362d5d38b8a26f810a94f70990",
+            "initial_frame_sha256": "5589566e19605c7538b43807dc29674cfd1d450aefbe6dc451a36b87e73eea77",
+            "source_sha256": "01506fe66453d6feab54072a31d3ca37e122de9fa53b4d0c3a100c3852e51342",
+            "checkpoint": "/shared/rsaas/apotnis2/openpi_cache/openpi-assets/checkpoints/pi05_libero_pytorch",
+            "job_id": "29324.0",
+            "gpu": "NVIDIA A40",
+            "seconds": 20.694704294204712
+          }
         }
       }
     },
@@ -275,5 +519,107 @@
     "seed": 105,
     "files_preserved": true
   },
-  "shared_raw_noise_recorded": false
+  "previous_task04_example": {
+    "task": "libero_spatial_swap_04",
+    "trial": 24,
+    "omega": 1,
+    "simulation_anchor": "sim-spatial-04-trial24",
+    "baseline_success": false,
+    "contrastflow_success": true,
+    "training_video": "libero_spatial_swap_04_train.mp4",
+    "records": {
+      "pi05": {
+        "id": "libero_spatial_swap_04_trial24",
+        "method": "pi05",
+        "frames": 361,
+        "source_frames": 361,
+        "fps": 10,
+        "width": 896,
+        "height": 896,
+        "fully_decoded": true,
+        "all_source_frames_once": true,
+        "sha256": "5da6fad1701d142d537725810409f4d5d041bfdf4b778d73793f07cf9c1c4ffe",
+        "source": "/scratch/apotnis2/libero_more_candidates_20261122/historical_hires/task04_trial24/baseline/traj.npz",
+        "source_sha256": "457fcad5a31c98ddf545f4f6e88d10f0ae9578f96f9ce3f71e104864d5e98224",
+        "capture_metadata": {
+          "suite": "libero_spatial_swap",
+          "task_id": 4,
+          "trial": 24,
+          "resolution": 1024,
+          "omega_cf": 1.0,
+          "omega_base": 0.0,
+          "m18_mode": "emb_zero",
+          "erase_pct": 0.85,
+          "max_steps": 350,
+          "seed": 7,
+          "use_bddl_language": false,
+          "baseline_success": false,
+          "cf_success": true,
+          "baseline_fallback": 0,
+          "cf_fallback": 0,
+          "instruction": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate"
+        },
+        "common_noise_verified": false,
+        "trajectory_overlay": {
+          "color_rgb": [
+            239,
+            68,
+            68
+          ],
+          "width_pixels": 5.12,
+          "outline_width_pixels": 7.04,
+          "accumulated_executed_path": true,
+          "reset_at_replan": false
+        },
+        "original_resolution": 1024
+      },
+      "contrastflow": {
+        "id": "libero_spatial_swap_04_trial24",
+        "method": "contrastflow",
+        "frames": 133,
+        "source_frames": 133,
+        "fps": 10,
+        "width": 896,
+        "height": 896,
+        "fully_decoded": true,
+        "all_source_frames_once": true,
+        "sha256": "574f8cab87162fa3e168734e4660d6570605284274834f7b2f1364b6582376c8",
+        "source": "/scratch/apotnis2/libero_more_candidates_20261122/historical_hires/task04_trial24/cfsz/traj.npz",
+        "source_sha256": "b9af9b7ec7db09a6b70c2980b56570d3691a21285b3fe9f3b1f3fc6dadfd31fe",
+        "capture_metadata": {
+          "suite": "libero_spatial_swap",
+          "task_id": 4,
+          "trial": 24,
+          "resolution": 1024,
+          "omega_cf": 1.0,
+          "omega_base": 0.0,
+          "m18_mode": "emb_zero",
+          "erase_pct": 0.85,
+          "max_steps": 350,
+          "seed": 7,
+          "use_bddl_language": false,
+          "baseline_success": false,
+          "cf_success": true,
+          "baseline_fallback": 0,
+          "cf_fallback": 0,
+          "instruction": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate"
+        },
+        "common_noise_verified": false,
+        "trajectory_overlay": {
+          "color_rgb": [
+            32,
+            220,
+            90
+          ],
+          "width_pixels": 5.12,
+          "outline_width_pixels": 7.04,
+          "accumulated_executed_path": true,
+          "reset_at_replan": false
+        },
+        "original_resolution": 1024
+      }
+    }
+  },
+  "previous_task04_media_preserved": true,
+  "noise_matching": "Task04 episode3 initial state and shared noise verified exact; archived task01 trial24 has no saved raw noise."
 }
