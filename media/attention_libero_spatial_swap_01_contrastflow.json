@@ -1,0 +1,1036 @@
+{
+  "task": "libero_spatial_swap_01",
+  "title": "Placement recovery",
+  "method": "contrastflow",
+  "video_asset": "static/videos/attention_libero_spatial_swap_01_contrastflow.mp4",
+  "poster_asset": "static/videos/attention_libero_spatial_swap_01_contrastflow.jpg",
+  "source_frames": 243,
+  "output_frames": 243,
+  "fps": 10,
+  "duration": 24.3,
+  "width": 1792,
+  "height": 944,
+  "panel_resolution": [
+    896,
+    896
+  ],
+  "source_sha256": "00172267aef846fcc26b9ce6540c4aa3c02275c14496baaea5393e7abd03742e",
+  "output_sha256": "5db33d6cb9ec96851e629fd835f6a04a62748c2c8aec55e8defdb030e87b5936",
+  "fully_decoded": true,
+  "all_camera_frames_once": true,
+  "attention_sampling": "Attention overlay uses its exact replan camera frame and is held until the next replan; the camera panel plays all recorded frames.",
+  "replan_frame_indices": [
+    0,
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45,
+    50,
+    55,
+    60,
+    65,
+    70,
+    75,
+    80,
+    85,
+    90,
+    95,
+    100,
+    105,
+    110,
+    115,
+    120,
+    125,
+    130,
+    135,
+    140,
+    145,
+    150,
+    155,
+    160,
+    165,
+    170,
+    175,
+    180,
+    185,
+    190,
+    195,
+    200,
+    205,
+    210,
+    215,
+    220,
+    225,
+    230,
+    235,
+    240
+  ],
+  "attention_style": {
+    "version": "rgb-register-clean-v1",
+    "normalization": "sum of method-cleaned base-camera patches after register and spike suppression",
+    "low": 0.00390625,
+    "knee": 0.02,
+    "spatial_sigma_patches": 0.8,
+    "opacity_max": 0.55,
+    "color": "blue-cyan-green-yellow-red",
+    "color_min": 0.00390625,
+    "color_max": 0.02,
+    "temporal_smoothing": false,
+    "note": "Policy calibration register mask, iterative spike suppression (ratio 2, up to 15 iterations), and sigma 0.8 Gaussian applied before display normalization. Same rule for both methods. Original raw tensors unchanged."
+  },
+  "register_cleaning": {
+    "cache_path": "/u/apotnis2/robowarp-vision-cluster/noise-conditioning-study/emb-zero/assets/cache_libero_spatial_swap_lang.pt",
+    "cache_sha256": "48065282ef34ea0bd08e54f5a2fdf0cf7f177ec0c9fb7b34e69c40b3414d37ac",
+    "common_source_sha256": "63194aa8185228ca71237719673ef0577aa922fc4aac4639b77049b94417b507",
+    "cleaner_source_sha256": "2b5e947537295f3005eab6d9754e750534884a8bb6e6974a90ca568538acba76",
+    "register_count": 9,
+    "register_coordinates": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        15
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        7,
+        10
+      ],
+      [
+        10,
+        0
+      ],
+      [
+        12,
+        1
+      ],
+      [
+        14,
+        1
+      ],
+      [
+        15,
+        3
+      ],
+      [
+        15,
+        13
+      ]
+    ],
+    "calibration_mask_ratio": 3.0,
+    "calibration_min_count_fraction": 0.5,
+    "dynamic_spike_ratio": 2.0,
+    "dynamic_spike_max_iterations": 15,
+    "gaussian_sigma": 0.8,
+    "policy_mask_parity": [
+      {
+        "chunk": "chunk000",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk001",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk002",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk003",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk004",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk005",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk006",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk007",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk008",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk009",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk010",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk011",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk012",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk013",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk014",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk015",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk016",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk017",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk018",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk019",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk020",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk021",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk022",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk023",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk024",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk025",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk026",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk027",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk028",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk029",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk030",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk031",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk032",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk033",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk034",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk035",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk036",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk037",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk038",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk039",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk040",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk041",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk042",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk043",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk044",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk045",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk046",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk047",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk048",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      }
+    ],
+    "mass_removed": [
+      {
+        "arm": "baseline",
+        "chunk": "chunk000",
+        "register_mass_fraction": 0.14642447233200073
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk001",
+        "register_mass_fraction": 0.18692809343338013
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk002",
+        "register_mass_fraction": 0.2641420066356659
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk003",
+        "register_mass_fraction": 0.25336986780166626
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk004",
+        "register_mass_fraction": 0.20290210843086243
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk005",
+        "register_mass_fraction": 0.1445940136909485
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk006",
+        "register_mass_fraction": 0.12657436728477478
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk007",
+        "register_mass_fraction": 0.12393529713153839
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk008",
+        "register_mass_fraction": 0.12944570183753967
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk009",
+        "register_mass_fraction": 0.12476936727762222
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk010",
+        "register_mass_fraction": 0.13382962346076965
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk011",
+        "register_mass_fraction": 0.12664197385311127
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk012",
+        "register_mass_fraction": 0.14294511079788208
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk013",
+        "register_mass_fraction": 0.16140879690647125
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk014",
+        "register_mass_fraction": 0.14081403613090515
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk015",
+        "register_mass_fraction": 0.14098992943763733
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk016",
+        "register_mass_fraction": 0.16010434925556183
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk017",
+        "register_mass_fraction": 0.19683030247688293
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk018",
+        "register_mass_fraction": 0.18835347890853882
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk019",
+        "register_mass_fraction": 0.18396654725074768
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk020",
+        "register_mass_fraction": 0.16166402399539948
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk021",
+        "register_mass_fraction": 0.21978287398815155
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk022",
+        "register_mass_fraction": 0.3323846459388733
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk023",
+        "register_mass_fraction": 0.25883230566978455
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk024",
+        "register_mass_fraction": 0.24027416110038757
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk025",
+        "register_mass_fraction": 0.3984171748161316
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk026",
+        "register_mass_fraction": 0.251006156206131
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk027",
+        "register_mass_fraction": 0.3510356545448303
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk028",
+        "register_mass_fraction": 0.43815913796424866
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk029",
+        "register_mass_fraction": 0.29356276988983154
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk030",
+        "register_mass_fraction": 0.4042479693889618
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk031",
+        "register_mass_fraction": 0.2581751048564911
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk032",
+        "register_mass_fraction": 0.3203233778476715
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk033",
+        "register_mass_fraction": 0.4135371148586273
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk034",
+        "register_mass_fraction": 0.4034305214881897
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk035",
+        "register_mass_fraction": 0.45941972732543945
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk036",
+        "register_mass_fraction": 0.3590089976787567
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk037",
+        "register_mass_fraction": 0.4106135964393616
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk038",
+        "register_mass_fraction": 0.3293306529521942
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk039",
+        "register_mass_fraction": 0.29346147179603577
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk040",
+        "register_mass_fraction": 0.43406111001968384
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk041",
+        "register_mass_fraction": 0.5343140959739685
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk042",
+        "register_mass_fraction": 0.3854774832725525
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk043",
+        "register_mass_fraction": 0.457956999540329
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk044",
+        "register_mass_fraction": 0.5134935975074768
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk045",
+        "register_mass_fraction": 0.5254445672035217
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk046",
+        "register_mass_fraction": 0.5127553939819336
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk047",
+        "register_mass_fraction": 0.42381271719932556
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk048",
+        "register_mass_fraction": 0.5521373748779297
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk049",
+        "register_mass_fraction": 0.5591697096824646
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk050",
+        "register_mass_fraction": 0.5310415029525757
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk051",
+        "register_mass_fraction": 0.46946603059768677
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk052",
+        "register_mass_fraction": 0.4259386956691742
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk053",
+        "register_mass_fraction": 0.5398439764976501
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk054",
+        "register_mass_fraction": 0.5656886696815491
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk055",
+        "register_mass_fraction": 0.4875484108924866
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk056",
+        "register_mass_fraction": 0.4875545799732208
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk057",
+        "register_mass_fraction": 0.4674537777900696
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk058",
+        "register_mass_fraction": 0.43793821334838867
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk059",
+        "register_mass_fraction": 0.5172680616378784
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk060",
+        "register_mass_fraction": 0.5146529674530029
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk061",
+        "register_mass_fraction": 0.52497398853302
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk062",
+        "register_mass_fraction": 0.5030694603919983
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk063",
+        "register_mass_fraction": 0.4916069209575653
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk064",
+        "register_mass_fraction": 0.4381329417228699
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk065",
+        "register_mass_fraction": 0.4916069209575653
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk066",
+        "register_mass_fraction": 0.4977443516254425
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk067",
+        "register_mass_fraction": 0.5143381357192993
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk068",
+        "register_mass_fraction": 0.5041783452033997
+      },
+      {
+        "arm": "baseline",
+        "chunk": "chunk069",
+        "register_mass_fraction": 0.5248532295227051
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk000",
+        "register_mass_fraction": 0.14642447233200073
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk001",
+        "register_mass_fraction": 0.1920662522315979
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk002",
+        "register_mass_fraction": 0.2774602174758911
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk003",
+        "register_mass_fraction": 0.22835421562194824
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk004",
+        "register_mass_fraction": 0.18661858141422272
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk005",
+        "register_mass_fraction": 0.14059016108512878
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk006",
+        "register_mass_fraction": 0.14097584784030914
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk007",
+        "register_mass_fraction": 0.1343938559293747
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk008",
+        "register_mass_fraction": 0.10240978002548218
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk009",
+        "register_mass_fraction": 0.10421527922153473
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk010",
+        "register_mass_fraction": 0.13579128682613373
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk011",
+        "register_mass_fraction": 0.1567787379026413
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk012",
+        "register_mass_fraction": 0.1494930237531662
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk013",
+        "register_mass_fraction": 0.1626635491847992
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk014",
+        "register_mass_fraction": 0.11513935029506683
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk015",
+        "register_mass_fraction": 0.16663837432861328
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk016",
+        "register_mass_fraction": 0.18818137049674988
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk017",
+        "register_mass_fraction": 0.17784325778484344
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk018",
+        "register_mass_fraction": 0.2195442020893097
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk019",
+        "register_mass_fraction": 0.20588749647140503
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk020",
+        "register_mass_fraction": 0.31335994601249695
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk021",
+        "register_mass_fraction": 0.2971276044845581
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk022",
+        "register_mass_fraction": 0.3093021810054779
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk023",
+        "register_mass_fraction": 0.27674946188926697
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk024",
+        "register_mass_fraction": 0.30878108739852905
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk025",
+        "register_mass_fraction": 0.23217815160751343
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk026",
+        "register_mass_fraction": 0.17410621047019958
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk027",
+        "register_mass_fraction": 0.14517144858837128
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk028",
+        "register_mass_fraction": 0.1348598152399063
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk029",
+        "register_mass_fraction": 0.1306825876235962
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk030",
+        "register_mass_fraction": 0.13195526599884033
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk031",
+        "register_mass_fraction": 0.12786999344825745
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk032",
+        "register_mass_fraction": 0.13065363466739655
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk033",
+        "register_mass_fraction": 0.13380679488182068
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk034",
+        "register_mass_fraction": 0.1577286720275879
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk035",
+        "register_mass_fraction": 0.08931271731853485
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk036",
+        "register_mass_fraction": 0.11172090470790863
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk037",
+        "register_mass_fraction": 0.14373570680618286
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk038",
+        "register_mass_fraction": 0.13677182793617249
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk039",
+        "register_mass_fraction": 0.09638278931379318
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk040",
+        "register_mass_fraction": 0.10898196697235107
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk041",
+        "register_mass_fraction": 0.12468273937702179
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk042",
+        "register_mass_fraction": 0.13812793791294098
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk043",
+        "register_mass_fraction": 0.1490781009197235
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk044",
+        "register_mass_fraction": 0.0953284502029419
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk045",
+        "register_mass_fraction": 0.10857896506786346
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk046",
+        "register_mass_fraction": 0.18139512836933136
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk047",
+        "register_mass_fraction": 0.11666115373373032
+      },
+      {
+        "arm": "emb-zero",
+        "chunk": "chunk048",
+        "register_mass_fraction": 0.12464400380849838
+      }
+    ],
+    "scope": "Same calibration mask and method cleaning for both positive-branch language-to-vision maps. Raw scores and actions untouched."
+  },
+  "cleaned_attention_sha256": "5255f7ef4e0cda2a454d6fdc1d9c0646442bc425f830b1e2970ffe6d268c4e33",
+  "attention_kind": "language-to-vision, positive branch, layer 12",
+  "zoom": false,
+  "text_bubbles": false,
+  "trajectory_overlay": false,
+  "policy_calls": 0
+}

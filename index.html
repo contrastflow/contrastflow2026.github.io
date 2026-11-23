@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="static/style.css?v=iphone-divider-v2">
+<link rel="stylesheet" href="static/style.css?v=attention-v1">
 </head>
 <body>
 
@@ -38,6 +38,15 @@
     <a class="sub" href="#sim-stove-swap">&middot; Scene rearrangement</a>
     <a class="sub" href="#sim-wine-plate">&middot; Instruction change</a>
   </div>
+  <a href="#attention-analysis" class="top">Attention analysis</a>
+  <div class="sub-links">
+    <a class="sub" href="#attention-object-swap">&middot; Object relocation</a>
+    <a class="sub" href="#attention-goal-swap">&middot; Goal relocation</a>
+    <a class="sub" href="#attention-spatial-recovery">&middot; Placement recovery</a>
+    <a class="sub" href="#attention-stove-swap">&middot; Scene rearrangement</a>
+    <a class="sub" href="#attention-wine-plate">&middot; Instruction change</a>
+  </div>
+
 
 
   </div>
@@ -111,171 +120,106 @@
 
 <section id="realworld" class="section">
   <h2>Real world</h2>
-
 <h3 id="rw-centrifuge-videos" class="sub">Centrifuge loading</h3>
-  <p class="task-prompt"><strong>Task prompt:</strong> Place the test tube into the target centrifuge slot.</p>
-
-  <!-- drive-clips-20261122: centrifuge -->
-  <h4 class="real-config">P1 · Red</h4>
-  <div class="real-video-pair real-task-pair">
-    <article class="real-clip" data-task="centrifuge" data-outcome="failure" data-source-id="1337QkWcPcFKNTIoQ54SsGsQNoBa09YO0">
-      <div class="real-clip-heading"><h4>π0.5</h4></div>
-      <video data-speed="2" controls playsinline preload="none" poster="static/videos/rw_centrifuge_base_fail_p1_red.jpg?v=iphone-bright-v2" aria-label="Centrifuge loading, P1 · Red, π0.5, filename-tagged failure. Full original clip: Base_fail_P1_red.mov" autoplay muted loop><source data-src="static/videos/rw_centrifuge_base_fail_p1_red.mp4?v=iphone-bright-v2" type="video/mp4"></video>
-    </article>
-    <article class="real-clip" data-task="centrifuge" data-outcome="success" data-source-id="1989DVAdEWeEbX-C5uUhdGQOfURr6Qc7q">
-      <div class="real-clip-heading"><h4>ContrastFlow</h4></div>
-      <video data-speed="2" controls playsinline preload="none" poster="static/videos/rw_centrifuge_cf_success_p1_red.jpg?v=iphone-bright-v2" aria-label="Centrifuge loading, P1 · Red, ContrastFlow, filename-tagged success. Full original clip: CF_success_P1_red.mov" autoplay muted loop><source data-src="static/videos/rw_centrifuge_cf_success_p1_red.mp4?v=iphone-bright-v2" type="video/mp4"></video>
-    </article>
-  </div>
-  <h4 class="real-config">P5 · Red</h4>
-  <div class="real-video-pair real-task-pair">
-    <article class="real-clip" data-task="centrifuge" data-outcome="failure" data-source-id="13cj8TNHLBVvTUDyU0P2V82kOuMNAFJeK">
-      <div class="real-clip-heading"><h4>π0.5</h4></div>
-      <video data-speed="2" controls playsinline preload="none" poster="static/videos/rw_centrifuge_base_fail_p5_red.jpg?v=iphone-bright-v2" aria-label="Centrifuge loading, P5 · Red, π0.5, filename-tagged failure. Full original clip: Base_fail_P5_red..mov" autoplay muted loop><source data-src="static/videos/rw_centrifuge_base_fail_p5_red.mp4?v=iphone-bright-v2" type="video/mp4"></video>
-    </article>
-    <article class="real-clip" data-task="centrifuge" data-outcome="success" data-source-id="1sJzD6iPIzPIZ3e3vZj35Gdq4Oyvstub1">
-      <div class="real-clip-heading"><h4>ContrastFlow</h4></div>
-      <video data-speed="2" controls playsinline preload="none" poster="static/videos/rw_centrifuge_cf_success_p5_red.jpg?v=iphone-bright-v2" aria-label="Centrifuge loading, P5 · Red, ContrastFlow, filename-tagged success. Full original clip: CF_success_P5_red.mov" autoplay muted loop><source data-src="static/videos/rw_centrifuge_cf_success_p5_red.mp4?v=iphone-bright-v2" type="video/mp4"></video>
-    </article>
-  </div>
-  <h4 class="real-config">OOD · P1 · Blue</h4>
-  <div class="real-video-pair real-task-pair">
-    <article class="real-clip" data-task="centrifuge" data-outcome="failure" data-source-id="1goKFs7wkkzMI95tOoXYyH_OsYKOQGlZn">
-      <div class="real-clip-heading"><h4>π0.5</h4></div>
-      <video data-speed="2" controls playsinline preload="none" poster="static/videos/rw_centrifuge_base_fail_ood_p1_blue.jpg?v=iphone-bright-v2" aria-label="Centrifuge loading, OOD · P1 · Blue, π0.5, filename-tagged failure. Full original clip: Base_fail_OOD_P1_blue.mov" autoplay muted loop><source data-src="static/videos/rw_centrifuge_base_fail_ood_p1_blue.mp4?v=iphone-bright-v2" type="video/mp4"></video>
-    </article>
-    <article class="real-clip" data-task="centrifuge" data-outcome="success" data-source-id="1PzYjUIt-WLI-opQOwSAsiKUUbSEtnd12">
-      <div class="real-clip-heading"><h4>ContrastFlow</h4></div>
-      <video data-speed="2" controls playsinline preload="none" poster="static/videos/rw_centrifuge_cf_success_ood_p1_blue.jpg?v=iphone-bright-v2" aria-label="Centrifuge loading, OOD · P1 · Blue, ContrastFlow, filename-tagged success. Full original clip: CF_success_OOD_P1_blue.mov" autoplay muted loop><source data-src="static/videos/rw_centrifuge_cf_success_ood_p1_blue.mp4?v=iphone-bright-v2" type="video/mp4"></video>
-    </article>
-  </div>
-  <h4 class="real-config">OOD · P1 · Red</h4>
-  <div class="real-video-pair real-task-pair">
-    <article class="real-clip" data-task="centrifuge" data-outcome="failure" data-source-id="1OisEYoULSRIGB9FjDl1GXbcQNcSgeK18">
-      <div class="real-clip-heading"><h4>π0.5</h4></div>
-      <video data-speed="2" controls playsinline preload="none" poster="static/videos/rw_centrifuge_base_fail_ood_p1_red.jpg?v=iphone-bright-v2" aria-label="Centrifuge loading, OOD · P1 · Red, π0.5, filename-tagged failure. Full original clip: Base_fail_OOD_P1_red.mov" autoplay muted loop><source data-src="static/videos/rw_centrifuge_base_fail_ood_p1_red.mp4?v=iphone-bright-v2" type="video/mp4"></video>
-    </article>
-  </div>
-  <h4 class="real-config">P2 · Blue</h4>
-  <div class="real-video-pair real-task-pair">
-    <article class="real-clip" data-task="centrifuge" data-outcome="success" data-source-id="1JysOUApIiqYnzYnfnYwGyh6Fj45kSQed">
-      <div class="real-clip-heading"><h4>ContrastFlow</h4></div>
-      <video data-speed="2" controls playsinline preload="none" poster="static/videos/rw_centrifuge_cf_success_p2_blue.jpg?v=iphone-bright-v2" aria-label="Centrifuge loading, P2 · Blue, ContrastFlow, filename-tagged success. Full original clip: CF_success_P2_blue.mov" autoplay muted loop><source data-src="static/videos/rw_centrifuge_cf_success_p2_blue.mp4?v=iphone-bright-v2" type="video/mp4"></video>
-    </article>
-  </div>
-  <h4 class="real-config">P3 · Blue</h4>
-  <div class="real-video-pair real-task-pair">
-    <article class="real-clip" data-task="centrifuge" data-outcome="success" data-source-id="1CKys6TYLN2m5MuhNv5wc5PhLcLbFCb4A">
-      <div class="real-clip-heading"><h4>ContrastFlow</h4></div>
-      <video data-speed="2" controls playsinline preload="none" poster="static/videos/rw_centrifuge_cf_success_p3_blue.jpg?v=iphone-bright-v2" aria-label="Centrifuge loading, P3 · Blue, ContrastFlow, filename-tagged success. Full original clip: CF_success_P3_blue.mov" autoplay muted loop><source data-src="static/videos/rw_centrifuge_cf_success_p3_blue.mp4?v=iphone-bright-v2" type="video/mp4"></video>
-    </article>
-  </div>
-
-
-<h3 id="rw-titration-videos" class="sub">Titration</h3>
-  <p class="task-prompt"><strong>Task prompt:</strong> Turn the burette valve to dispense liquid into the beaker.</p>
-
-  <!-- drive-clips-20261122: titration -->
-  <h4 class="real-config">Default</h4>
-  <div class="real-video-pair real-task-pair">
-    <article class="real-clip" data-task="titration" data-outcome="failure" data-source-id="1unUcaSlVX89tX4x2zzbmrpO4D8kCCNLT">
-      <div class="real-clip-heading"><h4>π0.5</h4></div>
-      <video data-speed="2" controls playsinline preload="none" poster="static/videos/rw_titration_base_fail_default.jpg?v=iphone-bright-v2" aria-label="Titration, Default, π0.5, filename-tagged failure. Full original clip: Base_fail_default.mov" autoplay muted loop><source data-src="static/videos/rw_titration_base_fail_default.mp4?v=iphone-bright-v2" type="video/mp4"></video>
-    </article>
-    <article class="real-clip" data-task="titration" data-outcome="success" data-source-id="1FwJHufzTn8bXoVVn-QNx5v4pH7IwyBme">
-      <div class="real-clip-heading"><h4>ContrastFlow</h4></div>
-      <video data-speed="2" controls playsinline preload="none" poster="static/videos/rw_titration_cf_success_default.jpg?v=iphone-bright-v2" aria-label="Titration, Default, ContrastFlow, filename-tagged success. Full original clip: CF_success_default.mov" autoplay muted loop><source data-src="static/videos/rw_titration_cf_success_default.mp4?v=iphone-bright-v2" type="video/mp4"></video>
-    </article>
-  </div>
-  <h4 class="real-config">Burette raised 2 cm</h4>
-  <div class="real-video-pair real-task-pair">
-    <article class="real-clip" data-task="titration" data-outcome="failure" data-source-id="1gbGC5xluIiWU8jKyP5tYM_vMGcOqEHiM">
-      <div class="real-clip-heading"><h4>π0.5</h4></div>
-      <video data-speed="2" controls playsinline preload="none" poster="static/videos/rw_titration_base_fail_2cmup.jpg?v=iphone-bright-v2" aria-label="Titration, Burette raised 2 cm, π0.5, filename-tagged failure. Full original clip: Base_fail_2cmUp.mov" autoplay muted loop><source data-src="static/videos/rw_titration_base_fail_2cmup.mp4?v=iphone-bright-v2" type="video/mp4"></video>
-    </article>
-    <article class="real-clip" data-task="titration" data-outcome="success" data-source-id="1tOQ_oZIBQE2T_bQvQLFf8zs4katkrCee">
-      <div class="real-clip-heading"><h4>ContrastFlow</h4></div>
-      <video data-speed="2" controls playsinline preload="none" poster="static/videos/rw_titration_cf_success_2cmup.jpg?v=iphone-bright-v2" aria-label="Titration, Burette raised 2 cm, ContrastFlow, filename-tagged success. Full original clip: CF_success_2cmUp.mov" autoplay muted loop><source data-src="static/videos/rw_titration_cf_success_2cmup.mp4?v=iphone-bright-v2" type="video/mp4"></video>
-    </article>
-  </div>
-  <h4 class="real-config">Stand shifted toward base</h4>
-  <div class="real-video-pair real-task-pair">
-    <article class="real-clip" data-task="titration" data-outcome="success" data-source-id="10PCrhEXDh7OP9DHXcLsKkTYUzcR6zjPM">
-      <div class="real-clip-heading"><h4>ContrastFlow</h4></div>
-      <video data-speed="2" controls playsinline preload="none" poster="static/videos/rw_titration_cf_success_towardbase.jpg?v=iphone-bright-v2" aria-label="Titration, Stand shifted toward base, ContrastFlow, filename-tagged success. Full original clip: CF_success_towardBase.mov" autoplay muted loop><source data-src="static/videos/rw_titration_cf_success_towardbase.mp4?v=iphone-bright-v2" type="video/mp4"></video>
-    </article>
-  </div>
-
-
-<div id="rw-videos" class="real-clips">
-  <h3 class="sub">Cable insertion videos</h3>
-  <p class="task-prompt"><strong>Task prompt:</strong> Insert the cable into the port.</p>
-
-  <h4 class="real-config">Configuration 2</h4>
-  <div class="real-video-pair"><article class="real-clip">
-  <div class="real-clip-heading"><h4>π0.5</h4></div>
-  <video data-speed="2" controls playsinline preload="none" poster="static/videos/baseline_fail_config2.jpg?v=iphone-bright-v2" aria-label="Cable insertion, configuration 2, π0.5 · Failure" autoplay muted loop><source data-src="static/videos/baseline_fail_config2.mp4?v=iphone-bright-v2" type="video/mp4"></video>
-
-</article><article class="real-clip">
-  <div class="real-clip-heading"><h4>ContrastFlow</h4></div>
-  <video data-speed="2" controls playsinline preload="none" poster="static/videos/contrastflow_success_config2.jpg?v=iphone-bright-v2" aria-label="Cable insertion, configuration 2, ContrastFlow · Success" autoplay muted loop><source data-src="static/videos/contrastflow_success_config2.mp4?v=iphone-bright-v2" type="video/mp4"></video>
-
+<p class="task-prompt"><strong>Task prompt:</strong> Place the test tube into the target centrifuge slot.</p>
+<h4 class="real-config">P1 · Red</h4>
+<div class="real-video-pair real-task-pair">
+<article class="real-clip" data-outcome="failure" data-source-id="1337QkWcPcFKNTIoQ54SsGsQNoBa09YO0" data-task="centrifuge">
+<div class="real-clip-heading"><h4>π0.5</h4></div>
+<video aria-label="Centrifuge loading, P1 · Red, π0.5, filename-tagged failure. Full original clip: Base_fail_P1_red.mov" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/rw_centrifuge_base_fail_p1_red.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/rw_centrifuge_base_fail_p1_red.mp4?v=iphone-bright-v2" type="video/mp4"/></video>
+</article>
+<article class="real-clip" data-outcome="success" data-source-id="1989DVAdEWeEbX-C5uUhdGQOfURr6Qc7q" data-task="centrifuge">
+<div class="real-clip-heading"><h4>ContrastFlow</h4></div>
+<video aria-label="Centrifuge loading, P1 · Red, ContrastFlow, filename-tagged success. Full original clip: CF_success_P1_red.mov" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/rw_centrifuge_cf_success_p1_red.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/rw_centrifuge_cf_success_p1_red.mp4?v=iphone-bright-v2" type="video/mp4"/></video>
+</article>
+</div>
+<div class="real-video-grid">
+<div><h4 class="real-config">P5 · Red</h4><article class="real-clip" data-outcome="success" data-source-id="1sJzD6iPIzPIZ3e3vZj35Gdq4Oyvstub1" data-task="centrifuge">
+<div class="real-clip-heading"><h4>ContrastFlow</h4></div>
+<video aria-label="Centrifuge loading, P5 · Red, ContrastFlow, filename-tagged success. Full original clip: CF_success_P5_red.mov" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/rw_centrifuge_cf_success_p5_red.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/rw_centrifuge_cf_success_p5_red.mp4?v=iphone-bright-v2" type="video/mp4"/></video>
 </article></div>
-  <div class="real-video-grid"><div><h4 class="real-config">Configuration 1</h4><article class="real-clip">
-  <div class="real-clip-heading"><h4>ContrastFlow</h4></div>
-  <video data-speed="2" controls playsinline preload="none" poster="static/videos/contrastflow_success_config1.jpg?v=iphone-bright-v2" aria-label="Cable insertion, configuration 1, ContrastFlow · Success" autoplay muted loop><source data-src="static/videos/contrastflow_success_config1.mp4?v=iphone-bright-v2" type="video/mp4"></video>
-
-</article></div><div><h4 class="real-config">Configuration 3</h4><article class="real-clip">
-  <div class="real-clip-heading"><h4>ContrastFlow</h4></div>
-  <video data-speed="2" controls playsinline preload="none" poster="static/videos/contrastflow_success_config3.jpg?v=iphone-bright-v2" aria-label="Cable insertion, configuration 3, ContrastFlow · Success" autoplay muted loop><source data-src="static/videos/contrastflow_success_config3.mp4?v=iphone-bright-v2" type="video/mp4"></video>
-
-</article></div><div><h4 class="real-config">Configuration 4</h4><article class="real-clip">
-  <div class="real-clip-heading"><h4>π0.5</h4></div>
-  <video data-speed="2" controls playsinline preload="none" poster="static/videos/baseline_fail_config4.jpg?v=iphone-bright-v2" aria-label="Cable insertion, configuration 4, π0.5 · Failure" autoplay muted loop><source data-src="static/videos/baseline_fail_config4.mp4?v=iphone-bright-v2" type="video/mp4"></video>
-
-</article></div></div>
-
-  </div>
-
+<div><h4 class="real-config">OOD · P1 · Blue</h4><article class="real-clip" data-outcome="success" data-source-id="1PzYjUIt-WLI-opQOwSAsiKUUbSEtnd12" data-task="centrifuge">
+<div class="real-clip-heading"><h4>ContrastFlow</h4></div>
+<video aria-label="Centrifuge loading, OOD · P1 · Blue, ContrastFlow, filename-tagged success. Full original clip: CF_success_OOD_P1_blue.mov" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/rw_centrifuge_cf_success_ood_p1_blue.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/rw_centrifuge_cf_success_ood_p1_blue.mp4?v=iphone-bright-v2" type="video/mp4"/></video>
+</article></div>
+<div><h4 class="real-config">P2 · Blue</h4><article class="real-clip" data-outcome="success" data-source-id="1JysOUApIiqYnzYnfnYwGyh6Fj45kSQed" data-task="centrifuge">
+<div class="real-clip-heading"><h4>ContrastFlow</h4></div>
+<video aria-label="Centrifuge loading, P2 · Blue, ContrastFlow, filename-tagged success. Full original clip: CF_success_P2_blue.mov" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/rw_centrifuge_cf_success_p2_blue.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/rw_centrifuge_cf_success_p2_blue.mp4?v=iphone-bright-v2" type="video/mp4"/></video>
+</article></div>
+<div><h4 class="real-config">P3 · Blue</h4><article class="real-clip" data-outcome="success" data-source-id="1CKys6TYLN2m5MuhNv5wc5PhLcLbFCb4A" data-task="centrifuge">
+<div class="real-clip-heading"><h4>ContrastFlow</h4></div>
+<video aria-label="Centrifuge loading, P3 · Blue, ContrastFlow, filename-tagged success. Full original clip: CF_success_P3_blue.mov" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/rw_centrifuge_cf_success_p3_blue.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/rw_centrifuge_cf_success_p3_blue.mp4?v=iphone-bright-v2" type="video/mp4"/></video>
+</article></div>
+</div>
+<h3 id="rw-titration-videos" class="sub">Titration</h3>
+<p class="task-prompt"><strong>Task prompt:</strong> Turn the burette valve to dispense liquid into the beaker.</p>
+<h4 class="real-config">Burette raised 2 cm</h4>
+<div class="real-video-pair real-task-pair">
+<article class="real-clip" data-outcome="failure" data-source-id="1gbGC5xluIiWU8jKyP5tYM_vMGcOqEHiM" data-task="titration">
+<div class="real-clip-heading"><h4>π0.5</h4></div>
+<video aria-label="Titration, Burette raised 2 cm, π0.5, filename-tagged failure. Full original clip: Base_fail_2cmUp.mov" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/rw_titration_base_fail_2cmup.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/rw_titration_base_fail_2cmup.mp4?v=iphone-bright-v2" type="video/mp4"/></video>
+</article>
+<article class="real-clip" data-outcome="success" data-source-id="1tOQ_oZIBQE2T_bQvQLFf8zs4katkrCee" data-task="titration">
+<div class="real-clip-heading"><h4>ContrastFlow</h4></div>
+<video aria-label="Titration, Burette raised 2 cm, ContrastFlow, filename-tagged success. Full original clip: CF_success_2cmUp.mov" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/rw_titration_cf_success_2cmup.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/rw_titration_cf_success_2cmup.mp4?v=iphone-bright-v2" type="video/mp4"/></video>
+</article>
+</div>
+<div class="real-video-grid">
+<div><h4 class="real-config">Default</h4><article class="real-clip" data-outcome="success" data-source-id="1FwJHufzTn8bXoVVn-QNx5v4pH7IwyBme" data-task="titration">
+<div class="real-clip-heading"><h4>ContrastFlow</h4></div>
+<video aria-label="Titration, Default, ContrastFlow, filename-tagged success. Full original clip: CF_success_default.mov" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/rw_titration_cf_success_default.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/rw_titration_cf_success_default.mp4?v=iphone-bright-v2" type="video/mp4"/></video>
+</article></div>
+<div><h4 class="real-config">Stand shifted toward base</h4><article class="real-clip" data-outcome="success" data-source-id="10PCrhEXDh7OP9DHXcLsKkTYUzcR6zjPM" data-task="titration">
+<div class="real-clip-heading"><h4>ContrastFlow</h4></div>
+<video aria-label="Titration, Stand shifted toward base, ContrastFlow, filename-tagged success. Full original clip: CF_success_towardBase.mov" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/rw_titration_cf_success_towardbase.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/rw_titration_cf_success_towardbase.mp4?v=iphone-bright-v2" type="video/mp4"/></video>
+</article></div>
+</div>
+<h3 id="rw-videos" class="sub">Cable insertion</h3>
+<p class="task-prompt"><strong>Task prompt:</strong> Insert the cable into the port.</p>
+<h4 class="real-config">Configuration 2</h4>
+<div class="real-video-pair real-task-pair">
+<article class="real-clip">
+<div class="real-clip-heading"><h4>π0.5</h4></div>
+<video aria-label="Cable insertion, configuration 2, π0.5 · Failure" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/baseline_fail_config2.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/baseline_fail_config2.mp4?v=iphone-bright-v2" type="video/mp4"/></video>
+</article>
+<article class="real-clip">
+<div class="real-clip-heading"><h4>ContrastFlow</h4></div>
+<video aria-label="Cable insertion, configuration 2, ContrastFlow · Success" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/contrastflow_success_config2.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/contrastflow_success_config2.mp4?v=iphone-bright-v2" type="video/mp4"/></video>
+</article>
+</div>
+<div class="real-video-grid">
+<div><h4 class="real-config">Configuration 1</h4><article class="real-clip">
+<div class="real-clip-heading"><h4>ContrastFlow</h4></div>
+<video aria-label="Cable insertion, configuration 1, ContrastFlow · Success" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/contrastflow_success_config1.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/contrastflow_success_config1.mp4?v=iphone-bright-v2" type="video/mp4"/></video>
+</article></div>
+<div><h4 class="real-config">Configuration 3</h4><article class="real-clip">
+<div class="real-clip-heading"><h4>ContrastFlow</h4></div>
+<video aria-label="Cable insertion, configuration 3, ContrastFlow · Success" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/contrastflow_success_config3.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/contrastflow_success_config3.mp4?v=iphone-bright-v2" type="video/mp4"/></video>
+</article></div>
+</div>
 <h3 id="rw-adapter-videos" class="sub">Adapter relocation</h3>
-  <p class="task-prompt"><strong>Task prompt:</strong> Move the charging adapter to the target socket.</p>
-
-  <!-- drive-clips-20261122: adapter -->
-  <h4 class="real-config">Transfer 1 → 4</h4>
-  <div class="real-video-pair real-task-pair">
-    <article class="real-clip" data-task="adapter" data-outcome="failure" data-source-id="1ocKrL5hsde-WgtsDKtLHZoBmV0AW2o6n">
-      <div class="real-clip-heading"><h4>π0.5</h4></div>
-      <video data-speed="2" controls playsinline preload="none" poster="static/videos/rw_adapter_base_fail_1to4.jpg?v=iphone-bright-v2" aria-label="Adapter relocation, Transfer 1 → 4, π0.5, filename-tagged failure. Full original clip: Base_fail_1to4.mov" autoplay muted loop><source data-src="static/videos/rw_adapter_base_fail_1to4.mp4?v=iphone-bright-v2" type="video/mp4"></video>
-    </article>
-    <article class="real-clip" data-task="adapter" data-outcome="success" data-source-id="1gKmFb6W6xLppa064G0EMlnzGwr0dyHpJ">
-      <div class="real-clip-heading"><h4>ContrastFlow</h4></div>
-      <video data-speed="2" controls playsinline preload="none" poster="static/videos/rw_adapter_cf_success_1to4.jpg?v=iphone-bright-v2" aria-label="Adapter relocation, Transfer 1 → 4, ContrastFlow, filename-tagged success. Full original clip: CF_success_1to4.mov" autoplay muted loop><source data-src="static/videos/rw_adapter_cf_success_1to4.mp4?v=iphone-bright-v2" type="video/mp4"></video>
-    </article>
-  </div>
-  <h4 class="real-config">Transfer 2 → 4</h4>
-  <div class="real-video-pair real-task-pair">
-    <article class="real-clip" data-task="adapter" data-outcome="failure" data-source-id="1Y38s_hinN-kBsyOeobemHOV4YkT2MmyR">
-      <div class="real-clip-heading"><h4>π0.5</h4></div>
-      <video data-speed="2" controls playsinline preload="none" poster="static/videos/rw_adapter_base_fail_2to4.jpg?v=iphone-bright-v2" aria-label="Adapter relocation, Transfer 2 → 4, π0.5, filename-tagged failure. Full original clip: Base_fail_2to4.mov" autoplay muted loop><source data-src="static/videos/rw_adapter_base_fail_2to4.mp4?v=iphone-bright-v2" type="video/mp4"></video>
-    </article>
-    <article class="real-clip" data-task="adapter" data-outcome="success" data-source-id="1-4W2P1DzeFonb0lkxYLCorjqqKtYHLum">
-      <div class="real-clip-heading"><h4>ContrastFlow</h4></div>
-      <video data-speed="2" controls playsinline preload="none" poster="static/videos/rw_adapter_cf_success_2to4.jpg?v=iphone-bright-v2" aria-label="Adapter relocation, Transfer 2 → 4, ContrastFlow, filename-tagged success. Full original clip: CF_success_2to4.mov" autoplay muted loop><source data-src="static/videos/rw_adapter_cf_success_2to4.mp4?v=iphone-bright-v2" type="video/mp4"></video>
-    </article>
-  </div>
-  <h4 class="real-config">Transfer 3 → 4</h4>
-  <div class="real-video-pair real-task-pair">
-    <article class="real-clip" data-task="adapter" data-outcome="failure" data-source-id="1oPb1RI2ra_lZXIOye6UgK72vkePc_4Kx">
-      <div class="real-clip-heading"><h4>π0.5</h4></div>
-      <video data-speed="2" controls playsinline preload="none" poster="static/videos/rw_adapter_base_fail_3to4.jpg?v=iphone-bright-v2" aria-label="Adapter relocation, Transfer 3 → 4, π0.5, filename-tagged failure. Full original clip: Base_fail_3to4.mov" autoplay muted loop><source data-src="static/videos/rw_adapter_base_fail_3to4.mp4?v=iphone-bright-v2" type="video/mp4"></video>
-    </article>
-    <article class="real-clip" data-task="adapter" data-outcome="success" data-source-id="1s-fSjPWSRLx0vzr0PX_CPLw8hQEudfIq">
-      <div class="real-clip-heading"><h4>ContrastFlow</h4></div>
-      <video data-speed="2" controls playsinline preload="none" poster="static/videos/rw_adapter_cf_success_3to4.jpg?v=iphone-bright-v2" aria-label="Adapter relocation, Transfer 3 → 4, ContrastFlow, filename-tagged success. Full original clip: CF_success_3to4.mov" autoplay muted loop><source data-src="static/videos/rw_adapter_cf_success_3to4.mp4?v=iphone-bright-v2" type="video/mp4"></video>
-    </article>
-  </div>
-
-
+<p class="task-prompt"><strong>Task prompt:</strong> Move the charging adapter to the target socket.</p>
+<h4 class="real-config">Transfer 1 → 4</h4>
+<div class="real-video-pair real-task-pair">
+<article class="real-clip" data-outcome="failure" data-source-id="1ocKrL5hsde-WgtsDKtLHZoBmV0AW2o6n" data-task="adapter">
+<div class="real-clip-heading"><h4>π0.5</h4></div>
+<video aria-label="Adapter relocation, Transfer 1 → 4, π0.5, filename-tagged failure. Full original clip: Base_fail_1to4.mov" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/rw_adapter_base_fail_1to4.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/rw_adapter_base_fail_1to4.mp4?v=iphone-bright-v2" type="video/mp4"/></video>
+</article>
+<article class="real-clip" data-outcome="success" data-source-id="1gKmFb6W6xLppa064G0EMlnzGwr0dyHpJ" data-task="adapter">
+<div class="real-clip-heading"><h4>ContrastFlow</h4></div>
+<video aria-label="Adapter relocation, Transfer 1 → 4, ContrastFlow, filename-tagged success. Full original clip: CF_success_1to4.mov" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/rw_adapter_cf_success_1to4.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/rw_adapter_cf_success_1to4.mp4?v=iphone-bright-v2" type="video/mp4"/></video>
+</article>
+</div>
+<div class="real-video-grid">
+<div><h4 class="real-config">Transfer 2 → 4</h4><article class="real-clip" data-outcome="success" data-source-id="1-4W2P1DzeFonb0lkxYLCorjqqKtYHLum" data-task="adapter">
+<div class="real-clip-heading"><h4>ContrastFlow</h4></div>
+<video aria-label="Adapter relocation, Transfer 2 → 4, ContrastFlow, filename-tagged success. Full original clip: CF_success_2to4.mov" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/rw_adapter_cf_success_2to4.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/rw_adapter_cf_success_2to4.mp4?v=iphone-bright-v2" type="video/mp4"/></video>
+</article></div>
+<div><h4 class="real-config">Transfer 3 → 4</h4><article class="real-clip" data-outcome="success" data-source-id="1s-fSjPWSRLx0vzr0PX_CPLw8hQEudfIq" data-task="adapter">
+<div class="real-clip-heading"><h4>ContrastFlow</h4></div>
+<video aria-label="Adapter relocation, Transfer 3 → 4, ContrastFlow, filename-tagged success. Full original clip: CF_success_3to4.mov" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/rw_adapter_cf_success_3to4.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/rw_adapter_cf_success_3to4.mp4?v=iphone-bright-v2" type="video/mp4"/></video>
+</article></div>
+</div>
 </section>
 
 <hr>
@@ -343,6 +287,39 @@
 
 </section>
 
-<script src="static/script.js?v=parallel-views-v1"></script>
+
+<hr>
+<section id="attention-analysis" class="section">
+<h2>Attention analysis</h2>
+<p class="attention-legend">Attention shows each replan observation. Blue → red: low → high intensity.</p>
+<h3 id="attention-object-swap" class="sub">Object relocation</h3>
+<p class="task-prompt"><strong>Task prompt:</strong> Pick the butter and place it in the basket.</p>
+<div class="attention-comparison paired" data-task="libero_object_swap_06">
+<article class="attention-view pi05"><h4>π0.5</h4><video class="sim-policy attention-policy" data-method="pi05" controls playsinline muted preload="none" poster="static/videos/attention_libero_object_swap_06_pi05.jpg" aria-label="Object relocation, π0.5, full rollout with camera and cleaned attention side by side"><source data-src="static/videos/attention_libero_object_swap_06_pi05.mp4" type="video/mp4"></video></article>
+<article class="attention-view contrastflow"><h4>ContrastFlow</h4><video class="sim-policy attention-policy" data-method="contrastflow" controls playsinline muted preload="none" poster="static/videos/attention_libero_object_swap_06_contrastflow.jpg" aria-label="Object relocation, ContrastFlow, full rollout with camera and cleaned attention side by side"><source data-src="static/videos/attention_libero_object_swap_06_contrastflow.mp4" type="video/mp4"></video></article>
+</div>
+<h3 id="attention-goal-swap" class="sub">Goal relocation</h3>
+<p class="task-prompt"><strong>Task prompt:</strong> Put the bowl on the plate.</p>
+<div class="attention-comparison single" data-task="libero_goal_swap_08">
+<article class="attention-view contrastflow"><h4>ContrastFlow</h4><video class="sim-policy attention-policy" data-method="contrastflow" controls playsinline muted preload="none" poster="static/videos/attention_libero_goal_swap_08_contrastflow.jpg" aria-label="Goal relocation, ContrastFlow, full rollout with camera and cleaned attention side by side"><source data-src="static/videos/attention_libero_goal_swap_08_contrastflow.mp4" type="video/mp4"></video></article>
+</div>
+<h3 id="attention-spatial-recovery" class="sub">Placement recovery</h3>
+<p class="task-prompt"><strong>Task prompt:</strong> Pick up the black bowl next to the ramekin and place it on the plate.</p>
+<div class="attention-comparison single" data-task="libero_spatial_swap_01">
+<article class="attention-view contrastflow"><h4>ContrastFlow</h4><video class="sim-policy attention-policy" data-method="contrastflow" controls playsinline muted preload="none" poster="static/videos/attention_libero_spatial_swap_01_contrastflow.jpg" aria-label="Placement recovery, ContrastFlow, full rollout with camera and cleaned attention side by side"><source data-src="static/videos/attention_libero_spatial_swap_01_contrastflow.mp4" type="video/mp4"></video></article>
+</div>
+<h3 id="attention-stove-swap" class="sub">Scene rearrangement</h3>
+<p class="task-prompt"><strong>Task prompt:</strong> Put the bowl on the stove.</p>
+<div class="attention-comparison single" data-task="libero_goal_swap_01">
+<article class="attention-view contrastflow"><h4>ContrastFlow</h4><video class="sim-policy attention-policy" data-method="contrastflow" controls playsinline muted preload="none" poster="static/videos/attention_libero_goal_swap_01_contrastflow.jpg" aria-label="Scene rearrangement, ContrastFlow, full rollout with camera and cleaned attention side by side"><source data-src="static/videos/attention_libero_goal_swap_01_contrastflow.mp4" type="video/mp4"></video></article>
+</div>
+<h3 id="attention-wine-plate" class="sub">Instruction change</h3>
+<p class="task-prompt"><strong>Task prompt:</strong> Put the wine bottle on the plate.</p>
+<div class="attention-comparison single" data-task="libero_goal_task_08_diverse">
+<article class="attention-view contrastflow"><h4>ContrastFlow</h4><video class="sim-policy attention-policy" data-method="contrastflow" controls playsinline muted preload="none" poster="static/videos/attention_libero_goal_task_08_diverse_contrastflow.jpg" aria-label="Instruction change, ContrastFlow, full rollout with camera and cleaned attention side by side"><source data-src="static/videos/attention_libero_goal_task_08_diverse_contrastflow.mp4" type="video/mp4"></video></article>
+</div>
+</section>
+
+<script src="static/script.js?v=attention-v1"></script>
 </body>
 </html>

@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Both full policy clips start together; the shorter holds its final frame
   // until both finish, then the pair restarts together.
   const comparisonVideos = [];
-  document.querySelectorAll(".sim-comparison").forEach(group => {
+  document.querySelectorAll(".sim-comparison, .attention-comparison").forEach(group => {
     const videos = Array.from(group.querySelectorAll("video.sim-policy"));
     comparisonVideos.push(...videos);
     let visible = false;

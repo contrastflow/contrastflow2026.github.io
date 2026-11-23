@@ -1,0 +1,75 @@
+{
+  "reason": "One baseline comparison per real-world task; other configurations show ContrastFlow.",
+  "assets": [
+    {
+      "original": "static/videos/rw_centrifuge_base_fail_p5_red.mp4",
+      "archive": "static/videos/archive/before_baseline_reduction_20261122/rw_centrifuge_base_fail_p5_red.mp4",
+      "sha256": "2e00a27deba709bb587bb59bf4f97b48103c5e78005a5b9f3aceb8c026c62741"
+    },
+    {
+      "original": "static/videos/rw_centrifuge_base_fail_p5_red.jpg",
+      "archive": "static/videos/archive/before_baseline_reduction_20261122/rw_centrifuge_base_fail_p5_red.jpg",
+      "sha256": "72673ca8090bc2e9ef87d769c72d7b6c08180bf1cd2cd58ffbca72f955fd9a5d"
+    },
+    {
+      "original": "static/videos/rw_centrifuge_base_fail_ood_p1_blue.mp4",
+      "archive": "static/videos/archive/before_baseline_reduction_20261122/rw_centrifuge_base_fail_ood_p1_blue.mp4",
+      "sha256": "765c331fc0c3780ca62a62fccb15073346a14debc496ed90a76076f3cde3af55"
+    },
+    {
+      "original": "static/videos/rw_centrifuge_base_fail_ood_p1_blue.jpg",
+      "archive": "static/videos/archive/before_baseline_reduction_20261122/rw_centrifuge_base_fail_ood_p1_blue.jpg",
+      "sha256": "c8b6f92a777fdca958a0c087d901351bc6474ee03fca43265cde7ae0730627ee"
+    },
+    {
+      "original": "static/videos/rw_centrifuge_base_fail_ood_p1_red.mp4",
+      "archive": "static/videos/archive/before_baseline_reduction_20261122/rw_centrifuge_base_fail_ood_p1_red.mp4",
+      "sha256": "b895d9b51d0a70f366f761aa189d1bba89a9170bf2808976d5f79269503fcb7a"
+    },
+    {
+      "original": "static/videos/rw_centrifuge_base_fail_ood_p1_red.jpg",
+      "archive": "static/videos/archive/before_baseline_reduction_20261122/rw_centrifuge_base_fail_ood_p1_red.jpg",
+      "sha256": "1b7559f59d26f7086f09ed0644991a8014cec4b614c11c788b51dd999b4d47d6"
+    },
+    {
+      "original": "static/videos/rw_titration_base_fail_default.mp4",
+      "archive": "static/videos/archive/before_baseline_reduction_20261122/rw_titration_base_fail_default.mp4",
+      "sha256": "e46fa4c834707c98a370ae3936c5e8e251b551b0d8ebaf67972810ee7f7e7333"
+    },
+    {
+      "original": "static/videos/rw_titration_base_fail_default.jpg",
+      "archive": "static/videos/archive/before_baseline_reduction_20261122/rw_titration_base_fail_default.jpg",
+      "sha256": "5190032e0d8634c59e5019c44007ab13c1378568727834f251d67fc8906d9957"
+    },
+    {
+      "original": "static/videos/baseline_fail_config4.mp4",
+      "archive": "static/videos/archive/before_baseline_reduction_20261122/baseline_fail_config4.mp4",
+      "sha256": "06b26b24d27f518896c3d81612917133b03e75a0d451d278fd3afecf7b502eed"
+    },
+    {
+      "original": "static/videos/baseline_fail_config4.jpg",
+      "archive": "static/videos/archive/before_baseline_reduction_20261122/baseline_fail_config4.jpg",
+      "sha256": "d97f8267284a6a3bf9c1162778ebe4f634f44522bb72047e0562e3e6caf63911"
+    },
+    {
+      "original": "static/videos/rw_adapter_base_fail_2to4.mp4",
+      "archive": "static/videos/archive/before_baseline_reduction_20261122/rw_adapter_base_fail_2to4.mp4",
+      "sha256": "21d317e29a5948f82f35bc9a46fbd8877d5c384466b11ccec522debaee7b9390"
+    },
+    {
+      "original": "static/videos/rw_adapter_base_fail_2to4.jpg",
+      "archive": "static/videos/archive/before_baseline_reduction_20261122/rw_adapter_base_fail_2to4.jpg",
+      "sha256": "a45d6c5971ebf1eda50125e6465b74ab564cfbe02e062453fb6b668f0658a5cf"
+    },
+    {
+      "original": "static/videos/rw_adapter_base_fail_3to4.mp4",
+      "archive": "static/videos/archive/before_baseline_reduction_20261122/rw_adapter_base_fail_3to4.mp4",
+      "sha256": "7fc6d2aa3f14c72ebbaf53c17f588946c6e5daadbbe5e2adaeade81f7fc3b03f"
+    },
+    {
+      "original": "static/videos/rw_adapter_base_fail_3to4.jpg",
+      "archive": "static/videos/archive/before_baseline_reduction_20261122/rw_adapter_base_fail_3to4.jpg",
+      "sha256": "c4496558a7244dd946eb021da06f6ddd16aee81d50470107e163fed5c812d60d"
+    }
+  ]
+}
