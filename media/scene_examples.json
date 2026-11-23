@@ -1,5 +1,5 @@
 {
-  "category": "Scene rearrangement",
+  "category": "Goal relocation",
   "examples": [
     {
       "task": "libero_goal_swap_01",
@@ -14,5 +14,6 @@
       "seed": 105,
       "reason": "Removed from active page at user request; source clips preserved."
     }
-  ]
+  ],
+  "merged_into": "goal_relocation_examples.json"
 }

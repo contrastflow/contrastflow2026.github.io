@@ -1,0 +1,17 @@
+{
+  "category": "Goal relocation",
+  "examples": [
+    {
+      "task": "libero_goal_swap_08",
+      "simulation_anchor": "sim-goal-plate",
+      "attention_anchor": "attention-goal-plate"
+    },
+    {
+      "task": "libero_goal_swap_01",
+      "seed": 102,
+      "simulation_anchor": "sim-stove-swap",
+      "attention_anchor": "attention-stove-swap"
+    }
+  ],
+  "navigation": "Two examples with arrows, dots, and counter; existing clip sources unchanged."
+}
