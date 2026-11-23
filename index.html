@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="static/style.css?v=attention-camera-v1">
+<link rel="stylesheet" href="static/style.css?v=long-placeholders-v1">
 </head>
 <body>
 
@@ -329,13 +329,12 @@
 </div>
 
 <h3 id="sim-long-swap" class="sub">Long swap</h3>
-<p class="task-prompt"><strong>Task prompt:</strong> Pick up the book and place it in the back compartment of the caddy.</p>
-<figure class="fig sim-comparison" data-task="libero_10_swap_05" data-example="episode10">
+<figure class="fig sim-comparison" id="sim-long-swap-views">
   <div class="sim-grid">
-    <article class="sim-view train"><h4>Train setup</h4><video class="sim-policy training-demo" data-method="training" controls playsinline muted preload="none" poster="static/videos/libero_10_swap_05_train.jpg" aria-label="Original training demonstration: book into the back compartment of the caddy"><source data-src="static/videos/libero_10_swap_05_train.mp4" type="video/mp4"></video></article>
-    <article class="sim-view test"><h4>Test setup</h4><img src="static/videos/libero_10_swap_05_episode10_test.jpg" alt="Test setup: book and mug exchange positions" loading="lazy" decoding="async" width="896" height="896"></article>
-    <article class="sim-view pi05"><h4><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" aria-label="pi 0.5"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math></h4><video class="sim-policy" data-method="pi05" controls playsinline muted preload="none" poster="static/videos/libero_10_swap_05_episode10_pi05.jpg" aria-label="Full pi0.5 rollout with a continuous red recorded trajectory"><source data-src="static/videos/libero_10_swap_05_episode10_pi05.mp4" type="video/mp4"></video></article>
-    <article class="sim-view contrastflow"><h4>ContrastFlow</h4><video class="sim-policy" data-method="contrastflow" controls playsinline muted preload="none" poster="static/videos/libero_10_swap_05_episode10_contrastflow.jpg" aria-label="Full ContrastFlow rollout, omega 2, with a continuous green recorded trajectory"><source data-src="static/videos/libero_10_swap_05_episode10_contrastflow.mp4" type="video/mp4"></video></article>
+    <article class="sim-view train"><h4>Train setup</h4><div class="video-placeholder" role="img" aria-label="Empty video placeholder"></div></article>
+    <article class="sim-view test"><h4>Test setup</h4><div class="video-placeholder" role="img" aria-label="Empty video placeholder"></div></article>
+    <article class="sim-view pi05"><h4><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" aria-label="pi 0.5"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math></h4><div class="video-placeholder" role="img" aria-label="Empty video placeholder"></div></article>
+    <article class="sim-view contrastflow"><h4>ContrastFlow</h4><div class="video-placeholder" role="img" aria-label="Empty video placeholder"></div></article>
   </div>
 </figure>
 </section>

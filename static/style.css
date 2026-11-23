@@ -994,3 +994,5 @@ video.is-playing { filter:none; outline-color:#fff; }
 
 .attention-comparison.camera-overlay .attention-view video { aspect-ratio:2/1; }
 .attention-panel-labels { display:grid; grid-template-columns:1fr 1fr; gap:0; margin:0 0 8px; text-align:center; font-size:14px; color:var(--muted); }
+
+.sim-view .video-placeholder { display:block; width:100%; aspect-ratio:1; border-radius:10px; background:#d1d5db; }
