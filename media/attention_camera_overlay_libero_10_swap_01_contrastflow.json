@@ -1,0 +1,647 @@
+{
+  "task": "libero_10_swap_01",
+  "title": "Long Swap",
+  "method": "contrastflow",
+  "trial": 10,
+  "seed": 7,
+  "environment_seed": 7,
+  "omega": 2.0,
+  "success": true,
+  "run": "libero_w2s1both_20261102 libero_10_swap g0 (Table 1 ContrastFlow row, runtime v43, blender17 H100 NVL)",
+  "video_asset": "static/videos/attention_camera_overlay_libero_10_swap_01_contrastflow.mp4",
+  "poster_asset": "static/videos/attention_camera_overlay_libero_10_swap_01_contrastflow.jpg",
+  "source_sha256": "4684395ff9d55cf9c58cd3d7b2503f9621c3b836adbdad7c91129366f535db27",
+  "output_sha256": "a1421945ee43415334cd69d5ad67af9ef5c8b822a9a8a2765351edf17ccc09c0",
+  "cleaned_attention_sha256": "9723dabb9647b3b99f6365db6bacedf2c6c0708e70280ad3bec8b5ad3bb635ac",
+  "register_cleaning": {
+    "cache_path": "/scratch/dwip2/adaptive_omega/caches/cache_libero_10_swap_lang.pt",
+    "cache_sha256": "19e4438fd984709a63bac8afa6b55fbdad37c26f3ac50fa339d49a8869e63ed5",
+    "common_source_sha256": "5f90c4c74e8b4a5784cb010eef895652ae3761437ce6a41ea3996d036209dd50",
+    "cleaner_source_sha256": "2b5e947537295f3005eab6d9754e750534884a8bb6e6974a90ca568538acba76",
+    "register_count": 10,
+    "register_coordinates": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        13
+      ],
+      [
+        1,
+        15
+      ],
+      [
+        2,
+        15
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        12,
+        1
+      ],
+      [
+        13,
+        15
+      ],
+      [
+        14,
+        1
+      ],
+      [
+        15,
+        3
+      ],
+      [
+        15,
+        13
+      ]
+    ],
+    "calibration_mask_ratio": 3.0,
+    "calibration_min_count_fraction": 0.5,
+    "dynamic_spike_ratio": 2.0,
+    "dynamic_spike_max_iterations": 15,
+    "gaussian_sigma": 0.8,
+    "policy_mask_parity": [
+      {
+        "chunk": "chunk000",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk001",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk002",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk003",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk004",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk005",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk006",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk007",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk008",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk009",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk010",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk011",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk012",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk013",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk014",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk015",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk016",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk017",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk018",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk019",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk020",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk021",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk022",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk023",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk024",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk025",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk026",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk027",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk028",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk029",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk030",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk031",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk032",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk033",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk034",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk035",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk036",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk037",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk038",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk039",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk040",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk041",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk042",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk043",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk044",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk045",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk046",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk047",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk048",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk049",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk050",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk051",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk052",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk053",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk054",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk055",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk056",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk057",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk058",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk059",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk060",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk061",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk062",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk063",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk064",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk065",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk066",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk067",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk068",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      },
+      {
+        "chunk": "chunk069",
+        "matching": 256,
+        "total": 256,
+        "exact": true
+      }
+    ],
+    "raw_scores_modified": false
+  },
+  "attention_kind": "positive-branch language-to-vision attention, layer 12",
+  "attention_style": {
+    "version": "direct-overlay-v1",
+    "color": "blue-cyan-green-yellow-red",
+    "normalization": "Unit sum over 256 method-cleaned camera patches",
+    "color_min": 0.0,
+    "color_max": 0.05,
+    "opacity_min": 0.16,
+    "opacity_max": 0.78,
+    "interpolation": "bilinear",
+    "extra_smoothing": false,
+    "temporal_smoothing": false,
+    "raw_scores_modified": false
+  },
+  "replan_frame_indices": [
+    0,
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45,
+    50,
+    55,
+    60,
+    65,
+    70,
+    75,
+    80,
+    85,
+    90,
+    95,
+    100,
+    105,
+    110,
+    115,
+    120,
+    125,
+    130,
+    135,
+    140,
+    145,
+    150,
+    155,
+    160,
+    165,
+    170,
+    175,
+    180,
+    185,
+    190,
+    195,
+    200,
+    205,
+    210,
+    215,
+    220,
+    225,
+    230,
+    235,
+    240,
+    245,
+    250,
+    255,
+    260,
+    265,
+    270,
+    275,
+    280,
+    285,
+    290,
+    295,
+    300,
+    305,
+    310,
+    315,
+    320,
+    325,
+    330,
+    335,
+    340,
+    345
+  ],
+  "attention_sampling": "Each map is overlaid on the exact camera observation used to compute it; that observation is held until the next replan. No attention is fabricated for intervening frames.",
+  "source_frames": 351,
+  "output_frames": 351,
+  "width": 1792,
+  "height": 896,
+  "fps": 10,
+  "duration_seconds": 35.1,
+  "fully_decoded": true,
+  "full_episode_duration": true,
+  "all_recorded_replans_present": true,
+  "zoom": false,
+  "trajectory_overlay": false,
+  "header_band": false,
+  "policy_calls": 0,
+  "panel_resolution": [
+    896,
+    896
+  ],
+  "panels": [
+    "Original camera",
+    "Attention overlay"
+  ],
+  "all_camera_frames_once": true,
+  "camera_playback": "Every camera frame plays on the left. The right shows each attention map on its exact replan observation until the next replan.",
+  "poster_frame": 100,
+  "attention_recomputed": {
+    "how": "Attention was not saved by the run; recomputed offline from the saved episode: the runtime's env (OffScreenRenderEnv 256, seed 7, init state trial % 50, 10 wait steps) re-executes the episode's executed actions on blender12 GPU 7 (EGL), every replan observation goes through the runtime's _obs_tuple, and pi0.5 (pi05_libero_pytorch) runs the runtime's pi05_forward_envs prefix attention, lang_query_positions, clean_attention_for_layer and _percentile_mask (frozen runtime v43 code; common/spike_utils/cf_core/cf_steer md5-identical to the v16 base runtime). No rollout, no policy action used.",
+    "runtime_dir": "/scratch/dwip2/libero_bothcams_w1_20261017/runtime/cf_steer_zero",
+    "checkpoint": "/scratch/dwip2/aw_local/openpi_home/openpi-assets/checkpoints/pi05_libero_pytorch",
+    "layer": 12,
+    "erase_pct": 0.85,
+    "instruction": "put both the cream cheese box and the butter in the basket",
+    "mask_counts_base": [
+      39
+    ],
+    "mask_counts_wrist": [
+      39
+    ],
+    "obs_check_two_independent_live_envs": {
+      "calls": 70,
+      "eef_cm_vs_verified_replay_max": 0.0,
+      "agentview_u8_maxabs": 0,
+      "agentview_u8_mae_max": 0.0,
+      "wrist_u8_maxabs": 0,
+      "state8_maxabs": 0.0,
+      "calls_bit_identical": 70
+    },
+    "cross_run_policy_input_maxabs": null,
+    "cross_run_policy_input_identical_calls": null,
+    "state_render_note": "A render of the end-of-step replay state (set_init_state) is NOT the policy's image: robosuite samples the cameras inside the control step. Median per-call MAE (0-255) of the policy input vs a state render: step k 0.16, step k-1 1.28. Frames are therefore live-stepped.",
+    "replay_report": "replay of the logged actions: eef <= 0.23 cm, objects <= 0.50 cm vs the run log, 69/70 calls within 0.5 cm, success at step 348"
+  },
+  "native_replay": {
+    "native_resolution": [
+      896,
+      896
+    ],
+    "original_resolution": [
+      256,
+      256
+    ],
+    "physics_steps": "executed actions re-stepped (no policy)",
+    "policy_calls": 0,
+    "frames": 351,
+    "note": "Left panel and the right panel's base image are native 896x896 agent-view camera frames from an env live-stepped with the episode's executed actions (same reset, same camera-sampling timing as the policy's 256 px images; physics state equal to the verified replay at every call), in the policy's orientation ([::-1, ::-1])."
+  },
+  "selection_note": "Qualitative pair chosen by Dwip (2026-11-23): LIBERO-PRO Long task 1 (put both the cream cheese box and the butter in the basket), init state 10, seed 7. pi0.5 = a NEW unguided (omega 0) sample re-executed on blender12 GPU 7 with runtime v16 (illustration only, not the paper's l10_c0 episode); it puts the orange juice and the butter in the basket. ContrastFlow = the saved Table 1 episode (libero_w2s1both_20261102, omega 2, s = 1, both cameras), success.",
+  "episode": 10
+}
