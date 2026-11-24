@@ -31,7 +31,7 @@
   </div>
   <a href="#simulation" class="top">Simulation</a>
   <div class="sub-links">
-    <a class="sub" href="#sim-object-swap">&middot; Different Object (Object Swap)</a>
+    <a class="sub" href="#sim-object-swap">&middot; Object Swap</a>
     <a class="sub" href="#sim-goal-swap">&middot; Goal relocation (Goal Swap)</a>
     <a class="sub" href="#sim-spatial-recovery">&middot; New Location (Spatial Swap)</a>
     <a class="sub" href="#sim-long-swap">&middot; Long swap</a>
@@ -39,7 +39,7 @@
   </div>
   <a href="#attention-analysis" class="top">Attention analysis</a>
   <div class="sub-links">
-    <a class="sub" href="#attention-object-swap">&middot; Different Object (Object Swap)</a>
+    <a class="sub" href="#attention-object-swap">&middot; Object Swap</a>
     <a class="sub" href="#attention-goal-swap">&middot; Goal relocation (Goal Swap)</a>
     <a class="sub" href="#attention-spatial-recovery">&middot; New Location (Spatial Swap)</a>
 
@@ -78,7 +78,7 @@
         <a class="reel-card" href="#rw-centrifuge-videos" aria-label="Centrifuge loading: view full comparisons">
           <video class="reel-video" data-src="static/videos/rw_centrifuge_cf_success_ood_p1_blue.mp4?v=iphone-silent-v3" aria-label="Centrifuge Loading, Middle Slot · Orientation 1, ContrastFlow success" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/rw_centrifuge_cf_success_ood_p1_blue.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/rw_centrifuge_cf_success_ood_p1_blue.mp4?v=iphone-silent-v3" type="video/mp4"/></video>
         </a>
-        <a class="reel-card" href="#sim-object-swap" aria-label="Different Object (Object Swap): view full comparison">
+        <a class="reel-card" href="#sim-object-swap" aria-label="Object Swap: view full comparison">
           <video class="reel-video" muted loop playsinline preload="none" poster="static/videos/libero_object_swap_06_overlays_reel_clean.jpg" data-src="static/videos/libero_object_swap_06_overlays_reel_clean.mp4?v=d7eaa27d7c0a" aria-label="LIBERO-PRO · Object swap: ContrastFlow rollout" autoplay></video>
         </a>
         <a class="reel-card" href="#rw-titration-videos" aria-label="Titration: view full comparisons">
@@ -96,8 +96,8 @@
         <a class="reel-card" href="#rw-adapter-videos" aria-label="Adapter relocation: view full comparisons">
           <video class="reel-video" data-src="static/videos/rw_adapter_cf_success_1to4.mp4?v=iphone-silent-v3" aria-label="Adapter Relocation, Long Adapter Transfer (Outlet 1 → 4), ContrastFlow success" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/rw_adapter_cf_success_1to4.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/rw_adapter_cf_success_1to4.mp4?v=iphone-silent-v3" type="video/mp4"/></video>
         </a>
-        <a class="reel-card" href="#sim-object-swap" aria-label="Different Object (Object Swap): view full comparison">
-          <video class="reel-video" muted loop playsinline preload="none" poster="static/videos/libero_object_swap_06_overlays_reel_clean.jpg" data-src="static/videos/libero_object_swap_06_overlays_reel_clean.mp4?v=d7eaa27d7c0a" aria-label="LIBERO-PRO · Different Object (Object Swap): ContrastFlow rollout" autoplay></video>
+        <a class="reel-card" href="#sim-object-swap" aria-label="Object Swap: view full comparison">
+          <video class="reel-video" muted loop playsinline preload="none" poster="static/videos/libero_object_swap_06_overlays_reel_clean.jpg" data-src="static/videos/libero_object_swap_06_overlays_reel_clean.mp4?v=d7eaa27d7c0a" aria-label="LIBERO-PRO · Object Swap: ContrastFlow rollout" autoplay></video>
         </a>
         <a class="reel-card" href="#rw-centrifuge-videos" aria-label="Centrifuge loading: view full comparisons">
           <video class="reel-video" muted loop playsinline preload="none" poster="static/videos/rw_centrifuge_cf_success_p3_blue.jpg?v=iphone-bright-v2" data-src="static/videos/rw_centrifuge_cf_success_p3_blue.mp4?v=iphone-silent-v3" aria-label="Centrifuge Loading, Top Test Tube Slot, ContrastFlow success" data-speed="2" autoplay></video>
@@ -365,7 +365,7 @@
   <h2>Simulation: LIBERO-PRO</h2>
   <p class="trajectory-legend">Red: <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" aria-label="pi 0.5"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math>. Green: ContrastFlow. Trails show recorded motion across replans.</p>
 
-  <h3 id="sim-object-swap" class="sub">Different Object (Object Swap)</h3>
+  <h3 id="sim-object-swap" class="sub">Object Swap</h3>
 <div aria-labelledby="sim-object-swap" class="case-carousel single-example" data-category-anchor="sim-object-swap" id="sim-object-examples" role="region" tabindex="0">
 
 <div aria-label="Selected example" class="case-slide" id="sim-object-example-1" role="group">
@@ -440,12 +440,11 @@
 <hr>
 <section id="attention-analysis" class="section">
 <h2>Attention analysis</h2>
-<p class="attention-legend">Recorded attention at each replan. Blue → red: low → high intensity.</p>
-<h3 id="attention-object-swap" class="sub">Different Object (Object Swap)</h3>
+<h3 id="attention-object-swap" class="sub">Object Swap</h3>
 <p class="task-prompt"><strong>Task prompt:</strong> Pick the butter and place it in the basket.</p>
 <div class="attention-comparison paired camera-overlay" data-task="libero_object_swap_06">
-<article class="attention-view pi05"><h4><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" aria-label="pi 0.5"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math> (Baseline)</h4><div class="attention-panel-labels" aria-hidden="true"><span>Original</span><span>Attention</span></div><video class="sim-policy attention-policy" data-method="pi05" controls playsinline muted preload="none" poster="static/videos/attention_camera_overlay_libero_object_swap_06_pi05.jpg" aria-label="Different Object (Object Swap): pi05, original camera beside its recorded attention overlay"><source data-src="static/videos/attention_camera_overlay_libero_object_swap_06_pi05.mp4" type="video/mp4"></video></article>
-<article class="attention-view contrastflow"><h4>ContrastFlow (Ours)</h4><div class="attention-panel-labels" aria-hidden="true"><span>Original</span><span>Attention</span></div><video class="sim-policy attention-policy" data-method="contrastflow" controls playsinline muted preload="none" poster="static/videos/attention_camera_overlay_libero_object_swap_06_contrastflow.jpg" aria-label="Different Object (Object Swap): contrastflow, original camera beside its recorded attention overlay"><source data-src="static/videos/attention_camera_overlay_libero_object_swap_06_contrastflow.mp4" type="video/mp4"></video></article>
+<article class="attention-view pi05"><h4><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" aria-label="pi 0.5"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math> (Baseline)</h4><div class="attention-panel-labels" aria-hidden="true"><span>Original</span><span>Attention</span></div><video class="sim-policy attention-policy" data-method="pi05" controls playsinline muted preload="none" poster="static/videos/attention_camera_overlay_libero_object_swap_06_pi05.jpg" aria-label="Object Swap: pi05, original camera beside its recorded attention overlay"><source data-src="static/videos/attention_camera_overlay_libero_object_swap_06_pi05.mp4" type="video/mp4"></video></article>
+<article class="attention-view contrastflow"><h4>ContrastFlow (Ours)</h4><div class="attention-panel-labels" aria-hidden="true"><span>Original</span><span>Attention</span></div><video class="sim-policy attention-policy" data-method="contrastflow" controls playsinline muted preload="none" poster="static/videos/attention_camera_overlay_libero_object_swap_06_contrastflow.jpg" aria-label="Object Swap: contrastflow, original camera beside its recorded attention overlay"><source data-src="static/videos/attention_camera_overlay_libero_object_swap_06_contrastflow.mp4" type="video/mp4"></video></article>
 </div>
 <h3 id="attention-goal-swap" class="sub">Goal relocation (Goal Swap)</h3>
 <p class="task-prompt"><strong>Task prompt:</strong> Put the bowl on the plate.</p>
