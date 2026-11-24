@@ -53,7 +53,7 @@
     "note": "Policy calibration register mask, iterative spike suppression (ratio 2, up to 15 iterations), and sigma 0.8 Gaussian applied before display normalization. Same rule for both methods. Original raw tensors unchanged."
   },
   "register_cleaning": {
-    "cache_path": "/taiga/illinois/eng/cs/daf/apotnis2/openpi_cache/cache_libero_goal_task_lang.pt",
+    "cache_path": "${PROJECT_STORAGE}/openpi_cache/cache_libero_goal_task_lang.pt",
     "cache_sha256": "1382072e38e16c891afba73170edd15e279990fb2c83746db809334f65026535",
     "common_source_sha256": "a4f7ef397976881d6116e0aa784061be121f2c8ea427ce59cf5378d8424e530e",
     "cleaner_source_sha256": "2b5e947537295f3005eab6d9754e750534884a8bb6e6974a90ca568538acba76",

@@ -1,4 +1,3 @@
-/* ─── Design tokens ────────────────────────────────────────────────────────── */
 :root {
   --fg:      #111827;
   --muted:   #374151;
@@ -18,7 +17,6 @@
   --maxw:    1080px;
 }
 
-/* ─── Reset & base ──────────────────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; }
 
 html, body {
@@ -36,7 +34,6 @@ a:hover { text-decoration: underline; }
 
 img { display: block; max-width: 100%; height: auto; }
 
-/* ─── Full-width section stripe alternation ─────────────────────────────────── */
 .section-stripe { background: var(--surface); }
 
 hr {
@@ -46,7 +43,6 @@ hr {
   max-width: var(--maxw);
 }
 
-/* ─── Hero ───────────────────────────────────────────────────────────────────── */
 .hero {
   background: linear-gradient(160deg, #f0f4ff 0%, #ffffff 60%);
   border-bottom: 1px solid var(--line);
@@ -78,7 +74,6 @@ hr {
 .author   { font-weight: 600; }
 .affil    { color: var(--muted); margin: 0 0 24px; font-size: 15px; }
 
-/* ─── Anchor strip ──────────────────────────────────────────────────────────── */
 .anchorbar {
   display: flex;
   flex-wrap: wrap;
@@ -107,7 +102,6 @@ hr {
   box-shadow: var(--shadow-hover);
 }
 
-/* ─── Sections ──────────────────────────────────────────────────────────────── */
 .section {
   max-width: var(--maxw);
   margin: 0 auto;
@@ -140,7 +134,6 @@ hr {
 .section p { margin: 8px 0 14px; }
 .caption { color: var(--muted); font-size: 15px; line-height: 1.6; }
 
-/* ─── Task prompt ───────────────────────────────────────────────────────────── */
 .task-prompt {
   font-size: 16px;
   margin: 4px 0 12px;
@@ -148,7 +141,6 @@ hr {
 }
 .prompt-label { font-weight: 700; color: var(--accent); }
 
-/* ─── Scene note callout ────────────────────────────────────────────────────── */
 .scene-note {
   background: #fffbea;
   border-left: 4px solid #f59e0b;
@@ -160,7 +152,6 @@ hr {
   margin: 8px 0 16px;
 }
 
-/* ─── Figures ───────────────────────────────────────────────────────────────── */
 .fig { margin: 20px 0 28px; text-align: center; }
 .fig img {
   border: 1px solid var(--line);
@@ -182,7 +173,6 @@ hr {
   text-align: justify;
 }
 
-/* ─── Demo videos ───────────────────────────────────────────────────────────── */
 .demo-stack {
   display: flex;
   flex-direction: column;
@@ -229,7 +219,6 @@ hr {
 }
 
 
-/* ─── Sliding video marquee ──────────────────────────────── */
 .marquee-wrap { position: relative; }
 .marquee {
   overflow: hidden;
@@ -269,7 +258,6 @@ hr {
 .marquee-btn.next { right: 4px; }
 .marquee-note { text-align: center; color: var(--muted); margin-top: 14px; }
 
-/* Scrolling showcase; original full recordings remain in the task sections. */
 .reel-heading { display:flex; align-items:center; justify-content:space-between; gap:16px; }
 .reel-heading h2 { margin-bottom:0; }
 .reel-toggle { width:38px; height:38px; flex:0 0 auto; border:1px solid var(--line); border-radius:50%; background:#fff; color:var(--fg); cursor:pointer; font-size:18px; }
@@ -279,16 +267,13 @@ hr {
 .reel-card:focus-visible, .reel-toggle:focus-visible, .marquee-btn:focus-visible { outline:3px solid var(--accent); outline-offset:3px; }
 @media(max-width:600px) { .reel-card { flex-basis:240px; width:240px; } }
 
-/* ─── Numbered generalization regimes ───────────────────────────────────────── */
 .regimes { margin: 6px 0 16px; padding-left: 26px; }
 .regimes li { margin: 9px 0; line-height: 1.55; color: var(--fg); }
 .regimes li::marker { font-weight: 800; color: var(--accent); }
 
-/* ─── Pair cards ────────────────────────────────────────────────────────────── */
 .grid { display: grid; gap: 20px; margin-top: 12px; }
 .grid-pairs { grid-template-columns: 1fr; }
 
-/* Clutter: three target objects side by side */
 .clutter-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -327,14 +312,12 @@ hr {
   grid-template-columns: 1fr 1fr;
   gap: 14px;
 }
-/* Train/Test setup images + policy comparison videos, all side by side at equal size */
 .pair-grid.setup-quad {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 12px;
   align-items: start;
   position: relative;
 }
-/* Vertical divider between Train setup and Test setup (after column 1 of 4) */
 .pair-grid.setup-quad::after {
   content: "";
   position: absolute;
@@ -353,10 +336,6 @@ hr {
   border-radius: 8px;
   background: #000;
 }
-/* Real-world 4-up (Train | Test setup images + policy comparison videos).
-   The screenshots AND the rollout videos are all natively 4:3 (640x480), so pin every
-   tile to one identical 4:3 box. !important overrides .vid (16:9), the carousel reset,
-   and the LIBERO 1:1, so nothing is cropped and all four tiles are the exact same size. */
 .pair-grid.setup-quad.rw { align-items: start; grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .pair-grid.setup-quad.rw > figure { margin: 0; min-width: 0; display: flex; flex-direction: column; }
 .pair-grid.setup-quad.rw > figure > figcaption {
@@ -389,7 +368,6 @@ hr {
   margin-bottom: 6px;
   letter-spacing: 0.4px;
 }
-/* For the language-rephrase axis: scene is identical, so show the differing prompt as a tile */
 .prompt-tile {
   aspect-ratio: 1 / 1;
   display: flex;
@@ -427,7 +405,6 @@ hr {
 .pair-grid .bad  { color: var(--bad);  }
 .pair-grid .good { color: var(--good); }
 
-/* ─── Videos ────────────────────────────────────────────────────────────────── */
 .vid {
   width: 100%;
   border-radius: 8px;
@@ -437,7 +414,6 @@ hr {
   display: block;
 }
 
-/* ─── 2×3 grid ──────────────────────────────────────────────────────────────── */
 .grid-2x3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -461,7 +437,6 @@ hr {
 }
 .single-center { max-width: 580px; margin: 10px auto 24px; }
 
-/* One shared box wrapping a grid of bare (boxless, caption-less) videos */
 .vid-box {
   background: var(--surface);
   border: 1px solid var(--line);
@@ -473,16 +448,13 @@ hr {
 .vid-box .grid-2x3 { margin-top: 0; }
 .bare-vid { margin: 0; }
 
-/* ─── Carousel ──────────────────────────────────────────────────────────────── */
 .carousel {
   position: relative;
   padding: 4px 56px 46px;
   margin: 10px auto 24px;
   max-width: 580px;
 }
-/* two-video pair sliders (LIBERO-Plus axes) need the full width */
 .carousel[data-noadvance] { max-width: 1024px; }
-/* auto-generated "jump to case" dropdown above each slider */
 .carousel-select {
   display: block;
   margin: 8px auto 14px;
@@ -499,7 +471,6 @@ hr {
   box-shadow: var(--shadow);
   cursor: pointer;
 }
-/* framed container so each axis reads clearly as an interactive slider */
 .carousel[data-noadvance] {
   background: var(--surface);
   border: 1px solid var(--line);
@@ -573,7 +544,6 @@ hr {
 .dot:hover { transform: scale(1.3); background: #e5e7eb; }
 .dot.active { background: #6b7280; border-color: #6b7280; transform: scale(1.25); }
 
-/* ─── BibTeX ────────────────────────────────────────────────────────────────── */
 .bib {
   background: #1e293b;
   color: #e2e8f0;
@@ -586,7 +556,6 @@ hr {
   box-shadow: var(--shadow);
 }
 
-/* ─── Sticky side navigation ────────────────────────────────────────────────── */
 .sidenav {
   position: fixed;
   top: 16px;
@@ -595,6 +564,8 @@ hr {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   font-size: 13px;
+  max-height: calc(100vh - 32px);
+  overflow-y: auto;
   z-index: 50;
   box-shadow: var(--shadow);
 }
@@ -680,8 +651,6 @@ hr {
 
 @media (max-width: 1280px) { .sidenav { display: none; } }
 
-/* At widths where the fixed side bar is shown, offset the centered content so the
-   expanded bar never sits on top of the text. */
 @media (min-width: 1281px) {
   .section, .hero-inner, hr {
     margin-left: max(calc((100% - var(--maxw)) / 2), 264px);
@@ -690,12 +659,10 @@ hr {
   .hero-inner { transform: translateX(-24px); }
 }
 
-/* Range/gallery grids: 3-up on desktop, 2-up on mid screens (1-up phones below). */
 @media (max-width: 900px) {
   .grid-2x3 { grid-template-columns: 1fr 1fr; }
 }
 
-/* ─── Pair dropdown selector ────────────────────────────────────────────────── */
 .pair-select {
   display: block;
   margin: 10px 0 10px;
@@ -714,7 +681,6 @@ hr {
 .pair-select:focus { outline: 2px solid var(--accent); outline-offset: 2px; }
 .carousel-select { margin-bottom: 0; }
 
-/* ─── Footer ────────────────────────────────────────────────────────────────── */
 .foot {
   max-width: var(--maxw);
   margin: 0 auto;
@@ -725,7 +691,6 @@ hr {
   border-top: 1px solid var(--line);
 }
 
-/* ─── Responsive ────────────────────────────────────────────────────────────── */
 @media (max-width: 640px) {
   .title { font-size: 26px; }
   .title br { display: none; }
@@ -744,20 +709,16 @@ hr {
   .bib { padding: 16px 14px; font-size: 12.5px; }
 }
 
-/* Method-figure video: show the full ultra-wide frame, no 16:9 crop */
 .fig video.fig-vid { aspect-ratio: auto; height: auto; object-fit: contain; background: transparent; border: 1px solid var(--line); box-shadow: var(--shadow); }
 
-/* Author names are links: keep them blue (link affordance) despite the orange theme */
 .authors a { color: #1d4ed8; }
 .authors a:hover { color: #1e40af; text-decoration: underline; }
 
-/* Hero action buttons */
 .hero-btns { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 16px 0 4px; }
 .hero-btns .btn { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; border-radius: 8px; background: var(--surface); color: var(--fg); border: 1px solid var(--line); font-size: 15px; font-weight: 600; transition: background .12s, border-color .12s, color .12s, transform .12s, box-shadow .12s; }
 .hero-btns a.btn:hover { background: var(--accent-light); border-color: var(--accent); color: var(--accent); text-decoration: none; transform: translateY(-1px); box-shadow: var(--shadow); }
 .hero-btns .btn-disabled { opacity: .5; cursor: not-allowed; }
 
-/* ─── Results tables ────────────────────────────────────────────────────────── */
 .res-h { margin: 32px 0 4px; font-size: 20px; }
 
 .table-wrap { overflow-x: auto; margin: 18px 0 26px; -webkit-overflow-scrolling: touch; }
@@ -810,7 +771,6 @@ hr {
   .res-table th, .res-table td { padding: 7px 9px; }
 }
 
-/* ─── Table 1 column groups + radar plot grid ───────────────────────────────── */
 .res-table th.grp {
   text-align: center;
   font-weight: 700;
@@ -842,7 +802,6 @@ hr {
   .spider-grid { grid-template-columns: 1fr; gap: 4px; }
 }
 
-/* Table 1 (13 columns): fit the content column without horizontal scrolling */
 .res-table-compact { min-width: 0; font-size: 13.5px; table-layout: auto; }
 .res-table-compact th, .res-table-compact td { padding: 7px 6px; text-align: center; }
 .res-table-compact th:first-child, .res-table-compact td:first-child { text-align: left; white-space: nowrap; padding-left: 8px; }
@@ -854,7 +813,6 @@ hr {
 }
 @media (max-width: 720px) { .res-table-compact { min-width: 700px; } }
 
-/* Real-world results: one compact row of the paper graphs under the capability list */
 .rw-graphs { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin: 18px 0 4px; }
 .rw-graph { margin: 0; background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 9px 10px 8px; display: flex; flex-direction: column; }
 .rw-graph figcaption { display: grid; grid-template-columns: 18px 1fr; column-gap: 7px; align-items: center; margin-bottom: 6px; text-align: left; line-height: 1.25; }
@@ -867,22 +825,17 @@ hr {
 .rw-graphs-note { font-size: 12.5px; color: var(--muted); margin: 6px 0 24px; }
 @media (max-width: 1000px) { .rw-graphs { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 560px)  { .rw-graphs { grid-template-columns: 1fr; } }
-/* videos that must keep their own frame (e.g. the 2:1 three-camera composite) */
 .vid.vid-native { aspect-ratio: 1444 / 720; object-fit: contain; }
 
-/* YAM videos side by side at equal height: 16:9 (Reactive Grasp) next to 2:1 (Tomato Plate Transfer) */
 .rw-motion-row { display: grid; grid-template-columns: 1fr 1.125fr; gap: 14px; align-items: end; margin-top: 10px; }
 .rw-motion-vid { margin: 0; }
 .rw-motion-vid figcaption { margin: 0 0 6px; font-size: 13px; font-weight: 600; letter-spacing: .02em; color: var(--muted); }
 .rw-motion-vid figcaption.ours { color: #15803d; }
 @media (max-width: 720px) { .rw-motion-row { grid-template-columns: 1fr; } }
 
-/* ─── A2F additions ─────────────────────────────────────────────────────────── */
-/* Algorithm listing: reuse the dark BibTeX box but keep lines unwrapped */
 .bib.algo { white-space: pre; font-size: 13px; line-height: 1.55; margin: 12px 0 10px; }
 @media (max-width: 640px) { .bib.algo { font-size: 11.5px; } }
 
-/* Real-world task cards: three cropped panels of the paper's task figure */
 .task-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: 12px 0 8px; }
 .task-card { margin: 0; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 12px 12px 10px; box-shadow: var(--shadow); display: flex; flex-direction: column; }
 .task-card figcaption { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
@@ -891,20 +844,16 @@ hr {
 .task-card .task-desc { font-size: 13.5px; line-height: 1.5; color: var(--muted); margin: 10px 0 0; }
 @media (max-width: 900px) { .task-grid { grid-template-columns: 1fr; } }
 
-/* Tables: left-aligned technique/method column, delta rows, block separators */
 .res-table td.tech { text-align: left; white-space: normal; color: var(--muted); font-style: italic; }
 .res-table td.backbone { vertical-align: top; font-weight: 600; }
 .res-table tr.delta td { color: var(--good); font-weight: 600; font-size: 14px; border-bottom: 1px solid var(--line); }
 .res-table tr.block td { border-top: 2px solid var(--muted); }
 .res-table tr.ours td:first-child, .res-table tr.ours td.tech { color: var(--fg); font-style: normal; }
 
-/* Disabled hero buttons are spans, not links */
 .hero-btns span.btn-disabled { cursor: not-allowed; }
 
-/* Small vector plots: do not stretch to the full content width */
 .fig.fig-narrow img { max-width: 760px; margin: 0 auto; }
 
-/* Headline numbers under the teaser figure */
 .stat-row { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin: 6px 0 4px; }
 .stat { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px 12px; text-align: center; box-shadow: var(--shadow); }
 .stat-num { font-size: 28px; font-weight: 800; color: var(--accent); letter-spacing: -0.5px; line-height: 1.1; }
@@ -912,11 +861,9 @@ hr {
 @media (max-width: 900px) { .stat-row { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 480px) { .stat-row { grid-template-columns: 1fr; } }
 
-/* One-line key point above each figure or table */
 .key { font-size: 17px; font-weight: 600; color: var(--fg); margin: 14px 0 6px; line-height: 1.5; }
 .fig { margin-top: 8px; }
 
-/* Group label row spanning a results table (e.g. the backbone a block of rows uses). */
 .res-table tr.group td { text-align: center !important; font-weight: 700; color: var(--muted); background: var(--surface); padding-top: 9px; padding-bottom: 9px; }
 .res-table tr.group:hover { background: var(--surface); }
 .abstract { font-size: 16px; line-height: 1.65; color: var(--fg); margin: 10px 0 18px; }
@@ -925,26 +872,20 @@ hr {
 .res-table-dense thead th { font-size: 12px; }
 .res-table .pm { color: var(--muted); font-weight: 400; font-size: 11px; }
 
-/* Full real-world recordings. */
 .real-clips{scroll-margin-top:24px}.real-video-pair,.real-video-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin:16px 0 24px}.real-video-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.real-config{font-size:17px;margin:20px 0 10px}.real-clip{overflow:hidden;border:1px solid var(--line);border-radius:12px;background:var(--surface)}.real-clip-heading{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 14px}.real-clip-heading h4{margin:0;font-size:16px}.real-result{font-size:14px;border-radius:5px;padding:2px 7px}.real-result.success{background:var(--good-bg);color:var(--good)}.real-result.failure{background:var(--bad-bg);color:var(--bad)}.real-clip video{display:block;width:100%;aspect-ratio:1;object-fit:contain;background:#000}.real-clip-details{padding:10px 14px;font-size:14px}.real-clip-name{display:block;overflow-wrap:anywhere;font:12px/1.6 ui-monospace,monospace;color:var(--faint);margin-bottom:5px}.real-video-note{font-size:14px;color:var(--faint)}@media(max-width:750px){.real-video-grid{grid-template-columns:1fr}.real-video-pair{gap:10px}.real-clip-heading{align-items:flex-start;flex-direction:column;padding:8px}.real-clip-heading h4{font-size:14px}.real-clip-details{padding:8px}.real-clip-name{font-size:12px}}@media(max-width:440px){.real-video-pair{grid-template-columns:1fr}}
 
-/* Full LIBERO-PRO comparison with equally sized observation/attention panels. */
 .simulation-video video { display:block; width:100%; height:auto; aspect-ratio:1424/1000; background:#000; border-radius:10px; }
 .simulation-video figcaption { font-size:16px; line-height:1.5; margin-top:12px; color:var(--muted); }
 
-/* Preserve natural color while paused; a white border identifies playback. */
 video { background:#000; filter:none; outline:3px solid transparent; outline-offset:-3px; transition:outline-color .18s ease; }
 video.is-playing { filter:none; outline-color:#fff; }
 @media (prefers-reduced-motion:reduce) { video { transition:none; } }
 
-/* Preserve the full native camera framing for the three added real-world tasks. */
 .real-task-pair .real-clip video { aspect-ratio:auto; height:auto; }
 
-/* Task instructions above each full comparison group. */
 .task-prompt { margin: -0.25rem 0 1.25rem; font-size: 1rem; line-height: 1.6; color: var(--fg); }
 .task-prompt strong { font-weight: 600; }
 
-/* Real-world task showcases and paired low/wrist evaluation recordings. */
 #realworld.section { --maxw: 1280px; }
 #realworld > h2, #realworld .real-eval-section-title { font-size: 2rem; line-height: 1.3; }
 #realworld .real-task-showcase { margin-top: 2.5rem; }
@@ -992,8 +933,7 @@ video.is-playing { filter:none; outline-color:#fff; }
   .real-eval-page-header h1 { font-size: 1.75rem; }
 }
 
-/* Four independent views with natural-color paused policy frames. */
-.sim-comparison { padding:20px; border:1px solid var(--line); border-radius:20px; background:var(--surface); box-shadow:var(--shadow); }
+.sim-comparison, .simulation-attention { padding:20px; border:1px solid var(--line); border-radius:20px; background:var(--surface); box-shadow:var(--shadow); }
 .sim-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px; align-items:start; }
 .sim-view { min-width:0; }
 .sim-view.test { position:relative; }
@@ -1007,18 +947,13 @@ video.is-playing { filter:none; outline-color:#fff; }
 
 @media (max-width:750px) { .sim-view.test::before { left:-7px; } }
 
-/* Full camera/attention pairs, separate from the four-view simulation setup. */
-.attention-legend { color:var(--muted); font-size:15px; margin-bottom:28px; }
-.attention-comparison { display:grid; gap:20px; padding:20px; border:1px solid var(--line); border-radius:20px; background:var(--surface); box-shadow:var(--shadow); }
-.attention-comparison.paired { grid-template-columns:repeat(2,minmax(0,1fr)); }
-.attention-view { min-width:0; }
-.attention-view h4 { margin:0 0 12px; font-size:17px; }
+.attention-view { grid-column:span 2; min-width:0; }
+.attention-view h4 { margin:0 0 12px; font-size:17px; line-height:1.4; }
 .attention-view.pi05 h4 { color:#dc2626; }
 .attention-view.contrastflow h4 { color:#15803d; }
-.attention-view video { display:block; width:100%; height:auto; aspect-ratio:2/1; border-radius:10px; background:#000; }
-@media(max-width:750px) { .attention-comparison { padding:14px; } .attention-comparison.paired { grid-template-columns:1fr; } }
+.attention-view video { display:block; width:100%; height:auto; aspect-ratio:2/1; object-fit:contain; border-radius:10px; background:#000; }
+@media (max-width:750px) { .attention-view h4 { font-size:15px; margin-bottom:8px; } }
 
-/* Multiple examples share a category, with explicit arrow/dot navigation. */
 .case-carousel { position:relative; margin:10px 0 30px; padding:24px 56px 48px; border:1px solid var(--line); border-radius:20px; background:var(--surface); box-shadow:var(--shadow); }
 .case-carousel.single-example { padding:24px; }
 .case-slide[hidden] { display:none !important; }
@@ -1039,14 +974,10 @@ video.is-playing { filter:none; outline-color:#fff; }
   .case-carousel .case-arrow.next { right:2px; }
 }
 
-.attention-comparison.direct-overlay .attention-view video { aspect-ratio:1/1; }
-
-.attention-comparison.camera-overlay .attention-view video { aspect-ratio:2/1; }
 .attention-panel-labels { display:grid; grid-template-columns:1fr 1fr; gap:0; margin:0 0 8px; text-align:center; font-size:14px; color:var(--muted); }
 
 .sim-view .video-placeholder { display:block; width:100%; aspect-ratio:1; border-radius:10px; background:#d1d5db; }
 
-/* Two-line centrifuge captions separate the holder slot from rotor orientation. */
 .real-config-stacked { max-width: 100%; }
 .real-config-orientation { display: block; margin-top: 4px; font-size: 0.88em; line-height: 1.45; font-weight: 400; color: var(--muted); }
 
@@ -1077,3 +1008,20 @@ video.is-playing { filter:none; outline-color:#fff; }
 .real-eval-back:hover { background: #ffedd5; text-decoration: none; }
 .real-eval-back:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .real-eval-page-footer { border-top: 1px solid var(--line); text-align: center; }
+
+.simulation-suite { margin-top: 52px; }
+.simulation-suite-title { margin: 22px 0 8px; font-size: 1.4rem; }
+#simulation h4.sub { margin: 40px 0 8px; font-size: 20px; font-weight: 600; }
+#simulation .case-carousel.single-example,
+#sim-long-swap-views,
+.simulation-attention { padding: 24px; }
+#simulation .case-carousel.single-example,
+#sim-long-swap-views { margin-bottom: 16px; }
+.simulation-attention { margin: 0 0 32px; }
+.simulation-attention figcaption { margin-bottom: 6px; font-size: 1.05rem; font-weight: 600; }
+.simulation-attention .task-prompt { margin: 0 0 18px; }
+@media (max-width: 750px) {
+  #simulation .case-carousel.single-example,
+  #sim-long-swap-views,
+  .simulation-attention { padding: 16px; }
+}

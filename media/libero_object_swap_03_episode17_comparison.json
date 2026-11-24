@@ -265,7 +265,7 @@
         "initial_state_sha256": "0f5581bb149bc77e6f21b5b75296d35b393ba46e3a96e5d0fe2a04e2087068e7",
         "initial_frame_sha256": "c647a87b8dbc0d907a7455a79c4b1f1412893d279a1e58d0d61fa5e247b7b214",
         "source_sha256": "715ab046633f484c5088b499c7a8d99e7e7aa62cf418a6b1d21e7076e10c58ac",
-        "checkpoint": "/shared/rsaas/apotnis2/openpi_cache/openpi-assets/checkpoints/pi05_libero_pytorch",
+        "checkpoint": "${SHARED_STORAGE}/openpi_cache/openpi-assets/checkpoints/pi05_libero_pytorch",
         "job_id": "29804.0",
         "gpu": "NVIDIA A40",
         "seconds": 42.49704885482788
@@ -430,7 +430,7 @@
         "initial_state_sha256": "0f5581bb149bc77e6f21b5b75296d35b393ba46e3a96e5d0fe2a04e2087068e7",
         "initial_frame_sha256": "c647a87b8dbc0d907a7455a79c4b1f1412893d279a1e58d0d61fa5e247b7b214",
         "source_sha256": "90d6dcf8da3af10c39a7d034d1389949330beccf1bbbb4fdd420746b39b2c96f",
-        "checkpoint": "/shared/rsaas/apotnis2/openpi_cache/openpi-assets/checkpoints/pi05_libero_pytorch",
+        "checkpoint": "${SHARED_STORAGE}/openpi_cache/openpi-assets/checkpoints/pi05_libero_pytorch",
         "job_id": "29804.0",
         "gpu": "NVIDIA A40",
         "seconds": 34.1209671497345

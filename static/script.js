@@ -1,4 +1,3 @@
-// Playback focus and section navigation.
 document.addEventListener("DOMContentLoaded", () => {
   const configureSpeed = video => {
     const speed = Number(video.dataset.speed || 1);
@@ -7,7 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
     video.addEventListener("loadedmetadata", () => { video.playbackRate = speed; });
   };
   document.querySelectorAll("video").forEach(configureSpeed);
-  // Start muted full comparisons when visible; paired videos can play together.
   const allVideos = Array.from(document.querySelectorAll("video:not(.reel-video):not(.sim-policy):not(.real-eval-policy)"));
   const clearFocus = video => video.classList.remove("is-playing");
   const visibleVideos = new Set();
@@ -58,8 +56,6 @@ document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("visibilitychange", () => {
     allVideos.forEach(video => document.hidden ? video.pause() : startVideo(video));
   });
-  // Training and policy clips start together; shorter clips hold their final
-  // frames until the entire comparison finishes, then restart together.
   const comparisonVideos = [];
   document.querySelectorAll(".sim-comparison, .attention-comparison, .real-eval-comparison").forEach(group => {
     const videos = Array.from(group.querySelectorAll("video.sim-policy, video.real-eval-policy"));
@@ -118,7 +114,6 @@ document.addEventListener("DOMContentLoaded", () => {
       else start();
     });
   });
-  // Switch examples only on request; hidden slides never play in the background.
   const caseCarousels = Array.from(document.querySelectorAll(".case-carousel"));
   caseCarousels.forEach(carousel => {
     const slides = Array.from(carousel.querySelectorAll(":scope > .case-slide"));
@@ -174,7 +169,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   revealExample(location.hash);
   const fullPlayers = [...allVideos, ...comparisonVideos];
-  // Keep the reel independent of the full-length comparison players.
   const reel = document.querySelector("#showcase");
   if (reel) {
     const track = reel.querySelector(".marquee-track");
@@ -260,7 +254,6 @@ document.addEventListener("DOMContentLoaded", () => {
     measure();
     requestAnimationFrame(tick);
   }
-  // Sticky side nav: highlight the current section and sub-section while scrolling.
   const navLinks = document.querySelectorAll(".sidenav a");
   const linkById = new Map();
   navLinks.forEach(a => {
@@ -290,8 +283,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }, { threshold: 0, rootMargin: "-20% 0px -70% 0px" });
   subAnchors.forEach(s => ssub.observe(s));
 
-  // The last section (BibTeX) can't scroll high enough to reach the active band,
-  // so highlight it directly once the page is scrolled to the bottom.
   const activateLastAtBottom = () => {
     if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) {
       const last = sections[sections.length - 1];

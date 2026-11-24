@@ -105,7 +105,7 @@
     "note": "Policy calibration register mask, iterative spike suppression (ratio 2, up to 15 iterations), and sigma 0.8 Gaussian applied before display normalization. Same rule for both methods. Original raw tensors unchanged."
   },
   "register_cleaning": {
-    "cache_path": "/u/apotnis2/robowarp-vision-cluster/noise-conditioning-study/ten-task-object-study/assets/cache_libero_goal_swap_lang.pt",
+    "cache_path": "${HOME}/robowarp-vision-cluster/noise-conditioning-study/ten-task-object-study/assets/cache_libero_goal_swap_lang.pt",
     "cache_sha256": "75994e05f04755446b7ffefc8ba787f7570c851db3b78454f052f40523dbdb37",
     "common_source_sha256": "63194aa8185228ca71237719673ef0577aa922fc4aac4639b77049b94417b507",
     "cleaner_source_sha256": "2b5e947537295f3005eab6d9754e750534884a8bb6e6974a90ca568538acba76",

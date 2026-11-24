@@ -87,7 +87,7 @@
     "emb-zero": "cffd2eef0dca830ce0dbbd7dfe1f137b1f7c0f4e20df772547925a1d0f504366"
   },
   "register_cleaning": {
-    "cache_path": "/taiga/illinois/eng/cs/daf/apotnis2/openpi_cache/cache_libero_goal_task_lang.pt",
+    "cache_path": "${PROJECT_STORAGE}/openpi_cache/cache_libero_goal_task_lang.pt",
     "cache_sha256": "1382072e38e16c891afba73170edd15e279990fb2c83746db809334f65026535",
     "common_source_sha256": "a4f7ef397976881d6116e0aa784061be121f2c8ea427ce59cf5378d8424e530e",
     "cleaner_source_sha256": "2b5e947537295f3005eab6d9754e750534884a8bb6e6974a90ca568538acba76",

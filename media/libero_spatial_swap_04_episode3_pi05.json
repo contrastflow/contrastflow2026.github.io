@@ -155,7 +155,7 @@
     "initial_state_sha256": "6ea947add1b57c78fe524983a9ef7468e22f73362d5d38b8a26f810a94f70990",
     "initial_frame_sha256": "5589566e19605c7538b43807dc29674cfd1d450aefbe6dc451a36b87e73eea77",
     "source_sha256": "c511c25ac3012ba981046e8fc3de8ff4cf7638628d47ef1bbaa18c3b3cdb8b7d",
-    "checkpoint": "/shared/rsaas/apotnis2/openpi_cache/openpi-assets/checkpoints/pi05_libero_pytorch",
+    "checkpoint": "${SHARED_STORAGE}/openpi_cache/openpi-assets/checkpoints/pi05_libero_pytorch",
     "job_id": "29324.0",
     "gpu": "NVIDIA A40",
     "seconds": 45.958134174346924

@@ -14,7 +14,7 @@
   "output_sha256": "1a8ad35667480bfcb2e5ceff70912afc4564f4d6a2b347e059504c56135f4249",
   "cleaned_attention_sha256": "c420c5e1173cd23841c8fef6073216676b9b4df16234e80659a462cc10fa2828",
   "register_cleaning": {
-    "cache_path": "/scratch/dwip2/adaptive_omega/caches/cache_libero_10_swap_lang.pt",
+    "cache_path": "${SCRATCH}/adaptive_omega/caches/cache_libero_10_swap_lang.pt",
     "cache_sha256": "19e4438fd984709a63bac8afa6b55fbdad37c26f3ac50fa339d49a8869e63ed5",
     "common_source_sha256": "5f90c4c74e8b4a5784cb010eef895652ae3761437ce6a41ea3996d036209dd50",
     "cleaner_source_sha256": "2b5e947537295f3005eab6d9754e750534884a8bb6e6974a90ca568538acba76",
@@ -813,8 +813,8 @@
   "poster_frame": 100,
   "attention_recomputed": {
     "how": "Attention was not saved by the run; recomputed offline from the saved episode: the runtime's env (OffScreenRenderEnv 256, seed 7, init state trial % 50, 10 wait steps) re-executes the episode's executed actions on blender12 GPU 7 (EGL), every replan observation goes through the runtime's _obs_tuple, and pi0.5 (pi05_libero_pytorch) runs the runtime's pi05_forward_envs prefix attention, lang_query_positions, clean_attention_for_layer and _percentile_mask (frozen runtime v43 code; common/spike_utils/cf_core/cf_steer md5-identical to the v16 base runtime). No rollout, no policy action used.",
-    "runtime_dir": "/scratch/dwip2/libero_bothcams_w1_20261017/runtime/cf_steer_zero",
-    "checkpoint": "/scratch/dwip2/aw_local/openpi_home/openpi-assets/checkpoints/pi05_libero_pytorch",
+    "runtime_dir": "${SCRATCH}/libero_bothcams_w1_20261017/runtime/cf_steer_zero",
+    "checkpoint": "${SCRATCH}/aw_local/openpi_home/openpi-assets/checkpoints/pi05_libero_pytorch",
     "layer": 12,
     "erase_pct": 0.85,
     "instruction": "put both the cream cheese box and the butter in the basket",
@@ -852,6 +852,6 @@
     "frames": 501,
     "note": "Left panel and the right panel's base image are native 896x896 agent-view camera frames from an env live-stepped with the episode's executed actions (same reset, same camera-sampling timing as the policy's 256 px images; physics state equal to the verified replay at every call), in the policy's orientation ([::-1, ::-1])."
   },
-  "selection_note": "Qualitative pair chosen by Dwip (2026-11-23): LIBERO-PRO Long task 1 (put both the cream cheese box and the butter in the basket), init state 10, seed 7. pi0.5 = a NEW unguided (omega 0) sample re-executed on blender12 GPU 7 with runtime v16 (illustration only, not the paper's l10_c0 episode); it puts the orange juice and the butter in the basket. ContrastFlow = the saved Table 1 episode (libero_w2s1both_20261102, omega 2, s = 1, both cameras), success.",
+  "selection_note": "Qualitative comparison: LIBERO-PRO Long task 1 (put both the cream cheese box and the butter in the basket), init state 10, seed 7. pi0.5 = an unguided (omega 0) sample re-executed with runtime v16 (illustration only, not the paper's l10_c0 episode); it puts the orange juice and the butter in the basket. ContrastFlow = the saved Table 1 episode (libero_w2s1both_20261102, omega 2, s = 1, both cameras), success.",
   "episode": 10
 }

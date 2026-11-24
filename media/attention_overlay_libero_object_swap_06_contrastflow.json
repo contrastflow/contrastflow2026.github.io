@@ -11,7 +11,7 @@
   "output_sha256": "9bd036095db3eff98a54770a65905c948da50915fb9901b01f30d0d0cd435f51",
   "cleaned_attention_sha256": "985227e1e15ea90ecd1367c8457e2f251dbc5e359fe18e05ee6d890274ab76b4",
   "register_cleaning": {
-    "cache_path": "/u/apotnis2/robowarp-vision-cluster/noise-conditioning-study/emb-zero/assets/cache_libero_object_swap_lang.pt",
+    "cache_path": "${HOME}/robowarp-vision-cluster/noise-conditioning-study/emb-zero/assets/cache_libero_object_swap_lang.pt",
     "cache_sha256": "aefa60f4e1844b10b4d0e7a5c13000cb7c8cd790cc13ec792bc7fc08e308a006",
     "common_source_sha256": "63194aa8185228ca71237719673ef0577aa922fc4aac4639b77049b94417b507",
     "cleaner_source_sha256": "2b5e947537295f3005eab6d9754e750534884a8bb6e6974a90ca568538acba76",

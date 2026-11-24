@@ -173,7 +173,7 @@
             "initial_state_sha256": "6ea947add1b57c78fe524983a9ef7468e22f73362d5d38b8a26f810a94f70990",
             "initial_frame_sha256": "5589566e19605c7538b43807dc29674cfd1d450aefbe6dc451a36b87e73eea77",
             "source_sha256": "c511c25ac3012ba981046e8fc3de8ff4cf7638628d47ef1bbaa18c3b3cdb8b7d",
-            "checkpoint": "/shared/rsaas/apotnis2/openpi_cache/openpi-assets/checkpoints/pi05_libero_pytorch",
+            "checkpoint": "${SHARED_STORAGE}/openpi_cache/openpi-assets/checkpoints/pi05_libero_pytorch",
             "job_id": "29324.0",
             "gpu": "NVIDIA A40",
             "seconds": 45.958134174346924
@@ -338,7 +338,7 @@
             "initial_state_sha256": "6ea947add1b57c78fe524983a9ef7468e22f73362d5d38b8a26f810a94f70990",
             "initial_frame_sha256": "5589566e19605c7538b43807dc29674cfd1d450aefbe6dc451a36b87e73eea77",
             "source_sha256": "01506fe66453d6feab54072a31d3ca37e122de9fa53b4d0c3a100c3852e51342",
-            "checkpoint": "/shared/rsaas/apotnis2/openpi_cache/openpi-assets/checkpoints/pi05_libero_pytorch",
+            "checkpoint": "${SHARED_STORAGE}/openpi_cache/openpi-assets/checkpoints/pi05_libero_pytorch",
             "job_id": "29324.0",
             "gpu": "NVIDIA A40",
             "seconds": 20.694704294204712
@@ -366,7 +366,7 @@
           "fully_decoded": true,
           "all_source_frames_once": true,
           "sha256": "10125a8b0214106c4d8592971e36bcbb15de69abad6f02d254b800f4b3d40705",
-          "source": "/scratch/apotnis2/recovery_scene_examples_20261122/selected/task01_trial24/baseline/traj.npz",
+          "source": "${SCRATCH}/recovery_scene_examples_20261122/selected/task01_trial24/baseline/traj.npz",
           "source_sha256": "e8c2221bfe1fa985395ea87e2e225dbd11296b4c4a7f3a66001fae62fedc00e9",
           "capture_metadata": {
             "suite": "libero_spatial_swap",
@@ -412,7 +412,7 @@
           "fully_decoded": true,
           "all_source_frames_once": true,
           "sha256": "b60c422d6ed08accff9bf1962b1cccc556bd840f3bfa44fe10c71c903f0b6039",
-          "source": "/scratch/apotnis2/recovery_scene_examples_20261122/selected/task01_trial24/cfsz/traj.npz",
+          "source": "${SCRATCH}/recovery_scene_examples_20261122/selected/task01_trial24/cfsz/traj.npz",
           "source_sha256": "56348633f3b64f63be8bb1ebc8b47077c62cb3e7e0a71ad052f4af3a57585a85",
           "capture_metadata": {
             "suite": "libero_spatial_swap",
@@ -539,7 +539,7 @@
         "fully_decoded": true,
         "all_source_frames_once": true,
         "sha256": "5da6fad1701d142d537725810409f4d5d041bfdf4b778d73793f07cf9c1c4ffe",
-        "source": "/scratch/apotnis2/libero_more_candidates_20261122/historical_hires/task04_trial24/baseline/traj.npz",
+        "source": "${SCRATCH}/libero_more_candidates_20261122/historical_hires/task04_trial24/baseline/traj.npz",
         "source_sha256": "457fcad5a31c98ddf545f4f6e88d10f0ae9578f96f9ce3f71e104864d5e98224",
         "capture_metadata": {
           "suite": "libero_spatial_swap",
@@ -584,7 +584,7 @@
         "fully_decoded": true,
         "all_source_frames_once": true,
         "sha256": "574f8cab87162fa3e168734e4660d6570605284274834f7b2f1364b6582376c8",
-        "source": "/scratch/apotnis2/libero_more_candidates_20261122/historical_hires/task04_trial24/cfsz/traj.npz",
+        "source": "${SCRATCH}/libero_more_candidates_20261122/historical_hires/task04_trial24/cfsz/traj.npz",
         "source_sha256": "b9af9b7ec7db09a6b70c2980b56570d3691a21285b3fe9f3b1f3fc6dadfd31fe",
         "capture_metadata": {
           "suite": "libero_spatial_swap",
