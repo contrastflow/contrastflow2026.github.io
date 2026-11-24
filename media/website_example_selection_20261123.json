@@ -1,0 +1,13 @@
+{
+  "selected_original_indices": {
+    "object_swap": 1,
+    "goal_swap": 1,
+    "spatial_swap": 3
+  },
+  "slides": {
+    "sim-object-examples": "sim-object-example-1",
+    "sim-goal-examples": "sim-goal-plate",
+    "sim-spatial-examples": "sim-spatial-07-episode0"
+  },
+  "reel_matches_selected_cases": true
+}

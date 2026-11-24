@@ -62,7 +62,7 @@
       "height": 896,
       "fps": 10,
       "source_sha256": "735c2185613c58c0b35d4ea08f267fea7f02cf3923a2eb4accaca522f77c2bfe",
-      "sha256": "f93cce2a4daf0ab2e376849b234c008d0ab59541da4a05175e96a5ac9a8e985c",
+      "sha256": "0d1cc4cbb4e97c0101c94d395aa0083dae10f9d484a49f63db17ce20ab046be4",
       "path_sha256": "538074bb9ad58d34b3ef3309a1457d6040f9dcd40745f3e057487d6711c64b49",
       "fully_decoded": true,
       "all_source_frames_once": true,
@@ -71,14 +71,11 @@
         "placement": "top right of policy camera",
         "frame_ranges": [
           [
-            120,
-            150
-          ],
-          [
             189,
             209
           ]
-        ]
+        ],
+        "timing_source": "Recorded terminal success at policy step 189 (18.9 seconds)."
       }
     }
   ],

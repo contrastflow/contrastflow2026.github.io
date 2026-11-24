@@ -1,0 +1,1420 @@
+{
+  "source_commit": "62e4be434a9a491028bcabd1d1b725d3d5f1c892",
+  "policy": "Visually unchanged H.264/yuv420p, full resolution and length, original frame timing, existing audio copied, faststart. Keep original if no smaller candidate passes quality checks. Playback and brightness unchanged.",
+  "quality_thresholds": {
+    "vmaf_mean_min": 98,
+    "vmaf_p05_min": 95,
+    "ssim_mean_min_synthetic": 0.995,
+    "ssim_mean_min_photographic": 0.985
+  },
+  "original_archive": "All original videos and removed posters preserved outside the repository.",
+  "removed_unused_libero_videos": [
+    "static/videos/archive/attention_with_headers_20261122/attention_libero_goal_swap_01_contrastflow.mp4",
+    "static/videos/archive/attention_with_headers_20261122/attention_libero_goal_swap_08_contrastflow.mp4",
+    "static/videos/archive/attention_with_headers_20261122/attention_libero_goal_task_08_diverse_contrastflow.mp4",
+    "static/videos/archive/attention_with_headers_20261122/attention_libero_object_swap_06_contrastflow.mp4",
+    "static/videos/archive/attention_with_headers_20261122/attention_libero_object_swap_06_pi05.mp4",
+    "static/videos/archive/attention_with_headers_20261122/attention_libero_spatial_swap_01_contrastflow.mp4",
+    "static/videos/archive/four_view_before_extra20_20261122/libero_goal_swap_01_seed102_contrastflow.mp4",
+    "static/videos/archive/four_view_before_extra20_20261122/libero_goal_swap_01_seed102_pi05.mp4",
+    "static/videos/archive/four_view_before_extra20_20261122/libero_goal_swap_08_overlays_contrastflow.mp4",
+    "static/videos/archive/four_view_before_extra20_20261122/libero_goal_swap_08_overlays_pi05.mp4",
+    "static/videos/archive/four_view_before_extra20_20261122/libero_goal_task_08_diverse_sequential_contrastflow.mp4",
+    "static/videos/archive/four_view_before_extra20_20261122/libero_goal_task_08_diverse_sequential_pi05.mp4",
+    "static/videos/archive/four_view_before_extra20_20261122/libero_object_swap_06_overlays_contrastflow.mp4",
+    "static/videos/archive/four_view_before_extra20_20261122/libero_object_swap_06_overlays_pi05.mp4",
+    "static/videos/archive/four_view_before_extra20_20261122/libero_spatial_swap_01_seed105_contrastflow.mp4",
+    "static/videos/archive/four_view_before_extra20_20261122/libero_spatial_swap_01_seed105_pi05.mp4",
+    "static/videos/archive/pre_four_view_20261122/libero_goal_swap_01_seed102_marked.mp4",
+    "static/videos/archive/pre_four_view_20261122/libero_goal_swap_08_overlays_marked.mp4",
+    "static/videos/archive/pre_four_view_20261122/libero_goal_task_08_diverse_sequential_marked.mp4",
+    "static/videos/archive/pre_four_view_20261122/libero_object_swap_06_overlays_marked.mp4",
+    "static/videos/archive/pre_four_view_20261122/libero_spatial_swap_01_seed105_marked.mp4",
+    "static/videos/attention_camera_overlay_libero_spatial_swap_01_contrastflow.mp4",
+    "static/videos/attention_camera_overlay_libero_spatial_swap_01_pi05.mp4",
+    "static/videos/attention_camera_overlay_libero_spatial_swap_04_episode24_contrastflow.mp4",
+    "static/videos/attention_camera_overlay_libero_spatial_swap_04_episode24_pi05.mp4",
+    "static/videos/attention_libero_goal_swap_01_contrastflow.mp4",
+    "static/videos/attention_libero_goal_swap_01_pi05.mp4",
+    "static/videos/attention_libero_goal_swap_08_contrastflow.mp4",
+    "static/videos/attention_libero_goal_swap_08_pi05.mp4",
+    "static/videos/attention_libero_goal_task_08_diverse_contrastflow.mp4",
+    "static/videos/attention_libero_goal_task_08_diverse_pi05.mp4",
+    "static/videos/attention_libero_object_swap_06_contrastflow.mp4",
+    "static/videos/attention_libero_object_swap_06_pi05.mp4",
+    "static/videos/attention_libero_spatial_swap_01_contrastflow.mp4",
+    "static/videos/attention_libero_spatial_swap_01_pi05.mp4",
+    "static/videos/attention_overlay_libero_goal_swap_08_contrastflow.mp4",
+    "static/videos/attention_overlay_libero_goal_swap_08_pi05.mp4",
+    "static/videos/attention_overlay_libero_object_swap_06_contrastflow.mp4",
+    "static/videos/attention_overlay_libero_object_swap_06_pi05.mp4",
+    "static/videos/attention_overlay_libero_spatial_swap_01_contrastflow.mp4",
+    "static/videos/attention_overlay_libero_spatial_swap_01_pi05.mp4",
+    "static/videos/libero_10_swap_05_episode10_contrastflow.mp4",
+    "static/videos/libero_10_swap_05_episode10_pi05.mp4",
+    "static/videos/libero_10_swap_05_train.mp4",
+    "static/videos/libero_goal_swap_01_seed102_contrastflow.mp4",
+    "static/videos/libero_goal_swap_01_seed102_pi05.mp4",
+    "static/videos/libero_goal_swap_01_seed102_reel_clean.mp4",
+    "static/videos/libero_goal_swap_01_seed102_train.mp4",
+    "static/videos/libero_goal_swap_01_seed105_contrastflow.mp4",
+    "static/videos/libero_goal_swap_01_seed105_pi05.mp4",
+    "static/videos/libero_goal_swap_07_episode6_contrastflow.mp4",
+    "static/videos/libero_goal_swap_07_episode6_pi05.mp4",
+    "static/videos/libero_goal_swap_07_episode6_train.mp4",
+    "static/videos/libero_goal_task_08_diverse_sequential_contrastflow.mp4",
+    "static/videos/libero_goal_task_08_diverse_sequential_pi05.mp4",
+    "static/videos/libero_goal_task_08_diverse_sequential_reel_clean.mp4",
+    "static/videos/libero_goal_task_08_diverse_sequential_train.mp4",
+    "static/videos/libero_object_swap_03_episode17_contrastflow.mp4",
+    "static/videos/libero_object_swap_03_episode17_pi05.mp4",
+    "static/videos/libero_object_swap_03_episode17_train.mp4",
+    "static/videos/libero_spatial_swap_01_seed105_contrastflow.mp4",
+    "static/videos/libero_spatial_swap_01_seed105_pi05.mp4",
+    "static/videos/libero_spatial_swap_01_seed105_reel_clean.mp4",
+    "static/videos/libero_spatial_swap_01_seed105_train.mp4",
+    "static/videos/libero_spatial_swap_01_trial24_contrastflow.mp4",
+    "static/videos/libero_spatial_swap_01_trial24_pi05.mp4",
+    "static/videos/libero_spatial_swap_04_episode3_contrastflow.mp4",
+    "static/videos/libero_spatial_swap_04_episode3_pi05.mp4",
+    "static/videos/libero_spatial_swap_04_train.mp4",
+    "static/videos/libero_spatial_swap_04_trial24_contrastflow.mp4",
+    "static/videos/libero_spatial_swap_04_trial24_pi05.mp4",
+    "static/videos/libero_spatial_swap_04_trial24_reel_clean.mp4"
+  ],
+  "removed_unused_libero_posters": [
+    "static/videos/archive/attention_with_headers_20261122/attention_libero_goal_swap_01_contrastflow.jpg",
+    "static/videos/archive/attention_with_headers_20261122/attention_libero_goal_swap_08_contrastflow.jpg",
+    "static/videos/archive/attention_with_headers_20261122/attention_libero_goal_task_08_diverse_contrastflow.jpg",
+    "static/videos/archive/attention_with_headers_20261122/attention_libero_object_swap_06_contrastflow.jpg",
+    "static/videos/archive/attention_with_headers_20261122/attention_libero_object_swap_06_pi05.jpg",
+    "static/videos/archive/attention_with_headers_20261122/attention_libero_spatial_swap_01_contrastflow.jpg",
+    "static/videos/archive/four_view_before_extra20_20261122/libero_goal_swap_01_seed102_contrastflow.jpg",
+    "static/videos/archive/four_view_before_extra20_20261122/libero_goal_swap_01_seed102_pi05.jpg",
+    "static/videos/archive/four_view_before_extra20_20261122/libero_goal_swap_08_overlays_contrastflow.jpg",
+    "static/videos/archive/four_view_before_extra20_20261122/libero_goal_swap_08_overlays_pi05.jpg",
+    "static/videos/archive/four_view_before_extra20_20261122/libero_goal_task_08_diverse_sequential_contrastflow.jpg",
+    "static/videos/archive/four_view_before_extra20_20261122/libero_goal_task_08_diverse_sequential_pi05.jpg",
+    "static/videos/archive/four_view_before_extra20_20261122/libero_object_swap_06_overlays_contrastflow.jpg",
+    "static/videos/archive/four_view_before_extra20_20261122/libero_object_swap_06_overlays_pi05.jpg",
+    "static/videos/archive/four_view_before_extra20_20261122/libero_spatial_swap_01_seed105_contrastflow.jpg",
+    "static/videos/archive/four_view_before_extra20_20261122/libero_spatial_swap_01_seed105_pi05.jpg",
+    "static/videos/archive/pre_four_view_20261122/libero_goal_swap_01_seed102_marked.jpg",
+    "static/videos/archive/pre_four_view_20261122/libero_goal_swap_08_overlays_marked.jpg",
+    "static/videos/archive/pre_four_view_20261122/libero_goal_task_08_diverse_sequential_marked.jpg",
+    "static/videos/archive/pre_four_view_20261122/libero_object_swap_06_overlays_marked.jpg",
+    "static/videos/archive/pre_four_view_20261122/libero_spatial_swap_01_seed105_marked.jpg",
+    "static/videos/attention_camera_overlay_libero_spatial_swap_01_contrastflow.jpg",
+    "static/videos/attention_camera_overlay_libero_spatial_swap_01_pi05.jpg",
+    "static/videos/attention_camera_overlay_libero_spatial_swap_04_episode24_contrastflow.jpg",
+    "static/videos/attention_camera_overlay_libero_spatial_swap_04_episode24_pi05.jpg",
+    "static/videos/attention_libero_goal_swap_01_contrastflow.jpg",
+    "static/videos/attention_libero_goal_swap_01_pi05.jpg",
+    "static/videos/attention_libero_goal_swap_08_contrastflow.jpg",
+    "static/videos/attention_libero_goal_swap_08_pi05.jpg",
+    "static/videos/attention_libero_goal_task_08_diverse_contrastflow.jpg",
+    "static/videos/attention_libero_goal_task_08_diverse_pi05.jpg",
+    "static/videos/attention_libero_object_swap_06_contrastflow.jpg",
+    "static/videos/attention_libero_object_swap_06_pi05.jpg",
+    "static/videos/attention_libero_spatial_swap_01_contrastflow.jpg",
+    "static/videos/attention_libero_spatial_swap_01_pi05.jpg",
+    "static/videos/attention_overlay_libero_goal_swap_08_contrastflow.jpg",
+    "static/videos/attention_overlay_libero_goal_swap_08_pi05.jpg",
+    "static/videos/attention_overlay_libero_object_swap_06_contrastflow.jpg",
+    "static/videos/attention_overlay_libero_object_swap_06_pi05.jpg",
+    "static/videos/attention_overlay_libero_spatial_swap_01_contrastflow.jpg",
+    "static/videos/attention_overlay_libero_spatial_swap_01_pi05.jpg",
+    "static/videos/libero_10_swap_05_episode10_contrastflow.jpg",
+    "static/videos/libero_10_swap_05_episode10_pi05.jpg",
+    "static/videos/libero_10_swap_05_train.jpg",
+    "static/videos/libero_goal_swap_01_seed102_contrastflow.jpg",
+    "static/videos/libero_goal_swap_01_seed102_pi05.jpg",
+    "static/videos/libero_goal_swap_01_seed102_reel_clean.jpg",
+    "static/videos/libero_goal_swap_01_seed102_train.jpg",
+    "static/videos/libero_goal_swap_01_seed105_contrastflow.jpg",
+    "static/videos/libero_goal_swap_01_seed105_pi05.jpg",
+    "static/videos/libero_goal_swap_07_episode6_contrastflow.jpg",
+    "static/videos/libero_goal_swap_07_episode6_pi05.jpg",
+    "static/videos/libero_goal_swap_07_episode6_train.jpg",
+    "static/videos/libero_goal_task_08_diverse_sequential_contrastflow.jpg",
+    "static/videos/libero_goal_task_08_diverse_sequential_pi05.jpg",
+    "static/videos/libero_goal_task_08_diverse_sequential_reel_clean.jpg",
+    "static/videos/libero_goal_task_08_diverse_sequential_train.jpg",
+    "static/videos/libero_object_swap_03_episode17_contrastflow.jpg",
+    "static/videos/libero_object_swap_03_episode17_pi05.jpg",
+    "static/videos/libero_object_swap_03_episode17_train.jpg",
+    "static/videos/libero_spatial_swap_01_seed105_contrastflow.jpg",
+    "static/videos/libero_spatial_swap_01_seed105_pi05.jpg",
+    "static/videos/libero_spatial_swap_01_seed105_reel_clean.jpg",
+    "static/videos/libero_spatial_swap_01_seed105_train.jpg",
+    "static/videos/libero_spatial_swap_01_trial24_contrastflow.jpg",
+    "static/videos/libero_spatial_swap_01_trial24_pi05.jpg",
+    "static/videos/libero_spatial_swap_04_episode3_contrastflow.jpg",
+    "static/videos/libero_spatial_swap_04_episode3_pi05.jpg",
+    "static/videos/libero_spatial_swap_04_train.jpg",
+    "static/videos/libero_spatial_swap_04_trial24_contrastflow.jpg",
+    "static/videos/libero_spatial_swap_04_trial24_pi05.jpg",
+    "static/videos/libero_spatial_swap_04_trial24_reel_clean.jpg"
+  ],
+  "videos": [
+    {
+      "path": "static/videos/attention_camera_overlay_libero_goal_swap_08_contrastflow.mp4",
+      "original_bytes": 2071068,
+      "original_sha256": "2cb5b15575f6e4277862fd971a1d3467cc44bc6d74c350c2f5d6d1a07a9fecfb",
+      "stream": {
+        "width": 1792,
+        "height": 896,
+        "fps": 10.0,
+        "frames": 168,
+        "end_time_us": 16800000
+      },
+      "bytes": 2015023,
+      "sha256": "b08d9ca763f258e8b4bdd4f21214b7015e4899dda75b5cc1c3fa5bdb143c5557",
+      "compression": {
+        "crf": 19,
+        "vmaf_mean": 98.059657,
+        "vmaf_p05": 96.959271,
+        "vmaf_min": 96.802528,
+        "ssim": 0.998303,
+        "quality_frames": 168,
+        "decision": "accepted"
+      }
+    },
+    {
+      "path": "static/videos/attention_camera_overlay_libero_goal_swap_08_pi05.mp4",
+      "original_bytes": 4120143,
+      "original_sha256": "d26ed42ed028e70ff73131751c144c853258143185f4bc78bc5474c9565745b3",
+      "stream": {
+        "width": 1792,
+        "height": 896,
+        "fps": 10.0,
+        "frames": 351,
+        "end_time_us": 35100000
+      },
+      "bytes": 4120143,
+      "sha256": "d26ed42ed028e70ff73131751c144c853258143185f4bc78bc5474c9565745b3",
+      "compression": null
+    },
+    {
+      "path": "static/videos/attention_camera_overlay_libero_object_swap_06_contrastflow.mp4",
+      "original_bytes": 2176686,
+      "original_sha256": "8b86c7da2edbf577bb759ba236f170ac456a1519cad857b47f1787988b28aed4",
+      "stream": {
+        "width": 1792,
+        "height": 896,
+        "fps": 10.0,
+        "frames": 190,
+        "end_time_us": 19000000
+      },
+      "bytes": 2176686,
+      "sha256": "8b86c7da2edbf577bb759ba236f170ac456a1519cad857b47f1787988b28aed4",
+      "compression": null
+    },
+    {
+      "path": "static/videos/attention_camera_overlay_libero_object_swap_06_pi05.mp4",
+      "original_bytes": 3415238,
+      "original_sha256": "112df1f6cf6e9b34afa058448ad9a5536ad09058127680cc10d3d8617109680f",
+      "stream": {
+        "width": 1792,
+        "height": 896,
+        "fps": 10.0,
+        "frames": 351,
+        "end_time_us": 35100000
+      },
+      "bytes": 3415238,
+      "sha256": "112df1f6cf6e9b34afa058448ad9a5536ad09058127680cc10d3d8617109680f",
+      "compression": null
+    },
+    {
+      "path": "static/videos/attention_camera_overlay_libero_spatial_swap_04_episode3_contrastflow.mp4",
+      "original_bytes": 1697592,
+      "original_sha256": "ed9d960f73b4c23d5b3557fd31f1ed013cb1a168bc94f9073d71350bb75c5136",
+      "stream": {
+        "width": 1792,
+        "height": 896,
+        "fps": 10.0,
+        "frames": 113,
+        "end_time_us": 11300000
+      },
+      "bytes": 1537781,
+      "sha256": "6ca4adeabca45826cdda1502834c05c60f5f4c8abb2134d1cd25159ebbf2e42e",
+      "compression": {
+        "crf": 20,
+        "vmaf_mean": 98.121314,
+        "vmaf_p05": 96.84915,
+        "vmaf_min": 96.539935,
+        "ssim": 0.997956,
+        "quality_frames": 113,
+        "decision": "accepted"
+      }
+    },
+    {
+      "path": "static/videos/attention_camera_overlay_libero_spatial_swap_04_episode3_pi05.mp4",
+      "original_bytes": 6291589,
+      "original_sha256": "12b00f75fb2a356b80ba20ca0d9e90a851b074a8ee8d1c51d2787cd7acf7189a",
+      "stream": {
+        "width": 1792,
+        "height": 896,
+        "fps": 10.0,
+        "frames": 501,
+        "end_time_us": 50100000
+      },
+      "bytes": 6291589,
+      "sha256": "12b00f75fb2a356b80ba20ca0d9e90a851b074a8ee8d1c51d2787cd7acf7189a",
+      "compression": null
+    },
+    {
+      "path": "static/videos/libero_goal_swap_08_overlays_contrastflow.mp4",
+      "original_bytes": 1103920,
+      "original_sha256": "66722c3f844a57a54fb2b5a52b2f568e5cbe86791ed2e1a914358a07c0f46804",
+      "stream": {
+        "width": 896,
+        "height": 896,
+        "fps": 10.0,
+        "frames": 188,
+        "end_time_us": 18800000
+      },
+      "bytes": 802208,
+      "sha256": "85424d09e9eb4702006fea967c4c125b894a6089cc6471ffe01c8b5e7641c0bd",
+      "compression": {
+        "crf": 22,
+        "vmaf_mean": 98.173308,
+        "vmaf_p05": 96.16149,
+        "vmaf_min": 95.794987,
+        "ssim": 0.997396,
+        "quality_frames": 188,
+        "decision": "accepted"
+      }
+    },
+    {
+      "path": "static/videos/libero_goal_swap_08_overlays_pi05.mp4",
+      "original_bytes": 2182788,
+      "original_sha256": "d5e54feb3109585bd47dffd33b28b9a23ec23780cc6680249d4cde542ed6581b",
+      "stream": {
+        "width": 896,
+        "height": 896,
+        "fps": 10.0,
+        "frames": 351,
+        "end_time_us": 35100000
+      },
+      "bytes": 1786340,
+      "sha256": "832c4d08460e7148aef139dd4f95930bc3ed3d7726b6882312da831dffd5b71e",
+      "compression": {
+        "crf": 21,
+        "vmaf_mean": 98.066039,
+        "vmaf_p05": 96.610578,
+        "vmaf_min": 96.220088,
+        "ssim": 0.9981,
+        "quality_frames": 351,
+        "decision": "accepted"
+      }
+    },
+    {
+      "path": "static/videos/libero_goal_swap_08_overlays_reel_clean.mp4",
+      "original_bytes": 1012032,
+      "original_sha256": "59e5e4c179972d94e4968725a4cc1fb71f4fa37742d7dfe7c7212b8396a5c5fb",
+      "stream": {
+        "width": 896,
+        "height": 896,
+        "fps": 10.0,
+        "frames": 168,
+        "end_time_us": 16800000
+      },
+      "bytes": 640492,
+      "sha256": "2b25adf8f1abb40ab7c7aa985afaacab82544e910b78dae28e171dadca570031",
+      "compression": {
+        "crf": 23,
+        "vmaf_mean": 98.191916,
+        "vmaf_p05": 95.882661,
+        "vmaf_min": 95.662185,
+        "ssim": 0.99674,
+        "quality_frames": 168,
+        "decision": "accepted"
+      }
+    },
+    {
+      "path": "static/videos/libero_goal_swap_08_overlays_train.mp4",
+      "original_bytes": 605481,
+      "original_sha256": "20874adb0c9ad87056494f5bb2b268d105a32680939e742952482f482c841bb6",
+      "stream": {
+        "width": 896,
+        "height": 896,
+        "fps": 10.0,
+        "frames": 90,
+        "end_time_us": 9000000
+      },
+      "bytes": 450476,
+      "sha256": "7af2c330e23dbbe0b165184af1d3b3656eb10a4692576b3e8093963a4e5e7e11",
+      "compression": {
+        "crf": 22,
+        "vmaf_mean": 98.113562,
+        "vmaf_p05": 96.486723,
+        "vmaf_min": 96.152163,
+        "ssim": 0.997525,
+        "quality_frames": 90,
+        "decision": "accepted"
+      }
+    },
+    {
+      "path": "static/videos/libero_object_swap_06_overlays_contrastflow.mp4",
+      "original_bytes": 1105242,
+      "original_sha256": "f93cce2a4daf0ab2e376849b234c008d0ab59541da4a05175e96a5ac9a8e985c",
+      "stream": {
+        "width": 896,
+        "height": 896,
+        "fps": 10.0,
+        "frames": 210,
+        "end_time_us": 21000000
+      },
+      "bytes": 993697,
+      "sha256": "0d1cc4cbb4e97c0101c94d395aa0083dae10f9d484a49f63db17ce20ab046be4",
+      "compression": {
+        "crf": 20,
+        "vmaf_mean": 98.149054,
+        "vmaf_p05": 96.664752,
+        "vmaf_min": 96.395454,
+        "ssim": 0.996471,
+        "quality_frames": 210,
+        "decision": "accepted",
+        "quality_reference": "Lossless corrected render from original native frames and recorded trajectory"
+      },
+      "edit": "Object Swap tick appears only at recorded success, frame 189, and the final hold."
+    },
+    {
+      "path": "static/videos/libero_object_swap_06_overlays_pi05.mp4",
+      "original_bytes": 1593773,
+      "original_sha256": "29709d2ce58d662b56cabe2e4410a5715f06975bc3853621dfa7c2db1f21f2db",
+      "stream": {
+        "width": 896,
+        "height": 896,
+        "fps": 10.0,
+        "frames": 351,
+        "end_time_us": 35100000
+      },
+      "bytes": 1593773,
+      "sha256": "29709d2ce58d662b56cabe2e4410a5715f06975bc3853621dfa7c2db1f21f2db",
+      "compression": null
+    },
+    {
+      "path": "static/videos/libero_object_swap_06_overlays_reel_clean.mp4",
+      "original_bytes": 1008598,
+      "original_sha256": "2c575b68a94ae6d8101c3d263ef5a5375f44a61faa2790c6a8ad249f90254bd5",
+      "stream": {
+        "width": 896,
+        "height": 896,
+        "fps": 10.0,
+        "frames": 190,
+        "end_time_us": 19000000
+      },
+      "bytes": 736140,
+      "sha256": "d7eaa27d7c0a89181c3444b470d0694317b6ec5abf9dc684f3c36235b3c55350",
+      "compression": {
+        "crf": 22,
+        "vmaf_mean": 98.205478,
+        "vmaf_p05": 96.504365,
+        "vmaf_min": 96.355406,
+        "ssim": 0.997013,
+        "quality_frames": 190,
+        "decision": "accepted"
+      }
+    },
+    {
+      "path": "static/videos/libero_object_swap_06_overlays_train.mp4",
+      "original_bytes": 871502,
+      "original_sha256": "d0b0090fb428b776589c370bcb56e875971829170f85c23d46110360441f3472",
+      "stream": {
+        "width": 896,
+        "height": 896,
+        "fps": 10.0,
+        "frames": 169,
+        "end_time_us": 16900000
+      },
+      "bytes": 645794,
+      "sha256": "9c1aa6bb29dac9f0b760fcb1593d023507cef1e75b92afb96129c0629899fe94",
+      "compression": {
+        "crf": 22,
+        "vmaf_mean": 98.250749,
+        "vmaf_p05": 96.818831,
+        "vmaf_min": 96.378567,
+        "ssim": 0.997081,
+        "quality_frames": 169,
+        "decision": "accepted"
+      }
+    },
+    {
+      "path": "static/videos/libero_spatial_swap_07_episode0_contrastflow.mp4",
+      "original_bytes": 569173,
+      "original_sha256": "ca8b12b312a62140a27f20c0d9655997e0edc9e0d890a37e76a4392cd63304e6",
+      "stream": {
+        "width": 896,
+        "height": 896,
+        "fps": 10.0,
+        "frames": 100,
+        "end_time_us": 10000000
+      },
+      "bytes": 480511,
+      "sha256": "45fc24e370026238d28ac582c1e5767b3986e26488cbbc371a9ade6bf18507cb",
+      "compression": {
+        "crf": 21,
+        "vmaf_mean": 98.107819,
+        "vmaf_p05": 96.788021,
+        "vmaf_min": 96.576351,
+        "ssim": 0.998334,
+        "quality_frames": 100,
+        "decision": "accepted"
+      }
+    },
+    {
+      "path": "static/videos/libero_spatial_swap_07_episode0_pi05.mp4",
+      "original_bytes": 3514712,
+      "original_sha256": "fa369748611dad5adbde9914e0195b0b1e10c3392ed3a498b8212f552c95f4be",
+      "stream": {
+        "width": 896,
+        "height": 896,
+        "fps": 10.0,
+        "frames": 501,
+        "end_time_us": 50100000
+      },
+      "bytes": 3191182,
+      "sha256": "09aff98adeaeeb5503d66ada2f7a52c073a5d4456867857d0a02aeafe560f2ce",
+      "compression": {
+        "crf": 20,
+        "vmaf_mean": 98.02133,
+        "vmaf_p05": 96.707386,
+        "vmaf_min": 96.308211,
+        "ssim": 0.998305,
+        "quality_frames": 501,
+        "decision": "accepted"
+      }
+    },
+    {
+      "path": "static/videos/libero_spatial_swap_07_episode0_train.mp4",
+      "original_bytes": 905274,
+      "original_sha256": "f83c9764a6371eb1cb85654d68f1ef609090a95aa7c36c4b90b1506d3de4753d",
+      "stream": {
+        "width": 896,
+        "height": 896,
+        "fps": 10.0,
+        "frames": 155,
+        "end_time_us": 15500000
+      },
+      "bytes": 662507,
+      "sha256": "20384f9e3bcc50564081cc5f8f762893da2995a8b5f3d03e5453a5872b6b1899",
+      "compression": {
+        "crf": 22,
+        "vmaf_mean": 98.124238,
+        "vmaf_p05": 96.358305,
+        "vmaf_min": 96.135342,
+        "ssim": 0.997589,
+        "quality_frames": 155,
+        "decision": "accepted"
+      }
+    },
+    {
+      "path": "static/videos/contrastflow_success_config1.mp4",
+      "original_bytes": 2729239,
+      "original_sha256": "4dc9c88ee191bd5074513e3a63c827006ea5effa476f6a5ed501aaeef87ddc0d",
+      "stream": {
+        "width": 1080,
+        "height": 1080,
+        "fps": 30.0,
+        "frames": 531,
+        "end_time_us": 17700000
+      },
+      "bytes": 2729239,
+      "sha256": "4dc9c88ee191bd5074513e3a63c827006ea5effa476f6a5ed501aaeef87ddc0d",
+      "compression": null
+    },
+    {
+      "path": "static/videos/contrastflow_success_config2.mp4",
+      "original_bytes": 3690476,
+      "original_sha256": "2ab3781b8d6634caf91c5679563f6ec35804d7a7986ab7ce76f61a43ce5f2cc2",
+      "stream": {
+        "width": 1080,
+        "height": 1080,
+        "fps": 30.0,
+        "frames": 790,
+        "end_time_us": 26333333
+      },
+      "bytes": 3690476,
+      "sha256": "2ab3781b8d6634caf91c5679563f6ec35804d7a7986ab7ce76f61a43ce5f2cc2",
+      "compression": null
+    },
+    {
+      "path": "static/videos/contrastflow_success_config3.mp4",
+      "original_bytes": 3396533,
+      "original_sha256": "d3eb3114edbdd8971b47772c710fe8490e80df6d68e6deae759e1e61662deca0",
+      "stream": {
+        "width": 1080,
+        "height": 1080,
+        "fps": 30.0,
+        "frames": 715,
+        "end_time_us": 23833333
+      },
+      "bytes": 3396533,
+      "sha256": "d3eb3114edbdd8971b47772c710fe8490e80df6d68e6deae759e1e61662deca0",
+      "compression": null
+    },
+    {
+      "path": "static/videos/realworld-eval/Adapter_1to4_Baseline_Failure_6f9ae0e6_Low_Wrist.mp4",
+      "original_bytes": 15673331,
+      "original_sha256": "195bd8041ce6d0562280abcbb9fa085806143f6d27a872c42ac4c3d57735cd73",
+      "stream": {
+        "width": 1280,
+        "height": 480,
+        "fps": 10.0,
+        "frames": 313,
+        "end_time_us": 31300000
+      },
+      "bytes": 11174047,
+      "sha256": "fd4198c372ca34a69d93d793c0a2ae4d015453445173fd8c4e1c5a68317b5d20",
+      "compression": {
+        "crf": 19,
+        "vmaf_mean": 98.143328,
+        "vmaf_p05": 96.751791,
+        "vmaf_min": 96.443237,
+        "ssim": 0.985184,
+        "quality_frames": 313,
+        "decision": "accepted"
+      }
+    },
+    {
+      "path": "static/videos/realworld-eval/Adapter_1to4_ContrastFlow_Success_5686a30d_Low_Wrist.mp4",
+      "original_bytes": 26592390,
+      "original_sha256": "2fa84fbf27563d9a1ed0b4ab310fe1697bc5e8f736db11d6447907363032c26a",
+      "stream": {
+        "width": 1280,
+        "height": 480,
+        "fps": 10.0,
+        "frames": 563,
+        "end_time_us": 56300000
+      },
+      "bytes": 25544767,
+      "sha256": "a5056a3436d88e342042866ca7b0967594baeab1cca07b0c2afe211f7dbb0c1a",
+      "compression": {
+        "crf": 17,
+        "vmaf_mean": 98.113407,
+        "vmaf_p05": 97.231517,
+        "vmaf_min": 97.01699,
+        "ssim": 0.98973,
+        "quality_frames": 563,
+        "decision": "accepted"
+      }
+    },
+    {
+      "path": "static/videos/realworld-eval/Adapter_2to4_Baseline_Failure_1074589d_Low_Wrist.mp4",
+      "original_bytes": 12844953,
+      "original_sha256": "7d73710ecece0c334c5b4e70f0361251ff379260680917aaf9301e92906d8de3",
+      "stream": {
+        "width": 1280,
+        "height": 480,
+        "fps": 10.0,
+        "frames": 263,
+        "end_time_us": 26300000
+      },
+      "bytes": 9179240,
+      "sha256": "264c100dd11b770f0a8c3fd9b3cc9fa51cabb4479d2be9125aff1f0c8ab01eb3",
+      "compression": {
+        "crf": 19,
+        "vmaf_mean": 98.266157,
+        "vmaf_p05": 96.961365,
+        "vmaf_min": 96.665518,
+        "ssim": 0.985562,
+        "quality_frames": 263,
+        "decision": "accepted"
+      }
+    },
+    {
+      "path": "static/videos/realworld-eval/Adapter_2to4_ContrastFlow_Success_d57b39aa_Low_Wrist.mp4",
+      "original_bytes": 8645057,
+      "original_sha256": "cd0f5e779366e52f0a78ef516734b3fe6d448410566efc940dff717f947af57d",
+      "stream": {
+        "width": 1280,
+        "height": 480,
+        "fps": 10.0,
+        "frames": 172,
+        "end_time_us": 17200000
+      },
+      "bytes": 6243766,
+      "sha256": "1b7b9786a9ab511815d879a94d11b15c6bad8673810d890c758a9be8bf20940c",
+      "compression": {
+        "crf": 19,
+        "vmaf_mean": 98.503841,
+        "vmaf_p05": 96.853513,
+        "vmaf_min": 96.331981,
+        "ssim": 0.985399,
+        "quality_frames": 172,
+        "decision": "accepted"
+      }
+    },
+    {
+      "path": "static/videos/realworld-eval/Adapter_3to4_Baseline_Failure_1549d83e_Low_Wrist.mp4",
+      "original_bytes": 7348816,
+      "original_sha256": "021597b9640b4fdaf674b3db9669f4fef04d88dad51c9425a896a87bca9ee77c",
+      "stream": {
+        "width": 1280,
+        "height": 480,
+        "fps": 10.0,
+        "frames": 154,
+        "end_time_us": 15400000
+      },
+      "bytes": 5371366,
+      "sha256": "aa5ef4db7160c3fb4e7cda9b73f61838988e8088777517a9d760efbe6a81a0b1",
+      "compression": {
+        "crf": 19,
+        "vmaf_mean": 98.177312,
+        "vmaf_p05": 96.821403,
+        "vmaf_min": 96.514295,
+        "ssim": 0.985988,
+        "quality_frames": 154,
+        "decision": "accepted"
+      }
+    },
+    {
+      "path": "static/videos/realworld-eval/Adapter_3to4_ContrastFlow_Success_6a0a58c1_Low_Wrist.mp4",
+      "original_bytes": 7481257,
+      "original_sha256": "7de0d755a638cadd40f38721ca60826db3faa4485a65261b24547c1daa859174",
+      "stream": {
+        "width": 1280,
+        "height": 480,
+        "fps": 10.0,
+        "frames": 155,
+        "end_time_us": 15500000
+      },
+      "bytes": 5397800,
+      "sha256": "84fcab64ec16e3c3ca86705a00b0023813115d4abfa196e94e7c2cee61729d9a",
+      "compression": {
+        "crf": 19,
+        "vmaf_mean": 98.240944,
+        "vmaf_p05": 96.882107,
+        "vmaf_min": 96.646627,
+        "ssim": 0.985449,
+        "quality_frames": 155,
+        "decision": "accepted"
+      }
+    },
+    {
+      "path": "static/videos/realworld-eval/Cable_ID1_Baseline_Failure_032cfa53_Low_Wrist.mp4",
+      "original_bytes": 6643187,
+      "original_sha256": "82d44f328893261337ba68abf908393b3fb5f26ed6f80169b59a267a1d6af77e",
+      "stream": {
+        "width": 1280,
+        "height": 480,
+        "fps": 30.0,
+        "frames": 384,
+        "end_time_us": 12800000
+      },
+      "bytes": 6643187,
+      "sha256": "82d44f328893261337ba68abf908393b3fb5f26ed6f80169b59a267a1d6af77e",
+      "compression": null
+    },
+    {
+      "path": "static/videos/realworld-eval/Cable_ID1_ContrastFlow_Success_ad2aa117_Low_Wrist.mp4",
+      "original_bytes": 6862970,
+      "original_sha256": "3ba9bad0c15be7bf7f1ebb3ef4ed81e72b0f190d2227fb7962654f0c2812411b",
+      "stream": {
+        "width": 1280,
+        "height": 480,
+        "fps": 30.0,
+        "frames": 392,
+        "end_time_us": 13066667
+      },
+      "bytes": 6862970,
+      "sha256": "3ba9bad0c15be7bf7f1ebb3ef4ed81e72b0f190d2227fb7962654f0c2812411b",
+      "compression": null
+    },
+    {
+      "path": "static/videos/realworld-eval/Cable_ID2_Baseline_Failure_36329872_Low_Wrist.mp4",
+      "original_bytes": 18623059,
+      "original_sha256": "3a4c7332d71709d47e11e198c748c559abd0ad4189d30630a78848e9cba7b5ab",
+      "stream": {
+        "width": 1280,
+        "height": 480,
+        "fps": 30.0,
+        "frames": 1231,
+        "end_time_us": 41033333
+      },
+      "bytes": 18623059,
+      "sha256": "3a4c7332d71709d47e11e198c748c559abd0ad4189d30630a78848e9cba7b5ab",
+      "compression": null
+    },
+    {
+      "path": "static/videos/realworld-eval/Cable_ID2_ContrastFlow_Success_05c21812_Low_Wrist.mp4",
+      "original_bytes": 9016419,
+      "original_sha256": "6b57975e04957c96d783c8d0a55084223532243f4679adbe1efe96ebe95a2963",
+      "stream": {
+        "width": 1280,
+        "height": 480,
+        "fps": 30.0,
+        "frames": 547,
+        "end_time_us": 18233333
+      },
+      "bytes": 9016419,
+      "sha256": "6b57975e04957c96d783c8d0a55084223532243f4679adbe1efe96ebe95a2963",
+      "compression": null
+    },
+    {
+      "path": "static/videos/realworld-eval/Cable_ID3_Baseline_Failure_be1953ff_Low_Wrist.mp4",
+      "original_bytes": 6986073,
+      "original_sha256": "d2a8be5ed56f6d8e9509805a7d9bfc2ff8cfc0001859bcbcab85af5ecc2c7225",
+      "stream": {
+        "width": 1280,
+        "height": 480,
+        "fps": 30.0,
+        "frames": 387,
+        "end_time_us": 12900000
+      },
+      "bytes": 6986073,
+      "sha256": "d2a8be5ed56f6d8e9509805a7d9bfc2ff8cfc0001859bcbcab85af5ecc2c7225",
+      "compression": null
+    },
+    {
+      "path": "static/videos/realworld-eval/Cable_ID3_ContrastFlow_Success_12ecc814_Low_Wrist.mp4",
+      "original_bytes": 7489384,
+      "original_sha256": "4c35e9ecd4e44e1addaf00b5e62ba7cc1a4fef8a2456e11b5c37ef8de4204fa3",
+      "stream": {
+        "width": 1280,
+        "height": 480,
+        "fps": 30.0,
+        "frames": 405,
+        "end_time_us": 13500000
+      },
+      "bytes": 7489384,
+      "sha256": "4c35e9ecd4e44e1addaf00b5e62ba7cc1a4fef8a2456e11b5c37ef8de4204fa3",
+      "compression": null
+    },
+    {
+      "path": "static/videos/realworld-eval/Cable_ID4_Baseline_Failure_b8b8efa1_Low_Wrist.mp4",
+      "original_bytes": 9042792,
+      "original_sha256": "09b5372fc08958cf0dfedd41a999e4350ecec38051a63e910353e25f99ae71b7",
+      "stream": {
+        "width": 1280,
+        "height": 480,
+        "fps": 30.0,
+        "frames": 502,
+        "end_time_us": 16733333
+      },
+      "bytes": 9042792,
+      "sha256": "09b5372fc08958cf0dfedd41a999e4350ecec38051a63e910353e25f99ae71b7",
+      "compression": null
+    },
+    {
+      "path": "static/videos/realworld-eval/Cable_ID4_ContrastFlow_Success_dc86d76c_Low_Wrist.mp4",
+      "original_bytes": 5328818,
+      "original_sha256": "4a7cb17c2e664a237463293f7b0652681cbe59a21c98b6afaf9a4b9d59c6c275",
+      "stream": {
+        "width": 1280,
+        "height": 480,
+        "fps": 30.0,
+        "frames": 261,
+        "end_time_us": 8700000
+      },
+      "bytes": 5328818,
+      "sha256": "4a7cb17c2e664a237463293f7b0652681cbe59a21c98b6afaf9a4b9d59c6c275",
+      "compression": null
+    },
+    {
+      "path": "static/videos/realworld-eval/Cable_ID5_Baseline_Failure_34a61bba_Low_Wrist.mp4",
+      "original_bytes": 13484561,
+      "original_sha256": "f9ef71cf7001898b5d52dee896d5014f109b495b482726e69689c70772898d22",
+      "stream": {
+        "width": 1280,
+        "height": 480,
+        "fps": 30.0,
+        "frames": 882,
+        "end_time_us": 29400000
+      },
+      "bytes": 13484561,
+      "sha256": "f9ef71cf7001898b5d52dee896d5014f109b495b482726e69689c70772898d22",
+      "compression": null
+    },
+    {
+      "path": "static/videos/realworld-eval/Cable_ID5_ContrastFlow_Success_8fb88716_Low_Wrist.mp4",
+      "original_bytes": 7861361,
+      "original_sha256": "0df996317b9bed00825028798d0c54471f1fe700fff80ab63f8eda53a696d641",
+      "stream": {
+        "width": 1280,
+        "height": 480,
+        "fps": 30.0,
+        "frames": 463,
+        "end_time_us": 15433333
+      },
+      "bytes": 7861361,
+      "sha256": "0df996317b9bed00825028798d0c54471f1fe700fff80ab63f8eda53a696d641",
+      "compression": null
+    },
+    {
+      "path": "static/videos/realworld-eval/Cable_OOD6_Baseline_Failure_c894b9ac_Low_Wrist.mp4",
+      "original_bytes": 9504898,
+      "original_sha256": "8d674130f90466c0d2fcd9e55511d4a4af43204c0580e8875f87e6b66a53c067",
+      "stream": {
+        "width": 1280,
+        "height": 480,
+        "fps": 30.0,
+        "frames": 602,
+        "end_time_us": 20066667
+      },
+      "bytes": 9504898,
+      "sha256": "8d674130f90466c0d2fcd9e55511d4a4af43204c0580e8875f87e6b66a53c067",
+      "compression": null
+    },
+    {
+      "path": "static/videos/realworld-eval/Cable_OOD6_ContrastFlow_Success_e0ca1bc3_Low_Wrist.mp4",
+      "original_bytes": 7196032,
+      "original_sha256": "0afe69e5b23020554c78deec260e7f7e926ca7a6864bedb36acfaf03032eee64",
+      "stream": {
+        "width": 1280,
+        "height": 480,
+        "fps": 30.0,
+        "frames": 444,
+        "end_time_us": 14800000
+      },
+      "bytes": 7196032,
+      "sha256": "0afe69e5b23020554c78deec260e7f7e926ca7a6864bedb36acfaf03032eee64",
+      "compression": null
+    },
+    {
+      "path": "static/videos/realworld-eval/Cable_OOD7_Baseline_Failure_2a2cb78e_Low_Wrist.mp4",
+      "original_bytes": 7638365,
+      "original_sha256": "dded6a2f3a4b972270776e6411b4b78b032eba6c36ca832ba8aed2c9f38731fe",
+      "stream": {
+        "width": 1280,
+        "height": 480,
+        "fps": 30.0,
+        "frames": 499,
+        "end_time_us": 16633333
+      },
+      "bytes": 7638365,
+      "sha256": "dded6a2f3a4b972270776e6411b4b78b032eba6c36ca832ba8aed2c9f38731fe",
+      "compression": null
+    },
+    {
+      "path": "static/videos/realworld-eval/Cable_OOD7_ContrastFlow_Success_5de6e732_Low_Wrist.mp4",
+      "original_bytes": 7391223,
+      "original_sha256": "2e26cbc2e49f811b95ef086066acdbd67b03f1d2812a523bfeb94972fb658cc1",
+      "stream": {
+        "width": 1280,
+        "height": 480,
+        "fps": 30.0,
+        "frames": 460,
+        "end_time_us": 15333333
+      },
+      "bytes": 7391223,
+      "sha256": "2e26cbc2e49f811b95ef086066acdbd67b03f1d2812a523bfeb94972fb658cc1",
+      "compression": null
+    },
+    {
+      "path": "static/videos/realworld-eval/Centrifuge_P1_Baseline_Failure_a5f9ecdb_Low_Wrist.mp4",
+      "original_bytes": 14064588,
+      "original_sha256": "3e27a87f409addf230136e92e7b4a3e0485eb1ae34e9e0c278302101e1380118",
+      "stream": {
+        "width": 2560,
+        "height": 800,
+        "fps": 30.0,
+        "frames": 280,
+        "end_time_us": 9333333
+      },
+      "bytes": 10253711,
+      "sha256": "ac9af41e6e1befa745f0657905769c508064f8f514e75b5091a300780d5d58a7",
+      "compression": {
+        "crf": 19,
+        "vmaf_mean": 98.102894,
+        "vmaf_p05": 96.334916,
+        "vmaf_min": 95.619676,
+        "ssim": 0.989946,
+        "quality_frames": 280,
+        "decision": "accepted"
+      }
+    },
+    {
+      "path": "static/videos/realworld-eval/Centrifuge_P1_ContrastFlow_Success_fefe69d0_Low_Wrist.mp4",
+      "original_bytes": 43978162,
+      "original_sha256": "1ab87484525777be755731f20104769922124eda18c29a30ad01611d4a5f29db",
+      "stream": {
+        "width": 2560,
+        "height": 800,
+        "fps": 30.0,
+        "frames": 935,
+        "end_time_us": 31166667
+      },
+      "bytes": 40763156,
+      "sha256": "b2355229418ba96740186de3396dd7ae98bc6385887ba9a1054804e8e76c3b4a",
+      "compression": {
+        "crf": 17,
+        "vmaf_mean": 98.143499,
+        "vmaf_p05": 97.042582,
+        "vmaf_min": 96.214073,
+        "ssim": 0.992934,
+        "quality_frames": 935,
+        "decision": "accepted"
+      }
+    },
+    {
+      "path": "static/videos/realworld-eval/Centrifuge_P2_Baseline_Failure_283e473f_Low_Wrist.mp4",
+      "original_bytes": 44619677,
+      "original_sha256": "afa7bbccb5bf5ccc6538c71b91f7fdcf2442cc5fdaeadfb4997cd9e798b14cd3",
+      "stream": {
+        "width": 2560,
+        "height": 800,
+        "fps": 30.0,
+        "frames": 960,
+        "end_time_us": 32000000
+      },
+      "bytes": 44619677,
+      "sha256": "afa7bbccb5bf5ccc6538c71b91f7fdcf2442cc5fdaeadfb4997cd9e798b14cd3",
+      "compression": null
+    },
+    {
+      "path": "static/videos/realworld-eval/Centrifuge_P2_ContrastFlow_Success_03e5e0dd_Low_Wrist.mp4",
+      "original_bytes": 41204064,
+      "original_sha256": "a6335975bb0ce2a09ce051a20663a8b8d4b98077245ffd1724d4565ab662faaa",
+      "stream": {
+        "width": 2560,
+        "height": 800,
+        "fps": 30.0,
+        "frames": 874,
+        "end_time_us": 29133333
+      },
+      "bytes": 38053635,
+      "sha256": "612129ea82b80e22239396ae6306d022dea3a5d4e10ed8850799187c332220f6",
+      "compression": {
+        "crf": 17,
+        "vmaf_mean": 98.107676,
+        "vmaf_p05": 96.926297,
+        "vmaf_min": 96.102826,
+        "ssim": 0.992477,
+        "quality_frames": 874,
+        "decision": "accepted"
+      }
+    },
+    {
+      "path": "static/videos/realworld-eval/Centrifuge_P3_Baseline_Failure_833fc4ac_Low_Wrist.mp4",
+      "original_bytes": 48894568,
+      "original_sha256": "5aa62bff169a31cac35fdb04ba210e168061c8d47c3f3986e35aef9a78ad6256",
+      "stream": {
+        "width": 2560,
+        "height": 800,
+        "fps": 30.0,
+        "frames": 1567,
+        "end_time_us": 52233333
+      },
+      "bytes": 48894568,
+      "sha256": "5aa62bff169a31cac35fdb04ba210e168061c8d47c3f3986e35aef9a78ad6256",
+      "compression": null
+    },
+    {
+      "path": "static/videos/realworld-eval/Centrifuge_P3_ContrastFlow_Success_b754a0b5_Low_Wrist.mp4",
+      "original_bytes": 51578822,
+      "original_sha256": "ea84986f5f37e5e6c0b0984edb3ac6ec4f3163b68620f66ef870a62d151c715b",
+      "stream": {
+        "width": 2560,
+        "height": 800,
+        "fps": 30.0,
+        "frames": 1589,
+        "end_time_us": 52966667
+      },
+      "bytes": 51578822,
+      "sha256": "ea84986f5f37e5e6c0b0984edb3ac6ec4f3163b68620f66ef870a62d151c715b",
+      "compression": null
+    },
+    {
+      "path": "static/videos/realworld-eval/Centrifuge_P4_Baseline_Failure_22175f7f_Low_Wrist.mp4",
+      "original_bytes": 64146092,
+      "original_sha256": "40c3cee2ae227119644339ed8db86980b94f3c6cb8c32e52c8ee460123285822",
+      "stream": {
+        "width": 2560,
+        "height": 800,
+        "fps": 30.0,
+        "frames": 1434,
+        "end_time_us": 47800000
+      },
+      "bytes": 64146092,
+      "sha256": "40c3cee2ae227119644339ed8db86980b94f3c6cb8c32e52c8ee460123285822",
+      "compression": null
+    },
+    {
+      "path": "static/videos/realworld-eval/Centrifuge_P4_ContrastFlow_Success_dd08df2e_Low_Wrist.mp4",
+      "original_bytes": 52250867,
+      "original_sha256": "f61e4126aa5d3c71e3fb801ff7dc9fba2f84f3225f54b05da952a65e9508c191",
+      "stream": {
+        "width": 2560,
+        "height": 800,
+        "fps": 30.0,
+        "frames": 1155,
+        "end_time_us": 38500000
+      },
+      "bytes": 52250867,
+      "sha256": "f61e4126aa5d3c71e3fb801ff7dc9fba2f84f3225f54b05da952a65e9508c191",
+      "compression": null
+    },
+    {
+      "path": "static/videos/realworld-eval/Centrifuge_P5_Baseline_Failure_48bf7da1_Low_Wrist.mp4",
+      "original_bytes": 38130592,
+      "original_sha256": "d5b175ad325cdad00756ee9c47b350509dec03d1ec7fa4d0cb1e064cdff62342",
+      "stream": {
+        "width": 2560,
+        "height": 800,
+        "fps": 30.0,
+        "frames": 800,
+        "end_time_us": 26666667
+      },
+      "bytes": 38130592,
+      "sha256": "d5b175ad325cdad00756ee9c47b350509dec03d1ec7fa4d0cb1e064cdff62342",
+      "compression": null
+    },
+    {
+      "path": "static/videos/realworld-eval/Centrifuge_P5_ContrastFlow_Success_9c61ea8e_Low_Wrist.mp4",
+      "original_bytes": 37088164,
+      "original_sha256": "4cb0c60190f5dfc1dd97e5014137ecdb55eec40e3cbd5c4e6f983fda5d09fde5",
+      "stream": {
+        "width": 2560,
+        "height": 800,
+        "fps": 30.0,
+        "frames": 766,
+        "end_time_us": 25533333
+      },
+      "bytes": 34359133,
+      "sha256": "572369f1a4dcdc99f471a9cc5bb6516cf4848be7d317749e77a0c50c5f3f2e3e",
+      "compression": {
+        "crf": 17,
+        "vmaf_mean": 98.153122,
+        "vmaf_p05": 96.911804,
+        "vmaf_min": 95.184581,
+        "ssim": 0.992681,
+        "quality_frames": 766,
+        "decision": "accepted"
+      }
+    },
+    {
+      "path": "static/videos/realworld-eval/Titration_Config_01_Baseline_Failure_b0d93866_Low_Wrist.mp4",
+      "original_bytes": 7222268,
+      "original_sha256": "9ecf60e720092da05e30bb04821cb8b35cfdf4504fbe5b157882bc76fe9c2dff",
+      "stream": {
+        "width": 1280,
+        "height": 480,
+        "fps": 30.0,
+        "frames": 457,
+        "end_time_us": 15233333
+      },
+      "bytes": 7222268,
+      "sha256": "9ecf60e720092da05e30bb04821cb8b35cfdf4504fbe5b157882bc76fe9c2dff",
+      "compression": null
+    },
+    {
+      "path": "static/videos/realworld-eval/Titration_Config_01_ContrastFlow_Success_bb4d4e1c_Low_Wrist.mp4",
+      "original_bytes": 22605391,
+      "original_sha256": "083f3261c515fe173b06bb1b9221716808e5747684679d8d6c5f5e0a3a4e2b4c",
+      "stream": {
+        "width": 1280,
+        "height": 480,
+        "fps": 30.0,
+        "frames": 1483,
+        "end_time_us": 49433333
+      },
+      "bytes": 22605391,
+      "sha256": "083f3261c515fe173b06bb1b9221716808e5747684679d8d6c5f5e0a3a4e2b4c",
+      "compression": null
+    },
+    {
+      "path": "static/videos/realworld-eval/Titration_Config_02_Baseline_Stopping_Error_624fc51a_Low_Wrist.mp4",
+      "original_bytes": 19983365,
+      "original_sha256": "6054973221a1a075ca1c17d3413db01f9c30c85907d0da780916d1925656523a",
+      "stream": {
+        "width": 1280,
+        "height": 480,
+        "fps": 30.0,
+        "frames": 1435,
+        "end_time_us": 47833333
+      },
+      "bytes": 19983365,
+      "sha256": "6054973221a1a075ca1c17d3413db01f9c30c85907d0da780916d1925656523a",
+      "compression": null
+    },
+    {
+      "path": "static/videos/realworld-eval/Titration_Config_02_ContrastFlow_Success_fa15ca10_Low_Wrist.mp4",
+      "original_bytes": 19360787,
+      "original_sha256": "5ed0fbf96f7171d4622bcb4d62f18882c854052d6f8edd720c0c612f513ba4f0",
+      "stream": {
+        "width": 1280,
+        "height": 480,
+        "fps": 30.0,
+        "frames": 1295,
+        "end_time_us": 43166667
+      },
+      "bytes": 19360787,
+      "sha256": "5ed0fbf96f7171d4622bcb4d62f18882c854052d6f8edd720c0c612f513ba4f0",
+      "compression": null
+    },
+    {
+      "path": "static/videos/realworld-eval/Titration_Config_03_Baseline_Failure_e5547fcb_Low_Wrist.mp4",
+      "original_bytes": 8748780,
+      "original_sha256": "fb40c7c8fda431ef74f16c5b1a0d3d11e047dc7b1740e5cf77df62bd400cbd9b",
+      "stream": {
+        "width": 1280,
+        "height": 480,
+        "fps": 30.0,
+        "frames": 533,
+        "end_time_us": 17766667
+      },
+      "bytes": 8748780,
+      "sha256": "fb40c7c8fda431ef74f16c5b1a0d3d11e047dc7b1740e5cf77df62bd400cbd9b",
+      "compression": null
+    },
+    {
+      "path": "static/videos/realworld-eval/Titration_Config_03_ContrastFlow_Success_14e9fd4d_Low_Wrist.mp4",
+      "original_bytes": 14827947,
+      "original_sha256": "81ee5456ae95159c48950fbaf9c2db5f755165fd426314a8bfa636cc572bdcfc",
+      "stream": {
+        "width": 1280,
+        "height": 480,
+        "fps": 30.0,
+        "frames": 992,
+        "end_time_us": 33066667
+      },
+      "bytes": 14827947,
+      "sha256": "81ee5456ae95159c48950fbaf9c2db5f755165fd426314a8bfa636cc572bdcfc",
+      "compression": null
+    },
+    {
+      "path": "static/videos/realworld-eval/Titration_Config_04_Baseline_Failure_403383a3_Low_Wrist.mp4",
+      "original_bytes": 12482384,
+      "original_sha256": "ab3b291e5d9426034a2e57b79467dd39c16ffaa9e1bc815d0eec37ec038d0939",
+      "stream": {
+        "width": 1280,
+        "height": 480,
+        "fps": 30.0,
+        "frames": 831,
+        "end_time_us": 27700000
+      },
+      "bytes": 12482384,
+      "sha256": "ab3b291e5d9426034a2e57b79467dd39c16ffaa9e1bc815d0eec37ec038d0939",
+      "compression": null
+    },
+    {
+      "path": "static/videos/realworld-eval/Titration_Config_04_ContrastFlow_Success_f047bd0b_Low_Wrist.mp4",
+      "original_bytes": 27379724,
+      "original_sha256": "53b0c84db45db8047ca5eef020bb53ccea9695507dfbc95d2338b45b618ac7ef",
+      "stream": {
+        "width": 1280,
+        "height": 480,
+        "fps": 30.0,
+        "frames": 1946,
+        "end_time_us": 64866667
+      },
+      "bytes": 27379724,
+      "sha256": "53b0c84db45db8047ca5eef020bb53ccea9695507dfbc95d2338b45b618ac7ef",
+      "compression": null
+    },
+    {
+      "path": "static/videos/realworld-eval/Titration_Config_05_Baseline_Failure_50c403e7_Low_Wrist.mp4",
+      "original_bytes": 9840103,
+      "original_sha256": "87e733fb818f3f2d9c6f89395e344f90da408d92f590b5454928bea4dcd9ce4a",
+      "stream": {
+        "width": 1280,
+        "height": 480,
+        "fps": 30.0,
+        "frames": 631,
+        "end_time_us": 21033333
+      },
+      "bytes": 9840103,
+      "sha256": "87e733fb818f3f2d9c6f89395e344f90da408d92f590b5454928bea4dcd9ce4a",
+      "compression": null
+    },
+    {
+      "path": "static/videos/realworld-eval/Titration_Config_05_ContrastFlow_Success_ec870fab_Low_Wrist.mp4",
+      "original_bytes": 20008241,
+      "original_sha256": "283a1fad207752c535335f56fdb98e3a37e4908ff0991b6955564004957a3368",
+      "stream": {
+        "width": 1280,
+        "height": 480,
+        "fps": 30.0,
+        "frames": 1408,
+        "end_time_us": 46933333
+      },
+      "bytes": 20008241,
+      "sha256": "283a1fad207752c535335f56fdb98e3a37e4908ff0991b6955564004957a3368",
+      "compression": null
+    },
+    {
+      "path": "static/videos/realworld-eval/Titration_Config_06_Baseline_Failure_c2f5764b_Low_Wrist.mp4",
+      "original_bytes": 22286228,
+      "original_sha256": "cf69efa632a62b5bf30c4c32de6bb506258755c316b425a5f1bf1ea89f4f3ec6",
+      "stream": {
+        "width": 1280,
+        "height": 480,
+        "fps": 30.0,
+        "frames": 1643,
+        "end_time_us": 54766667
+      },
+      "bytes": 22286228,
+      "sha256": "cf69efa632a62b5bf30c4c32de6bb506258755c316b425a5f1bf1ea89f4f3ec6",
+      "compression": null
+    },
+    {
+      "path": "static/videos/realworld-eval/Titration_Config_06_ContrastFlow_Success_f04f7f64_Low_Wrist.mp4",
+      "original_bytes": 27631931,
+      "original_sha256": "b9725d03058aa8d2d634f11693f9e9d97ee171e47610a1bf4cf7d711a6af8b26",
+      "stream": {
+        "width": 1280,
+        "height": 480,
+        "fps": 30.0,
+        "frames": 1995,
+        "end_time_us": 66500000
+      },
+      "bytes": 27631931,
+      "sha256": "b9725d03058aa8d2d634f11693f9e9d97ee171e47610a1bf4cf7d711a6af8b26",
+      "compression": null
+    },
+    {
+      "path": "static/videos/rw_adapter_cf_success_1to4.mp4",
+      "original_bytes": 3272652,
+      "original_sha256": "c4aa8ad6762069a318903686ef2934ec8f09c6d93a281b2c5e255acde6671027",
+      "stream": {
+        "width": 1080,
+        "height": 1080,
+        "fps": 30.0,
+        "frames": 995,
+        "end_time_us": 33166667
+      },
+      "bytes": 3272652,
+      "sha256": "c4aa8ad6762069a318903686ef2934ec8f09c6d93a281b2c5e255acde6671027",
+      "compression": null
+    },
+    {
+      "path": "static/videos/rw_adapter_cf_success_2to4.mp4",
+      "original_bytes": 2015954,
+      "original_sha256": "295fc0868b5bfd7f88acae7ff3089f72561ca9ee6edf585a0a1af73e941033b6",
+      "stream": {
+        "width": 1080,
+        "height": 1080,
+        "fps": 30.0,
+        "frames": 470,
+        "end_time_us": 15666667
+      },
+      "bytes": 2015954,
+      "sha256": "295fc0868b5bfd7f88acae7ff3089f72561ca9ee6edf585a0a1af73e941033b6",
+      "compression": null
+    },
+    {
+      "path": "static/videos/rw_adapter_cf_success_3to4.mp4",
+      "original_bytes": 1977006,
+      "original_sha256": "51d6be257dcfaee84560ff9336b8d20b8c79cf92caa28a4803d2cfde1627f77d",
+      "stream": {
+        "width": 1080,
+        "height": 1080,
+        "fps": 30.12,
+        "frames": 496,
+        "end_time_us": 16500000
+      },
+      "bytes": 1977006,
+      "sha256": "51d6be257dcfaee84560ff9336b8d20b8c79cf92caa28a4803d2cfde1627f77d",
+      "compression": null
+    },
+    {
+      "path": "static/videos/rw_centrifuge_cf_success_ood_p1_blue.mp4",
+      "original_bytes": 5869333,
+      "original_sha256": "d7c92b1ca3559b9c025d4683a8896478bea89d21a2bf78600e7a480d9968f0b2",
+      "stream": {
+        "width": 1080,
+        "height": 1080,
+        "fps": 30.0,
+        "frames": 1220,
+        "end_time_us": 40666667
+      },
+      "bytes": 5869333,
+      "sha256": "d7c92b1ca3559b9c025d4683a8896478bea89d21a2bf78600e7a480d9968f0b2",
+      "compression": null
+    },
+    {
+      "path": "static/videos/rw_centrifuge_cf_success_p2_blue.mp4",
+      "original_bytes": 5885431,
+      "original_sha256": "922b7d5f84182a1d1c857e447e20ec83830d3107ffddb253f9667bf5dffabd48",
+      "stream": {
+        "width": 1080,
+        "height": 1080,
+        "fps": 30.0,
+        "frames": 1427,
+        "end_time_us": 47566667
+      },
+      "bytes": 5885431,
+      "sha256": "922b7d5f84182a1d1c857e447e20ec83830d3107ffddb253f9667bf5dffabd48",
+      "compression": null
+    },
+    {
+      "path": "static/videos/rw_centrifuge_cf_success_p3_blue.mp4",
+      "original_bytes": 6365369,
+      "original_sha256": "c934d7924d4ea2d5d4745bdbb7b5dad29edca8624f4fba80646cb30ebed98645",
+      "stream": {
+        "width": 1080,
+        "height": 1080,
+        "fps": 30.0,
+        "frames": 1341,
+        "end_time_us": 44700000
+      },
+      "bytes": 6365369,
+      "sha256": "c934d7924d4ea2d5d4745bdbb7b5dad29edca8624f4fba80646cb30ebed98645",
+      "compression": null
+    },
+    {
+      "path": "static/videos/rw_centrifuge_cf_success_p5_red.mp4",
+      "original_bytes": 5082190,
+      "original_sha256": "0683541deb9720feaaa868ff30d6b7d8ede2db95f0152eba8bb52e568352bb24",
+      "stream": {
+        "width": 1080,
+        "height": 1080,
+        "fps": 30.0,
+        "frames": 1186,
+        "end_time_us": 39533333
+      },
+      "bytes": 5082190,
+      "sha256": "0683541deb9720feaaa868ff30d6b7d8ede2db95f0152eba8bb52e568352bb24",
+      "compression": null
+    },
+    {
+      "path": "static/videos/rw_titration_cf_success_2cmup.mp4",
+      "original_bytes": 6982623,
+      "original_sha256": "cf01e6c067ad5f6ea5b1cab819fb259ed4e45c55d8c744daba9b8530dc1cd368",
+      "stream": {
+        "width": 1080,
+        "height": 1080,
+        "fps": 30.03,
+        "frames": 1862,
+        "end_time_us": 62033333
+      },
+      "bytes": 6982623,
+      "sha256": "cf01e6c067ad5f6ea5b1cab819fb259ed4e45c55d8c744daba9b8530dc1cd368",
+      "compression": null
+    },
+    {
+      "path": "static/videos/rw_titration_cf_success_default.mp4",
+      "original_bytes": 8266721,
+      "original_sha256": "a5e6883c19e38debc0da6e2d27190246fb05040470dffee70dc42aeaa0ab62df",
+      "stream": {
+        "width": 1080,
+        "height": 1080,
+        "fps": 30.0,
+        "frames": 1824,
+        "end_time_us": 60800000
+      },
+      "bytes": 8266721,
+      "sha256": "a5e6883c19e38debc0da6e2d27190246fb05040470dffee70dc42aeaa0ab62df",
+      "compression": null
+    },
+    {
+      "path": "static/videos/rw_titration_cf_success_towardbase.mp4",
+      "original_bytes": 8928341,
+      "original_sha256": "e31710e19d09598bffc4e9f79b4f8b5ba8712fe135f12b2eccd646e45dcda10f",
+      "stream": {
+        "width": 1080,
+        "height": 1080,
+        "fps": 30.01,
+        "frames": 2229,
+        "end_time_us": 74300000
+      },
+      "bytes": 8928341,
+      "sha256": "e31710e19d09598bffc4e9f79b4f8b5ba8712fe135f12b2eccd646e45dcda10f",
+      "compression": null
+    }
+  ],
+  "provenance_note": "Per-episode render manifests preserve original render provenance; this manifest records current website video hashes and compression checks."
+}

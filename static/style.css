@@ -1020,6 +1020,7 @@ video.is-playing { filter:none; outline-color:#fff; }
 
 /* Multiple examples share a category, with explicit arrow/dot navigation. */
 .case-carousel { position:relative; margin:10px 0 30px; padding:24px 56px 48px; border:1px solid var(--line); border-radius:20px; background:var(--surface); box-shadow:var(--shadow); }
+.case-carousel.single-example { padding:24px; }
 .case-slide[hidden] { display:none !important; }
 .case-carousel .task-prompt { padding-right:36px; margin:0 0 18px; }
 .case-counter { position:absolute; top:24px; right:56px; color:var(--muted); font-size:15px; line-height:1.6; }

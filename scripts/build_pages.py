@@ -46,6 +46,16 @@ def build(output, offline=False):
             if not url.scheme and not url.netloc and url.path:
                 referenced.add(((repo / asset).parent / url.path).resolve().relative_to(repo).as_posix())
 
+    unused_libero = sorted(
+        path.relative_to(repo).as_posix()
+        for path in (repo / "static/videos").rglob("*")
+        if path.is_file() and "libero" in path.name.lower()
+        and path.suffix.lower() in {".mp4", ".webm", ".mov"}
+        and path.relative_to(repo).as_posix() not in referenced
+    )
+    if unused_libero:
+        raise ValueError("Archive unused LIBERO videos outside the repository: " + ", ".join(unused_libero))
+
     def omit_history(directory, names):
         if Path(directory).is_relative_to(repo / "static/images"):
             return [

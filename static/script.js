@@ -122,6 +122,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const caseCarousels = Array.from(document.querySelectorAll(".case-carousel"));
   caseCarousels.forEach(carousel => {
     const slides = Array.from(carousel.querySelectorAll(":scope > .case-slide"));
+    if (slides.length === 1) {
+      carousel.showLinkedExample = id => slides[0].id === id;
+      return;
+    }
     const dots = Array.from(carousel.querySelectorAll(".case-dots .dot"));
     const counter = carousel.querySelector(".case-counter");
     let active = 0;
