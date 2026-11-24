@@ -1049,3 +1049,31 @@ video.is-playing { filter:none; outline-color:#fff; }
 /* Two-line centrifuge captions separate the holder slot from rotor orientation. */
 .real-config-stacked { max-width: 100%; }
 .real-config-orientation { display: block; margin-top: 4px; font-size: 0.88em; line-height: 1.45; font-weight: 400; color: var(--muted); }
+
+
+#realworld .real-task-showcase h3.sub,
+#realworld .real-eval-task-title {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.real-task-icon { flex: 0 0 auto; width: 1.05em; height: 1.05em; }
+
+.real-eval-back {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 9px 16px;
+  border: 1px solid #fed7aa;
+  border-radius: 10px;
+  background: var(--accent-light);
+  color: #9a3412;
+  font-weight: 600;
+}
+
+.real-eval-back:hover { background: #ffedd5; text-decoration: none; }
+.real-eval-back:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.real-eval-page-footer { border-top: 1px solid var(--line); text-align: center; }
