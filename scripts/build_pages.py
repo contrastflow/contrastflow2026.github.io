@@ -23,7 +23,7 @@ class AssetReferences(HTMLParser):
                     self.paths.append(url.path)
 
 
-def build(output, offline=False):
+def build(output, offline=False, compact_media=None):
     repo = Path(__file__).resolve().parent.parent
     output = output.resolve()
     if output.exists():
@@ -32,10 +32,17 @@ def build(output, offline=False):
     pages = sorted(repo.glob("*.html"))
     page_assets = {}
     for page in pages:
-        shutil.copy2(page, output / page.name)
+        html = page.read_text()
         references = AssetReferences()
-        references.feed(page.read_text())
+        references.feed(html)
         page_assets[page.name] = references.paths
+        if compact_media is not None:
+            html = re.sub(
+                r'((?:src|poster)="static/videos/[^"]+)',
+                lambda match: match[0] + ("&amp;" if "?" in match[0] else "?") + "pages=compact",
+                html,
+            )
+        (output / page.name).write_text(html)
     referenced = {asset for assets in page_assets.values() for asset in assets}
     # Include local CSS images as well as images referenced directly in HTML.
     for asset in list(referenced):
@@ -57,6 +64,8 @@ def build(output, offline=False):
         raise ValueError("Archive unused LIBERO videos outside the repository: " + ", ".join(unused_libero))
 
     def omit_history(directory, names):
+        if compact_media is not None and Path(directory) == repo / "static":
+            return ["videos"]
         if Path(directory).is_relative_to(repo / "static/images"):
             return [
                 name for name in names
@@ -74,6 +83,12 @@ def build(output, offline=False):
         ]
 
     shutil.copytree(repo / "static", output / "static", ignore=omit_history)
+    if compact_media is not None:
+        for asset in sorted(referenced):
+            if asset.startswith("static/videos/"):
+                destination = output / asset
+                destination.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(compact_media / asset, destination)
     (output / ".nojekyll").touch()
     for page, assets in page_assets.items():
         for asset in assets:
@@ -91,5 +106,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, default=Path(__file__).resolve().parent.parent / "_site")
     parser.add_argument("--offline", action="store_true", help="Package an offline review archive without the hosting size limit")
+    parser.add_argument("--compact-media", type=Path, help="Checkout containing the compact static/videos tree")
     args = parser.parse_args()
-    build(args.output, offline=args.offline)
+    build(args.output, offline=args.offline, compact_media=args.compact_media)

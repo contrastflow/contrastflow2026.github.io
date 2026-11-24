@@ -4,6 +4,15 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      variant:
+        description: Media to publish
+        type: choice
+        options:
+          - default
+          - compact
+          - full
+        default: default
 
 permissions:
   actions: read
@@ -25,9 +34,35 @@ jobs:
       - uses: actions/checkout@v6
         with:
           submodules: false
+      - name: Select media variant
+        id: media
+        env:
+          REQUESTED_VARIANT: ${{ inputs.variant }}
+        run: |
+          variant="${REQUESTED_VARIANT:-default}"
+          if [ "$variant" = default ]; then
+            variant="$(cat .github/pages-variant)"
+          fi
+          case "$variant" in
+            compact|full) echo "variant=$variant" >> "$GITHUB_OUTPUT" ;;
+            *) echo "Unknown Pages media variant: $variant" >&2; exit 1 ;;
+          esac
+      - uses: actions/checkout@v6
+        if: steps.media.outputs.variant == 'compact'
+        with:
+          ref: pages-compact-media
+          path: .pages-compact
+          persist-credentials: false
       - uses: actions/configure-pages@v5
       - name: Prepare static website
-        run: python3 scripts/build_pages.py
+        env:
+          PAGES_VARIANT: ${{ steps.media.outputs.variant }}
+        run: |
+          if [ "$PAGES_VARIANT" = compact ]; then
+            python3 scripts/build_pages.py --compact-media .pages-compact
+          else
+            python3 scripts/build_pages.py
+          fi
       - uses: actions/upload-pages-artifact@v4
         with:
           path: _site

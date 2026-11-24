@@ -28,9 +28,9 @@ A regular Git clone is sufficient; no private repositories or submodules are req
 
 ## Deployment
 
-Pushes to `main` automatically deploy the HTML pages and current assets to GitHub Pages using `scripts/build_pages.py`. Archived and unused video/image revisions stay in the repository and are excluded from the published bundle to make room for the high-quality current videos.
-The workflow can also be started manually from the Actions tab.
-There is no build step or dependency on the paper source repository.
+Pushes to `main` automatically deploy the HTML pages using `scripts/build_pages.py`. The compact media live on the `pages-compact-media` branch. The full-quality media live on `main`.
+
+In Actions, open **Deploy website to GitHub Pages**, choose **Run workflow** on `main`, and select **compact** or **full**. This choice applies to that deployment. To change the default for future pushes, set `.github/pages-variant` to `compact` or `full` on `main`.
 
 All displayed videos are stored directly in this repository. Displayed videos are kept in `static/videos/`. Unused and earlier versions were removed on 2026-11-23 and remain in Git history (last present in commit 79ce494). Other older versions remain available in Git history.
 
