@@ -1,0 +1,45 @@
+{
+  "purpose": "Archived ContrastFlow green-trajectory examples for review",
+  "clips": [
+    {
+      "title": "Wine bottle onto plate",
+      "id": "libero_goal_task_08_diverse_sequential",
+      "file": "libero_goal_task_08_diverse_sequential_contrastflow.mp4",
+      "duration_seconds": 11.0,
+      "bytes": 533193,
+      "sha256": "9019142b497f583705f0fe0d9f398e9ced6214adfd0d4144f1d0a193a1deb1c2"
+    },
+    {
+      "title": "BBQ sauce into basket",
+      "id": "libero_object_swap_03_episode17",
+      "file": "libero_object_swap_03_episode17_contrastflow.mp4",
+      "duration_seconds": 20.1,
+      "bytes": 966743,
+      "sha256": "703f1b2628ae69360bc306c84f707e62fc1c528bb811a965578aa8b7d8e5a50e"
+    },
+    {
+      "title": "Bowl onto stove",
+      "id": "libero_goal_swap_01_seed102",
+      "file": "libero_goal_swap_01_seed102_contrastflow.mp4",
+      "duration_seconds": 16.9,
+      "bytes": 910088,
+      "sha256": "9c767b6dca614dac1e7980fd5e66c9552b7ef7d5e343619c275631bd1af5ee07"
+    },
+    {
+      "title": "Turn on stove",
+      "id": "libero_goal_swap_07_episode6",
+      "file": "libero_goal_swap_07_episode6_contrastflow.mp4",
+      "duration_seconds": 10.3,
+      "bytes": 587049,
+      "sha256": "6e9160f184f4909f5009147fa409d59a292c1e4c7d024994568011cb70ee6a5b"
+    },
+    {
+      "title": "Bowl beside ramekin onto plate",
+      "id": "libero_spatial_swap_01_trial24",
+      "file": "libero_spatial_swap_01_trial24_contrastflow.mp4",
+      "duration_seconds": 21.4,
+      "bytes": 1413310,
+      "sha256": "b60c422d6ed08accff9bf1962b1cccc556bd840f3bfa44fe10c71c903f0b6039"
+    }
+  ]
+}
