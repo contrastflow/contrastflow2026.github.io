@@ -1,0 +1,75 @@
+{
+  "file": "libero_spatial_swap_07_episode0_train.mp4",
+  "frames": 155,
+  "source_frames": 155,
+  "fps": 10,
+  "width": 896,
+  "height": 896,
+  "fully_decoded": true,
+  "sha256": "f83c9764a6371eb1cb85654d68f1ef609090a95aa7c36c4b90b1506d3de4753d",
+  "native_state_rerender": {
+    "task": "libero_spatial_swap_07",
+    "arm": "training",
+    "frames": 155,
+    "rendered": 155,
+    "native_resolution": [
+      896,
+      896
+    ],
+    "physics_steps": 0,
+    "policy_calls": 0,
+    "source_sha256": "e16014f1085891acc3651fe86513361f13a38c73addf71373587cf6437218449",
+    "checks": [
+      {
+        "frame": 0,
+        "same_frame_mae_255": 1.0515543619791667,
+        "nearby_frame_mae_255": {
+          "0": 1.0515543619791667,
+          "1": 1.39459228515625,
+          "2": 1.6536865234375
+        }
+      },
+      {
+        "frame": 77,
+        "same_frame_mae_255": 2.6714884440104165,
+        "nearby_frame_mae_255": {
+          "75": 2.7206217447916665,
+          "76": 0.8653971354166666,
+          "77": 2.6714884440104165,
+          "78": 3.81878662109375,
+          "79": 4.5682373046875
+        }
+      },
+      {
+        "frame": 154,
+        "same_frame_mae_255": 1.4924723307291667,
+        "nearby_frame_mae_255": {
+          "152": 1.5850626627604167,
+          "153": 0.6243082682291666,
+          "154": 1.4924723307291667
+        }
+      }
+    ],
+    "state_roundtrip_atol": 1e-12,
+    "original_resolution": [
+      128,
+      128
+    ],
+    "source_state_frames_preserved": true,
+    "eef_max_abs_m": null,
+    "training_alignment_note": "All original demo states rendered in order; archived RGB observations are post-action and can lead the state stream by one frame."
+  },
+  "training_reference": {
+    "original_suite": "libero_spatial",
+    "original_task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate",
+    "original_instruction": "pick up the black bowl on the stove and place it on the plate",
+    "dataset": "yifengzhu-hf/LIBERO-datasets",
+    "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+    "source_url": "https://huggingface.co/datasets/yifengzhu-hf/LIBERO-datasets/resolve/f13aa24a3da8c43c7225569f28c562979fa0e35a/libero_spatial/pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_demo.hdf5",
+    "demo": "demo_0",
+    "frames": 155,
+    "source_frames_sha256": "fa268aaac90b559e6b5df64d9084d6660a67ce771d7435a3e76ff21b27ae6894",
+    "selection": "Original demo_0, without outcome selection",
+    "reference_note": "Original human demonstration with a separate initial state; exact policy training split membership is not asserted."
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "file": "libero_goal_swap_07_episode6_train.mp4",
+  "frames": 80,
+  "source_frames": 80,
+  "fps": 10,
+  "width": 896,
+  "height": 896,
+  "fully_decoded": true,
+  "sha256": "704bcc877a6a46126631317f54ad18ee3833a952f91e1dacc9340e2321550045",
+  "native_state_rerender": {
+    "task": "libero_goal_swap_07",
+    "arm": "training",
+    "frames": 80,
+    "rendered": 80,
+    "native_resolution": [
+      896,
+      896
+    ],
+    "physics_steps": 0,
+    "policy_calls": 0,
+    "source_sha256": "ff5d8c0450c094af3629d079d403f187dcb4b447681a9d9930bb3eb6d4f5ad5b",
+    "checks": [
+      {
+        "frame": 0,
+        "same_frame_mae_255": 1.43048095703125,
+        "nearby_frame_mae_255": {
+          "0": 1.43048095703125,
+          "1": 1.9097900390625,
+          "2": 2.2103271484375
+        }
+      },
+      {
+        "frame": 40,
+        "same_frame_mae_255": 0.8017985026041666,
+        "nearby_frame_mae_255": {
+          "38": 1.565185546875,
+          "39": 0.7135416666666666,
+          "40": 0.8017985026041666,
+          "41": 0.9267171223958334,
+          "42": 1.1397705078125
+        }
+      },
+      {
+        "frame": 79,
+        "same_frame_mae_255": 1.1223347981770833,
+        "nearby_frame_mae_255": {
+          "77": 1.1187337239583333,
+          "78": 0.6657511393229166,
+          "79": 1.1223347981770833
+        }
+      }
+    ],
+    "state_roundtrip_atol": 1e-12,
+    "original_resolution": [
+      128,
+      128
+    ],
+    "source_state_frames_preserved": true,
+    "eef_max_abs_m": null,
+    "training_alignment_note": "All original demo states rendered in order; archived RGB observations are post-action and can lead the state stream by one frame."
+  },
+  "training_reference": {
+    "original_suite": "libero_goal",
+    "original_task": "turn_on_the_stove",
+    "original_instruction": "turn on the stove",
+    "dataset": "yifengzhu-hf/LIBERO-datasets",
+    "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+    "source_url": "https://huggingface.co/datasets/yifengzhu-hf/LIBERO-datasets/resolve/f13aa24a3da8c43c7225569f28c562979fa0e35a/libero_goal/turn_on_the_stove_demo.hdf5",
+    "demo": "demo_0",
+    "frames": 80,
+    "source_frames_sha256": "45728fb627e89776cdcfa982610393d49dd2fa5c04439516e45d6ca44bb31684",
+    "selection": "Original demo_0, without outcome selection",
+    "reference_note": "Original human demonstration with a separate initial state; exact policy training split membership is not asserted."
+  }
+}

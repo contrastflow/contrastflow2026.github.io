@@ -1,0 +1,427 @@
+{
+  "task": "libero_spatial_swap_07",
+  "episode": 0,
+  "omega": 2,
+  "prompt": "Pick up the black bowl on the stove and place it on the plate.",
+  "simulation_anchor": "sim-spatial-07-episode0",
+  "baseline_success": false,
+  "contrastflow_success": true,
+  "policy_steps": [
+    500,
+    99
+  ],
+  "pair_verification": {
+    "initial_state_exact": true,
+    "initial_frame_exact": true,
+    "shared_noise_exact": true,
+    "common_replans": 20
+  },
+  "records": {
+    "train": {
+      "file": "libero_spatial_swap_07_episode0_train.mp4",
+      "frames": 155,
+      "source_frames": 155,
+      "fps": 10,
+      "width": 896,
+      "height": 896,
+      "fully_decoded": true,
+      "sha256": "f83c9764a6371eb1cb85654d68f1ef609090a95aa7c36c4b90b1506d3de4753d",
+      "native_state_rerender": {
+        "task": "libero_spatial_swap_07",
+        "arm": "training",
+        "frames": 155,
+        "rendered": 155,
+        "native_resolution": [
+          896,
+          896
+        ],
+        "physics_steps": 0,
+        "policy_calls": 0,
+        "source_sha256": "e16014f1085891acc3651fe86513361f13a38c73addf71373587cf6437218449",
+        "checks": [
+          {
+            "frame": 0,
+            "same_frame_mae_255": 1.0515543619791667,
+            "nearby_frame_mae_255": {
+              "0": 1.0515543619791667,
+              "1": 1.39459228515625,
+              "2": 1.6536865234375
+            }
+          },
+          {
+            "frame": 77,
+            "same_frame_mae_255": 2.6714884440104165,
+            "nearby_frame_mae_255": {
+              "75": 2.7206217447916665,
+              "76": 0.8653971354166666,
+              "77": 2.6714884440104165,
+              "78": 3.81878662109375,
+              "79": 4.5682373046875
+            }
+          },
+          {
+            "frame": 154,
+            "same_frame_mae_255": 1.4924723307291667,
+            "nearby_frame_mae_255": {
+              "152": 1.5850626627604167,
+              "153": 0.6243082682291666,
+              "154": 1.4924723307291667
+            }
+          }
+        ],
+        "state_roundtrip_atol": 1e-12,
+        "original_resolution": [
+          128,
+          128
+        ],
+        "source_state_frames_preserved": true,
+        "eef_max_abs_m": null,
+        "training_alignment_note": "All original demo states rendered in order; archived RGB observations are post-action and can lead the state stream by one frame."
+      },
+      "training_reference": {
+        "original_suite": "libero_spatial",
+        "original_task": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate",
+        "original_instruction": "pick up the black bowl on the stove and place it on the plate",
+        "dataset": "yifengzhu-hf/LIBERO-datasets",
+        "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+        "source_url": "https://huggingface.co/datasets/yifengzhu-hf/LIBERO-datasets/resolve/f13aa24a3da8c43c7225569f28c562979fa0e35a/libero_spatial/pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_demo.hdf5",
+        "demo": "demo_0",
+        "frames": 155,
+        "source_frames_sha256": "fa268aaac90b559e6b5df64d9084d6660a67ce771d7435a3e76ff21b27ae6894",
+        "selection": "Original demo_0, without outcome selection",
+        "reference_note": "Original human demonstration with a separate initial state; exact policy training split membership is not asserted."
+      }
+    },
+    "pi05": {
+      "task": "libero_spatial_swap_07",
+      "id": "libero_spatial_swap_07_episode0",
+      "method": "pi05",
+      "omega": 0,
+      "source_frames": 501,
+      "frames": 501,
+      "terminal_hold_frames": 0,
+      "fps": 10,
+      "width": 896,
+      "height": 896,
+      "file": "libero_spatial_swap_07_episode0_pi05.mp4",
+      "source_sha256": "15b16e64d8960f50b3657295a0c93dd3bbeb49fb0228c009df9abf70cb06dbab",
+      "sha256": "fa369748611dad5adbde9914e0195b0b1e10c3392ed3a498b8212f552c95f4be",
+      "fully_decoded": true,
+      "all_source_frames_once": true,
+      "success": false,
+      "native_state_rerender": {
+        "task": "libero_spatial_swap_07_episode0",
+        "arm": "baseline",
+        "frames": 501,
+        "rendered": 501,
+        "native_resolution": [
+          896,
+          896
+        ],
+        "physics_steps": 0,
+        "policy_calls": 0,
+        "source_sha256": "15b16e64d8960f50b3657295a0c93dd3bbeb49fb0228c009df9abf70cb06dbab",
+        "checks": [
+          {
+            "frame": 0,
+            "same_frame_mae_255": 1.2595163981119792,
+            "nearby_frame_mae_255": {
+              "0": 1.2595163981119792,
+              "1": 1.3525797526041667,
+              "2": 1.535430908203125
+            },
+            "eef_error_m": 2.689961071032406e-16
+          },
+          {
+            "frame": 250,
+            "same_frame_mae_255": 1.208984375,
+            "nearby_frame_mae_255": {
+              "248": 1.6639251708984375,
+              "249": 1.5285898844401042,
+              "250": 1.208984375,
+              "251": 1.3963673909505208,
+              "252": 1.4868214925130208
+            },
+            "eef_error_m": 1.3902561846079742e-05
+          },
+          {
+            "frame": 500,
+            "same_frame_mae_255": 1.2092946370442708,
+            "nearby_frame_mae_255": {
+              "498": 2.244562784830729,
+              "499": 1.7511800130208333,
+              "500": 1.2092946370442708
+            },
+            "eef_error_m": 7.850354088101419e-05
+          }
+        ],
+        "state_roundtrip_atol": 1e-12,
+        "original_resolution": [
+          256,
+          256
+        ],
+        "source_state_frames_preserved": true,
+        "eef_max_abs_m": 0.0008903300386762236,
+        "training_alignment_note": null
+      },
+      "trajectory_overlay": {
+        "color_rgb": [
+          239,
+          68,
+          68
+        ],
+        "width_pixels": 5.12,
+        "outline_width_pixels": 7.04,
+        "accumulated_executed_path": true,
+        "reset_at_replan": false
+      },
+      "capture_metadata": {
+        "name": "libero_spatial_swap_07_episode0",
+        "suite": "libero_spatial_swap",
+        "task_id": 7,
+        "episode": 0,
+        "task_name": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate",
+        "axis": "Spatial Swap",
+        "contrastflow_omega": 2,
+        "prompt_source": "task.language",
+        "sampling": "Ten matched episode IDs 0-9 per selected task, chosen before fresh outcomes. Three tasks prioritized by archived omega2 gains; qualitative candidate collection, not full benchmark. Exact compatible prior captures reused regardless of outcome.",
+        "prompt": "pick up the black bowl on the stove and place it on the plate",
+        "arm": "baseline",
+        "success": false,
+        "steps": 500,
+        "frames": 501,
+        "chunks": 100,
+        "noise_seed": 100,
+        "environment_seed": 7,
+        "control_horizon": 500,
+        "warmup_steps": 10,
+        "replan": 5,
+        "denoise_steps": 10,
+        "omega": 0,
+        "attention_layer": 12,
+        "attention_branch": "all recorded prefix calls",
+        "attention_call_order": [
+          "policy positive"
+        ],
+        "attention_tensor_axes": [
+          "replan",
+          "prefix_call",
+          "head",
+          "language_query",
+          "camera",
+          "image_patch"
+        ],
+        "attention_cameras": [
+          "agentview",
+          "robot0_eye_in_hand"
+        ],
+        "attention_tensor_dtype": "float32",
+        "attention_tensor_shape": [
+          100,
+          1,
+          8,
+          14,
+          2,
+          256
+        ],
+        "attention_layout": {
+          "image_spans": [
+            [
+              0,
+              256
+            ],
+            [
+              256,
+              512
+            ],
+            [
+              512,
+              768
+            ]
+          ],
+          "lang_span": [
+            768,
+            968
+          ],
+          "prefix_len": 968
+        },
+        "attention_instrumentation_max_error": 0.0,
+        "initial_state_sha256": "dcce3c7a205e342c95c67b5d613653ad67abae8e56f7730b2463d70f288b5bbd",
+        "initial_frame_sha256": "2a639b03eac7f4420aaa1929bab07622a571765a600b561e4057dcb7f0b1de0c",
+        "source_sha256": "15b16e64d8960f50b3657295a0c93dd3bbeb49fb0228c009df9abf70cb06dbab",
+        "checkpoint": "/shared/rsaas/apotnis2/openpi_cache/openpi-assets/checkpoints/pi05_libero_pytorch",
+        "job_id": "29809.1",
+        "gpu": "NVIDIA A40",
+        "seconds": 47.30741214752197
+      }
+    },
+    "contrastflow": {
+      "task": "libero_spatial_swap_07",
+      "id": "libero_spatial_swap_07_episode0",
+      "method": "contrastflow",
+      "omega": 2,
+      "source_frames": 100,
+      "frames": 100,
+      "terminal_hold_frames": 0,
+      "fps": 10,
+      "width": 896,
+      "height": 896,
+      "file": "libero_spatial_swap_07_episode0_contrastflow.mp4",
+      "source_sha256": "86da2b16118a479c7667fe2ab8efb37c425b16d7eef7a0165cf6c53f906518d6",
+      "sha256": "ca8b12b312a62140a27f20c0d9655997e0edc9e0d890a37e76a4392cd63304e6",
+      "fully_decoded": true,
+      "all_source_frames_once": true,
+      "success": true,
+      "native_state_rerender": {
+        "task": "libero_spatial_swap_07_episode0",
+        "arm": "emb_zero",
+        "frames": 100,
+        "rendered": 100,
+        "native_resolution": [
+          896,
+          896
+        ],
+        "physics_steps": 0,
+        "policy_calls": 0,
+        "source_sha256": "86da2b16118a479c7667fe2ab8efb37c425b16d7eef7a0165cf6c53f906518d6",
+        "checks": [
+          {
+            "frame": 0,
+            "same_frame_mae_255": 1.2595163981119792,
+            "nearby_frame_mae_255": {
+              "0": 1.2595163981119792,
+              "1": 1.351287841796875,
+              "2": 1.5431874593098958
+            },
+            "eef_error_m": 2.689961071032406e-16
+          },
+          {
+            "frame": 50,
+            "same_frame_mae_255": 1.2956746419270833,
+            "nearby_frame_mae_255": {
+              "48": 2.6989288330078125,
+              "49": 2.1380411783854165,
+              "50": 1.2956746419270833,
+              "51": 2.279515584309896,
+              "52": 3.283350626627604
+            },
+            "eef_error_m": 0.0003561311952061663
+          },
+          {
+            "frame": 99,
+            "same_frame_mae_255": 1.2159423828125,
+            "nearby_frame_mae_255": {
+              "97": 2.354766845703125,
+              "98": 1.7816212972005208,
+              "99": 1.2159423828125
+            },
+            "eef_error_m": 0.0002846154651571786
+          }
+        ],
+        "state_roundtrip_atol": 1e-12,
+        "original_resolution": [
+          256,
+          256
+        ],
+        "source_state_frames_preserved": true,
+        "eef_max_abs_m": 0.0010046212238188357,
+        "training_alignment_note": null
+      },
+      "trajectory_overlay": {
+        "color_rgb": [
+          32,
+          220,
+          90
+        ],
+        "width_pixels": 5.12,
+        "outline_width_pixels": 7.04,
+        "accumulated_executed_path": true,
+        "reset_at_replan": false
+      },
+      "capture_metadata": {
+        "name": "libero_spatial_swap_07_episode0",
+        "suite": "libero_spatial_swap",
+        "task_id": 7,
+        "episode": 0,
+        "task_name": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate",
+        "axis": "Spatial Swap",
+        "contrastflow_omega": 2,
+        "prompt_source": "task.language",
+        "sampling": "Ten matched episode IDs 0-9 per selected task, chosen before fresh outcomes. Three tasks prioritized by archived omega2 gains; qualitative candidate collection, not full benchmark. Exact compatible prior captures reused regardless of outcome.",
+        "prompt": "pick up the black bowl on the stove and place it on the plate",
+        "arm": "emb_zero",
+        "success": true,
+        "steps": 99,
+        "frames": 100,
+        "chunks": 20,
+        "noise_seed": 100,
+        "environment_seed": 7,
+        "control_horizon": 500,
+        "warmup_steps": 10,
+        "replan": 5,
+        "denoise_steps": 10,
+        "omega": 2,
+        "attention_layer": 12,
+        "attention_branch": "all recorded prefix calls",
+        "attention_call_order": [
+          "mask-selection positive",
+          "policy positive",
+          "policy masked negative"
+        ],
+        "attention_tensor_axes": [
+          "replan",
+          "prefix_call",
+          "head",
+          "language_query",
+          "camera",
+          "image_patch"
+        ],
+        "attention_cameras": [
+          "agentview",
+          "robot0_eye_in_hand"
+        ],
+        "attention_tensor_dtype": "float32",
+        "attention_tensor_shape": [
+          20,
+          3,
+          8,
+          14,
+          2,
+          256
+        ],
+        "attention_layout": {
+          "image_spans": [
+            [
+              0,
+              256
+            ],
+            [
+              256,
+              512
+            ],
+            [
+              512,
+              768
+            ]
+          ],
+          "lang_span": [
+            768,
+            968
+          ],
+          "prefix_len": 968
+        },
+        "attention_instrumentation_max_error": 0.0,
+        "initial_state_sha256": "dcce3c7a205e342c95c67b5d613653ad67abae8e56f7730b2463d70f288b5bbd",
+        "initial_frame_sha256": "2a639b03eac7f4420aaa1929bab07622a571765a600b561e4057dcb7f0b1de0c",
+        "source_sha256": "86da2b16118a479c7667fe2ab8efb37c425b16d7eef7a0165cf6c53f906518d6",
+        "checkpoint": "/shared/rsaas/apotnis2/openpi_cache/openpi-assets/checkpoints/pi05_libero_pytorch",
+        "job_id": "29809.1",
+        "gpu": "NVIDIA A40",
+        "seconds": 18.47089719772339
+      }
+    }
+  },
+  "full_episodes": true,
+  "attention": false,
+  "zoom": false
+}
