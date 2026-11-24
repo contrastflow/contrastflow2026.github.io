@@ -4,21 +4,20 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="icon" type="image/svg+xml" href="static/favicon.svg">
-<title>ContrastFlow: Improving Generalist Policies via Contrastive Flow at Test-Time</title>
+<title>Supplementary materials for submission 3160</title>
 <meta name="description" content="ContrastFlow: a test-time method that masks the visual tokens a generalist robot policy already attends to, and amplifies the contrast between the velocity predictions with and without them during flow integration. No additional training, no auxiliary models.">
 <meta name="robots" content="noindex, nofollow">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ContrastFlow: Improving Generalist Policies via Contrastive Flow at Test-Time">
 <meta property="og:description" content="Grounding the actions of a generalist policy in the visual regions it already localizes. No additional training, no auxiliary models.">
 <link rel="stylesheet" href="static/fonts/inter.css">
-<link rel="stylesheet" href="static/style.css?v=libero-attention-layout">
+<link rel="stylesheet" href="static/style.css?v=realworld-layout-v3">
 </head>
 <body>
 
 <aside class="sidenav" id="sidenav" aria-label="Section navigation">
   <div class="sidenav-body">
   <div class="sidenav-title">ContrastFlow</div>
-  <a href="#overview">Abstract</a>
   <a href="#showcase">Showcase</a>
   <div class="sidenav-cat">Results</div>
   <a href="#realworld" class="top">Real World</a>
@@ -27,18 +26,19 @@
     <a class="sub" href="#rw-titration-videos">&middot; Titration Task</a>
     <a class="sub" href="#rw-videos">&middot; Cable Insertion Task</a>
     <a class="sub" href="#rw-adapter-videos">&middot; Adapter Relocation Task</a>
-    <a class="sub" href="#rw-evaluation-videos">&middot; Additional Rollouts</a>
+    <a class="sub" href="#rw-evaluation-videos">&middot; Head-to-head Comparisons</a>
   </div>
   <a href="#simulation" class="top">Simulation</a>
   <div class="sub-links">
+    <a class="sub sub-group" href="#robolab">RoboLab-120</a>
     <a class="sub sub-group" href="#libero-pro">LIBERO-PRO</a>
     <div class="sub-links">
       <a class="sub" href="#sim-object-swap">&middot; Object Swap</a>
       <a class="sub" href="#sim-goal-swap">&middot; Goal Swap</a>
       <a class="sub" href="#sim-spatial-recovery">&middot; Spatial Swap</a>
       <a class="sub" href="#sim-long-swap">&middot; Long Swap</a>
+      <a class="sub" href="#libero-attention">&middot; Attention Maps</a>
     </div>
-    <a class="sub sub-group" href="#robolab">RoboLab-120</a>
   </div>
 
 
@@ -48,18 +48,10 @@
 
 <header class="hero">
 <div class="hero-inner">
-  <h1 class="title">Improving Generalist Policies via <br>Contrastive Flow at Test-Time</h1>
+  <h1 class="title">Supplementary materials for submission 3160</h1>
 
 </div>
 </header>
-
-<hr>
-
-<section id="overview" class="section">
-  <h2>Abstract</h2>
-
-<p class="abstract">Generalist robot policies often generate actions that follow the action distribution learned in the training scenes, even when the current observation differs. We make an interesting observation: such a policy already localizes the action-relevant visual regions in its text-to-vision attention, yet the generated actions remain under-conditioned on those regions. We propose ContrastFlow, a test-time method that turns the localized regions into a correction of the generated actions. ContrastFlow masks the attended visual tokens to obtain a negative reference from the policy itself, and amplifies the contrast between the velocity predictions with and without those tokens during flow integration, with no additional training and no auxiliary models. We show that the guidance shifts action plans toward the target and reduces the variance of the planned fingertip endpoints by about half. ContrastFlow consistently improves <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" aria-label="pi 0.5"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math> and Cosmos3, a vision-language-action model and a world action model, on LIBERO-PRO and RoboLab-120. On a physical robot, across four manipulation tasks that end in fine closed-loop alignment, ContrastFlow raises the per-task success rate of <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" aria-label="pi 0.5"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math> from 12&ndash;25% to 50&ndash;75%. ContrastFlow improves four state-of-the-art model families that span three architectures.</p>
-</section>
 
 <hr>
 
@@ -72,7 +64,7 @@
     <div class="marquee" aria-label="Scrolling task videos">
       <div class="marquee-track">
         <a class="reel-card" href="#rw-centrifuge-videos" aria-label="Centrifuge loading: view full comparisons">
-          <video class="reel-video" data-src="static/videos/rw_centrifuge_cf_success_ood_p1_blue.mp4?v=iphone-silent-v3" aria-label="Centrifuge Loading, Middle Slot · Orientation 1, ContrastFlow success" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/rw_centrifuge_cf_success_ood_p1_blue.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/rw_centrifuge_cf_success_ood_p1_blue.mp4?v=iphone-silent-v3" type="video/mp4"/></video>
+          <video class="reel-video" data-src="static/videos/rw_centrifuge_cf_success_ood_p1_blue.mp4?v=iphone-silent-v3" aria-label="Centrifuge Loading, Unseen Middle Holder Slot, ContrastFlow success" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/rw_centrifuge_cf_success_ood_p1_blue.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/rw_centrifuge_cf_success_ood_p1_blue.mp4?v=iphone-silent-v3" type="video/mp4"/></video>
         </a>
         <a class="reel-card" href="#sim-object-swap" aria-label="Object Swap: view full comparison">
           <video class="reel-video" muted loop playsinline preload="none" poster="static/videos/libero_object_swap_06_overlays_reel_clean.jpg" data-src="static/videos/libero_object_swap_06_overlays_reel_clean.mp4?v=d7eaa27d7c0a" aria-label="LIBERO-PRO · Object swap: ContrastFlow rollout" autoplay></video>
@@ -84,19 +76,19 @@
           <video class="reel-video" muted loop playsinline preload="none" poster="static/videos/libero_goal_swap_08_overlays_reel_clean.jpg" data-src="static/videos/libero_goal_swap_08_overlays_reel_clean.mp4?v=2b25adf8f1ab" aria-label="LIBERO-PRO · Goal Swap: ContrastFlow rollout" autoplay></video>
         </a>
         <a class="reel-card" href="#rw-videos" aria-label="Cable insertion: view full comparisons">
-          <video class="reel-video" data-src="static/videos/contrastflow_success_config2.mp4?v=iphone-silent-v3" aria-label="Cable Insertion, Large rotation 2, ContrastFlow success" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/contrastflow_success_config2.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/contrastflow_success_config2.mp4?v=iphone-silent-v3" type="video/mp4"/></video>
+          <video class="reel-video" data-src="static/videos/contrastflow_success_config2.mp4?v=iphone-silent-v3" aria-label="Cable Insertion, Large Wrist Rotation 2, ContrastFlow success" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/contrastflow_success_config2.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/contrastflow_success_config2.mp4?v=iphone-silent-v3" type="video/mp4"/></video>
         </a>
         <a class="reel-card" href="#sim-spatial-recovery" aria-label="Spatial Swap: view full comparison">
-          <video class="reel-video" muted loop playsinline preload="none" poster="static/videos/libero_spatial_swap_07_episode0_contrastflow.jpg" data-src="static/videos/libero_spatial_swap_07_episode0_contrastflow.mp4?v=45fc24e37002" aria-label="LIBERO-PRO · Spatial Swap: ContrastFlow rollout" autoplay></video>
+          <video class="reel-video" muted loop playsinline preload="none" poster="static/videos/libero_spatial_swap_04_trial24_reel_clean.jpg" data-src="static/videos/libero_spatial_swap_04_trial24_reel_clean.mp4" aria-label="LIBERO-PRO · Spatial Swap: ContrastFlow rollout" autoplay></video>
         </a>
         <a class="reel-card" href="#rw-adapter-videos" aria-label="Adapter relocation: view full comparisons">
-          <video class="reel-video" data-src="static/videos/rw_adapter_cf_success_1to4.mp4?v=iphone-silent-v3" aria-label="Adapter Relocation, Long Adapter Transfer (Outlet 1 → 4), ContrastFlow success" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/rw_adapter_cf_success_1to4.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/rw_adapter_cf_success_1to4.mp4?v=iphone-silent-v3" type="video/mp4"/></video>
+          <video class="reel-video" data-src="static/videos/rw_adapter_cf_success_1to4.mp4?v=iphone-silent-v3" aria-label="Adapter Relocation, Outlet 1 → Outlet 4, ContrastFlow success" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/rw_adapter_cf_success_1to4.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/rw_adapter_cf_success_1to4.mp4?v=iphone-silent-v3" type="video/mp4"/></video>
         </a>
         <a class="reel-card" href="#sim-object-swap" aria-label="Object Swap: view full comparison">
           <video class="reel-video" muted loop playsinline preload="none" poster="static/videos/libero_object_swap_06_overlays_reel_clean.jpg" data-src="static/videos/libero_object_swap_06_overlays_reel_clean.mp4?v=d7eaa27d7c0a" aria-label="LIBERO-PRO · Object Swap: ContrastFlow rollout" autoplay></video>
         </a>
         <a class="reel-card" href="#rw-centrifuge-videos" aria-label="Centrifuge loading: view full comparisons">
-          <video class="reel-video" muted loop playsinline preload="none" poster="static/videos/rw_centrifuge_cf_success_p3_blue.jpg?v=iphone-bright-v2" data-src="static/videos/rw_centrifuge_cf_success_p3_blue.mp4?v=iphone-silent-v3" aria-label="Centrifuge Loading, Top Test Tube Slot, ContrastFlow success" data-speed="2" autoplay></video>
+          <video class="reel-video" muted loop playsinline preload="none" poster="static/videos/rw_centrifuge_cf_success_p1_red.jpg?v=iphone-bright-v2" data-src="static/videos/rw_centrifuge_cf_success_p1_red.mp4?v=iphone-silent-v3" aria-label="Centrifuge Loading, Top Holder Slot, ContrastFlow success" data-speed="2" autoplay></video>
         </a>
         <a class="reel-card" href="#sim-goal-swap" aria-label="Goal Swap: view full comparison">
           <video class="reel-video" muted loop playsinline preload="none" poster="static/videos/libero_goal_swap_08_overlays_reel_clean.jpg" data-src="static/videos/libero_goal_swap_08_overlays_reel_clean.mp4?v=2b25adf8f1ab" aria-label="LIBERO-PRO · Goal Swap: ContrastFlow rollout" autoplay></video>
@@ -119,24 +111,24 @@
 
     <div class="real-video-grid">
       <div>
-        <h4 class="real-config">Middle Test Tube Slot</h4>
-        <article class="real-clip" data-outcome="success" data-source-id="1PzYjUIt-WLI-opQOwSAsiKUUbSEtnd12" data-task="centrifuge">
+        <h4 class="real-config">Top Holder Slot</h4>
+        <article class="real-clip" data-outcome="success" data-task="centrifuge">
         <div class="real-clip-heading"><h4>ContrastFlow</h4></div>
-        <video aria-label="Centrifuge Loading, Middle Test Tube Slot, ContrastFlow success" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/rw_centrifuge_cf_success_ood_p1_blue.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/rw_centrifuge_cf_success_ood_p1_blue.mp4?v=iphone-silent-v3" type="video/mp4"/></video>
+        <video aria-label="Centrifuge Loading, Top Holder Slot, ContrastFlow success" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/rw_centrifuge_cf_success_p1_red.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/rw_centrifuge_cf_success_p1_red.mp4?v=iphone-silent-v3" type="video/mp4"/></video>
         </article>
       </div>
       <div>
-        <h4 class="real-config">Bottom Test Tube Slot</h4>
-        <article class="real-clip" data-outcome="success" data-source-id="1JysOUApIiqYnzYnfnYwGyh6Fj45kSQed" data-task="centrifuge">
+        <h4 class="real-config">Bottom Holder Slot</h4>
+        <article class="real-clip" data-outcome="success" data-task="centrifuge">
         <div class="real-clip-heading"><h4>ContrastFlow</h4></div>
-        <video aria-label="Centrifuge Loading, Bottom Test Tube Slot, ContrastFlow success" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/rw_centrifuge_cf_success_p2_blue.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/rw_centrifuge_cf_success_p2_blue.mp4?v=iphone-silent-v3" type="video/mp4"/></video>
+        <video aria-label="Centrifuge Loading, Bottom Holder Slot, ContrastFlow success" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/rw_centrifuge_cf_success_p2_blue.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/rw_centrifuge_cf_success_p2_blue.mp4?v=iphone-silent-v3" type="video/mp4"/></video>
         </article>
       </div>
       <div>
-        <h4 class="real-config">Top Test Tube Slot</h4>
-        <article class="real-clip" data-outcome="success" data-source-id="1CKys6TYLN2m5MuhNv5wc5PhLcLbFCb4A" data-task="centrifuge">
+        <h4 class="real-config">Unseen Middle Holder Slot</h4>
+        <article class="real-clip" data-outcome="success" data-task="centrifuge">
         <div class="real-clip-heading"><h4>ContrastFlow</h4></div>
-        <video aria-label="Centrifuge Loading, Top Test Tube Slot, ContrastFlow success" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/rw_centrifuge_cf_success_p3_blue.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/rw_centrifuge_cf_success_p3_blue.mp4?v=iphone-silent-v3" type="video/mp4"/></video>
+        <video aria-label="Centrifuge Loading, Unseen Middle Holder Slot, ContrastFlow success" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/rw_centrifuge_cf_success_ood_p1_blue.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/rw_centrifuge_cf_success_ood_p1_blue.mp4?v=iphone-silent-v3" type="video/mp4"/></video>
         </article>
       </div>
     </div>
@@ -147,21 +139,21 @@
     <div class="real-video-grid">
       <div>
         <h4 class="real-config">Default Burette Position</h4>
-        <article class="real-clip" data-outcome="success" data-source-id="1FwJHufzTn8bXoVVn-QNx5v4pH7IwyBme" data-task="titration">
+        <article class="real-clip" data-outcome="success" data-task="titration">
         <div class="real-clip-heading"><h4>ContrastFlow</h4></div>
         <video aria-label="Titration, Default Burette Position, ContrastFlow success" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/rw_titration_cf_success_default.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/rw_titration_cf_success_default.mp4?v=iphone-silent-v3" type="video/mp4"/></video>
         </article>
       </div>
       <div>
-        <h4 class="real-config">Burette Height Shift</h4>
-        <article class="real-clip" data-outcome="success" data-source-id="1tOQ_oZIBQE2T_bQvQLFf8zs4katkrCee" data-task="titration">
+        <h4 class="real-config">Burette Height Shift <span role="img" aria-label="raised">↑</span> 2 cm</h4>
+        <article class="real-clip" data-outcome="success" data-task="titration">
         <div class="real-clip-heading"><h4>ContrastFlow</h4></div>
         <video aria-label="Titration, Burette Height Shift, ContrastFlow success" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/rw_titration_cf_success_2cmup.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/rw_titration_cf_success_2cmup.mp4?v=iphone-silent-v3" type="video/mp4"/></video>
         </article>
       </div>
       <div>
-        <h4 class="real-config">Burette Stand Shift</h4>
-        <article class="real-clip" data-outcome="success" data-source-id="10PCrhEXDh7OP9DHXcLsKkTYUzcR6zjPM" data-task="titration">
+        <h4 class="real-config">Burette Stand Shift <span role="img" aria-label="toward the robot base">↖</span></h4>
+        <article class="real-clip" data-outcome="success" data-task="titration">
         <div class="real-clip-heading"><h4>ContrastFlow</h4></div>
         <video aria-label="Titration, Burette Stand Shift, ContrastFlow success" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/rw_titration_cf_success_towardbase.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/rw_titration_cf_success_towardbase.mp4?v=iphone-silent-v3" type="video/mp4"/></video>
         </article>
@@ -173,24 +165,24 @@
 
     <div class="real-video-grid">
       <div>
-        <h4 class="real-config">Large Wrist Rotation</h4>
+        <h4 class="real-config">Large Wrist Rotation 1</h4>
         <article class="real-clip" data-outcome="success" data-task="cable">
         <div class="real-clip-heading"><h4>ContrastFlow</h4></div>
-        <video aria-label="Cable Insertion, Large Wrist Rotation, ContrastFlow success" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/contrastflow_success_config1.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/contrastflow_success_config1.mp4?v=iphone-silent-v3" type="video/mp4"/></video>
+        <video aria-label="Cable Insertion, Large Wrist Rotation 1, ContrastFlow success" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/contrastflow_success_config1.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/contrastflow_success_config1.mp4?v=iphone-silent-v3" type="video/mp4"/></video>
         </article>
       </div>
       <div>
-        <h4 class="real-config">Large Wrist Rotation</h4>
+        <h4 class="real-config">Large Wrist Rotation 2</h4>
         <article class="real-clip" data-outcome="success" data-task="cable">
         <div class="real-clip-heading"><h4>ContrastFlow</h4></div>
-        <video aria-label="Cable Insertion, Large Wrist Rotation, ContrastFlow success" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/contrastflow_success_config2.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/contrastflow_success_config2.mp4?v=iphone-silent-v3" type="video/mp4"/></video>
+        <video aria-label="Cable Insertion, Large Wrist Rotation 2, ContrastFlow success" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/contrastflow_success_config2.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/contrastflow_success_config2.mp4?v=iphone-silent-v3" type="video/mp4"/></video>
         </article>
       </div>
       <div>
-        <h4 class="real-config">Large Wrist Rotation</h4>
+        <h4 class="real-config">Large Wrist Rotation 3</h4>
         <article class="real-clip" data-outcome="success" data-task="cable">
         <div class="real-clip-heading"><h4>ContrastFlow</h4></div>
-        <video aria-label="Cable Insertion, Large Wrist Rotation, ContrastFlow success" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/contrastflow_success_config3.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/contrastflow_success_config3.mp4?v=iphone-silent-v3" type="video/mp4"/></video>
+        <video aria-label="Cable Insertion, Large Wrist Rotation 3, ContrastFlow success" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/contrastflow_success_config3.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/contrastflow_success_config3.mp4?v=iphone-silent-v3" type="video/mp4"/></video>
         </article>
       </div>
     </div>
@@ -200,37 +192,37 @@
 
     <div class="real-video-grid">
       <div>
-        <h4 class="real-config">Long Adapter Transfer</h4>
-        <article class="real-clip" data-outcome="success" data-source-id="1gKmFb6W6xLppa064G0EMlnzGwr0dyHpJ" data-task="adapter">
+        <h4 class="real-config">Outlet 1 → Outlet 4</h4>
+        <article class="real-clip" data-outcome="success" data-task="adapter">
         <div class="real-clip-heading"><h4>ContrastFlow</h4></div>
-        <video aria-label="Adapter Relocation, Long Adapter Transfer, ContrastFlow success" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/rw_adapter_cf_success_1to4.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/rw_adapter_cf_success_1to4.mp4?v=iphone-silent-v3" type="video/mp4"/></video>
+        <video aria-label="Adapter Relocation, Outlet 1 → Outlet 4, ContrastFlow success" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/rw_adapter_cf_success_1to4.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/rw_adapter_cf_success_1to4.mp4?v=iphone-silent-v3" type="video/mp4"/></video>
         </article>
       </div>
       <div>
-        <h4 class="real-config">Medium Adapter Transfer</h4>
-        <article class="real-clip" data-outcome="success" data-source-id="1-4W2P1DzeFonb0lkxYLCorjqqKtYHLum" data-task="adapter">
+        <h4 class="real-config">Outlet 2 → Outlet 4</h4>
+        <article class="real-clip" data-outcome="success" data-task="adapter">
         <div class="real-clip-heading"><h4>ContrastFlow</h4></div>
-        <video aria-label="Adapter Relocation, Medium Adapter Transfer, ContrastFlow success" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/rw_adapter_cf_success_2to4.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/rw_adapter_cf_success_2to4.mp4?v=iphone-silent-v3" type="video/mp4"/></video>
+        <video aria-label="Adapter Relocation, Outlet 2 → Outlet 4, ContrastFlow success" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/rw_adapter_cf_success_2to4.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/rw_adapter_cf_success_2to4.mp4?v=iphone-silent-v3" type="video/mp4"/></video>
         </article>
       </div>
       <div>
-        <h4 class="real-config">Short Adapter Transfer</h4>
-        <article class="real-clip" data-outcome="success" data-source-id="1s-fSjPWSRLx0vzr0PX_CPLw8hQEudfIq" data-task="adapter">
+        <h4 class="real-config">Outlet 3 → Outlet 4</h4>
+        <article class="real-clip" data-outcome="success" data-task="adapter">
         <div class="real-clip-heading"><h4>ContrastFlow</h4></div>
-        <video aria-label="Adapter Relocation, Short Adapter Transfer, ContrastFlow success" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/rw_adapter_cf_success_3to4.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/rw_adapter_cf_success_3to4.mp4?v=iphone-silent-v3" type="video/mp4"/></video>
+        <video aria-label="Adapter Relocation, Outlet 3 → Outlet 4, ContrastFlow success" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/rw_adapter_cf_success_3to4.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/rw_adapter_cf_success_3to4.mp4?v=iphone-silent-v3" type="video/mp4"/></video>
         </article>
       </div>
     </div>
   </div>
 
   <div class="real-eval-showcase">
-    <h2 id="rw-evaluation-videos" class="real-eval-section-title">Additional Rollouts from Embodied camera</h2>
+    <h2 id="rw-evaluation-videos" class="real-eval-section-title">Head-to-head comparison of ContrastFlow and the <math aria-label="pi 0.5" display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math> baseline</h2>
     <p class="real-eval-intro">Base policy and ContrastFlow from the same initial state, at 2× speed.</p>
 
     <div class="real-eval-task">
       <h3 id="rw-eval-centrifuge" class="real-eval-task-title"><img class="real-task-icon" src="static/icons/test-tube.svg" width="28" height="28" alt=""><span>Centrifuge Loading Task</span></h3>
       <figure class="real-eval-comparison" data-task="centrifuge" data-config="P3">
-        <figcaption class="real-eval-config">Bottom Test Tube Slot</figcaption>
+
         <div class="real-eval-grid">
           <article class="real-eval-view pi05" data-outcome="failure" data-behavior="failure" data-trial-id="833fc4ac-f885-49dd-a7ab-b5f36c15c5b6">
             <div class="real-eval-method"><math aria-label="pi 0.5" display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math> (Baseline)</div>
@@ -243,7 +235,7 @@
         </div>
       </figure>
       <figure class="real-eval-comparison" data-task="centrifuge" data-config="P1">
-        <figcaption class="real-eval-config">Middle Test Tube Slot</figcaption>
+
         <div class="real-eval-grid">
           <article class="real-eval-view pi05" data-outcome="failure" data-behavior="failure" data-trial-id="a5f9ecdb-5382-4519-a8e1-7ec1857efa97">
             <div class="real-eval-method"><math aria-label="pi 0.5" display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math> (Baseline)</div>
@@ -256,13 +248,26 @@
         </div>
       </figure>
       <div class="real-eval-footer">
-        <a class="real-more-videos" href="realworld-videos.html#eval-centrifuge" aria-label="More Centrifuge Loading videos: all 5 configurations"><span>More videos</span><span class="real-more-meta">(5 configurations)</span></a>
+        <a class="real-more-videos" href="realworld-centrifuge.html" aria-label="More Centrifuge Loading videos: all 5 configurations"><span>More videos</span><span class="real-more-meta">(5 configurations)</span></a>
       </div>
     </div>
     <div class="real-eval-task">
       <h3 id="rw-eval-burette" class="real-eval-task-title"><img class="real-task-icon" src="static/icons/burette.svg" width="28" height="28" alt=""><span>Titration Task</span></h3>
+      <figure class="real-eval-comparison" data-task="burette" data-config="1">
+
+        <div class="real-eval-grid">
+          <article class="real-eval-view pi05" data-outcome="failure" data-behavior="failure" data-trial-id="b0d93866-fbf4-4d65-9f1f-021957bbf728">
+            <div class="real-eval-method"><math aria-label="pi 0.5" display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math> (Baseline)</div>
+            <video class="real-eval-policy" aria-label="Titration, Default Burette Position, baseline pi 0.5, low and wrist cameras" controls muted playsinline preload="none" data-speed="2" poster="static/videos/realworld-eval/Titration_Config_01_Baseline_Failure_b0d93866_Low_Wrist.jpg?v=eval-approved-hq-v1"><source data-src="static/videos/realworld-eval/Titration_Config_01_Baseline_Failure_b0d93866_Low_Wrist.mp4?v=eval-approved-hq-v1" type="video/mp4"></video>
+          </article>
+          <article class="real-eval-view contrastflow" data-outcome="success" data-behavior="success" data-trial-id="bb4d4e1c-ec77-4a37-86ae-afb7c3c06bcb">
+            <div class="real-eval-method">ContrastFlow (Ours)</div>
+            <video class="real-eval-policy" aria-label="Titration, Default Burette Position, ContrastFlow, low and wrist cameras" controls muted playsinline preload="none" data-speed="2" poster="static/videos/realworld-eval/Titration_Config_01_ContrastFlow_Success_bb4d4e1c_Low_Wrist.jpg?v=eval-approved-hq-v1"><source data-src="static/videos/realworld-eval/Titration_Config_01_ContrastFlow_Success_bb4d4e1c_Low_Wrist.mp4?v=eval-approved-hq-v1" type="video/mp4"></video>
+          </article>
+        </div>
+      </figure>
       <figure class="real-eval-comparison" data-task="burette" data-config="4">
-        <figcaption class="real-eval-config">Burette Stand Shift</figcaption>
+
         <div class="real-eval-grid">
           <article class="real-eval-view pi05" data-outcome="failure" data-behavior="failure" data-trial-id="403383a3-af91-41ad-91df-5ed8b2491cad">
             <div class="real-eval-method"><math aria-label="pi 0.5" display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math> (Baseline)</div>
@@ -274,26 +279,14 @@
           </article>
         </div>
       </figure>
-      <figure class="real-eval-comparison" data-task="burette" data-config="6">
-        <div class="real-eval-grid">
-          <article class="real-eval-view pi05" data-outcome="failure" data-behavior="failure" data-trial-id="c2f5764b-252b-4834-bd7c-cc568fe82e8a">
-            <div class="real-eval-method"><math aria-label="pi 0.5" display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math> (Baseline)</div>
-            <video class="real-eval-policy" aria-label="Titration, Burette Stand Shift, baseline pi 0.5, low and wrist cameras" controls muted playsinline preload="none" data-speed="2" poster="static/videos/realworld-eval/Titration_Config_06_Baseline_Failure_c2f5764b_Low_Wrist.jpg?v=eval-approved-hq-v1"><source data-src="static/videos/realworld-eval/Titration_Config_06_Baseline_Failure_c2f5764b_Low_Wrist.mp4?v=eval-approved-hq-v1" type="video/mp4"></video>
-          </article>
-          <article class="real-eval-view contrastflow" data-outcome="success" data-behavior="success" data-trial-id="f04f7f64-eb57-4b4f-bc8c-2d3b8d0c0fcf">
-            <div class="real-eval-method">ContrastFlow (Ours)</div>
-            <video class="real-eval-policy" aria-label="Titration, Burette Stand Shift, ContrastFlow, low and wrist cameras" controls muted playsinline preload="none" data-speed="2" poster="static/videos/realworld-eval/Titration_Config_06_ContrastFlow_Success_f04f7f64_Low_Wrist.jpg?v=eval-approved-hq-v1"><source data-src="static/videos/realworld-eval/Titration_Config_06_ContrastFlow_Success_f04f7f64_Low_Wrist.mp4?v=eval-approved-hq-v1" type="video/mp4"></video>
-          </article>
-        </div>
-      </figure>
       <div class="real-eval-footer">
-        <a class="real-more-videos" href="realworld-videos.html#eval-burette" aria-label="More Titration videos: all 6 configurations"><span>More videos</span><span class="real-more-meta">(6 configurations)</span></a>
+        <a class="real-more-videos" href="realworld-titration.html" aria-label="More Titration videos: all 6 configurations"><span>More videos</span><span class="real-more-meta">(6 configurations)</span></a>
       </div>
     </div>
     <div class="real-eval-task">
       <h3 id="rw-eval-cable" class="real-eval-task-title"><img class="real-task-icon" src="static/icons/cable-manager.svg" width="28" height="28" alt=""><span>Cable Insertion Task</span></h3>
       <figure class="real-eval-comparison" data-task="cable" data-config="1">
-        <figcaption class="real-eval-config">Large Wrist Rotation</figcaption>
+
         <div class="real-eval-grid">
           <article class="real-eval-view pi05" data-outcome="failure" data-behavior="failure" data-trial-id="032cfa53-7ce6-4989-8228-ffdb2c6d90c1">
             <div class="real-eval-method"><math aria-label="pi 0.5" display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math> (Baseline)</div>
@@ -318,39 +311,39 @@
         </div>
       </figure>
       <div class="real-eval-footer">
-        <a class="real-more-videos" href="realworld-videos.html#eval-cable" aria-label="More Cable Insertion videos: all 7 configurations"><span>More videos</span><span class="real-more-meta">(7 configurations)</span></a>
+        <a class="real-more-videos" href="realworld-cable.html" aria-label="More Cable Insertion videos: all 7 configurations"><span>More videos</span><span class="real-more-meta">(7 configurations)</span></a>
       </div>
     </div>
     <div class="real-eval-task">
       <h3 id="rw-eval-adapter" class="real-eval-task-title"><img class="real-task-icon" src="static/icons/adapter.svg" width="28" height="28" alt=""><span>Adapter Relocation Task</span></h3>
       <figure class="real-eval-comparison" data-task="adapter" data-config="3-&gt;4">
-        <figcaption class="real-eval-config">Short Adapter Transfer</figcaption>
+
         <div class="real-eval-grid">
           <article class="real-eval-view pi05" data-outcome="failure" data-behavior="failure" data-trial-id="1549d83e-a16e-44a7-b3ec-2fb59bc86693">
             <div class="real-eval-method"><math aria-label="pi 0.5" display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math> (Baseline)</div>
-            <video class="real-eval-policy" aria-label="Adapter Relocation, Short Adapter Transfer, baseline pi 0.5, low and wrist cameras" controls muted playsinline preload="none" data-speed="2" poster="static/videos/realworld-eval/Adapter_3to4_Baseline_Failure_1549d83e_Low_Wrist.jpg?v=eval-approved-hq-v1"><source data-src="static/videos/realworld-eval/Adapter_3to4_Baseline_Failure_1549d83e_Low_Wrist.mp4?v=aa5ef4db7160" type="video/mp4"></video>
+            <video class="real-eval-policy" aria-label="Adapter Relocation, Outlet 3 → Outlet 4, baseline pi 0.5, low and wrist cameras" controls muted playsinline preload="none" data-speed="2" poster="static/videos/realworld-eval/Adapter_3to4_Baseline_Failure_1549d83e_Low_Wrist.jpg?v=eval-approved-hq-v1"><source data-src="static/videos/realworld-eval/Adapter_3to4_Baseline_Failure_1549d83e_Low_Wrist.mp4?v=aa5ef4db7160" type="video/mp4"></video>
           </article>
           <article class="real-eval-view contrastflow" data-outcome="success" data-behavior="success" data-trial-id="6a0a58c1-a0c0-4d79-936f-4a3165a606d2">
             <div class="real-eval-method">ContrastFlow (Ours)</div>
-            <video class="real-eval-policy" aria-label="Adapter Relocation, Short Adapter Transfer, ContrastFlow, low and wrist cameras" controls muted playsinline preload="none" data-speed="2" poster="static/videos/realworld-eval/Adapter_3to4_ContrastFlow_Success_6a0a58c1_Low_Wrist.jpg?v=eval-approved-hq-v1"><source data-src="static/videos/realworld-eval/Adapter_3to4_ContrastFlow_Success_6a0a58c1_Low_Wrist.mp4?v=84fcab64ec16" type="video/mp4"></video>
+            <video class="real-eval-policy" aria-label="Adapter Relocation, Outlet 3 → Outlet 4, ContrastFlow, low and wrist cameras" controls muted playsinline preload="none" data-speed="2" poster="static/videos/realworld-eval/Adapter_3to4_ContrastFlow_Success_6a0a58c1_Low_Wrist.jpg?v=eval-approved-hq-v1"><source data-src="static/videos/realworld-eval/Adapter_3to4_ContrastFlow_Success_6a0a58c1_Low_Wrist.mp4?v=84fcab64ec16" type="video/mp4"></video>
           </article>
         </div>
       </figure>
       <figure class="real-eval-comparison" data-task="adapter" data-config="1-&gt;4">
-        <figcaption class="real-eval-config">Long Adapter Transfer</figcaption>
+
         <div class="real-eval-grid">
           <article class="real-eval-view pi05" data-outcome="failure" data-behavior="failure" data-trial-id="6f9ae0e6-f418-4ac9-bbde-067b285ea622">
             <div class="real-eval-method"><math aria-label="pi 0.5" display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math> (Baseline)</div>
-            <video class="real-eval-policy" aria-label="Adapter Relocation, Long Adapter Transfer, baseline pi 0.5, low and wrist cameras" controls muted playsinline preload="none" data-speed="2" poster="static/videos/realworld-eval/Adapter_1to4_Baseline_Failure_6f9ae0e6_Low_Wrist.jpg?v=eval-approved-hq-v1"><source data-src="static/videos/realworld-eval/Adapter_1to4_Baseline_Failure_6f9ae0e6_Low_Wrist.mp4?v=fd4198c372ca" type="video/mp4"></video>
+            <video class="real-eval-policy" aria-label="Adapter Relocation, Outlet 1 → Outlet 4, baseline pi 0.5, low and wrist cameras" controls muted playsinline preload="none" data-speed="2" poster="static/videos/realworld-eval/Adapter_1to4_Baseline_Failure_6f9ae0e6_Low_Wrist.jpg?v=eval-approved-hq-v1"><source data-src="static/videos/realworld-eval/Adapter_1to4_Baseline_Failure_6f9ae0e6_Low_Wrist.mp4?v=fd4198c372ca" type="video/mp4"></video>
           </article>
           <article class="real-eval-view contrastflow" data-outcome="success" data-behavior="success" data-trial-id="5686a30d-b209-4858-be36-3cafc6cdaed7">
             <div class="real-eval-method">ContrastFlow (Ours)</div>
-            <video class="real-eval-policy" aria-label="Adapter Relocation, Long Adapter Transfer, ContrastFlow, low and wrist cameras" controls muted playsinline preload="none" data-speed="2" poster="static/videos/realworld-eval/Adapter_1to4_ContrastFlow_Success_5686a30d_Low_Wrist.jpg?v=eval-approved-hq-v1"><source data-src="static/videos/realworld-eval/Adapter_1to4_ContrastFlow_Success_5686a30d_Low_Wrist.mp4?v=a5056a3436d8" type="video/mp4"></video>
+            <video class="real-eval-policy" aria-label="Adapter Relocation, Outlet 1 → Outlet 4, ContrastFlow, low and wrist cameras" controls muted playsinline preload="none" data-speed="2" poster="static/videos/realworld-eval/Adapter_1to4_ContrastFlow_Success_5686a30d_Low_Wrist.jpg?v=eval-approved-hq-v1"><source data-src="static/videos/realworld-eval/Adapter_1to4_ContrastFlow_Success_5686a30d_Low_Wrist.mp4?v=a5056a3436d8" type="video/mp4"></video>
           </article>
         </div>
       </figure>
       <div class="real-eval-footer">
-        <a class="real-more-videos" href="realworld-videos.html#eval-adapter" aria-label="More Adapter Relocation videos: all 3 configurations"><span>More videos</span><span class="real-more-meta">(3 configurations)</span></a>
+        <a class="real-more-videos" href="realworld-adapter.html" aria-label="More Adapter Relocation videos: all 3 configurations"><span>More videos</span><span class="real-more-meta">(3 configurations)</span></a>
       </div>
     </div>
   </div>
@@ -360,116 +353,6 @@
 
 <section id="simulation" class="section">
   <h2>Simulation</h2>
-  <h3 id="libero-pro" class="simulation-suite-title">LIBERO-PRO</h3>
-  <p class="trajectory-legend">Red: <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" aria-label="pi 0.5"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math>. Green: ContrastFlow. Trails show recorded motion across replans.</p>
-
-  <h4 id="sim-object-swap" class="sub">Object Swap</h4>
-<div aria-labelledby="sim-object-swap" class="case-carousel single-example" data-category-anchor="sim-object-swap" id="sim-object-examples" role="region" tabindex="0">
-
-<div aria-label="Selected example" class="case-slide" id="sim-object-example-1" role="group">
-<p class="task-prompt"><strong>Task prompt:</strong> Pick the butter and place it in the basket.</p>
-<figure class="fig sim-comparison" data-task="libero_object_swap_06">
-<div class="sim-grid">
-<article class="sim-view train"><h4>Train setup</h4><video aria-label="Original training demonstration: pick up the butter and place it in the basket" class="sim-policy training-demo" controls="" data-method="training" muted="" playsinline="" poster="static/videos/libero_object_swap_06_overlays_train.jpg" preload="none"><source data-src="static/videos/libero_object_swap_06_overlays_train.mp4?v=9c1aa6bb29da" type="video/mp4"/></video></article>
-<article class="sim-view test"><h4>Test setup</h4><img alt="Test setup for this task" decoding="async" height="896" loading="lazy" src="static/videos/libero_object_swap_06_overlays_test.jpg" width="896"/></article>
-<article class="sim-view pi05"><h4><math aria-label="pi 0.5" display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math> (Baseline)</h4><video aria-label="Full π0.5 rollout with a continuous red recorded trajectory" class="sim-policy" controls="" data-method="pi05" muted="" playsinline="" poster="static/videos/libero_object_swap_06_overlays_pi05.jpg?v=thin20-v1" preload="none"><source data-src="static/videos/libero_object_swap_06_overlays_pi05.mp4?v=thin20-v1" type="video/mp4"/></video></article>
-<article class="sim-view contrastflow"><h4>ContrastFlow (Ours)</h4><video aria-label="Full ContrastFlow rollout with a continuous green recorded trajectory" class="sim-policy" controls="" data-method="contrastflow" muted="" playsinline="" poster="static/videos/libero_object_swap_06_overlays_contrastflow.jpg?v=84163ddf24e2" preload="none"><source data-src="static/videos/libero_object_swap_06_overlays_contrastflow.mp4?v=0d1cc4cbb4e9" type="video/mp4"/></video></article>
-</div>
-</figure>
-</div>
-
-
-
-
-</div>
-
-<figure id="attention-object-swap" class="simulation-attention" aria-describedby="attention-object-swap-prompt">
-  <figcaption>Attention maps</figcaption>
-  <p id="attention-object-swap-prompt" class="task-prompt"><strong>Task prompt:</strong> Pick the butter and place it in the basket.</p>
-<div class="attention-comparison sim-grid" data-task="libero_object_swap_06">
-<article class="attention-view pi05"><h4><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" aria-label="pi 0.5"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math> (Baseline)</h4><div class="attention-panel-labels" aria-hidden="true"><span>Original</span><span>Attention</span></div><video class="sim-policy attention-policy" data-method="pi05" controls playsinline muted preload="none" poster="static/videos/attention_camera_overlay_libero_object_swap_06_pi05.jpg" aria-label="Object Swap: pi05, original camera beside its recorded attention overlay"><source data-src="static/videos/attention_camera_overlay_libero_object_swap_06_pi05.mp4" type="video/mp4"></video></article>
-<article class="attention-view contrastflow"><h4>ContrastFlow (Ours)</h4><div class="attention-panel-labels" aria-hidden="true"><span>Original</span><span>Attention</span></div><video class="sim-policy attention-policy" data-method="contrastflow" controls playsinline muted preload="none" poster="static/videos/attention_camera_overlay_libero_object_swap_06_contrastflow.jpg" aria-label="Object Swap: contrastflow, original camera beside its recorded attention overlay"><source data-src="static/videos/attention_camera_overlay_libero_object_swap_06_contrastflow.mp4" type="video/mp4"></video></article>
-</div>
-</figure>
-
-<h4 id="sim-goal-swap" class="sub">Goal Swap</h4>
-<div aria-labelledby="sim-goal-swap" class="case-carousel single-example" data-category-anchor="sim-goal-swap" id="sim-goal-examples" role="region" tabindex="0">
-
-<div aria-label="Selected example" class="case-slide" id="sim-goal-plate" role="group">
-<p class="task-prompt"><strong>Task prompt:</strong> Put the bowl on the plate.</p>
-<figure class="fig sim-comparison" data-task="libero_goal_swap_08">
-<div class="sim-grid">
-<article class="sim-view train"><h4>Train setup</h4><video aria-label="Original training demonstration: put the bowl on the plate" class="sim-policy training-demo" controls="" data-method="training" muted="" playsinline="" poster="static/videos/libero_goal_swap_08_overlays_train.jpg" preload="none"><source data-src="static/videos/libero_goal_swap_08_overlays_train.mp4?v=7af2c330e23d" type="video/mp4"/></video></article>
-<article class="sim-view test"><h4>Test setup</h4><img alt="Test setup for this task" decoding="async" height="896" loading="lazy" src="static/videos/libero_goal_swap_08_overlays_test.jpg" width="896"/></article>
-<article class="sim-view pi05"><h4><math aria-label="pi 0.5" display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math> (Baseline)</h4><video aria-label="Full π0.5 rollout with a continuous red recorded trajectory" class="sim-policy" controls="" data-method="pi05" muted="" playsinline="" poster="static/videos/libero_goal_swap_08_overlays_pi05.jpg?v=thin20-v1" preload="none"><source data-src="static/videos/libero_goal_swap_08_overlays_pi05.mp4?v=832c4d08460e" type="video/mp4"/></video></article>
-<article class="sim-view contrastflow"><h4>ContrastFlow (Ours)</h4><video aria-label="Full ContrastFlow rollout with a continuous green recorded trajectory" class="sim-policy" controls="" data-method="contrastflow" muted="" playsinline="" poster="static/videos/libero_goal_swap_08_overlays_contrastflow.jpg?v=thin20-v1" preload="none"><source data-src="static/videos/libero_goal_swap_08_overlays_contrastflow.mp4?v=85424d09e9eb" type="video/mp4"/></video></article>
-</div>
-</figure>
-</div>
-
-
-
-
-</div>
-
-<figure id="attention-goal-swap" class="simulation-attention" aria-describedby="attention-goal-swap-prompt">
-  <figcaption>Attention maps</figcaption>
-  <p id="attention-goal-swap-prompt" class="task-prompt"><strong>Task prompt:</strong> Put the bowl on the plate.</p>
-<div class="attention-comparison sim-grid" data-task="libero_goal_swap_08">
-<article class="attention-view pi05"><h4><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" aria-label="pi 0.5"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math> (Baseline)</h4><div class="attention-panel-labels" aria-hidden="true"><span>Original</span><span>Attention</span></div><video class="sim-policy attention-policy" data-method="pi05" controls playsinline muted preload="none" poster="static/videos/attention_camera_overlay_libero_goal_swap_08_pi05.jpg" aria-label="Goal Swap: pi05, original camera beside its recorded attention overlay"><source data-src="static/videos/attention_camera_overlay_libero_goal_swap_08_pi05.mp4" type="video/mp4"></video></article>
-<article class="attention-view contrastflow"><h4>ContrastFlow (Ours)</h4><div class="attention-panel-labels" aria-hidden="true"><span>Original</span><span>Attention</span></div><video class="sim-policy attention-policy" data-method="contrastflow" controls playsinline muted preload="none" poster="static/videos/attention_camera_overlay_libero_goal_swap_08_contrastflow.jpg" aria-label="Goal Swap: contrastflow, original camera beside its recorded attention overlay"><source data-src="static/videos/attention_camera_overlay_libero_goal_swap_08_contrastflow.mp4?v=b08d9ca763f2" type="video/mp4"></video></article>
-</div>
-</figure>
-
-<h4 id="sim-spatial-recovery" class="sub">Spatial Swap</h4>
-<div aria-labelledby="sim-spatial-recovery" class="case-carousel single-example" data-category-anchor="sim-spatial-recovery" id="sim-spatial-examples" role="region" tabindex="0">
-
-
-
-<div aria-label="Selected example" class="case-slide" id="sim-spatial-07-episode0" role="group">
-<p class="task-prompt"><strong>Task prompt:</strong> Pick up the black bowl on the stove and place it on the plate.</p>
-<figure class="fig sim-comparison" data-example="episode0" data-omega="2" data-task="libero_spatial_swap_07">
-<div class="sim-grid">
-<article class="sim-view train"><h4>Train setup</h4><video aria-label="Original training demonstration: Pick up the black bowl on the stove and place it on the plate." class="sim-policy training-demo" controls="" data-method="training" muted="" playsinline="" poster="static/videos/libero_spatial_swap_07_episode0_train.jpg" preload="none"><source data-src="static/videos/libero_spatial_swap_07_episode0_train.mp4?v=20384f9e3bcc" type="video/mp4"/></video></article>
-<article class="sim-view test"><h4>Test setup</h4><img alt="Modified test setup: Pick up the black bowl on the stove and place it on the plate." decoding="async" height="896" loading="lazy" src="static/videos/libero_spatial_swap_07_episode0_test.jpg" width="896"/></article>
-<article class="sim-view pi05"><h4><math aria-label="pi 0.5" display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math> (Baseline)</h4><video aria-label="Full π0.5 rollout with a continuous red recorded trajectory" class="sim-policy" controls="" data-method="pi05" muted="" playsinline="" poster="static/videos/libero_spatial_swap_07_episode0_pi05.jpg" preload="none"><source data-src="static/videos/libero_spatial_swap_07_episode0_pi05.mp4?v=09aff98adeae" type="video/mp4"/></video></article>
-<article class="sim-view contrastflow"><h4>ContrastFlow (Ours)</h4><video aria-label="Full ContrastFlow rollout with a continuous green recorded trajectory" class="sim-policy" controls="" data-method="contrastflow" muted="" playsinline="" poster="static/videos/libero_spatial_swap_07_episode0_contrastflow.jpg" preload="none"><source data-src="static/videos/libero_spatial_swap_07_episode0_contrastflow.mp4?v=45fc24e37002" type="video/mp4"/></video></article>
-</div>
-</figure>
-</div>
-
-
-</div>
-
-<figure id="attention-spatial-recovery" class="simulation-attention" aria-describedby="attention-spatial-recovery-prompt">
-  <figcaption>Attention maps</figcaption>
-  <p id="attention-spatial-recovery-prompt" class="task-prompt"><strong>Task prompt:</strong> Pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate.</p>
-<div class="attention-comparison sim-grid" data-task="libero_spatial_swap_04" data-episode="3">
-<article class="attention-view pi05"><h4><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" aria-label="pi 0.5"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math> (Baseline)</h4><div class="attention-panel-labels" aria-hidden="true"><span>Original</span><span>Attention</span></div><video class="sim-policy attention-policy" data-method="pi05" controls playsinline muted preload="none" poster="static/videos/attention_camera_overlay_libero_spatial_swap_04_episode3_pi05.jpg" aria-label="Spatial Swap: pi05, original camera beside its recorded attention overlay"><source data-src="static/videos/attention_camera_overlay_libero_spatial_swap_04_episode3_pi05.mp4" type="video/mp4"></video></article>
-<article class="attention-view contrastflow"><h4>ContrastFlow (Ours)</h4><div class="attention-panel-labels" aria-hidden="true"><span>Original</span><span>Attention</span></div><video class="sim-policy attention-policy" data-method="contrastflow" controls playsinline muted preload="none" poster="static/videos/attention_camera_overlay_libero_spatial_swap_04_episode3_contrastflow.jpg" aria-label="Spatial Swap: contrastflow, original camera beside its recorded attention overlay"><source data-src="static/videos/attention_camera_overlay_libero_spatial_swap_04_episode3_contrastflow.mp4?v=6ca4adeabca4" type="video/mp4"></video></article>
-</div>
-</figure>
-
-<h4 id="sim-long-swap" class="sub">Long Swap</h4>
-<p class="task-prompt"><strong>Task prompt:</strong> Put both the cream cheese box and the butter in the basket.</p>
-<figure class="fig sim-comparison" id="sim-long-swap-views" data-task="libero_10_swap_01">
-<div class="sim-grid">
-<article class="sim-view train"><h4>Train setup</h4><img alt="Train setup for this task" decoding="async" height="896" loading="lazy" src="static/videos/libero_10_swap_01_tr10_train.jpg" width="896"/></article>
-<article class="sim-view test"><h4>Test setup</h4><img alt="Test setup for this task: the cream cheese and the butter start where the orange juice and the tomato sauce were" decoding="async" height="896" loading="lazy" src="static/videos/libero_10_swap_01_tr10_test.jpg" width="896"/></article>
-<article class="sim-view pi05"><h4><math aria-label="pi 0.5" display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math> (Baseline)</h4><video aria-label="Full π0.5 rollout with a continuous red recorded trajectory" class="sim-policy" controls="" data-method="pi05" muted="" playsinline="" poster="static/videos/libero_10_swap_01_tr10_pi05.jpg" preload="none"><source data-src="static/videos/libero_10_swap_01_tr10_pi05.mp4" type="video/mp4"/></video></article>
-<article class="sim-view contrastflow"><h4>ContrastFlow (Ours)</h4><video aria-label="Full ContrastFlow rollout with a continuous green recorded trajectory" class="sim-policy" controls="" data-method="contrastflow" muted="" playsinline="" poster="static/videos/libero_10_swap_01_tr10_contrastflow.jpg" preload="none"><source data-src="static/videos/libero_10_swap_01_tr10_contrastflow.mp4" type="video/mp4"/></video></article>
-</div>
-</figure>
-
-<figure id="attention-long-swap" class="simulation-attention" aria-describedby="attention-long-swap-prompt">
-  <figcaption>Attention maps</figcaption>
-  <p id="attention-long-swap-prompt" class="task-prompt"><strong>Task prompt:</strong> Put both the cream cheese box and the butter in the basket.</p>
-<div class="attention-comparison sim-grid" data-task="libero_10_swap_01" data-episode="10">
-<article class="attention-view pi05"><h4><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" aria-label="pi 0.5"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math> (Baseline)</h4><div class="attention-panel-labels" aria-hidden="true"><span>Original</span><span>Attention</span></div><video class="sim-policy attention-policy" data-method="pi05" controls playsinline muted preload="none" poster="static/videos/attention_camera_overlay_libero_10_swap_01_pi05.jpg" aria-label="Long Swap: pi05, original camera beside its recorded attention overlay"><source data-src="static/videos/attention_camera_overlay_libero_10_swap_01_pi05.mp4" type="video/mp4"></video></article>
-<article class="attention-view contrastflow"><h4>ContrastFlow (Ours)</h4><div class="attention-panel-labels" aria-hidden="true"><span>Original</span><span>Attention</span></div><video class="sim-policy attention-policy" data-method="contrastflow" controls playsinline muted preload="none" poster="static/videos/attention_camera_overlay_libero_10_swap_01_contrastflow.jpg" aria-label="Long Swap: contrastflow, original camera beside its recorded attention overlay"><source data-src="static/videos/attention_camera_overlay_libero_10_swap_01_contrastflow.mp4" type="video/mp4"></video></article>
-</div>
-</figure>
-
 <div id="robolab" class="simulation-suite">
   <h3 class="simulation-suite-title">RoboLab-120</h3>
   <p class="real-eval-intro">Base policy and ContrastFlow from the same initial state, at 2× speed. The shorter rollout holds its last frame.</p>
@@ -508,6 +391,112 @@
       <article class="real-eval-view contrastflow" data-outcome="success"><div class="real-eval-method">ContrastFlow (Ours)</div><video class="real-eval-policy" aria-label="Pack canned foods into the bin, ContrastFlow, success" controls muted playsinline preload="none" data-speed="1" poster="static/videos/robolab/robolab_Cans_contrastflow.jpg"><source data-src="static/videos/robolab/robolab_Cans_contrastflow.mp4" type="video/mp4"></video></article>
     </div>
   </figure>
+</div>
+
+  <h3 id="libero-pro" class="simulation-suite-title">LIBERO-PRO</h3>
+  <p class="trajectory-legend">Red: <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" aria-label="pi 0.5"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math>. Green: ContrastFlow. Trails show recorded motion across replans.</p>
+
+  <h4 id="sim-object-swap" class="sub">Object Swap</h4>
+<div aria-labelledby="sim-object-swap" class="case-carousel single-example" data-category-anchor="sim-object-swap" id="sim-object-examples" role="region" tabindex="0">
+
+<div aria-label="Selected example" class="case-slide" id="sim-object-example-1" role="group">
+<p class="task-prompt"><strong>Task prompt:</strong> Pick the butter and place it in the basket.</p>
+<figure class="fig sim-comparison" data-task="libero_object_swap_06">
+<div class="sim-grid">
+<article class="sim-view train"><h4>Train setup</h4><video aria-label="Original training demonstration: pick up the butter and place it in the basket" class="sim-policy training-demo" controls="" data-method="training" muted="" playsinline="" poster="static/videos/libero_object_swap_06_overlays_train.jpg" preload="none"><source data-src="static/videos/libero_object_swap_06_overlays_train.mp4?v=9c1aa6bb29da" type="video/mp4"/></video></article>
+<article class="sim-view test"><h4>Test setup</h4><img alt="Test setup for this task" decoding="async" height="896" loading="lazy" src="static/videos/libero_object_swap_06_overlays_test.jpg" width="896"/></article>
+<article class="sim-view pi05"><h4><math aria-label="pi 0.5" display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math> (Baseline)</h4><video aria-label="Full π0.5 rollout with a continuous red recorded trajectory" class="sim-policy" controls="" data-method="pi05" muted="" playsinline="" poster="static/videos/libero_object_swap_06_overlays_pi05.jpg?v=thin20-v1" preload="none"><source data-src="static/videos/libero_object_swap_06_overlays_pi05.mp4?v=thin20-v1" type="video/mp4"/></video></article>
+<article class="sim-view contrastflow"><h4>ContrastFlow (Ours)</h4><video aria-label="Full ContrastFlow rollout with a continuous green recorded trajectory" class="sim-policy" controls="" data-method="contrastflow" muted="" playsinline="" poster="static/videos/libero_object_swap_06_overlays_contrastflow.jpg?v=84163ddf24e2" preload="none"><source data-src="static/videos/libero_object_swap_06_overlays_contrastflow.mp4?v=0d1cc4cbb4e9" type="video/mp4"/></video></article>
+</div>
+</figure>
+</div>
+
+</div>
+
+<h4 id="sim-goal-swap" class="sub">Goal Swap</h4>
+<div aria-labelledby="sim-goal-swap" class="case-carousel single-example" data-category-anchor="sim-goal-swap" id="sim-goal-examples" role="region" tabindex="0">
+
+<div aria-label="Selected example" class="case-slide" id="sim-goal-plate" role="group">
+<p class="task-prompt"><strong>Task prompt:</strong> Put the bowl on the plate.</p>
+<figure class="fig sim-comparison" data-task="libero_goal_swap_08">
+<div class="sim-grid">
+<article class="sim-view train"><h4>Train setup</h4><video aria-label="Original training demonstration: put the bowl on the plate" class="sim-policy training-demo" controls="" data-method="training" muted="" playsinline="" poster="static/videos/libero_goal_swap_08_overlays_train.jpg" preload="none"><source data-src="static/videos/libero_goal_swap_08_overlays_train.mp4?v=7af2c330e23d" type="video/mp4"/></video></article>
+<article class="sim-view test"><h4>Test setup</h4><img alt="Test setup for this task" decoding="async" height="896" loading="lazy" src="static/videos/libero_goal_swap_08_overlays_test.jpg" width="896"/></article>
+<article class="sim-view pi05"><h4><math aria-label="pi 0.5" display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math> (Baseline)</h4><video aria-label="Full π0.5 rollout with a continuous red recorded trajectory" class="sim-policy" controls="" data-method="pi05" muted="" playsinline="" poster="static/videos/libero_goal_swap_08_overlays_pi05.jpg?v=thin20-v1" preload="none"><source data-src="static/videos/libero_goal_swap_08_overlays_pi05.mp4?v=832c4d08460e" type="video/mp4"/></video></article>
+<article class="sim-view contrastflow"><h4>ContrastFlow (Ours)</h4><video aria-label="Full ContrastFlow rollout with a continuous green recorded trajectory" class="sim-policy" controls="" data-method="contrastflow" muted="" playsinline="" poster="static/videos/libero_goal_swap_08_overlays_contrastflow.jpg?v=thin20-v1" preload="none"><source data-src="static/videos/libero_goal_swap_08_overlays_contrastflow.mp4?v=85424d09e9eb" type="video/mp4"/></video></article>
+</div>
+</figure>
+</div>
+
+</div>
+
+<h4 id="sim-spatial-recovery" class="sub">Spatial Swap</h4>
+<div aria-labelledby="sim-spatial-recovery" class="case-carousel single-example" data-category-anchor="sim-spatial-recovery" id="sim-spatial-examples" role="region" tabindex="0">
+
+<div aria-label="Selected example" class="case-slide" id="sim-spatial-07-episode0" role="group">
+<p class="task-prompt"><strong>Task prompt:</strong> Pick up the black bowl on the stove and place it on the plate.</p>
+<figure class="fig sim-comparison" data-example="episode0" data-omega="2" data-task="libero_spatial_swap_07">
+<div class="sim-grid">
+<article class="sim-view train"><h4>Train setup</h4><video aria-label="Original training demonstration: Pick up the black bowl on the stove and place it on the plate." class="sim-policy training-demo" controls="" data-method="training" muted="" playsinline="" poster="static/videos/libero_spatial_swap_07_episode0_train.jpg" preload="none"><source data-src="static/videos/libero_spatial_swap_07_episode0_train.mp4?v=20384f9e3bcc" type="video/mp4"/></video></article>
+<article class="sim-view test"><h4>Test setup</h4><img alt="Modified test setup: Pick up the black bowl on the stove and place it on the plate." decoding="async" height="896" loading="lazy" src="static/videos/libero_spatial_swap_07_episode0_test.jpg" width="896"/></article>
+<article class="sim-view pi05"><h4><math aria-label="pi 0.5" display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math> (Baseline)</h4><video aria-label="Full π0.5 rollout with a continuous red recorded trajectory" class="sim-policy" controls="" data-method="pi05" muted="" playsinline="" poster="static/videos/libero_spatial_swap_07_episode0_pi05.jpg" preload="none"><source data-src="static/videos/libero_spatial_swap_07_episode0_pi05.mp4?v=09aff98adeae" type="video/mp4"/></video></article>
+<article class="sim-view contrastflow"><h4>ContrastFlow (Ours)</h4><video aria-label="Full ContrastFlow rollout with a continuous green recorded trajectory" class="sim-policy" controls="" data-method="contrastflow" muted="" playsinline="" poster="static/videos/libero_spatial_swap_07_episode0_contrastflow.jpg" preload="none"><source data-src="static/videos/libero_spatial_swap_07_episode0_contrastflow.mp4?v=45fc24e37002" type="video/mp4"/></video></article>
+</div>
+</figure>
+</div>
+
+</div>
+
+<h4 id="sim-long-swap" class="sub">Long Swap</h4>
+<p class="task-prompt"><strong>Task prompt:</strong> Put both the cream cheese box and the butter in the basket.</p>
+<figure class="fig sim-comparison" id="sim-long-swap-views" data-task="libero_10_swap_01">
+<div class="sim-grid">
+<article class="sim-view train"><h4>Train setup</h4><img alt="Train setup for this task" decoding="async" height="896" loading="lazy" src="static/videos/libero_10_swap_01_tr10_train.jpg" width="896"/></article>
+<article class="sim-view test"><h4>Test setup</h4><img alt="Test setup for this task: the cream cheese and the butter start where the orange juice and the tomato sauce were" decoding="async" height="896" loading="lazy" src="static/videos/libero_10_swap_01_tr10_test.jpg" width="896"/></article>
+<article class="sim-view pi05"><h4><math aria-label="pi 0.5" display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math> (Baseline)</h4><video aria-label="Full π0.5 rollout with a continuous red recorded trajectory" class="sim-policy" controls="" data-method="pi05" muted="" playsinline="" poster="static/videos/libero_10_swap_01_tr10_pi05.jpg" preload="none"><source data-src="static/videos/libero_10_swap_01_tr10_pi05.mp4" type="video/mp4"/></video></article>
+<article class="sim-view contrastflow"><h4>ContrastFlow (Ours)</h4><video aria-label="Full ContrastFlow rollout with a continuous green recorded trajectory" class="sim-policy" controls="" data-method="contrastflow" muted="" playsinline="" poster="static/videos/libero_10_swap_01_tr10_contrastflow.jpg" preload="none"><source data-src="static/videos/libero_10_swap_01_tr10_contrastflow.mp4" type="video/mp4"/></video></article>
+</div>
+</figure>
+
+<div class="simulation-suite" aria-labelledby="libero-attention">
+  <h4 id="libero-attention" class="sub">Attention Maps</h4>
+  <p class="real-eval-intro">Attention follows the current subgoal, shifting from the object to pick to its destination, then repeating that sequence for the second object in Long Swap.</p>
+
+<figure id="attention-object-swap" class="simulation-attention" aria-describedby="attention-object-swap-prompt">
+  <figcaption>Object Swap</figcaption>
+  <p id="attention-object-swap-prompt" class="task-prompt"><strong>Task prompt:</strong> Pick the butter and place it in the basket.</p>
+<div class="attention-comparison sim-grid" data-task="libero_object_swap_06">
+<article class="attention-view pi05"><h4><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" aria-label="pi 0.5"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math> (Baseline)</h4><div class="attention-panel-labels" aria-hidden="true"><span>Original</span><span>Attention</span></div><video class="sim-policy attention-policy" data-method="pi05" controls playsinline muted preload="none" poster="static/videos/attention_camera_overlay_libero_object_swap_06_pi05.jpg" aria-label="Object Swap: pi05, original camera beside its recorded attention overlay"><source data-src="static/videos/attention_camera_overlay_libero_object_swap_06_pi05.mp4" type="video/mp4"></video></article>
+<article class="attention-view contrastflow"><h4>ContrastFlow (Ours)</h4><div class="attention-panel-labels" aria-hidden="true"><span>Original</span><span>Attention</span></div><video class="sim-policy attention-policy" data-method="contrastflow" controls playsinline muted preload="none" poster="static/videos/attention_camera_overlay_libero_object_swap_06_contrastflow.jpg" aria-label="Object Swap: contrastflow, original camera beside its recorded attention overlay"><source data-src="static/videos/attention_camera_overlay_libero_object_swap_06_contrastflow.mp4" type="video/mp4"></video></article>
+</div>
+</figure>
+
+<figure id="attention-goal-swap" class="simulation-attention" aria-describedby="attention-goal-swap-prompt">
+  <figcaption>Goal Swap</figcaption>
+  <p id="attention-goal-swap-prompt" class="task-prompt"><strong>Task prompt:</strong> Put the bowl on the plate.</p>
+<div class="attention-comparison sim-grid" data-task="libero_goal_swap_08">
+<article class="attention-view pi05"><h4><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" aria-label="pi 0.5"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math> (Baseline)</h4><div class="attention-panel-labels" aria-hidden="true"><span>Original</span><span>Attention</span></div><video class="sim-policy attention-policy" data-method="pi05" controls playsinline muted preload="none" poster="static/videos/attention_camera_overlay_libero_goal_swap_08_pi05.jpg" aria-label="Goal Swap: pi05, original camera beside its recorded attention overlay"><source data-src="static/videos/attention_camera_overlay_libero_goal_swap_08_pi05.mp4" type="video/mp4"></video></article>
+<article class="attention-view contrastflow"><h4>ContrastFlow (Ours)</h4><div class="attention-panel-labels" aria-hidden="true"><span>Original</span><span>Attention</span></div><video class="sim-policy attention-policy" data-method="contrastflow" controls playsinline muted preload="none" poster="static/videos/attention_camera_overlay_libero_goal_swap_08_contrastflow.jpg" aria-label="Goal Swap: contrastflow, original camera beside its recorded attention overlay"><source data-src="static/videos/attention_camera_overlay_libero_goal_swap_08_contrastflow.mp4?v=b08d9ca763f2" type="video/mp4"></video></article>
+</div>
+</figure>
+
+<figure id="attention-spatial-recovery" class="simulation-attention" aria-describedby="attention-spatial-recovery-prompt">
+  <figcaption>Spatial Swap</figcaption>
+  <p id="attention-spatial-recovery-prompt" class="task-prompt"><strong>Task prompt:</strong> Pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate.</p>
+<div class="attention-comparison sim-grid" data-task="libero_spatial_swap_04" data-episode="3">
+<article class="attention-view pi05"><h4><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" aria-label="pi 0.5"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math> (Baseline)</h4><div class="attention-panel-labels" aria-hidden="true"><span>Original</span><span>Attention</span></div><video class="sim-policy attention-policy" data-method="pi05" controls playsinline muted preload="none" poster="static/videos/attention_camera_overlay_libero_spatial_swap_04_episode3_pi05.jpg" aria-label="Spatial Swap: pi05, original camera beside its recorded attention overlay"><source data-src="static/videos/attention_camera_overlay_libero_spatial_swap_04_episode3_pi05.mp4" type="video/mp4"></video></article>
+<article class="attention-view contrastflow"><h4>ContrastFlow (Ours)</h4><div class="attention-panel-labels" aria-hidden="true"><span>Original</span><span>Attention</span></div><video class="sim-policy attention-policy" data-method="contrastflow" controls playsinline muted preload="none" poster="static/videos/attention_camera_overlay_libero_spatial_swap_04_episode3_contrastflow.jpg" aria-label="Spatial Swap: contrastflow, original camera beside its recorded attention overlay"><source data-src="static/videos/attention_camera_overlay_libero_spatial_swap_04_episode3_contrastflow.mp4?v=6ca4adeabca4" type="video/mp4"></video></article>
+</div>
+</figure>
+
+<figure id="attention-long-swap" class="simulation-attention" aria-describedby="attention-long-swap-prompt">
+  <figcaption>Long Swap</figcaption>
+  <p id="attention-long-swap-prompt" class="task-prompt"><strong>Task prompt:</strong> Put both the cream cheese box and the butter in the basket.</p>
+<div class="attention-comparison sim-grid" data-task="libero_10_swap_01" data-episode="10">
+<article class="attention-view pi05"><h4><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" aria-label="pi 0.5"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math> (Baseline)</h4><div class="attention-panel-labels" aria-hidden="true"><span>Original</span><span>Attention</span></div><video class="sim-policy attention-policy" data-method="pi05" controls playsinline muted preload="none" poster="static/videos/attention_camera_overlay_libero_10_swap_01_pi05.jpg" aria-label="Long Swap: pi05, original camera beside its recorded attention overlay"><source data-src="static/videos/attention_camera_overlay_libero_10_swap_01_pi05.mp4" type="video/mp4"></video></article>
+<article class="attention-view contrastflow"><h4>ContrastFlow (Ours)</h4><div class="attention-panel-labels" aria-hidden="true"><span>Original</span><span>Attention</span></div><video class="sim-policy attention-policy" data-method="contrastflow" controls playsinline muted preload="none" poster="static/videos/attention_camera_overlay_libero_10_swap_01_contrastflow.jpg" aria-label="Long Swap: contrastflow, original camera beside its recorded attention overlay"><source data-src="static/videos/attention_camera_overlay_libero_10_swap_01_contrastflow.mp4" type="video/mp4"></video></article>
+</div>
+</figure>
 </div>
 </section>
 
