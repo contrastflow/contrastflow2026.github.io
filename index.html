@@ -427,13 +427,14 @@
 </div>
 
 <h3 id="sim-long-swap" class="sub">Long swap</h3>
-<figure class="fig sim-comparison" id="sim-long-swap-views">
-  <div class="sim-grid">
-    <article class="sim-view train"><h4>Train setup</h4><div class="video-placeholder" role="img" aria-label="Empty video placeholder"></div></article>
-    <article class="sim-view test"><h4>Test setup</h4><div class="video-placeholder" role="img" aria-label="Empty video placeholder"></div></article>
-    <article class="sim-view pi05"><h4><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" aria-label="pi 0.5"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math> (Baseline)</h4><div class="video-placeholder" role="img" aria-label="Empty video placeholder"></div></article>
-    <article class="sim-view contrastflow"><h4>ContrastFlow (Ours)</h4><div class="video-placeholder" role="img" aria-label="Empty video placeholder"></div></article>
-  </div>
+<p class="task-prompt"><strong>Task prompt:</strong> Put both the cream cheese box and the butter in the basket.</p>
+<figure class="fig sim-comparison" id="sim-long-swap-views" data-task="libero_10_swap_01">
+<div class="sim-grid">
+<article class="sim-view train"><h4>Train setup</h4><img alt="Train setup for this task" decoding="async" height="896" loading="lazy" src="static/videos/libero_10_swap_01_tr10_train.jpg" width="896"/></article>
+<article class="sim-view test"><h4>Test setup</h4><img alt="Test setup for this task: the cream cheese and the butter start where the orange juice and the tomato sauce were" decoding="async" height="896" loading="lazy" src="static/videos/libero_10_swap_01_tr10_test.jpg" width="896"/></article>
+<article class="sim-view pi05"><h4><math aria-label="pi 0.5" display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math> (Baseline)</h4><video aria-label="Full π0.5 rollout with a continuous red recorded trajectory" class="sim-policy" controls="" data-method="pi05" muted="" playsinline="" poster="static/videos/libero_10_swap_01_tr10_pi05.jpg" preload="none"><source data-src="static/videos/libero_10_swap_01_tr10_pi05.mp4" type="video/mp4"/></video></article>
+<article class="sim-view contrastflow"><h4>ContrastFlow (Ours)</h4><video aria-label="Full ContrastFlow rollout with a continuous green recorded trajectory" class="sim-policy" controls="" data-method="contrastflow" muted="" playsinline="" poster="static/videos/libero_10_swap_01_tr10_contrastflow.jpg" preload="none"><source data-src="static/videos/libero_10_swap_01_tr10_contrastflow.mp4" type="video/mp4"/></video></article>
+</div>
 </figure>
 </section>
 
