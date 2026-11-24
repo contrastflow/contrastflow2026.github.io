@@ -37,6 +37,7 @@
     <a class="sub" href="#sim-long-swap">&middot; Long swap</a>
 
   </div>
+  <a href="#robolab" class="top">RoboLab</a>
   <a href="#attention-analysis" class="top">Attention analysis</a>
   <div class="sub-links">
     <a class="sub" href="#attention-object-swap">&middot; Object Swap</a>
@@ -436,6 +437,52 @@
 </figure>
 </section>
 
+
+<hr>
+<section id="robolab" class="section">
+  <h2>Simulation: RoboLab-120</h2>
+  <p class="real-eval-intro">Base policy and ContrastFlow from the same initial state, at 2× speed. The shorter rollout holds its last frame.</p>
+  <h3 id="robolab-rubikscubes" class="sub">Sort all rubiks cubes into the bin</h3>
+  <figure class="real-eval-comparison" data-task="robolab-rubikscubes">
+    <div class="real-eval-grid">
+      <article class="real-eval-view pi05" data-outcome="failure"><div class="real-eval-method"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" aria-label="pi 0.5"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math> (Baseline)</div><video class="real-eval-policy" aria-label="Sort all rubiks cubes into the bin, baseline pi 0.5, failure" controls muted playsinline preload="none" data-speed="1" poster="static/videos/robolab/robolab_RubiksCubes_pi05.jpg"><source data-src="static/videos/robolab/robolab_RubiksCubes_pi05.mp4" type="video/mp4"></video></article>
+      <article class="real-eval-view contrastflow" data-outcome="success"><div class="real-eval-method">ContrastFlow (Ours)</div><video class="real-eval-policy" aria-label="Sort all rubiks cubes into the bin, ContrastFlow, success" controls muted playsinline preload="none" data-speed="1" poster="static/videos/robolab/robolab_RubiksCubes_contrastflow.jpg"><source data-src="static/videos/robolab/robolab_RubiksCubes_contrastflow.mp4" type="video/mp4"></video></article>
+    </div>
+    <figcaption class="real-eval-config">The base policy also drops the red and blue blocks into the bin and leaves a Rubik's cube out.</figcaption>
+  </figure>
+  <h3 id="robolab-plasticbottles" class="sub">Put all plastic bottles away in the bin</h3>
+  <figure class="real-eval-comparison" data-task="robolab-plasticbottles">
+    <div class="real-eval-grid">
+      <article class="real-eval-view pi05" data-outcome="failure"><div class="real-eval-method"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" aria-label="pi 0.5"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math> (Baseline)</div><video class="real-eval-policy" aria-label="Put all plastic bottles away in the bin, baseline pi 0.5, failure" controls muted playsinline preload="none" data-speed="1" poster="static/videos/robolab/robolab_PlasticBottles_pi05.jpg"><source data-src="static/videos/robolab/robolab_PlasticBottles_pi05.mp4" type="video/mp4"></video></article>
+      <article class="real-eval-view contrastflow" data-outcome="success"><div class="real-eval-method">ContrastFlow (Ours)</div><video class="real-eval-policy" aria-label="Put all plastic bottles away in the bin, ContrastFlow, success" controls muted playsinline preload="none" data-speed="1" poster="static/videos/robolab/robolab_PlasticBottles_contrastflow.jpg"><source data-src="static/videos/robolab/robolab_PlasticBottles_contrastflow.mp4" type="video/mp4"></video></article>
+    </div>
+    <figcaption class="real-eval-config">The base policy puts fruit into the bin and leaves the milk jug on the table.</figcaption>
+  </figure>
+  <h3 id="robolab-cartons" class="sub">Put the recyclable cartons in the grey bin</h3>
+  <figure class="real-eval-comparison" data-task="robolab-cartons">
+    <div class="real-eval-grid">
+      <article class="real-eval-view pi05" data-outcome="failure"><div class="real-eval-method"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" aria-label="pi 0.5"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math> (Baseline)</div><video class="real-eval-policy" aria-label="Put the recyclable cartons in the grey bin, baseline pi 0.5, failure" controls muted playsinline preload="none" data-speed="1" poster="static/videos/robolab/robolab_Cartons_pi05.jpg"><source data-src="static/videos/robolab/robolab_Cartons_pi05.mp4" type="video/mp4"></video></article>
+      <article class="real-eval-view contrastflow" data-outcome="success"><div class="real-eval-method">ContrastFlow (Ours)</div><video class="real-eval-policy" aria-label="Put the recyclable cartons in the grey bin, ContrastFlow, success" controls muted playsinline preload="none" data-speed="1" poster="static/videos/robolab/robolab_Cartons_contrastflow.jpg"><source data-src="static/videos/robolab/robolab_Cartons_contrastflow.mp4" type="video/mp4"></video></article>
+    </div>
+    <figcaption class="real-eval-config">The base policy drops the milk carton beside the bin.</figcaption>
+  </figure>
+  <h3 id="robolab-coloredblocks" class="sub">Sort all colored blocks into the bin</h3>
+  <figure class="real-eval-comparison" data-task="robolab-coloredblocks">
+    <div class="real-eval-grid">
+      <article class="real-eval-view pi05" data-outcome="failure"><div class="real-eval-method"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" aria-label="pi 0.5"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math> (Baseline)</div><video class="real-eval-policy" aria-label="Sort all colored blocks into the bin, baseline pi 0.5, failure" controls muted playsinline preload="none" data-speed="1" poster="static/videos/robolab/robolab_ColoredBlocks_pi05.jpg"><source data-src="static/videos/robolab/robolab_ColoredBlocks_pi05.mp4" type="video/mp4"></video></article>
+      <article class="real-eval-view contrastflow" data-outcome="success"><div class="real-eval-method">ContrastFlow (Ours)</div><video class="real-eval-policy" aria-label="Sort all colored blocks into the bin, ContrastFlow, success" controls muted playsinline preload="none" data-speed="1" poster="static/videos/robolab/robolab_ColoredBlocks_contrastflow.jpg"><source data-src="static/videos/robolab/robolab_ColoredBlocks_contrastflow.mp4" type="video/mp4"></video></article>
+    </div>
+    <figcaption class="real-eval-config">The base policy never picks up the red, green or yellow block.</figcaption>
+  </figure>
+  <h3 id="robolab-cans" class="sub">Pack canned foods into the bin</h3>
+  <figure class="real-eval-comparison" data-task="robolab-cans">
+    <div class="real-eval-grid">
+      <article class="real-eval-view pi05" data-outcome="failure"><div class="real-eval-method"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" aria-label="pi 0.5"><msub><mi mathvariant="normal" style="font-style:italic">π</mi><mn>0.5</mn></msub></math> (Baseline)</div><video class="real-eval-policy" aria-label="Pack canned foods into the bin, baseline pi 0.5, failure" controls muted playsinline preload="none" data-speed="1" poster="static/videos/robolab/robolab_Cans_pi05.jpg"><source data-src="static/videos/robolab/robolab_Cans_pi05.mp4" type="video/mp4"></video></article>
+      <article class="real-eval-view contrastflow" data-outcome="success"><div class="real-eval-method">ContrastFlow (Ours)</div><video class="real-eval-policy" aria-label="Pack canned foods into the bin, ContrastFlow, success" controls muted playsinline preload="none" data-speed="1" poster="static/videos/robolab/robolab_Cans_contrastflow.jpg"><source data-src="static/videos/robolab/robolab_Cans_contrastflow.mp4" type="video/mp4"></video></article>
+    </div>
+    <figcaption class="real-eval-config">The base policy packs one of the three cans.</figcaption>
+  </figure>
+</section>
 
 <hr>
 <section id="attention-analysis" class="section">
