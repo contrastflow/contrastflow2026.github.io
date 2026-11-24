@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
   document.querySelectorAll("video").forEach(configureSpeed);
   // Start muted full comparisons when visible; paired videos can play together.
-  const allVideos = Array.from(document.querySelectorAll("video:not(.reel-video):not(.sim-policy)"));
+  const allVideos = Array.from(document.querySelectorAll("video:not(.reel-video):not(.sim-policy):not(.real-eval-policy)"));
   const clearFocus = video => video.classList.remove("is-playing");
   const visibleVideos = new Set();
   const manuallyPaused = new WeakSet();
@@ -61,8 +61,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // Training and policy clips start together; shorter clips hold their final
   // frames until the entire comparison finishes, then restart together.
   const comparisonVideos = [];
-  document.querySelectorAll(".sim-comparison, .attention-comparison").forEach(group => {
-    const videos = Array.from(group.querySelectorAll("video.sim-policy"));
+  document.querySelectorAll(".sim-comparison, .attention-comparison, .real-eval-comparison").forEach(group => {
+    const videos = Array.from(group.querySelectorAll("video.sim-policy, video.real-eval-policy"));
     comparisonVideos.push(...videos);
     let visible = false;
     let manualPause = false;

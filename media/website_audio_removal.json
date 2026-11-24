@@ -1,0 +1,149 @@
+{
+  "operation": "Removed audio tracks by copying the video stream without re-encoding.",
+  "clips": [
+    {
+      "video_asset": "static/videos/baseline_fail_config2.mp4",
+      "before_sha256": "92678741b3fd77a3c1fd4e41ff85ce1f3f82a48aff1e08412fefee5d8d9922e1",
+      "output_sha256": "2a6d7ca18fdfa293bf9e7039be830f23bd8d07eb041551f177ff5978b1771e3b",
+      "output_bytes": 3594829,
+      "video_stream_copied": true,
+      "audio_tracks": 0
+    },
+    {
+      "video_asset": "static/videos/contrastflow_success_config1.mp4",
+      "before_sha256": "256fda0f7dd128c245377cd151ec93e333d9486f21d06a2974264780c5a04855",
+      "output_sha256": "4dc9c88ee191bd5074513e3a63c827006ea5effa476f6a5ed501aaeef87ddc0d",
+      "output_bytes": 2729239,
+      "video_stream_copied": true,
+      "audio_tracks": 0
+    },
+    {
+      "video_asset": "static/videos/contrastflow_success_config2.mp4",
+      "before_sha256": "72828c96552b1e40209eaf3963a5caea5a2e44daa6a31802d9e9ebd8b0305db3",
+      "output_sha256": "2ab3781b8d6634caf91c5679563f6ec35804d7a7986ab7ce76f61a43ce5f2cc2",
+      "output_bytes": 3690476,
+      "video_stream_copied": true,
+      "audio_tracks": 0
+    },
+    {
+      "video_asset": "static/videos/contrastflow_success_config3.mp4",
+      "before_sha256": "595816fcf7a415a39e57c97fb36568c221b364c486c73ee1ecfc17d826f5b7e4",
+      "output_sha256": "d3eb3114edbdd8971b47772c710fe8490e80df6d68e6deae759e1e61662deca0",
+      "output_bytes": 3396533,
+      "video_stream_copied": true,
+      "audio_tracks": 0
+    },
+    {
+      "video_asset": "static/videos/rw_adapter_base_fail_1to4.mp4",
+      "before_sha256": "ff0a284abf9694ed651166acc75cb4a1670d94701885f8b5ec6e20e04d1e37ea",
+      "output_sha256": "cbc83846b688c38147b149adddb2fad643b5842f6c7439433772b54b2fbb5710",
+      "output_bytes": 3439481,
+      "video_stream_copied": true,
+      "audio_tracks": 0
+    },
+    {
+      "video_asset": "static/videos/rw_adapter_cf_success_1to4.mp4",
+      "before_sha256": "c5b98fde5fe723bc9df307e01e8942d5b127c0eec4218f6ea62daf9214f8bf85",
+      "output_sha256": "c4aa8ad6762069a318903686ef2934ec8f09c6d93a281b2c5e255acde6671027",
+      "output_bytes": 3272652,
+      "video_stream_copied": true,
+      "audio_tracks": 0
+    },
+    {
+      "video_asset": "static/videos/rw_adapter_cf_success_2to4.mp4",
+      "before_sha256": "e4b355745e1fff979bb63ae1e8eb784347f058e3c34b65cd40a9052da28b2678",
+      "output_sha256": "295fc0868b5bfd7f88acae7ff3089f72561ca9ee6edf585a0a1af73e941033b6",
+      "output_bytes": 2015954,
+      "video_stream_copied": true,
+      "audio_tracks": 0
+    },
+    {
+      "video_asset": "static/videos/rw_adapter_cf_success_3to4.mp4",
+      "before_sha256": "6c3cb42772c54c44428779c4972990ac2e1e61dffeb980d0696d607b86609129",
+      "output_sha256": "51d6be257dcfaee84560ff9336b8d20b8c79cf92caa28a4803d2cfde1627f77d",
+      "output_bytes": 1977006,
+      "video_stream_copied": true,
+      "audio_tracks": 0
+    },
+    {
+      "video_asset": "static/videos/rw_centrifuge_base_fail_p1_red.mp4",
+      "before_sha256": "de5f1273e10ddf62a34b88e3d555a8bcf820194b286446b4eb65ee99a819e4f0",
+      "output_sha256": "da5d4d455ad743b055670037eb5f321cbbd83593725cf36951b52010a6a57d2a",
+      "output_bytes": 6834914,
+      "video_stream_copied": true,
+      "audio_tracks": 0
+    },
+    {
+      "video_asset": "static/videos/rw_centrifuge_cf_success_ood_p1_blue.mp4",
+      "before_sha256": "d87de12e858808fea5300e73280ce928d967155349a87b309fe0e5d35f543403",
+      "output_sha256": "d7c92b1ca3559b9c025d4683a8896478bea89d21a2bf78600e7a480d9968f0b2",
+      "output_bytes": 5869333,
+      "video_stream_copied": true,
+      "audio_tracks": 0
+    },
+    {
+      "video_asset": "static/videos/rw_centrifuge_cf_success_p1_red.mp4",
+      "before_sha256": "bf24262cc76ac593c5c197e20b37c689c748509af76ad9afc5a2dd8b9a48174b",
+      "output_sha256": "8d54a5c552a46e93b02238a0a051e3ba6b719eab4c2fd4251dbbc08002662d03",
+      "output_bytes": 6782781,
+      "video_stream_copied": true,
+      "audio_tracks": 0
+    },
+    {
+      "video_asset": "static/videos/rw_centrifuge_cf_success_p2_blue.mp4",
+      "before_sha256": "cfdcf3ee12086cb622c5277124d5a6264c90d041613429063f0dc2e2b640c87a",
+      "output_sha256": "922b7d5f84182a1d1c857e447e20ec83830d3107ffddb253f9667bf5dffabd48",
+      "output_bytes": 5885431,
+      "video_stream_copied": true,
+      "audio_tracks": 0
+    },
+    {
+      "video_asset": "static/videos/rw_centrifuge_cf_success_p3_blue.mp4",
+      "before_sha256": "1681164ec39791fef740545f1cc7095d267e2ef4b84590a8fd5e6819f01f8fbb",
+      "output_sha256": "c934d7924d4ea2d5d4745bdbb7b5dad29edca8624f4fba80646cb30ebed98645",
+      "output_bytes": 6365369,
+      "video_stream_copied": true,
+      "audio_tracks": 0
+    },
+    {
+      "video_asset": "static/videos/rw_centrifuge_cf_success_p5_red.mp4",
+      "before_sha256": "7a64db4ba4f38efc8a1c6ff52637ee48193462711c6db3129df861466524e04e",
+      "output_sha256": "0683541deb9720feaaa868ff30d6b7d8ede2db95f0152eba8bb52e568352bb24",
+      "output_bytes": 5082190,
+      "video_stream_copied": true,
+      "audio_tracks": 0
+    },
+    {
+      "video_asset": "static/videos/rw_titration_base_fail_2cmup.mp4",
+      "before_sha256": "1a15d8ab7a25dd746e488273680ac2982df5ef586d167e14deb9bc7fa821f2f1",
+      "output_sha256": "85f4d170d37d0e20c13ee3becc6bf83a99b1e131f7dbba9da25bbbb1c2b991f1",
+      "output_bytes": 6135027,
+      "video_stream_copied": true,
+      "audio_tracks": 0
+    },
+    {
+      "video_asset": "static/videos/rw_titration_cf_success_2cmup.mp4",
+      "before_sha256": "8240392f3a88871ffb89b676b1541bfa40ac5a2c8015360e005eef5e48d60b61",
+      "output_sha256": "cf01e6c067ad5f6ea5b1cab819fb259ed4e45c55d8c744daba9b8530dc1cd368",
+      "output_bytes": 6982623,
+      "video_stream_copied": true,
+      "audio_tracks": 0
+    },
+    {
+      "video_asset": "static/videos/rw_titration_cf_success_default.mp4",
+      "before_sha256": "97459f2751316bef300c7abbda914dc7ba61a0772db44274abd71e52268dc2ea",
+      "output_sha256": "a5e6883c19e38debc0da6e2d27190246fb05040470dffee70dc42aeaa0ab62df",
+      "output_bytes": 8266721,
+      "video_stream_copied": true,
+      "audio_tracks": 0
+    },
+    {
+      "video_asset": "static/videos/rw_titration_cf_success_towardbase.mp4",
+      "before_sha256": "3cbe766d18c00949051290b26c4512d49d2eaca5c572bd59562280167fcb63c6",
+      "output_sha256": "e31710e19d09598bffc4e9f79b4f8b5ba8712fe135f12b2eccd646e45dcda10f",
+      "output_bytes": 8928341,
+      "video_stream_copied": true,
+      "audio_tracks": 0
+    }
+  ]
+}

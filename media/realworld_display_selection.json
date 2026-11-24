@@ -1,27 +1,24 @@
 {
-  "displayed_baselines": [
-    "rw_centrifuge_base_fail_p1_red",
-    "rw_titration_base_fail_2cmup",
-    "baseline_fail_config2",
-    "rw_adapter_base_fail_1to4"
-  ],
+  "displayed_baselines": [],
   "displayed_contrastflow": [
-    "rw_centrifuge_cf_success_p1_red",
-    "rw_centrifuge_cf_success_p5_red",
     "rw_centrifuge_cf_success_ood_p1_blue",
     "rw_centrifuge_cf_success_p2_blue",
     "rw_centrifuge_cf_success_p3_blue",
     "rw_titration_cf_success_default",
     "rw_titration_cf_success_2cmup",
     "rw_titration_cf_success_towardbase",
-    "contrastflow_success_config2",
     "contrastflow_success_config1",
+    "contrastflow_success_config2",
     "contrastflow_success_config3",
     "rw_adapter_cf_success_1to4",
     "rw_adapter_cf_success_2to4",
     "rw_adapter_cf_success_3to4"
   ],
   "hidden_baselines": [
+    "rw_centrifuge_base_fail_p1_red",
+    "rw_titration_base_fail_2cmup",
+    "baseline_fail_config2",
+    "rw_adapter_base_fail_1to4",
     "rw_centrifuge_base_fail_p5_red",
     "rw_centrifuge_base_fail_ood_p1_blue",
     "rw_centrifuge_base_fail_ood_p1_red",
@@ -30,5 +27,35 @@
     "rw_adapter_base_fail_2to4",
     "rw_adapter_base_fail_3to4"
   ],
-  "archive": "static/videos/archive/before_baseline_reduction_20261122"
+  "archive": "static/videos/archive/before_baseline_reduction_20261122",
+  "hidden_contrastflow": [
+    "rw_centrifuge_cf_success_p1_red",
+    "rw_centrifuge_cf_success_p5_red"
+  ],
+  "selection_scope": "iPhone showcase",
+  "evaluation_gallery": "realworld-videos.html",
+  "evaluation_navigation": {
+    "centrifuge": "realworld-videos.html#eval-centrifuge",
+    "burette": "realworld-videos.html#eval-burette",
+    "cable": "realworld-videos.html#eval-cable",
+    "adapter": "realworld-videos.html#eval-adapter"
+  },
+  "evaluation_showcases": {
+    "centrifuge": [
+      "P3",
+      "P1"
+    ],
+    "burette": [
+      "4",
+      "6"
+    ],
+    "cable": [
+      "1",
+      "5"
+    ],
+    "adapter": [
+      "3->4",
+      "1->4"
+    ]
+  }
 }
