@@ -1,0 +1,163 @@
+{
+  "task": "libero_spatial_swap_07",
+  "id": "libero_spatial_swap_07_episode0",
+  "method": "pi05",
+  "omega": 0,
+  "source_frames": 501,
+  "frames": 501,
+  "terminal_hold_frames": 0,
+  "fps": 10,
+  "width": 896,
+  "height": 896,
+  "file": "libero_spatial_swap_07_episode0_pi05.mp4",
+  "source_sha256": "15b16e64d8960f50b3657295a0c93dd3bbeb49fb0228c009df9abf70cb06dbab",
+  "sha256": "fa369748611dad5adbde9914e0195b0b1e10c3392ed3a498b8212f552c95f4be",
+  "fully_decoded": true,
+  "all_source_frames_once": true,
+  "success": false,
+  "native_state_rerender": {
+    "task": "libero_spatial_swap_07_episode0",
+    "arm": "baseline",
+    "frames": 501,
+    "rendered": 501,
+    "native_resolution": [
+      896,
+      896
+    ],
+    "physics_steps": 0,
+    "policy_calls": 0,
+    "source_sha256": "15b16e64d8960f50b3657295a0c93dd3bbeb49fb0228c009df9abf70cb06dbab",
+    "checks": [
+      {
+        "frame": 0,
+        "same_frame_mae_255": 1.2595163981119792,
+        "nearby_frame_mae_255": {
+          "0": 1.2595163981119792,
+          "1": 1.3525797526041667,
+          "2": 1.535430908203125
+        },
+        "eef_error_m": 2.689961071032406e-16
+      },
+      {
+        "frame": 250,
+        "same_frame_mae_255": 1.208984375,
+        "nearby_frame_mae_255": {
+          "248": 1.6639251708984375,
+          "249": 1.5285898844401042,
+          "250": 1.208984375,
+          "251": 1.3963673909505208,
+          "252": 1.4868214925130208
+        },
+        "eef_error_m": 1.3902561846079742e-05
+      },
+      {
+        "frame": 500,
+        "same_frame_mae_255": 1.2092946370442708,
+        "nearby_frame_mae_255": {
+          "498": 2.244562784830729,
+          "499": 1.7511800130208333,
+          "500": 1.2092946370442708
+        },
+        "eef_error_m": 7.850354088101419e-05
+      }
+    ],
+    "state_roundtrip_atol": 1e-12,
+    "original_resolution": [
+      256,
+      256
+    ],
+    "source_state_frames_preserved": true,
+    "eef_max_abs_m": 0.0008903300386762236,
+    "training_alignment_note": null
+  },
+  "trajectory_overlay": {
+    "color_rgb": [
+      239,
+      68,
+      68
+    ],
+    "width_pixels": 5.12,
+    "outline_width_pixels": 7.04,
+    "accumulated_executed_path": true,
+    "reset_at_replan": false
+  },
+  "capture_metadata": {
+    "name": "libero_spatial_swap_07_episode0",
+    "suite": "libero_spatial_swap",
+    "task_id": 7,
+    "episode": 0,
+    "task_name": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate",
+    "axis": "Spatial Swap",
+    "contrastflow_omega": 2,
+    "prompt_source": "task.language",
+    "sampling": "Ten matched episode IDs 0-9 per selected task, chosen before fresh outcomes. Three tasks prioritized by archived omega2 gains; qualitative candidate collection, not full benchmark. Exact compatible prior captures reused regardless of outcome.",
+    "prompt": "pick up the black bowl on the stove and place it on the plate",
+    "arm": "baseline",
+    "success": false,
+    "steps": 500,
+    "frames": 501,
+    "chunks": 100,
+    "noise_seed": 100,
+    "environment_seed": 7,
+    "control_horizon": 500,
+    "warmup_steps": 10,
+    "replan": 5,
+    "denoise_steps": 10,
+    "omega": 0,
+    "attention_layer": 12,
+    "attention_branch": "all recorded prefix calls",
+    "attention_call_order": [
+      "policy positive"
+    ],
+    "attention_tensor_axes": [
+      "replan",
+      "prefix_call",
+      "head",
+      "language_query",
+      "camera",
+      "image_patch"
+    ],
+    "attention_cameras": [
+      "agentview",
+      "robot0_eye_in_hand"
+    ],
+    "attention_tensor_dtype": "float32",
+    "attention_tensor_shape": [
+      100,
+      1,
+      8,
+      14,
+      2,
+      256
+    ],
+    "attention_layout": {
+      "image_spans": [
+        [
+          0,
+          256
+        ],
+        [
+          256,
+          512
+        ],
+        [
+          512,
+          768
+        ]
+      ],
+      "lang_span": [
+        768,
+        968
+      ],
+      "prefix_len": 968
+    },
+    "attention_instrumentation_max_error": 0.0,
+    "initial_state_sha256": "dcce3c7a205e342c95c67b5d613653ad67abae8e56f7730b2463d70f288b5bbd",
+    "initial_frame_sha256": "2a639b03eac7f4420aaa1929bab07622a571765a600b561e4057dcb7f0b1de0c",
+    "source_sha256": "15b16e64d8960f50b3657295a0c93dd3bbeb49fb0228c009df9abf70cb06dbab",
+    "checkpoint": "/shared/rsaas/apotnis2/openpi_cache/openpi-assets/checkpoints/pi05_libero_pytorch",
+    "job_id": "29809.1",
+    "gpu": "NVIDIA A40",
+    "seconds": 47.30741214752197
+  }
+}

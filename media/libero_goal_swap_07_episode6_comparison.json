@@ -1,0 +1,429 @@
+{
+  "task": "libero_goal_swap_07",
+  "episode": 6,
+  "omega": 2,
+  "prompt": "Turn on the stove.",
+  "simulation_anchor": "sim-goal-07-episode6",
+  "baseline_success": false,
+  "contrastflow_success": true,
+  "policy_steps": [
+    500,
+    102
+  ],
+  "pair_verification": {
+    "initial_state_exact": true,
+    "initial_frame_exact": true,
+    "shared_noise_exact": true,
+    "common_replans": 21
+  },
+  "records": {
+    "train": {
+      "file": "libero_goal_swap_07_episode6_train.mp4",
+      "frames": 80,
+      "source_frames": 80,
+      "fps": 10,
+      "width": 896,
+      "height": 896,
+      "fully_decoded": true,
+      "sha256": "704bcc877a6a46126631317f54ad18ee3833a952f91e1dacc9340e2321550045",
+      "native_state_rerender": {
+        "task": "libero_goal_swap_07",
+        "arm": "training",
+        "frames": 80,
+        "rendered": 80,
+        "native_resolution": [
+          896,
+          896
+        ],
+        "physics_steps": 0,
+        "policy_calls": 0,
+        "source_sha256": "ff5d8c0450c094af3629d079d403f187dcb4b447681a9d9930bb3eb6d4f5ad5b",
+        "checks": [
+          {
+            "frame": 0,
+            "same_frame_mae_255": 1.43048095703125,
+            "nearby_frame_mae_255": {
+              "0": 1.43048095703125,
+              "1": 1.9097900390625,
+              "2": 2.2103271484375
+            }
+          },
+          {
+            "frame": 40,
+            "same_frame_mae_255": 0.8017985026041666,
+            "nearby_frame_mae_255": {
+              "38": 1.565185546875,
+              "39": 0.7135416666666666,
+              "40": 0.8017985026041666,
+              "41": 0.9267171223958334,
+              "42": 1.1397705078125
+            }
+          },
+          {
+            "frame": 79,
+            "same_frame_mae_255": 1.1223347981770833,
+            "nearby_frame_mae_255": {
+              "77": 1.1187337239583333,
+              "78": 0.6657511393229166,
+              "79": 1.1223347981770833
+            }
+          }
+        ],
+        "state_roundtrip_atol": 1e-12,
+        "original_resolution": [
+          128,
+          128
+        ],
+        "source_state_frames_preserved": true,
+        "eef_max_abs_m": null,
+        "training_alignment_note": "All original demo states rendered in order; archived RGB observations are post-action and can lead the state stream by one frame."
+      },
+      "training_reference": {
+        "original_suite": "libero_goal",
+        "original_task": "turn_on_the_stove",
+        "original_instruction": "turn on the stove",
+        "dataset": "yifengzhu-hf/LIBERO-datasets",
+        "revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+        "source_url": "https://huggingface.co/datasets/yifengzhu-hf/LIBERO-datasets/resolve/f13aa24a3da8c43c7225569f28c562979fa0e35a/libero_goal/turn_on_the_stove_demo.hdf5",
+        "demo": "demo_0",
+        "frames": 80,
+        "source_frames_sha256": "45728fb627e89776cdcfa982610393d49dd2fa5c04439516e45d6ca44bb31684",
+        "selection": "Original demo_0, without outcome selection",
+        "reference_note": "Original human demonstration with a separate initial state; exact policy training split membership is not asserted."
+      }
+    },
+    "pi05": {
+      "task": "libero_goal_swap_07",
+      "id": "libero_goal_swap_07_episode6",
+      "method": "pi05",
+      "omega": 0,
+      "source_frames": 501,
+      "frames": 501,
+      "terminal_hold_frames": 0,
+      "fps": 10,
+      "width": 896,
+      "height": 896,
+      "file": "libero_goal_swap_07_episode6_pi05.mp4",
+      "source_sha256": "16a274729d8f0dbdb831cf66f5804f844691fc224f749a63529af3ff7ce7e3af",
+      "sha256": "6e8814ed5123f9065a1660ce1a19ea0b98c9fff9689ef9b0617955ae0133cb93",
+      "fully_decoded": true,
+      "all_source_frames_once": true,
+      "success": false,
+      "native_state_rerender": {
+        "task": "libero_goal_swap_07_episode6",
+        "arm": "baseline",
+        "frames": 501,
+        "rendered": 501,
+        "native_resolution": [
+          896,
+          896
+        ],
+        "task_state_visualization_restored": true,
+        "physics_steps": 0,
+        "policy_calls": 0,
+        "source_sha256": "16a274729d8f0dbdb831cf66f5804f844691fc224f749a63529af3ff7ce7e3af",
+        "checks": [
+          {
+            "frame": 0,
+            "same_frame_mae_255": 1.2233174641927083,
+            "nearby_frame_mae_255": {
+              "0": 1.2233174641927083,
+              "1": 1.2735544840494792,
+              "2": 1.3744710286458333
+            },
+            "eef_error_m": 2.5982244054459555e-16
+          },
+          {
+            "frame": 250,
+            "same_frame_mae_255": 1.2625325520833333,
+            "nearby_frame_mae_255": {
+              "248": 2.9394734700520835,
+              "249": 2.1872711181640625,
+              "250": 1.2625325520833333,
+              "251": 2.0708770751953125,
+              "252": 2.9568684895833335
+            },
+            "eef_error_m": 0.00026746871084540325
+          },
+          {
+            "frame": 500,
+            "same_frame_mae_255": 1.2186177571614583,
+            "nearby_frame_mae_255": {
+              "498": 3.250340779622396,
+              "499": 2.3564961751302085,
+              "500": 1.2186177571614583
+            },
+            "eef_error_m": 0.0003033236428300057
+          }
+        ],
+        "state_roundtrip_atol": 1e-12,
+        "original_resolution": [
+          256,
+          256
+        ],
+        "source_state_frames_preserved": true,
+        "eef_max_abs_m": 0.0007743385131107061,
+        "training_alignment_note": null
+      },
+      "trajectory_overlay": {
+        "color_rgb": [
+          239,
+          68,
+          68
+        ],
+        "width_pixels": 5.12,
+        "outline_width_pixels": 7.04,
+        "accumulated_executed_path": true,
+        "reset_at_replan": false
+      },
+      "capture_metadata": {
+        "name": "libero_goal_swap_07_episode6",
+        "suite": "libero_goal_swap",
+        "task_id": 7,
+        "episode": 6,
+        "task_name": "turn_on_the_stove",
+        "axis": "Goal Swap",
+        "contrastflow_omega": 2,
+        "prompt_source": "task.language",
+        "sampling": "Ten matched episode IDs0-9 per selected task, fixed before outcomes. Additional task diversity requested by user. Full500-step samples and attention; no full benchmark.",
+        "prompt": "turn on the stove",
+        "arm": "baseline",
+        "success": false,
+        "steps": 500,
+        "frames": 501,
+        "chunks": 100,
+        "noise_seed": 100,
+        "environment_seed": 7,
+        "control_horizon": 500,
+        "warmup_steps": 10,
+        "replan": 5,
+        "denoise_steps": 10,
+        "omega": 0,
+        "attention_layer": 12,
+        "attention_branch": "all recorded prefix calls",
+        "attention_call_order": [
+          "policy positive"
+        ],
+        "attention_tensor_axes": [
+          "replan",
+          "prefix_call",
+          "head",
+          "language_query",
+          "camera",
+          "image_patch"
+        ],
+        "attention_cameras": [
+          "agentview",
+          "robot0_eye_in_hand"
+        ],
+        "attention_tensor_dtype": "float32",
+        "attention_tensor_shape": [
+          100,
+          1,
+          8,
+          4,
+          2,
+          256
+        ],
+        "attention_layout": {
+          "image_spans": [
+            [
+              0,
+              256
+            ],
+            [
+              256,
+              512
+            ],
+            [
+              512,
+              768
+            ]
+          ],
+          "lang_span": [
+            768,
+            968
+          ],
+          "prefix_len": 968
+        },
+        "attention_instrumentation_max_error": 0.0,
+        "initial_state_sha256": "3e18639a55ecc4ddf01d8d54316ce8db6c91711824f8f4a332a3415b70d1103b",
+        "initial_frame_sha256": "ac98360cd0c9832fd422302b483a21d3807a6ff8efc2dbfa9d62a8cb220457bf",
+        "source_sha256": "16a274729d8f0dbdb831cf66f5804f844691fc224f749a63529af3ff7ce7e3af",
+        "checkpoint": "/shared/rsaas/apotnis2/openpi_cache/openpi-assets/checkpoints/pi05_libero_pytorch",
+        "job_id": "29810.0",
+        "gpu": "NVIDIA A40",
+        "seconds": 40.62338042259216
+      }
+    },
+    "contrastflow": {
+      "task": "libero_goal_swap_07",
+      "id": "libero_goal_swap_07_episode6",
+      "method": "contrastflow",
+      "omega": 2,
+      "source_frames": 103,
+      "frames": 103,
+      "terminal_hold_frames": 0,
+      "fps": 10,
+      "width": 896,
+      "height": 896,
+      "file": "libero_goal_swap_07_episode6_contrastflow.mp4",
+      "source_sha256": "1cf1ec74a1914d790717e611a9b35303e4c20897536d3f4cd6b730b33c254c31",
+      "sha256": "6e9160f184f4909f5009147fa409d59a292c1e4c7d024994568011cb70ee6a5b",
+      "fully_decoded": true,
+      "all_source_frames_once": true,
+      "success": true,
+      "native_state_rerender": {
+        "task": "libero_goal_swap_07_episode6",
+        "arm": "emb_zero",
+        "frames": 103,
+        "rendered": 103,
+        "native_resolution": [
+          896,
+          896
+        ],
+        "task_state_visualization_restored": true,
+        "physics_steps": 0,
+        "policy_calls": 0,
+        "source_sha256": "1cf1ec74a1914d790717e611a9b35303e4c20897536d3f4cd6b730b33c254c31",
+        "checks": [
+          {
+            "frame": 0,
+            "same_frame_mae_255": 1.2233174641927083,
+            "nearby_frame_mae_255": {
+              "0": 1.2233174641927083,
+              "1": 1.2946624755859375,
+              "2": 1.4043121337890625
+            },
+            "eef_error_m": 2.5982244054459555e-16
+          },
+          {
+            "frame": 51,
+            "same_frame_mae_255": 1.3768310546875,
+            "nearby_frame_mae_255": {
+              "49": 4.9324493408203125,
+              "50": 3.3285980224609375,
+              "51": 1.3768310546875,
+              "52": 2.8578592936197915,
+              "53": 4.1275889078776045
+            },
+            "eef_error_m": 0.000565428545898139
+          },
+          {
+            "frame": 102,
+            "same_frame_mae_255": 1.6308135986328125,
+            "nearby_frame_mae_255": {
+              "100": 2.613520304361979,
+              "101": 2.1785888671875,
+              "102": 1.6308135986328125
+            },
+            "eef_error_m": 0.00012344570909270103
+          }
+        ],
+        "state_roundtrip_atol": 1e-12,
+        "original_resolution": [
+          256,
+          256
+        ],
+        "source_state_frames_preserved": true,
+        "eef_max_abs_m": 0.0009471659405000665,
+        "training_alignment_note": null
+      },
+      "trajectory_overlay": {
+        "color_rgb": [
+          32,
+          220,
+          90
+        ],
+        "width_pixels": 5.12,
+        "outline_width_pixels": 7.04,
+        "accumulated_executed_path": true,
+        "reset_at_replan": false
+      },
+      "capture_metadata": {
+        "name": "libero_goal_swap_07_episode6",
+        "suite": "libero_goal_swap",
+        "task_id": 7,
+        "episode": 6,
+        "task_name": "turn_on_the_stove",
+        "axis": "Goal Swap",
+        "contrastflow_omega": 2,
+        "prompt_source": "task.language",
+        "sampling": "Ten matched episode IDs0-9 per selected task, fixed before outcomes. Additional task diversity requested by user. Full500-step samples and attention; no full benchmark.",
+        "prompt": "turn on the stove",
+        "arm": "emb_zero",
+        "success": true,
+        "steps": 102,
+        "frames": 103,
+        "chunks": 21,
+        "noise_seed": 100,
+        "environment_seed": 7,
+        "control_horizon": 500,
+        "warmup_steps": 10,
+        "replan": 5,
+        "denoise_steps": 10,
+        "omega": 2,
+        "attention_layer": 12,
+        "attention_branch": "all recorded prefix calls",
+        "attention_call_order": [
+          "mask-selection positive",
+          "policy positive",
+          "policy masked negative"
+        ],
+        "attention_tensor_axes": [
+          "replan",
+          "prefix_call",
+          "head",
+          "language_query",
+          "camera",
+          "image_patch"
+        ],
+        "attention_cameras": [
+          "agentview",
+          "robot0_eye_in_hand"
+        ],
+        "attention_tensor_dtype": "float32",
+        "attention_tensor_shape": [
+          21,
+          3,
+          8,
+          4,
+          2,
+          256
+        ],
+        "attention_layout": {
+          "image_spans": [
+            [
+              0,
+              256
+            ],
+            [
+              256,
+              512
+            ],
+            [
+              512,
+              768
+            ]
+          ],
+          "lang_span": [
+            768,
+            968
+          ],
+          "prefix_len": 968
+        },
+        "attention_instrumentation_max_error": 0.0,
+        "initial_state_sha256": "3e18639a55ecc4ddf01d8d54316ce8db6c91711824f8f4a332a3415b70d1103b",
+        "initial_frame_sha256": "ac98360cd0c9832fd422302b483a21d3807a6ff8efc2dbfa9d62a8cb220457bf",
+        "source_sha256": "1cf1ec74a1914d790717e611a9b35303e4c20897536d3f4cd6b730b33c254c31",
+        "checkpoint": "/shared/rsaas/apotnis2/openpi_cache/openpi-assets/checkpoints/pi05_libero_pytorch",
+        "job_id": "29810.0",
+        "gpu": "NVIDIA A40",
+        "seconds": 17.285869598388672
+      }
+    }
+  },
+  "full_episodes": true,
+  "attention": false,
+  "zoom": false
+}
