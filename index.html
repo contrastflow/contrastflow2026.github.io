@@ -11,7 +11,7 @@
 <meta property="og:title" content="ContrastFlow: Improving Generalist Policies via Contrastive Flow at Test-Time">
 <meta property="og:description" content="Grounding the actions of a generalist policy in the visual regions it already localizes. No additional training, no auxiliary models.">
 <link rel="stylesheet" href="static/fonts/inter.css">
-<link rel="stylesheet" href="static/style.css?v=final-v2-stacked">
+<link rel="stylesheet" href="static/style.css?v=eval-left-labels-v1">
 </head>
 <body>
 
@@ -27,7 +27,7 @@
     <a class="sub" href="#rw-titration-videos">&middot; Titration</a>
     <a class="sub" href="#rw-videos">&middot; Cable insertion</a>
     <a class="sub" href="#rw-adapter-videos">&middot; Adapter relocation</a>
-    <a class="sub" href="#rw-evaluation-videos">&middot; Evaluation rollouts</a>
+    <a class="sub" href="#rw-evaluation-videos">&middot; Additional Rollouts</a>
   </div>
   <a href="#simulation" class="top">Simulation</a>
   <div class="sub-links">
@@ -123,24 +123,24 @@
 
     <div class="real-video-grid">
       <div>
-        <h4 class="real-config real-config-stacked">Middle Slot in Tube Holder<span class="real-config-orientation">Centrifuge Rotor Orientation 1</span></h4>
+        <h4 class="real-config">Middle Test Tube Slot</h4>
         <article class="real-clip" data-outcome="success" data-source-id="1PzYjUIt-WLI-opQOwSAsiKUUbSEtnd12" data-task="centrifuge">
         <div class="real-clip-heading"><h4>ContrastFlow</h4></div>
-        <video aria-label="Centrifuge Loading, Middle Slot in Tube Holder · Centrifuge Rotor Orientation 1, ContrastFlow success" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/rw_centrifuge_cf_success_ood_p1_blue.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/rw_centrifuge_cf_success_ood_p1_blue.mp4?v=iphone-silent-v3" type="video/mp4"/></video>
+        <video aria-label="Centrifuge Loading, Middle Test Tube Slot, ContrastFlow success" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/rw_centrifuge_cf_success_ood_p1_blue.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/rw_centrifuge_cf_success_ood_p1_blue.mp4?v=iphone-silent-v3" type="video/mp4"/></video>
         </article>
       </div>
       <div>
-        <h4 class="real-config real-config-stacked">Bottom Slot in Tube Holder<span class="real-config-orientation">Centrifuge Rotor Orientation 2</span></h4>
+        <h4 class="real-config">Bottom Test Tube Slot</h4>
         <article class="real-clip" data-outcome="success" data-source-id="1JysOUApIiqYnzYnfnYwGyh6Fj45kSQed" data-task="centrifuge">
         <div class="real-clip-heading"><h4>ContrastFlow</h4></div>
-        <video aria-label="Centrifuge Loading, Bottom Slot in Tube Holder · Centrifuge Rotor Orientation 2, ContrastFlow success" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/rw_centrifuge_cf_success_p2_blue.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/rw_centrifuge_cf_success_p2_blue.mp4?v=iphone-silent-v3" type="video/mp4"/></video>
+        <video aria-label="Centrifuge Loading, Bottom Test Tube Slot, ContrastFlow success" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/rw_centrifuge_cf_success_p2_blue.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/rw_centrifuge_cf_success_p2_blue.mp4?v=iphone-silent-v3" type="video/mp4"/></video>
         </article>
       </div>
       <div>
-        <h4 class="real-config real-config-stacked">Top Slot in Tube Holder<span class="real-config-orientation">Centrifuge Rotor Orientation 3</span></h4>
+        <h4 class="real-config">Top Test Tube Slot</h4>
         <article class="real-clip" data-outcome="success" data-source-id="1CKys6TYLN2m5MuhNv5wc5PhLcLbFCb4A" data-task="centrifuge">
         <div class="real-clip-heading"><h4>ContrastFlow</h4></div>
-        <video aria-label="Centrifuge Loading, Top Slot in Tube Holder · Centrifuge Rotor Orientation 3, ContrastFlow success" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/rw_centrifuge_cf_success_p3_blue.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/rw_centrifuge_cf_success_p3_blue.mp4?v=iphone-silent-v3" type="video/mp4"/></video>
+        <video aria-label="Centrifuge Loading, Top Test Tube Slot, ContrastFlow success" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/rw_centrifuge_cf_success_p3_blue.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/rw_centrifuge_cf_success_p3_blue.mp4?v=iphone-silent-v3" type="video/mp4"/></video>
         </article>
       </div>
     </div>
@@ -157,17 +157,17 @@
         </article>
       </div>
       <div>
-        <h4 class="real-config">Burette Height Shift 1 (+2 cm)</h4>
+        <h4 class="real-config">Burette Height Shift</h4>
         <article class="real-clip" data-outcome="success" data-source-id="1tOQ_oZIBQE2T_bQvQLFf8zs4katkrCee" data-task="titration">
         <div class="real-clip-heading"><h4>ContrastFlow</h4></div>
-        <video aria-label="Titration, Burette Height Shift 1 (+2 cm), ContrastFlow success" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/rw_titration_cf_success_2cmup.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/rw_titration_cf_success_2cmup.mp4?v=iphone-silent-v3" type="video/mp4"/></video>
+        <video aria-label="Titration, Burette Height Shift, ContrastFlow success" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/rw_titration_cf_success_2cmup.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/rw_titration_cf_success_2cmup.mp4?v=iphone-silent-v3" type="video/mp4"/></video>
         </article>
       </div>
       <div>
-        <h4 class="real-config">Burette Stand Shift 2</h4>
+        <h4 class="real-config">Burette Stand Shift</h4>
         <article class="real-clip" data-outcome="success" data-source-id="10PCrhEXDh7OP9DHXcLsKkTYUzcR6zjPM" data-task="titration">
         <div class="real-clip-heading"><h4>ContrastFlow</h4></div>
-        <video aria-label="Titration, Burette Stand Shift 2, ContrastFlow success" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/rw_titration_cf_success_towardbase.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/rw_titration_cf_success_towardbase.mp4?v=iphone-silent-v3" type="video/mp4"/></video>
+        <video aria-label="Titration, Burette Stand Shift, ContrastFlow success" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/rw_titration_cf_success_towardbase.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/rw_titration_cf_success_towardbase.mp4?v=iphone-silent-v3" type="video/mp4"/></video>
         </article>
       </div>
     </div>
@@ -177,24 +177,24 @@
 
     <div class="real-video-grid">
       <div>
-        <h4 class="real-config">Large Wrist Rotation 1</h4>
+        <h4 class="real-config">Large Wrist Rotation</h4>
         <article class="real-clip" data-outcome="success" data-task="cable">
         <div class="real-clip-heading"><h4>ContrastFlow</h4></div>
-        <video aria-label="Cable Insertion, Large Wrist Rotation 1, ContrastFlow success" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/contrastflow_success_config1.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/contrastflow_success_config1.mp4?v=iphone-silent-v3" type="video/mp4"/></video>
+        <video aria-label="Cable Insertion, Large Wrist Rotation, ContrastFlow success" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/contrastflow_success_config1.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/contrastflow_success_config1.mp4?v=iphone-silent-v3" type="video/mp4"/></video>
         </article>
       </div>
       <div>
-        <h4 class="real-config">Large Wrist Rotation 2</h4>
+        <h4 class="real-config">Large Wrist Rotation</h4>
         <article class="real-clip" data-outcome="success" data-task="cable">
         <div class="real-clip-heading"><h4>ContrastFlow</h4></div>
-        <video aria-label="Cable Insertion, Large Wrist Rotation 2, ContrastFlow success" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/contrastflow_success_config2.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/contrastflow_success_config2.mp4?v=iphone-silent-v3" type="video/mp4"/></video>
+        <video aria-label="Cable Insertion, Large Wrist Rotation, ContrastFlow success" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/contrastflow_success_config2.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/contrastflow_success_config2.mp4?v=iphone-silent-v3" type="video/mp4"/></video>
         </article>
       </div>
       <div>
-        <h4 class="real-config">Large Wrist Rotation 3</h4>
+        <h4 class="real-config">Large Wrist Rotation</h4>
         <article class="real-clip" data-outcome="success" data-task="cable">
         <div class="real-clip-heading"><h4>ContrastFlow</h4></div>
-        <video aria-label="Cable Insertion, Large Wrist Rotation 3, ContrastFlow success" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/contrastflow_success_config3.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/contrastflow_success_config3.mp4?v=iphone-silent-v3" type="video/mp4"/></video>
+        <video aria-label="Cable Insertion, Large Wrist Rotation, ContrastFlow success" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/contrastflow_success_config3.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/contrastflow_success_config3.mp4?v=iphone-silent-v3" type="video/mp4"/></video>
         </article>
       </div>
     </div>
@@ -204,57 +204,57 @@
 
     <div class="real-video-grid">
       <div>
-        <h4 class="real-config">Long Adapter Transfer (Outlet 1 → 4)</h4>
+        <h4 class="real-config">Long Adapter Transfer</h4>
         <article class="real-clip" data-outcome="success" data-source-id="1gKmFb6W6xLppa064G0EMlnzGwr0dyHpJ" data-task="adapter">
         <div class="real-clip-heading"><h4>ContrastFlow</h4></div>
-        <video aria-label="Adapter Relocation, Long Adapter Transfer (Outlet 1 → 4), ContrastFlow success" autoplay="" controls="" data-speed="2.5" loop="" muted="" playsinline="" poster="static/videos/rw_adapter_cf_success_1to4.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/rw_adapter_cf_success_1to4.mp4?v=iphone-silent-v3" type="video/mp4"/></video>
+        <video aria-label="Adapter Relocation, Long Adapter Transfer, ContrastFlow success" autoplay="" controls="" data-speed="2.5" loop="" muted="" playsinline="" poster="static/videos/rw_adapter_cf_success_1to4.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/rw_adapter_cf_success_1to4.mp4?v=iphone-silent-v3" type="video/mp4"/></video>
         </article>
       </div>
       <div>
-        <h4 class="real-config">Medium Adapter Transfer (Outlet 2 → 4)</h4>
+        <h4 class="real-config">Medium Adapter Transfer</h4>
         <article class="real-clip" data-outcome="success" data-source-id="1-4W2P1DzeFonb0lkxYLCorjqqKtYHLum" data-task="adapter">
         <div class="real-clip-heading"><h4>ContrastFlow</h4></div>
-        <video aria-label="Adapter Relocation, Medium Adapter Transfer (Outlet 2 → 4), ContrastFlow success" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/rw_adapter_cf_success_2to4.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/rw_adapter_cf_success_2to4.mp4?v=iphone-silent-v3" type="video/mp4"/></video>
+        <video aria-label="Adapter Relocation, Medium Adapter Transfer, ContrastFlow success" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/rw_adapter_cf_success_2to4.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/rw_adapter_cf_success_2to4.mp4?v=iphone-silent-v3" type="video/mp4"/></video>
         </article>
       </div>
       <div>
-        <h4 class="real-config">Short Adapter Transfer (Outlet 3 → 4)</h4>
+        <h4 class="real-config">Short Adapter Transfer</h4>
         <article class="real-clip" data-outcome="success" data-source-id="1s-fSjPWSRLx0vzr0PX_CPLw8hQEudfIq" data-task="adapter">
         <div class="real-clip-heading"><h4>ContrastFlow</h4></div>
-        <video aria-label="Adapter Relocation, Short Adapter Transfer (Outlet 3 → 4), ContrastFlow success" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/rw_adapter_cf_success_3to4.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/rw_adapter_cf_success_3to4.mp4?v=iphone-silent-v3" type="video/mp4"/></video>
+        <video aria-label="Adapter Relocation, Short Adapter Transfer, ContrastFlow success" autoplay="" controls="" data-speed="2" loop="" muted="" playsinline="" poster="static/videos/rw_adapter_cf_success_3to4.jpg?v=iphone-bright-v2" preload="none"><source data-src="static/videos/rw_adapter_cf_success_3to4.mp4?v=iphone-silent-v3" type="video/mp4"/></video>
         </article>
       </div>
     </div>
   </div>
 
   <div class="real-eval-showcase">
-    <h3 id="rw-evaluation-videos" class="sub">Evaluation rollouts</h3>
-    <p class="real-eval-intro">π<sub>0.5</sub> and ContrastFlow, side by side. Low camera (left) · Wrist camera (right)</p>
+    <h2 id="rw-evaluation-videos" class="real-eval-section-title">Additional Rollouts from Embodied camera</h2>
+
     <div class="real-eval-task">
-      <h4 id="rw-eval-centrifuge" class="real-eval-task-title">Centrifuge Loading</h4>
+      <h3 id="rw-eval-centrifuge" class="real-eval-task-title">Centrifuge Loading</h3>
       <figure class="real-eval-comparison" data-task="centrifuge" data-config="P3">
-        <figcaption class="real-eval-config real-config-stacked">Bottom Slot in Tube Holder<span class="real-config-orientation">Centrifuge Rotor Orientation 3</span></figcaption>
+        <figcaption class="real-eval-config">Bottom Test Tube Slot</figcaption>
         <div class="real-eval-grid">
           <article class="real-eval-view pi05" data-outcome="failure" data-behavior="failure" data-trial-id="833fc4ac-f885-49dd-a7ab-b5f36c15c5b6">
             <div class="real-eval-method">π<sub>0.5</sub></div>
-            <video class="real-eval-policy" aria-label="Centrifuge Loading, Bottom Slot in Tube Holder · Centrifuge Rotor Orientation 3, baseline pi 0.5, low and wrist cameras" controls muted playsinline preload="none" data-speed="2" poster="static/videos/realworld-eval/Centrifuge_P3_Baseline_Failure_833fc4ac_Low_Wrist.jpg?v=eval-approved-final-v2"><source data-src="static/videos/realworld-eval/Centrifuge_P3_Baseline_Failure_833fc4ac_Low_Wrist.mp4?v=eval-approved-final-v2" type="video/mp4"></video>
+            <video class="real-eval-policy" aria-label="Centrifuge Loading, Bottom Test Tube Slot, baseline pi 0.5, low and wrist cameras" controls muted playsinline preload="none" data-speed="2" poster="static/videos/realworld-eval/Centrifuge_P3_Baseline_Failure_833fc4ac_Low_Wrist.jpg?v=eval-approved-final-v2"><source data-src="static/videos/realworld-eval/Centrifuge_P3_Baseline_Failure_833fc4ac_Low_Wrist.mp4?v=eval-approved-final-v2" type="video/mp4"></video>
           </article>
           <article class="real-eval-view contrastflow" data-outcome="success" data-behavior="success" data-trial-id="b754a0b5-cafd-41f4-ae06-4eaddcaeac6a">
             <div class="real-eval-method">ContrastFlow</div>
-            <video class="real-eval-policy" aria-label="Centrifuge Loading, Bottom Slot in Tube Holder · Centrifuge Rotor Orientation 3, ContrastFlow, low and wrist cameras" controls muted playsinline preload="none" data-speed="2" poster="static/videos/realworld-eval/Centrifuge_P3_ContrastFlow_Success_b754a0b5_Low_Wrist.jpg?v=eval-approved-final-v2"><source data-src="static/videos/realworld-eval/Centrifuge_P3_ContrastFlow_Success_b754a0b5_Low_Wrist.mp4?v=eval-approved-final-v2" type="video/mp4"></video>
+            <video class="real-eval-policy" aria-label="Centrifuge Loading, Bottom Test Tube Slot, ContrastFlow, low and wrist cameras" controls muted playsinline preload="none" data-speed="2" poster="static/videos/realworld-eval/Centrifuge_P3_ContrastFlow_Success_b754a0b5_Low_Wrist.jpg?v=eval-approved-final-v2"><source data-src="static/videos/realworld-eval/Centrifuge_P3_ContrastFlow_Success_b754a0b5_Low_Wrist.mp4?v=eval-approved-final-v2" type="video/mp4"></video>
           </article>
         </div>
       </figure>
       <figure class="real-eval-comparison" data-task="centrifuge" data-config="P1">
-        <figcaption class="real-eval-config real-config-stacked">Middle Slot in Tube Holder<span class="real-config-orientation">Centrifuge Rotor Orientation 1</span></figcaption>
+        <figcaption class="real-eval-config">Middle Test Tube Slot</figcaption>
         <div class="real-eval-grid">
           <article class="real-eval-view pi05" data-outcome="failure" data-behavior="failure" data-trial-id="a5f9ecdb-5382-4519-a8e1-7ec1857efa97">
             <div class="real-eval-method">π<sub>0.5</sub></div>
-            <video class="real-eval-policy" aria-label="Centrifuge Loading, Middle Slot in Tube Holder · Centrifuge Rotor Orientation 1, baseline pi 0.5, low and wrist cameras" controls muted playsinline preload="none" data-speed="2" poster="static/videos/realworld-eval/Centrifuge_P1_Baseline_Failure_a5f9ecdb_Low_Wrist.jpg?v=eval-approved-hq-v1"><source data-src="static/videos/realworld-eval/Centrifuge_P1_Baseline_Failure_a5f9ecdb_Low_Wrist.mp4?v=eval-approved-hq-v1" type="video/mp4"></video>
+            <video class="real-eval-policy" aria-label="Centrifuge Loading, Middle Test Tube Slot, baseline pi 0.5, low and wrist cameras" controls muted playsinline preload="none" data-speed="2" poster="static/videos/realworld-eval/Centrifuge_P1_Baseline_Failure_a5f9ecdb_Low_Wrist.jpg?v=eval-approved-hq-v1"><source data-src="static/videos/realworld-eval/Centrifuge_P1_Baseline_Failure_a5f9ecdb_Low_Wrist.mp4?v=eval-approved-hq-v1" type="video/mp4"></video>
           </article>
           <article class="real-eval-view contrastflow" data-outcome="success" data-behavior="success" data-trial-id="fefe69d0-42c7-4d62-b60d-8f83b03ac4e8">
             <div class="real-eval-method">ContrastFlow</div>
-            <video class="real-eval-policy" aria-label="Centrifuge Loading, Middle Slot in Tube Holder · Centrifuge Rotor Orientation 1, ContrastFlow, low and wrist cameras" controls muted playsinline preload="none" data-speed="2" poster="static/videos/realworld-eval/Centrifuge_P1_ContrastFlow_Success_fefe69d0_Low_Wrist.jpg?v=eval-approved-hq-v1"><source data-src="static/videos/realworld-eval/Centrifuge_P1_ContrastFlow_Success_fefe69d0_Low_Wrist.mp4?v=eval-approved-hq-v1" type="video/mp4"></video>
+            <video class="real-eval-policy" aria-label="Centrifuge Loading, Middle Test Tube Slot, ContrastFlow, low and wrist cameras" controls muted playsinline preload="none" data-speed="2" poster="static/videos/realworld-eval/Centrifuge_P1_ContrastFlow_Success_fefe69d0_Low_Wrist.jpg?v=eval-approved-hq-v1"><source data-src="static/videos/realworld-eval/Centrifuge_P1_ContrastFlow_Success_fefe69d0_Low_Wrist.mp4?v=eval-approved-hq-v1" type="video/mp4"></video>
           </article>
         </div>
       </figure>
@@ -263,30 +263,29 @@
       </div>
     </div>
     <div class="real-eval-task">
-      <h4 id="rw-eval-burette" class="real-eval-task-title">Titration</h4>
+      <h3 id="rw-eval-burette" class="real-eval-task-title">Titration</h3>
       <figure class="real-eval-comparison" data-task="burette" data-config="4">
-        <figcaption class="real-eval-config">Burette Stand Shift 1</figcaption>
+        <figcaption class="real-eval-config">Burette Stand Shift</figcaption>
         <div class="real-eval-grid">
           <article class="real-eval-view pi05" data-outcome="failure" data-behavior="failure" data-trial-id="403383a3-af91-41ad-91df-5ed8b2491cad">
             <div class="real-eval-method">π<sub>0.5</sub></div>
-            <video class="real-eval-policy" aria-label="Titration, Burette Stand Shift 1, baseline pi 0.5, low and wrist cameras" controls muted playsinline preload="none" data-speed="2" poster="static/videos/realworld-eval/Titration_Config_04_Baseline_Failure_403383a3_Low_Wrist.jpg?v=eval-approved-hq-v1"><source data-src="static/videos/realworld-eval/Titration_Config_04_Baseline_Failure_403383a3_Low_Wrist.mp4?v=eval-approved-hq-v1" type="video/mp4"></video>
+            <video class="real-eval-policy" aria-label="Titration, Burette Stand Shift, baseline pi 0.5, low and wrist cameras" controls muted playsinline preload="none" data-speed="2" poster="static/videos/realworld-eval/Titration_Config_04_Baseline_Failure_403383a3_Low_Wrist.jpg?v=eval-approved-hq-v1"><source data-src="static/videos/realworld-eval/Titration_Config_04_Baseline_Failure_403383a3_Low_Wrist.mp4?v=eval-approved-hq-v1" type="video/mp4"></video>
           </article>
           <article class="real-eval-view contrastflow" data-outcome="success" data-behavior="success" data-trial-id="f047bd0b-b8cb-4ceb-a4c9-cae856be6862">
             <div class="real-eval-method">ContrastFlow</div>
-            <video class="real-eval-policy" aria-label="Titration, Burette Stand Shift 1, ContrastFlow, low and wrist cameras" controls muted playsinline preload="none" data-speed="2" poster="static/videos/realworld-eval/Titration_Config_04_ContrastFlow_Success_f047bd0b_Low_Wrist.jpg?v=eval-approved-hq-v1"><source data-src="static/videos/realworld-eval/Titration_Config_04_ContrastFlow_Success_f047bd0b_Low_Wrist.mp4?v=eval-approved-hq-v1" type="video/mp4"></video>
+            <video class="real-eval-policy" aria-label="Titration, Burette Stand Shift, ContrastFlow, low and wrist cameras" controls muted playsinline preload="none" data-speed="2" poster="static/videos/realworld-eval/Titration_Config_04_ContrastFlow_Success_f047bd0b_Low_Wrist.jpg?v=eval-approved-hq-v1"><source data-src="static/videos/realworld-eval/Titration_Config_04_ContrastFlow_Success_f047bd0b_Low_Wrist.mp4?v=eval-approved-hq-v1" type="video/mp4"></video>
           </article>
         </div>
       </figure>
       <figure class="real-eval-comparison" data-task="burette" data-config="6">
-        <figcaption class="real-eval-config">Burette Stand Shift 3</figcaption>
         <div class="real-eval-grid">
           <article class="real-eval-view pi05" data-outcome="failure" data-behavior="failure" data-trial-id="c2f5764b-252b-4834-bd7c-cc568fe82e8a">
             <div class="real-eval-method">π<sub>0.5</sub></div>
-            <video class="real-eval-policy" aria-label="Titration, Burette Stand Shift 3, baseline pi 0.5, low and wrist cameras" controls muted playsinline preload="none" data-speed="2" poster="static/videos/realworld-eval/Titration_Config_06_Baseline_Failure_c2f5764b_Low_Wrist.jpg?v=eval-approved-hq-v1"><source data-src="static/videos/realworld-eval/Titration_Config_06_Baseline_Failure_c2f5764b_Low_Wrist.mp4?v=eval-approved-hq-v1" type="video/mp4"></video>
+            <video class="real-eval-policy" aria-label="Titration, Burette Stand Shift, baseline pi 0.5, low and wrist cameras" controls muted playsinline preload="none" data-speed="2" poster="static/videos/realworld-eval/Titration_Config_06_Baseline_Failure_c2f5764b_Low_Wrist.jpg?v=eval-approved-hq-v1"><source data-src="static/videos/realworld-eval/Titration_Config_06_Baseline_Failure_c2f5764b_Low_Wrist.mp4?v=eval-approved-hq-v1" type="video/mp4"></video>
           </article>
           <article class="real-eval-view contrastflow" data-outcome="success" data-behavior="success" data-trial-id="f04f7f64-eb57-4b4f-bc8c-2d3b8d0c0fcf">
             <div class="real-eval-method">ContrastFlow</div>
-            <video class="real-eval-policy" aria-label="Titration, Burette Stand Shift 3, ContrastFlow, low and wrist cameras" controls muted playsinline preload="none" data-speed="2" poster="static/videos/realworld-eval/Titration_Config_06_ContrastFlow_Success_f04f7f64_Low_Wrist.jpg?v=eval-approved-hq-v1"><source data-src="static/videos/realworld-eval/Titration_Config_06_ContrastFlow_Success_f04f7f64_Low_Wrist.mp4?v=eval-approved-hq-v1" type="video/mp4"></video>
+            <video class="real-eval-policy" aria-label="Titration, Burette Stand Shift, ContrastFlow, low and wrist cameras" controls muted playsinline preload="none" data-speed="2" poster="static/videos/realworld-eval/Titration_Config_06_ContrastFlow_Success_f04f7f64_Low_Wrist.jpg?v=eval-approved-hq-v1"><source data-src="static/videos/realworld-eval/Titration_Config_06_ContrastFlow_Success_f04f7f64_Low_Wrist.mp4?v=eval-approved-hq-v1" type="video/mp4"></video>
           </article>
         </div>
       </figure>
@@ -295,30 +294,29 @@
       </div>
     </div>
     <div class="real-eval-task">
-      <h4 id="rw-eval-cable" class="real-eval-task-title">Cable Insertion</h4>
+      <h3 id="rw-eval-cable" class="real-eval-task-title">Cable Insertion</h3>
       <figure class="real-eval-comparison" data-task="cable" data-config="1">
-        <figcaption class="real-eval-config">Large Wrist Rotation 1</figcaption>
+        <figcaption class="real-eval-config">Large Wrist Rotation</figcaption>
         <div class="real-eval-grid">
           <article class="real-eval-view pi05" data-outcome="failure" data-behavior="failure" data-trial-id="032cfa53-7ce6-4989-8228-ffdb2c6d90c1">
             <div class="real-eval-method">π<sub>0.5</sub></div>
-            <video class="real-eval-policy" aria-label="Cable Insertion, Large Wrist Rotation 1, baseline pi 0.5, low and wrist cameras" controls muted playsinline preload="none" data-speed="2" poster="static/videos/realworld-eval/Cable_ID1_Baseline_Failure_032cfa53_Low_Wrist.jpg?v=eval-approved-hq-v1"><source data-src="static/videos/realworld-eval/Cable_ID1_Baseline_Failure_032cfa53_Low_Wrist.mp4?v=eval-approved-hq-v1" type="video/mp4"></video>
+            <video class="real-eval-policy" aria-label="Cable Insertion, Large Wrist Rotation, baseline pi 0.5, low and wrist cameras" controls muted playsinline preload="none" data-speed="2" poster="static/videos/realworld-eval/Cable_ID1_Baseline_Failure_032cfa53_Low_Wrist.jpg?v=eval-approved-hq-v1"><source data-src="static/videos/realworld-eval/Cable_ID1_Baseline_Failure_032cfa53_Low_Wrist.mp4?v=eval-approved-hq-v1" type="video/mp4"></video>
           </article>
           <article class="real-eval-view contrastflow" data-outcome="success" data-behavior="success" data-trial-id="ad2aa117-9370-4e30-b45c-cf361f11d3af">
             <div class="real-eval-method">ContrastFlow</div>
-            <video class="real-eval-policy" aria-label="Cable Insertion, Large Wrist Rotation 1, ContrastFlow, low and wrist cameras" controls muted playsinline preload="none" data-speed="2" poster="static/videos/realworld-eval/Cable_ID1_ContrastFlow_Success_ad2aa117_Low_Wrist.jpg?v=eval-approved-hq-v1"><source data-src="static/videos/realworld-eval/Cable_ID1_ContrastFlow_Success_ad2aa117_Low_Wrist.mp4?v=eval-approved-hq-v1" type="video/mp4"></video>
+            <video class="real-eval-policy" aria-label="Cable Insertion, Large Wrist Rotation, ContrastFlow, low and wrist cameras" controls muted playsinline preload="none" data-speed="2" poster="static/videos/realworld-eval/Cable_ID1_ContrastFlow_Success_ad2aa117_Low_Wrist.jpg?v=eval-approved-hq-v1"><source data-src="static/videos/realworld-eval/Cable_ID1_ContrastFlow_Success_ad2aa117_Low_Wrist.mp4?v=eval-approved-hq-v1" type="video/mp4"></video>
           </article>
         </div>
       </figure>
       <figure class="real-eval-comparison" data-task="cable" data-config="5">
-        <figcaption class="real-eval-config">Large Wrist Rotation 4</figcaption>
         <div class="real-eval-grid">
           <article class="real-eval-view pi05" data-outcome="failure" data-behavior="failure" data-trial-id="34a61bba-7c8f-4905-a2c2-fe3a6aa9dde0">
             <div class="real-eval-method">π<sub>0.5</sub></div>
-            <video class="real-eval-policy" aria-label="Cable Insertion, Large Wrist Rotation 4, baseline pi 0.5, low and wrist cameras" controls muted playsinline preload="none" data-speed="2" poster="static/videos/realworld-eval/Cable_ID5_Baseline_Failure_34a61bba_Low_Wrist.jpg?v=eval-approved-hq-v1"><source data-src="static/videos/realworld-eval/Cable_ID5_Baseline_Failure_34a61bba_Low_Wrist.mp4?v=eval-approved-hq-v1" type="video/mp4"></video>
+            <video class="real-eval-policy" aria-label="Cable Insertion, Large Wrist Rotation, baseline pi 0.5, low and wrist cameras" controls muted playsinline preload="none" data-speed="2" poster="static/videos/realworld-eval/Cable_ID5_Baseline_Failure_34a61bba_Low_Wrist.jpg?v=eval-approved-hq-v1"><source data-src="static/videos/realworld-eval/Cable_ID5_Baseline_Failure_34a61bba_Low_Wrist.mp4?v=eval-approved-hq-v1" type="video/mp4"></video>
           </article>
           <article class="real-eval-view contrastflow" data-outcome="success" data-behavior="success" data-trial-id="8fb88716-90cf-44fb-a704-69d0d2125971">
             <div class="real-eval-method">ContrastFlow</div>
-            <video class="real-eval-policy" aria-label="Cable Insertion, Large Wrist Rotation 4, ContrastFlow, low and wrist cameras" controls muted playsinline preload="none" data-speed="2" poster="static/videos/realworld-eval/Cable_ID5_ContrastFlow_Success_8fb88716_Low_Wrist.jpg?v=eval-approved-hq-v1"><source data-src="static/videos/realworld-eval/Cable_ID5_ContrastFlow_Success_8fb88716_Low_Wrist.mp4?v=eval-approved-hq-v1" type="video/mp4"></video>
+            <video class="real-eval-policy" aria-label="Cable Insertion, Large Wrist Rotation, ContrastFlow, low and wrist cameras" controls muted playsinline preload="none" data-speed="2" poster="static/videos/realworld-eval/Cable_ID5_ContrastFlow_Success_8fb88716_Low_Wrist.jpg?v=eval-approved-hq-v1"><source data-src="static/videos/realworld-eval/Cable_ID5_ContrastFlow_Success_8fb88716_Low_Wrist.mp4?v=eval-approved-hq-v1" type="video/mp4"></video>
           </article>
         </div>
       </figure>
@@ -327,30 +325,30 @@
       </div>
     </div>
     <div class="real-eval-task">
-      <h4 id="rw-eval-adapter" class="real-eval-task-title">Adapter Relocation</h4>
+      <h3 id="rw-eval-adapter" class="real-eval-task-title">Adapter Relocation</h3>
       <figure class="real-eval-comparison" data-task="adapter" data-config="3-&gt;4">
-        <figcaption class="real-eval-config">Short Adapter Transfer (Outlet 3 → 4)</figcaption>
+        <figcaption class="real-eval-config">Short Adapter Transfer</figcaption>
         <div class="real-eval-grid">
           <article class="real-eval-view pi05" data-outcome="failure" data-behavior="failure" data-trial-id="1549d83e-a16e-44a7-b3ec-2fb59bc86693">
             <div class="real-eval-method">π<sub>0.5</sub></div>
-            <video class="real-eval-policy" aria-label="Adapter Relocation, Short Adapter Transfer (Outlet 3 → 4), baseline pi 0.5, low and wrist cameras" controls muted playsinline preload="none" data-speed="2" poster="static/videos/realworld-eval/Adapter_3to4_Baseline_Failure_1549d83e_Low_Wrist.jpg?v=eval-approved-hq-v1"><source data-src="static/videos/realworld-eval/Adapter_3to4_Baseline_Failure_1549d83e_Low_Wrist.mp4?v=eval-approved-hq-v1" type="video/mp4"></video>
+            <video class="real-eval-policy" aria-label="Adapter Relocation, Short Adapter Transfer, baseline pi 0.5, low and wrist cameras" controls muted playsinline preload="none" data-speed="2" poster="static/videos/realworld-eval/Adapter_3to4_Baseline_Failure_1549d83e_Low_Wrist.jpg?v=eval-approved-hq-v1"><source data-src="static/videos/realworld-eval/Adapter_3to4_Baseline_Failure_1549d83e_Low_Wrist.mp4?v=eval-approved-hq-v1" type="video/mp4"></video>
           </article>
           <article class="real-eval-view contrastflow" data-outcome="success" data-behavior="success" data-trial-id="6a0a58c1-a0c0-4d79-936f-4a3165a606d2">
             <div class="real-eval-method">ContrastFlow</div>
-            <video class="real-eval-policy" aria-label="Adapter Relocation, Short Adapter Transfer (Outlet 3 → 4), ContrastFlow, low and wrist cameras" controls muted playsinline preload="none" data-speed="2" poster="static/videos/realworld-eval/Adapter_3to4_ContrastFlow_Success_6a0a58c1_Low_Wrist.jpg?v=eval-approved-hq-v1"><source data-src="static/videos/realworld-eval/Adapter_3to4_ContrastFlow_Success_6a0a58c1_Low_Wrist.mp4?v=eval-approved-hq-v1" type="video/mp4"></video>
+            <video class="real-eval-policy" aria-label="Adapter Relocation, Short Adapter Transfer, ContrastFlow, low and wrist cameras" controls muted playsinline preload="none" data-speed="2" poster="static/videos/realworld-eval/Adapter_3to4_ContrastFlow_Success_6a0a58c1_Low_Wrist.jpg?v=eval-approved-hq-v1"><source data-src="static/videos/realworld-eval/Adapter_3to4_ContrastFlow_Success_6a0a58c1_Low_Wrist.mp4?v=eval-approved-hq-v1" type="video/mp4"></video>
           </article>
         </div>
       </figure>
       <figure class="real-eval-comparison" data-task="adapter" data-config="1-&gt;4">
-        <figcaption class="real-eval-config">Long Adapter Transfer (Outlet 1 → 4)</figcaption>
+        <figcaption class="real-eval-config">Long Adapter Transfer</figcaption>
         <div class="real-eval-grid">
           <article class="real-eval-view pi05" data-outcome="failure" data-behavior="failure" data-trial-id="6f9ae0e6-f418-4ac9-bbde-067b285ea622">
             <div class="real-eval-method">π<sub>0.5</sub></div>
-            <video class="real-eval-policy" aria-label="Adapter Relocation, Long Adapter Transfer (Outlet 1 → 4), baseline pi 0.5, low and wrist cameras" controls muted playsinline preload="none" data-speed="2" poster="static/videos/realworld-eval/Adapter_1to4_Baseline_Failure_6f9ae0e6_Low_Wrist.jpg?v=eval-approved-hq-v1"><source data-src="static/videos/realworld-eval/Adapter_1to4_Baseline_Failure_6f9ae0e6_Low_Wrist.mp4?v=eval-approved-hq-v1" type="video/mp4"></video>
+            <video class="real-eval-policy" aria-label="Adapter Relocation, Long Adapter Transfer, baseline pi 0.5, low and wrist cameras" controls muted playsinline preload="none" data-speed="2" poster="static/videos/realworld-eval/Adapter_1to4_Baseline_Failure_6f9ae0e6_Low_Wrist.jpg?v=eval-approved-hq-v1"><source data-src="static/videos/realworld-eval/Adapter_1to4_Baseline_Failure_6f9ae0e6_Low_Wrist.mp4?v=eval-approved-hq-v1" type="video/mp4"></video>
           </article>
           <article class="real-eval-view contrastflow" data-outcome="success" data-behavior="success" data-trial-id="5686a30d-b209-4858-be36-3cafc6cdaed7">
             <div class="real-eval-method">ContrastFlow </div>
-            <video class="real-eval-policy" aria-label="Adapter Relocation, Long Adapter Transfer (Outlet 1 → 4), ContrastFlow, low and wrist cameras" controls muted playsinline preload="none" data-speed="2.5" poster="static/videos/realworld-eval/Adapter_1to4_ContrastFlow_Success_5686a30d_Low_Wrist.jpg?v=eval-approved-hq-v1"><source data-src="static/videos/realworld-eval/Adapter_1to4_ContrastFlow_Success_5686a30d_Low_Wrist.mp4?v=eval-approved-hq-v1" type="video/mp4"></video>
+            <video class="real-eval-policy" aria-label="Adapter Relocation, Long Adapter Transfer, ContrastFlow, low and wrist cameras" controls muted playsinline preload="none" data-speed="2.5" poster="static/videos/realworld-eval/Adapter_1to4_ContrastFlow_Success_5686a30d_Low_Wrist.jpg?v=eval-approved-hq-v1"><source data-src="static/videos/realworld-eval/Adapter_1to4_ContrastFlow_Success_5686a30d_Low_Wrist.mp4?v=eval-approved-hq-v1" type="video/mp4"></video>
           </article>
         </div>
       </figure>
